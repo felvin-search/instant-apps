@@ -1,5 +1,16 @@
 # Neera Snippet Apps
 
+## What are snippet apps?
+<img width="933" alt="snippetApp" src="https://user-images.githubusercontent.com/2477788/114712160-66f05080-9d4d-11eb-8554-6b41ff561e99.png">
+
+It is the small instant answer thing which you get on the top of search. Its not just dictionary, you can show any data with snippet app.
+
+It can be football scores, stock prices or notes from your notion or even search history from company slack or anything!!
+
+## Why should I create one?
+Because it's fun!
+
+
 ## How to create a Neera snippet app?
 
 * Fork the repository
