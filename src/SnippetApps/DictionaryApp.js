@@ -1,14 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-// Keep the logic of making the API call seperate from the component definition
-// Ideally the component shouldn't make an API call.
-// We should give lot of example snippet apps which people can fork and create their own apps
-// The single API end point waala cheez might restrict people
-// People might want to do make all kind of api calls and do lot of random stuff, maybe we should allow it
-// In terms of libraries and all, we can install most of the popular libraries
-// We'll need to balance performance & customizability
-
 const dictionarySampleData = [
   {
     word: "grit",
@@ -83,6 +75,7 @@ const dictionarySampleData = [
   },
 ];
 
+
 function Definition(props) {
   const definition = props.data;
   return (
@@ -97,6 +90,9 @@ function Definition(props) {
     </div>
   );
 }
+
+//  ==================== renderer =================
+
 
 function Dictionary(props) {
   console.log("Dictionary Render");
@@ -134,6 +130,8 @@ function Dictionary(props) {
   );
 }
 
+//  ==================== dataFetcher =================
+
 async function fetchMeaningData({ query }) {
   const { data } = await axios.get(
     `https://api.dictionaryapi.dev/api/v2/entries/en_US/${query}`
@@ -141,7 +139,8 @@ async function fetchMeaningData({ query }) {
   return data;
 }
 
-// Accept an object, gives you more flexibility
+//  ==================== Final App Definition =================
+
 const DictionaryApp = {
   name: "Dictionary App",
   id: "dictionary",
