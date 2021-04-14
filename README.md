@@ -6,6 +6,10 @@
 * Add a js/ts file with the app.
 * Commit and send a pull request. I'll accept the PR and you are done :)
 
+## Example Snippet Apps
+
+* [Dictionary App](https://github.com/hargup/neera-snippet-apps/blob/master/src/SnippetApps/DictionaryApp.js)
+
 ## Anatomy of Snippet App
 
 A snippet app is a Javascript object with following keys:
