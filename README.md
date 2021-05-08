@@ -20,6 +20,7 @@ Because it's fun!
 ## Example Snippet Apps
 
 * [Dictionary App](https://github.com/hargup/neera-snippet-apps/blob/master/src/SnippetApps/DictionaryApp.js)
+* [Currency Conversion App](https://github.com/hargup/neera-snippet-apps/blob/master/src/SnippetApps/CurrencyConversionApp.js)
 
 ## Anatomy of Snippet App
 
