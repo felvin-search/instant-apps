@@ -21,6 +21,7 @@ Because it's fun!
 
 * [Dictionary App](https://github.com/hargup/neera-snippet-apps/blob/master/src/SnippetApps/DictionaryApp.js)
 * [Currency Conversion App](https://github.com/hargup/neera-snippet-apps/blob/master/src/SnippetApps/CurrencyConversionApp.js)
+* [JSON Formatter App](https://github.com/Neera-AI/neera-snippet-apps/blob/master/src/SnippetApps/JSONFormatterApp.js)
 
 ## Anatomy of Snippet App
 
