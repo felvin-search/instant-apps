@@ -23,6 +23,13 @@ You! Neera is a platform - create apps for yourself as well as others.
 
 Because it's fun and it's a new kind of superpower. 😎
 
+<!--
+```sh
+git clone ....
+cd something
+```
+ -->
+
 ## How to create a Neera snippet app?
 
 - Fork the repository
