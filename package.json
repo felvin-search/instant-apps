@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "createSampleApp": "./utils/create_sample_app.sh"
+    "create-app": "./utils/create_sample_app.sh"
   },
   "eslintConfig": {
     "extends": [
