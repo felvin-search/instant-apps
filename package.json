@@ -2,6 +2,10 @@
   "name": "neera-snippet-apps",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "frontend",
+    "apps/*"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -14,7 +18,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cd frontend && yarn start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
