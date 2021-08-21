@@ -9,16 +9,18 @@ type RendererProps = {
 const InstantAppRenderer = (props: RendererProps) => {
   useEffect(() => {
     const DictionaryAppComponent = apps[0].Component;
-    console.log(`Calling dictionary app with ${props.query}`)
-    if(!props.query) {
+    console.log(`Calling dictionary app with ${props.query}`);
+    if (!props.query) {
       return;
     }
-    apps[0].queryToData({query: props.query})
-    .then((data: Array<any>) => {
-      if(data){
-        ReactDOM.render(<DictionaryAppComponent data={data} />, document.getElementById("instant_app_root"))
+    apps[0].queryToData({ query: props.query }).then((data: Array<any>) => {
+      if (data) {
+        ReactDOM.render(
+          <DictionaryAppComponent data={data} />,
+          document.getElementById("instant_app_root")
+        );
       }
-    })
+    });
     // call each instant apps one by one
     // Instant apps processor can do magic and render stuff.
     // Render the first matching app

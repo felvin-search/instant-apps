@@ -66,21 +66,22 @@ const Link = styled.div`
 //============================================
 
 function Results() {
-  const [results, setResults] = useState<Result[]>([]);
-  const [query, setQuery] = useState("");
   const history = useHistory();
+  const [results, setResults] = useState<Result[]>([]);
+  const q = new URLSearchParams(window.location.search).get("q") || "";
+
+  const [query, setQuery] = useState(q);
 
   useEffect(() => {
     const fetchResults = async () => {
-      // Renders a sample list of results irrespective of the search query
       const q = new URLSearchParams(window.location.search).get("q") || "";
-
       if (q.length === 0) {
         // Redirect users to homepage if they directly visit the url without any q
         history.push("/");
       }
 
       setQuery(q);
+      // Renders a sample list of results irrespective of the search query
       setResults(sampleResults.items);
     };
 
