@@ -1,5 +1,6 @@
 {
   "name": "@felvin-search/apps",
+  "license": "MIT",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -22,7 +23,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "cd frontend && yarn start",
+    "start": "REACT_APP_MODE=development react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

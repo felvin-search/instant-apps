@@ -5,7 +5,7 @@ import SearchBox from "../components/SearchBox";
 import Breakpoints from "../shared/Breakpoints";
 import { Result } from "../types";
 import sampleResults from "../data/sample_results.json";
-import InstantAppRenderer from "../instantApps/renderer";
+import InstantAppRenderer from "../lib/renderer";
 
 //--------------Styled Components--------------
 
