@@ -5,7 +5,7 @@ import SearchBox from "../components/SearchBox";
 import Breakpoints from "../shared/Breakpoints";
 import { Result } from "../types";
 import sampleResults from "../data/sample_results.json";
-import SnippetAppRenderer from "../instantApps/renderer";
+import InstantAppRenderer from "../instantApps/renderer";
 
 //--------------Styled Components--------------
 
@@ -92,7 +92,7 @@ function Results() {
     <Container>
       {/* TODO: See if refs are useful and this search box shouldn't be re-rendered. */}
       <SearchBox resultsView />
-      <SnippetAppRenderer query={query} />
+      <InstantAppRenderer query={query} />
       <ResultsContainer>
         {results.map((result) => (
           <ResultContainer key={result.link}>

@@ -47,37 +47,46 @@ function Definition(props) {
 }
 
 function Dictionary(props) {
-  const data = props.data[0];
-  return (
-    <DictionaryContainer>
-      <h1>{data.word}</h1>
-      <RowContainer>
-        <div>{data.phonetics[0]?.text}</div>
-        <audio controls src={data.phonetics[0]?.audio}>
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio>
-      </RowContainer>
-      {data.meanings &&
-        data.meanings.map((m, index) => {
-          return (
-            <ColContainer>
-              <em>{m.partOfSpeech}</em>
-              {m.definitions.map((d) => (
-                <Definition data={d} />
-              ))}
-            </ColContainer>
-          );
-        })}
-    </DictionaryContainer>
-  );
+  // const data = props.data[0];
+  return (<div>{JSON.stringify(props)}</div>);
+  // return (
+  //   <DictionaryContainer>
+  //     <h1>{data.word}</h1>
+  //     <RowContainer>
+  //       <div>{data.phonetics[0]?.text}</div>
+  //       <audio controls src={data.phonetics[0]?.audio}>
+  //         Your browser does not support the
+  //         <code>audio</code> element.
+  //       </audio>
+  //     </RowContainer>
+  //     {data.meanings &&
+  //       data.meanings.map((m, index) => {
+  //         return (
+  //           <ColContainer>
+  //             <em>{m.partOfSpeech}</em>
+  //             {m.definitions.map((d) => (
+  //               <Definition data={d} />
+  //             ))}
+  //           </ColContainer>
+  //         );
+  //       })}
+  //   </DictionaryContainer>
+  // );
 }
 
 async function fetchMeaningData({ query }) {
-  const { data } = await axios.get(
-    `https://api.dictionaryapi.dev/api/v2/entries/en_US/${query}`
-  );
-  return data;
+  console.log(`Fetching meaning for ${query}`)
+  try{
+    const { data } = await axios.get(
+      `https://api.dictionaryapi.dev/api/v2/entries/en_US/${query}`
+    );
+    if(data && Array.isArray(data) && data.length > 0) {
+      return data;
+    }
+  } catch {
+    return undefined;
+  }
+
 }
 
 // Accept an object, gives you more flexibility
