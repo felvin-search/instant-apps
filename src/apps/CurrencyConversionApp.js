@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
+import fx from "money";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-
-// Keep the logic of making the API call seperate from the component definition
-// Ideally the component shouldn't make an API call.
-// We should give lot of example snippet apps which people can fork and create their own apps
-// The single API end point waala cheez might restrict people
-// People might want to do make all kind of api calls and do lot of random stuff, maybe we should allow it
-// In terms of libraries and all, we can install most of the popular libraries
-// We'll need to balance performance & customizability
 
 const currencies = [
   { value: "AUD", label: "Australian Dollar" },
@@ -46,6 +39,8 @@ const currencies = [
   { value: "ZAR", label: "South African Rand" },
 ];
 
+//------------Styled Components-----------------
+
 const Input = styled.input`
   color: #363636;
   background-color: #fff;
@@ -81,79 +76,99 @@ const Select = styled.select`
   outline: none;
 `;
 
+const ColContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const RowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+`;
+
+//===========================================
+
 function CurrenyConvertor(props) {
-  const [inputCurrency, setInputCurrency] = useState("INR");
-  const [outputCurrency, setOutputCurrency] = useState("USD");
+  const [inputCurrency, setInputCurrency] = useState(
+    props.data.inputCurrency || "USD"
+  );
+  const [outputCurrency, setOutputCurrency] = useState(
+    props.data.outputCurrency || "INR"
+  );
 
-  const [inputValue, setInputValue] = useState();
-  const [outputValue, setOutputValue] = useState();
-
-  const [loaded, setLoaded] = useState(false);
+  const [inputValue, setInputValue] = useState(props.data.amount || 1);
+  const [outputValue, setOutputValue] = useState(0);
+  const [way, setWay] = useState("forward");
 
   // Loading the money.js script
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "/money.js";
-    document.body.appendChild(script);
-    script.addEventListener("load", () => setLoaded(true));
+    fx.rates = props.data.rates;
+    fx.base = props.data.base;
+    setOutputValue(convert(inputValue, outputCurrency, inputCurrency, 1));
   }, []);
 
-  // This sets the rates and the base currency after the script has been loaded
-  useEffect(() => {
-    if (!loaded) {
-      return;
-    }
-
-    window.fx.rates = props.data.rates;
-    window.fx.base = props.data.base;
-  }, [loaded]);
-
-  const handleConversion = (amount, input, output, way) => {
-    if (way == 1) {
-      setInputValue(amount);
-    } else {
-      setOutputValue(amount);
-    }
-    return window.fx.convert(amount, { from: output, to: input });
+  const convert = (amount, input, output) => {
+    return fx.convert(amount, { from: input, to: output }).toFixed(2);
   };
 
+  useEffect(() => {
+    if (way === "forward") {
+      setOutputValue(convert(inputValue, inputCurrency, outputCurrency));
+    }
+
+    if (way === "reverse") {
+      setInputValue(convert(outputValue, outputCurrency, inputCurrency));
+    }
+  }, [inputValue, outputValue, inputCurrency, outputCurrency, way]);
+
   return (
-    <div class="flex flex-col">
-      <div class="flex md:flex-row flex-col">
+    <ColContainer>
+      <RowContainer>
         <Input
+          type="number"
+          step="0.01"
           value={inputValue}
           placeholder="Input Currency"
           onChange={(e) => {
-            setOutputValue(
-              handleConversion(e.target.value, outputCurrency, inputCurrency, 1)
-            );
+            setInputValue(e.target.value);
+            setWay("forward");
           }}
         />
         <Select
           value={inputCurrency}
-          onChange={(e) => setInputCurrency(e.target.value)}
+          onChange={(e) => {
+            setInputCurrency(e.target.value);
+            setWay("forward");
+          }}
         >
           {currencies.map((currency) => (
             <option key={currency.value} value={currency.value}>
               {currency.label}
             </option>
           ))}
-          <div></div>
         </Select>
-      </div>
-      <div class="flex md:flex-row flex-col ">
+      </RowContainer>
+      <RowContainer>
         <Input
+          type="number"
+          step="0.01"
           value={outputValue}
           placeholder="Output Currency"
           onChange={(e) => {
-            setInputValue(
-              handleConversion(e.target.value, inputCurrency, outputCurrency, 2)
-            );
+            setOutputValue(e.target.value);
+            setWay("reverse");
           }}
         />
         <Select
           value={outputCurrency}
-          onChange={(e) => setOutputCurrency(e.target.value)}
+          onChange={(e) => {
+            setOutputCurrency(e.target.value);
+            setWay("forward");
+          }}
         >
           {currencies.map((currency) => (
             <option key={currency.value} value={currency.value}>
@@ -161,14 +176,134 @@ function CurrenyConvertor(props) {
             </option>
           ))}
         </Select>
-      </div>
-    </div>
+      </RowContainer>
+    </ColContainer>
   );
 }
 
-async function fetchRates() {
+const parseConversionString = (query) => {
+  // Default amount is 1
+  // Example: USD TO INR => {amount: 1, from: 'USD', to: 'INR'}
+  // Example: 5 USD TO INR => {amount: 5, from: 'USD', to: 'INR'}
+  const normalizedQuery = query.toUpperCase();
+  if (normalizedQuery.includes(" TO ") || normalizedQuery.includes(" IN ")) {
+    const tokens = normalizedQuery.split(" ");
+    if (tokens.length === 3) {
+      return { amount: 1, from: tokens[0], to: tokens[2] };
+    } else if (tokens.length === 4) {
+      try {
+        const amount = parseInt(tokens[0]);
+        return { amount, from: tokens[1], to: tokens[3] };
+      } catch {
+        return null;
+      }
+    }
+    return null;
+  }
+};
+
+const isValidCurrencyCode = (currencyCode) => {
+  const validCodes = [
+    "AUD",
+    "BGN",
+    "BRL",
+    "CAD",
+    "CHF",
+    "CNY",
+    "CZK",
+    "DKK",
+    "EUR",
+    "GBP",
+    "HKD",
+    "HRK",
+    "HUF",
+    "IDR",
+    "ILS",
+    "INR",
+    "ISK",
+    "JPY",
+    "KRW",
+    "MXN",
+    "MYR",
+    "NOK",
+    "NZD",
+    "PHP",
+    "PLN",
+    "RON",
+    "RUB",
+    "SEK",
+    "SGD",
+    "THB",
+    "TRY",
+    "USD",
+    "ZAR",
+  ];
+  return validCodes.includes(currencyCode);
+};
+
+// Todo: this should be a fuzzy match
+const currencyNameToCurrencyCode = (currencyName) => {
+  currencyName = currencyName.toUpperCase();
+  const namesToCodes = {
+    "AUSTRALIAN DOLLAR": "AUD",
+    "BULGARIAN LEV": "BGN",
+    "BRAZILIAN REAL": "BRL",
+    "CANADIAN DOLLAR": "CAD",
+    "SWISS FRANC": "CHF",
+    "CHINESE RENMINBI YUAN": "CNY",
+    "CZECH KORUNA": "CZK",
+    "DANISH KRONE": "DKK",
+    EURO: "EUR",
+    "BRITISH POUND": "GBP",
+    "HONG KONG DOLLAR": "HKD",
+    "CROATIAN KUNA": "HRK",
+    "HUNGARIAN FORINT": "HUF",
+    "INDONESIAN RUPIAH": "IDR",
+    "ISRAELI NEW SHEQEL": "ILS",
+    "INDIAN RUPEE": "INR",
+    RUPEE: "INR",
+    "ICELANDIC KRÓNA": "ISK",
+    "JAPANESE YEN": "JPY",
+    "SOUTH KOREAN WON": "KRW",
+    "MEXICAN PESO": "MXN",
+    "MALAYSIAN RINGGIT": "MYR",
+    "NORWEGIAN KRONE": "NOK",
+    "NEW ZEALAND DOLLAR": "NZD",
+    "PHILIPPINE PESO": "PHP",
+    "POLISH ZŁOTY": "PLN",
+    "ROMANIAN LEU": "RON",
+    "RUSSIAN RUBLE": "RUB",
+    "SWEDISH KRONA": "SEK",
+    "SINGAPORE DOLLAR": "SGD",
+    "THAI BAHT": "THB",
+    "TURKISH LIRA": "TRY",
+    "UNITED STATES DOLLAR": "USD",
+    DOLLAR: "USD",
+    "SOUTH AFRICAN RAND": "ZAR",
+  };
+  return namesToCodes[currencyName] || currencyName;
+};
+
+async function fetchRates(query) {
   const { data } = await axios.get("https://api.frankfurter.app/latest");
-  return data;
+  try {
+    let { amount, from, to } = parseConversionString(query);
+    from = currencyNameToCurrencyCode(from);
+    to = currencyNameToCurrencyCode(to);
+    if (isValidCurrencyCode(from) && isValidCurrencyCode(to)) {
+      return {
+        rates: data.rates,
+        base: data.base,
+        amount,
+        inputCurrency: from,
+        outputCurrency: to,
+      };
+    } else {
+      return null;
+    }
+  } catch {
+    return null;
+  }
 }
 
 // Accept an object, gives you more flexibility
@@ -177,8 +312,8 @@ const CurrencyConversionApp = {
   id: "currency_convertor",
   description: "Convert currencies",
   logo: "",
-  dataFetcher: fetchRates,
-  renderer: CurrenyConvertor,
+  queryToData: fetchRates,
+  Component: CurrenyConvertor,
 };
 
 export default CurrencyConversionApp;
