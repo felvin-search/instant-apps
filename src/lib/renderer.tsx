@@ -1,17 +1,28 @@
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import apps from "../apps";
+import styled from "styled-components";
+const InstantAppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 95%;
+  justify-content: center;
+  align-items: center
+`;
 
 function renderApps(query: string) {
   apps.every(async (app) => {
     console.log("checking render for app", app);
     // Question: Not all apps need to return data.
     // TODO: Clearly define what is success and what is failure criteria for these apps somewhere.
+    // @ts-ignore
     const data = await app.queryToData(query);
     console.log("data from dictionary app", data);
     // TODO: This will always render the first app
     if (!!data) {
       ReactDOM.render(
+        // @ts-ignore
         <app.Component data={data} />,
         document.getElementById("instant_apps_root")
       );
@@ -37,7 +48,10 @@ const InstantAppRenderer = (props: RendererProps) => {
     renderApps(props.query);
   }, [props.query]);
 
-  return <div id="instant_apps_root"></div>;
+  return <InstantAppContainer>
+    <div id="instant_apps_root"></div>
+    </InstantAppContainer>
+  ;
 };
 
 export default InstantAppRenderer;
