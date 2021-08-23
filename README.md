@@ -1,11 +1,17 @@
-# Neera Instant Apps
+# Felvin Search - Instant Apps
+
+> Your search box is now an app store! 🎉 - [Felvin](https://felvin.com)
+
+<!-- Concern: Does this convey that these apps are running on a website? Gif is  -->
+
+|                                                                                                                   |                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| [<img  alt="snippetApp" src="./assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="snippetApp" src="./assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer) |
+| [<img  alt="snippetApp" src="./assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)  | [<img  alt="snippetApp" src="./assets/readme/json-example.png">](https://felvin.com/search?q=format+json)       |
+
+[checkout more apps]() or even [create one for yourself]()!
 
 ## What are instant apps?
-
-|                                                                      |                                                                 |
-| -------------------------------------------------------------------- | --------------------------------------------------------------- |
-| <img  alt="snippetApp" src="./assets/readme/dictionary-example.png"> | <img  alt="snippetApp" src="./assets/readme/timer-example.png"> |
-| <img  alt="snippetApp" src="./assets/readme/currency-example.png">   | <img  alt="snippetApp" src="./assets/readme/json-example.png">  |
 
 Instant apps are the small interactive cards which you get for your search queries.
 
@@ -19,9 +25,9 @@ Try them out live - [neera.ai](https://neera.ai)
 
 You! Neera is a platform - create apps for yourself as well as others.
 
-## Why should I create one?
+## Contributing
 
-Because it's fun and it's a new kind of superpower. 😎
+Try creating a new app, it's fun and it's a new kind of superpower. 😎
 
 <!--
 ```sh
@@ -29,6 +35,8 @@ git clone ....
 cd something
 ```
  -->
+
+You could also contribute by suggesting a new instant app!
 
 ## How to create a Neera snippet app?
 
