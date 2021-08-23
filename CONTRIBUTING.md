@@ -21,6 +21,7 @@ This should start the search website sandbox with all the plugins loaded!
 ## Creating a new app
 
 ### 1. Run the generator script
+
 `yarn create-app`
 
 ### 2. Import
@@ -32,10 +33,10 @@ Import your app inside `src/apps/index.ts` and update the `availableApps` list.
 import dictionary from "./dictionary";
 import CurrencyConversionApp from "./CurrencyConversionApp"
 import JSONFormatterApp from "./JSONFormatterApp"
-++ import myApp from "./myApp";
+++ import MyApp from "./myApp";
 
 const availableApps: Array<InstantApp> = [
-++ myApp
+++ MyApp
   JSONFormatterApp,
   dictionary,
   CurrencyConversionApp,
