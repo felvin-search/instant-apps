@@ -21,7 +21,7 @@ function renderApps(query: string) {
     // TODO: This will always render the first app
     if (!!data) {
       ReactDOM.render(
-        <app.Component data={data} query={query} />,
+        <app.Component data={data} />,
         document.getElementById("instant_apps_root")
       );
       return false;
