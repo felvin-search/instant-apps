@@ -28,5 +28,5 @@ export type InstantApp = {
   description: string;
   iconUrl?: string;
   queryToData: (input: queryToDataInput) => Promise<queryToDataOutput>;
-  Component: (props: InstantAppProps) => {};
+  Component: (props: InstantAppProps) => JSX.Element;
 };
