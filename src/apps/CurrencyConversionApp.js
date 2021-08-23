@@ -284,7 +284,7 @@ const currencyNameToCurrencyCode = (currencyName) => {
   return namesToCodes[currencyName] || currencyName;
 };
 
-async function fetchRates(query) {
+async function fetchRates({ query }) {
   const { data } = await axios.get("https://api.frankfurter.app/latest");
   try {
     let { amount, from, to } = parseConversionString(query);
@@ -308,7 +308,6 @@ async function fetchRates(query) {
 
 // Accept an object, gives you more flexibility
 const CurrencyConversionApp = {
-  apiVersion: "instant-apps@v1",
   name: "Currency Convertor",
   description: "Convert currencies",
   queryToData: fetchRates,
