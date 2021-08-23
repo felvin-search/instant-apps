@@ -5,7 +5,7 @@ title: "[Bug] <INSTANT APP NAME> - <SUMMARY>"
 labels: bug
 ---
 
-## Screenshots
+## Screenshot(s)
 
 <!-- Screenshots are a great way to report bugs visually! -->
 
