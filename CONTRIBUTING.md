@@ -34,10 +34,10 @@ import JSONFormatterApp from "./JSONFormatterApp"
 ++ import myNewApp from "./myNewApp";
 
 const availableApps: Array<InstantApp> = [
+++ myNewApp
   JSONFormatterApp,
   dictionary,
   CurrencyConversionApp,
-++ myNewApp
 ];
 
 export default availableApps;
