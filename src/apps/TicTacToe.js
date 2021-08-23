@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { InstantApp } from "./types";
 
 //------------Styled Components------------
 
@@ -124,12 +123,8 @@ function calculateWinner(squares) {
   return null;
 }
 
-const MyAppComponent = (props) => {
-  return <Board />;
-};
-
 const shouldRunMyApp = async ({ query }) => {
-  const triggerQueries = ["tic tac toe"];
+  const triggerQueries = ["play tic tac toe"];
   for (const triggerQuery of triggerQueries) {
     if (query.toLowerCase() === triggerQuery) {
       return { query };
@@ -142,7 +137,7 @@ const TicTacToe = {
   name: "Tic-Tac-Toe",
   description: "Play Tic-Tac-Toe with someone or yourself",
   queryToData: shouldRunMyApp,
-  Component: MyAppComponent,
+  Component: Board,
 };
 
 export default TicTacToe;
