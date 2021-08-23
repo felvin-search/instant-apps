@@ -1,16 +1,18 @@
 /**
  * Note: Add a new import here when adding a new app.
  */
-import { InstantApp } from "./types";
-import dictionary from "./DictionaryApp";
 import CurrencyConversionApp from "./CurrencyConversionApp";
+import dictionary from "./DictionaryApp";
 import JSONFormatterApp from "./JSONFormatterApp";
+import TicTacToe from "./TicTacToe";
 import TimerApp from "./TimerApp";
+import { InstantApp } from "./types";
 
 /**
  * Note: Update me when adding a new app.
  */
 const availableApps: Array<InstantApp> = [
+  TicTacToe,
   JSONFormatterApp,
   dictionary,
   CurrencyConversionApp,
