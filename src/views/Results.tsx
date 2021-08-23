@@ -5,6 +5,7 @@ import SearchBox from "../components/SearchBox";
 import Breakpoints from "../shared/Breakpoints";
 import { Result } from "../types";
 import sampleResults from "../data/sample_results.json";
+import InstantAppRenderer from "../lib/renderer";
 
 //--------------Styled Components--------------
 
@@ -65,20 +66,22 @@ const Link = styled.div`
 //============================================
 
 function Results() {
-  const [results, setResults] = useState<Result[]>([]);
   const history = useHistory();
+  const [results, setResults] = useState<Result[]>([]);
+  const q = new URLSearchParams(window.location.search).get("q") || "";
+
+  const [query, setQuery] = useState(q);
 
   useEffect(() => {
-    console.log("Re-rendering");
     const fetchResults = async () => {
-      // Renders a sample list of results irrespective of the search query
       const q = new URLSearchParams(window.location.search).get("q") || "";
-
       if (q.length === 0) {
         // Redirect users to homepage if they directly visit the url without any q
         history.push("/");
       }
 
+      setQuery(q);
+      // Renders a sample list of results irrespective of the search query
       setResults(sampleResults.items);
     };
 
@@ -90,7 +93,7 @@ function Results() {
     <Container>
       {/* TODO: See if refs are useful and this search box shouldn't be re-rendered. */}
       <SearchBox resultsView />
-
+      <InstantAppRenderer query={query} />
       <ResultsContainer>
         {results.map((result) => (
           <ResultContainer key={result.link}>

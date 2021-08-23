@@ -34,9 +34,11 @@ cd something
 
 - Fork the repository
 - Add a js/ts file with the app.
-- Commit and send a pull request. I'll accept the PR and you are done :)
+- Commit and send a pull request!
 
 <!--- Insert a minute explainer --->
+
+Checkout our [CONTRIBUTING](./CONTRIBUTING.md) guide for more details.
 
 ## Example Snippet Apps
 
