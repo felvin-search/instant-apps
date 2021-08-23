@@ -1,24 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { InstantApp, InstantAppProps, queryToDataInput } from "./types";
 
-type SnippetAppApi = {
-  name: string;
-  id: string;
-  description: string;
-  logo: string;
-  Component: (props: RendererProps) => {};
-  queryToData?: (query: string) => {};
-};
-
-type RendererProps = {
-  data: any;
-};
-
-
-const Timer = (props: RendererProps) => {
+const Timer = (props: InstantAppProps) => {
   // const [isValidQuery, setIsValidQuery] = useState(false);
   const [minutes, setMinutes] = useState(props.data.minutes || 0);
   const [seconds, setSeconds] = useState(props.data.seconds || 0);
-  var audio = new Audio('./ring.wav');
+  var audio = new Audio("./ring.wav");
 
   useEffect(() => {
     let myInterval = setInterval(() => {
@@ -31,7 +18,7 @@ const Timer = (props: RendererProps) => {
       if (seconds === 0) {
         if (minutes === 0) {
           clearInterval(myInterval);
-          audio.play()
+          audio.play();
         } else {
           newMinutes = minutes - 1;
           newSeconds = 59;
@@ -92,11 +79,11 @@ const countdownString = (minutes: number, seconds: number): string => {
   return `${minutes} m  ${seconds} s`;
 };
 
-const parseTimerQuery = (query : string) => {
+const parseTimerQuery = async ({ query }: queryToDataInput) => {
   // Trigger timer only if the query string
   // contains the word "timer"
-  const triggerWord = "timer"
-  if(!query.includes(triggerWord)) {
+  const triggerWord = "timer";
+  if (!query.includes(triggerWord)) {
     return;
   }
 
@@ -108,26 +95,21 @@ const parseTimerQuery = (query : string) => {
      * '10 seconds timer', '1 hour timer', '5 mins timer', etc.
      * @returns Number of seconds
      */
-      // TODO(orkohunter): Support words like 'five minutes'
-      const queryWithoutTrigger = query.replace("timer", "")
-      const durationInSeconds = convertNaturalStringToDate(query);
-      const minutes = Math.floor(durationInSeconds / 60);
-      const seconds = durationInSeconds % 60;
-      console.log({minutes, seconds})
-      return {minutes, seconds}
-    } catch (err) {
-      console.log("Error in Timer Snippets App");
-      console.log(err);
-      return;
-    }
-  return;
-}
+    // TODO(orkohunter): Support words like 'five minutes'
+    const queryWithoutTrigger = query.replace("timer", "");
+    const durationInSeconds = convertNaturalStringToDate(query);
+    const minutes = Math.floor(durationInSeconds / 60);
+    const seconds = durationInSeconds % 60;
+    console.log({ minutes, seconds });
+    return { minutes, seconds };
+  } catch (err) {
+    return;
+  }
+};
 
-const TimerApp: SnippetAppApi = {
+const TimerApp: InstantApp = {
   name: "Timer App",
-  id: "timer_app",
   description: "Set an instant timer using search. e.g. 15 minutes timer",
-  logo: "",
   queryToData: parseTimerQuery,
   Component: Timer,
 };

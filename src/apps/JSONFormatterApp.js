@@ -124,7 +124,6 @@ async function shouldTriggerJSONFormatter({ query }) {
 }
 
 const JSONFormatterApp = {
-  apiVersion: "instant-apps@v1",
   name: "JSONFormatter",
   description:
     "Formats the JSON with right indentation for easier human consumption",

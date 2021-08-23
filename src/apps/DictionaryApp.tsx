@@ -128,7 +128,6 @@ async function queryToData({
  * Definition of the instant app.
  */
 const DictionaryApp: InstantApp = {
-  apiVersion: "instant-apps@v1",
   name: "Dictionary App",
   description: "A simple dictionary app to define an english word.",
   iconUrl:

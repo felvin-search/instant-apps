@@ -12,18 +12,18 @@ export type queryToDataOutput = undefined | boolean | Array<any> | any;
 
 /**
  * @param data Successful response of how queryToData is implemented by the app.
- * @param query Search query of the user.
  */
-export type InstantAppProps = { data: queryToDataOutput; query: string };
+export type InstantAppProps = { data: queryToDataOutput };
 
 /**
  * Interface for a snippet app.
- * @param queryToData Function which acts as an entrypoint of the app, and is used to
+ * @param apiVersion (Optional) Default is `instant-apps@v1`
+ * @param queryToData Function which acts as an entry point of the app, and is used to
  * convert a search query into data that could be rendered for the user.
  * @param Component UI logic of the Instant app.
  */
 export type InstantApp = {
-  apiVersion: string;
+  apiVersion?: string;
   name: string;
   description: string;
   iconUrl?: string;
