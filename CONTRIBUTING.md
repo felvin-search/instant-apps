@@ -21,6 +21,7 @@ This should start the search website sandbox with all the plugins loaded!
 ## Creating a new app
 
 ### 1. Run the generator script
+`yarn create-app`
 
 ### 2. Import
 
@@ -31,10 +32,10 @@ Import your app inside `src/apps/index.ts` and update the `availableApps` list.
 import dictionary from "./dictionary";
 import CurrencyConversionApp from "./CurrencyConversionApp"
 import JSONFormatterApp from "./JSONFormatterApp"
-++ import myNewApp from "./myNewApp";
+++ import myApp from "./myApp";
 
 const availableApps: Array<InstantApp> = [
-++ myNewApp
+++ myApp
   JSONFormatterApp,
   dictionary,
   CurrencyConversionApp,
@@ -43,8 +44,9 @@ const availableApps: Array<InstantApp> = [
 export default availableApps;
 ```
 
-### 3. Restart
+### 3. Start
 
-Kill `yarn start` and run it again. And searching to test out your app!
+Run `yarn start` to start the app. [Search "my app" to test out your first felvin instant app!](http://localhost:3000/search?q=my%20app).
+Edit `src/apps/myApp.js` to make it whatever you want. Happy Hacking! 🚀
 
 <!-- Note: Maybe restart isn't needed because of hot reloading. To be verified. -->
