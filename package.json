@@ -1,8 +1,12 @@
 {
   "name": "@felvin-search/apps",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
+  "publishConfig": {
+    "access": "public",
+    "main": "src/apps/index.ts"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
