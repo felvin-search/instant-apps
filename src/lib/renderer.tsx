@@ -2,13 +2,14 @@ import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import apps from "../apps";
 import styled from "styled-components";
+
 const InstantAppContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
   width: 95%;
   justify-content: center;
-  align-items: center
+  align-items: center;
 `;
 
 function renderApps(query: string) {
@@ -48,10 +49,11 @@ const InstantAppRenderer = (props: RendererProps) => {
     renderApps(props.query);
   }, [props.query]);
 
-  return <InstantAppContainer>
-    <div id="instant_apps_root"></div>
+  return (
+    <InstantAppContainer>
+      <div id="instant_apps_root"></div>
     </InstantAppContainer>
-  ;
+  );
 };
 
 export default InstantAppRenderer;
