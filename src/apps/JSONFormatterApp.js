@@ -81,7 +81,7 @@ const FormattedJSONContainer = styled.div`
 
 //==============================================
 
-function PrettifyJSON(props) {
+function PrettifyJSON() {
   const [jsonData, setJsonData] = useState();
   const [copy, setCopy] = useState(false);
 
@@ -114,20 +114,20 @@ function PrettifyJSON(props) {
   );
 }
 
-async function shouldTriggerJSONFormatter(query) {
-  const triggerQueries = ["json format", "format json"]
-  for(const triggerQuery of triggerQueries){
+async function shouldTriggerJSONFormatter({ query }) {
+  const triggerQueries = ["json format", "format json"];
+  for (const triggerQuery of triggerQueries) {
     if (query.toLowerCase() === triggerQuery) {
       return true;
     }
   }
-
 }
 
 const JSONFormatterApp = {
+  apiVersion: "instant-apps@v1",
   name: "JSONFormatter",
-  description: "Formats the JSON with right indentation for easier human consumption",
-  logo: "",
+  description:
+    "Formats the JSON with right indentation for easier human consumption",
   queryToData: shouldTriggerJSONFormatter,
   Component: PrettifyJSON,
 };

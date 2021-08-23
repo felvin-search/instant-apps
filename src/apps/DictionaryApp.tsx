@@ -1,5 +1,10 @@
-import React from "react";
 import styled from "styled-components";
+import {
+  InstantApp,
+  InstantAppProps,
+  queryToDataInput,
+  queryToDataOutput,
+} from "./types";
 
 const RowContainer = styled.div`
   display: flex;
@@ -31,7 +36,6 @@ const DictionaryContainer = styled.div`
 `;
 
 function Definition(props) {
-  // console.log(props);
   const definition = props.data;
   return (
     <DefinitionContainer>
@@ -46,7 +50,10 @@ function Definition(props) {
   );
 }
 
-function Dictionary(props) {
+/**
+ * The UI logic of the app.
+ */
+function Component(props: InstantAppProps) {
   const data = props.data;
 
   return (
@@ -62,10 +69,10 @@ function Dictionary(props) {
       {data.meanings &&
         data.meanings.map((m, index) => {
           return (
-            <ColContainer>
+            <ColContainer key={index}>
               <em>{m.partOfSpeech}</em>
               {m.definitions.map((d) => (
-                <Definition data={d} />
+                <Definition data={d} key={d} />
               ))}
             </ColContainer>
           );
@@ -82,9 +89,11 @@ function cleanQuery(query: string): string {
   return newQuery;
 }
 
-async function queryToData(query: string) {
+async function queryToData({
+  query,
+}: queryToDataInput): Promise<queryToDataOutput> {
   // If the query does not contain the following words, do not trigger the app
-  // define, meaning
+  // `define`, `meaning`
   let triggered = false;
   triggerWords.forEach((word) => {
     if (query.toLowerCase().split(" ").includes(word)) {
@@ -92,7 +101,6 @@ async function queryToData(query: string) {
     }
   });
 
-  console.log("triggered", triggered);
   if (!triggered) {
     return undefined;
   }
@@ -119,14 +127,14 @@ async function queryToData(query: string) {
 /**
  * Definition of the instant app.
  */
-const DictionaryApp = {
+const DictionaryApp: InstantApp = {
   apiVersion: "instant-apps@v1",
   name: "Dictionary App",
   description: "A simple dictionary app to define an english word.",
   iconUrl:
     "https://upload.wikimedia.org/wikipedia/commons/4/4b/Books-aj.svg_aj_ashton_01.svg",
-  queryToData: queryToData,
-  Component: Dictionary,
+  queryToData,
+  Component,
 };
 
 export default DictionaryApp;

@@ -14,17 +14,14 @@ const InstantAppContainer = styled.div`
 
 function renderApps(query: string) {
   apps.every(async (app) => {
-    console.log("checking render for app", app);
     // Question: Not all apps need to return data.
     // TODO: Clearly define what is success and what is failure criteria for these apps somewhere.
-    // @ts-ignore
-    const data = await app.queryToData(query);
+    const data = await app.queryToData({ query });
     console.log("data from dictionary app", data);
     // TODO: This will always render the first app
     if (!!data) {
       ReactDOM.render(
-        // @ts-ignore
-        <app.Component data={data} />,
+        <app.Component data={data} query={query} />,
         document.getElementById("instant_apps_root")
       );
       return false;

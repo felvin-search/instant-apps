@@ -1,14 +1,19 @@
 /**
  * Note: Add a new import here when adding a new app.
  */
-import dictionary from "./dictionary";
-import CurrencyConversionApp from "./CurrencyConversionApp"
-import JSONFormatterApp from "./JSONFormatterApp"
+import dictionary from "./DictionaryApp";
+import CurrencyConversionApp from "./CurrencyConversionApp";
+import JSONFormatterApp from "./JSONFormatterApp";
+import { InstantApp } from "./types";
 // import timer from "./timer";
 
 /**
  * Note: Update me when adding a new app.
  */
-const availableApps = [JSONFormatterApp, dictionary, CurrencyConversionApp];
+const availableApps: Array<InstantApp> = [
+  JSONFormatterApp,
+  dictionary,
+  CurrencyConversionApp,
+];
 
 export default availableApps;

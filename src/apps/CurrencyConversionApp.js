@@ -92,7 +92,7 @@ const RowContainer = styled.div`
 
 //===========================================
 
-function CurrenyConvertor(props) {
+function CurrencyConvertor(props) {
   const [inputCurrency, setInputCurrency] = useState(
     props.data.inputCurrency || "USD"
   );
@@ -308,12 +308,11 @@ async function fetchRates(query) {
 
 // Accept an object, gives you more flexibility
 const CurrencyConversionApp = {
+  apiVersion: "instant-apps@v1",
   name: "Currency Convertor",
-  id: "currency_convertor",
   description: "Convert currencies",
-  logo: "",
   queryToData: fetchRates,
-  Component: CurrenyConvertor,
+  Component: CurrencyConvertor,
 };
 
 export default CurrencyConversionApp;
