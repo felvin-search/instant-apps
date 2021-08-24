@@ -7,6 +7,7 @@ import Breakpoints from "../shared/Breakpoints";
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+  position: relative;
 
   min-height: 5.5rem;
   background-color: #f9f9f9;
