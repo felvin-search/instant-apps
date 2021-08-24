@@ -1,7 +1,7 @@
 {
   "name": "@felvin-search/apps",
   "license": "MIT",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -67,5 +67,9 @@
     "ts-loader": "^9.2.5",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
-  }
+  },
+  "files": [
+    "dist",
+    "dist-types"
+  ]
 }
