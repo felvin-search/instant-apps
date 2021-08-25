@@ -1,8 +1,13 @@
 {
   "name": "@felvin-search/apps",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -22,7 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.0",
-    "typescript": "^4.1.2",
+    "typescript": "^4.3.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -30,7 +35,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "create-app": "./utils/create_sample_app.sh"
+    "create-app": "./utils/create_sample_app.sh",
+    "publish-apps": "tsc -d && yarn publish"
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
