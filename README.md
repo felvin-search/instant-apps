@@ -17,11 +17,9 @@
 
 Instant apps are the small interactive cards which you get for your search queries.
 
-> Search box is now an app store.
-
 We can build instant apps for all kinds of use cases like dictionary, checking football scores, stock prices or notes from your notion or even search history from company slack or anything!
 
-Try them out live - [neera.ai](https://neera.ai)
+Try them out live - [felvin.com](https://felvin.com)
 
 ## Contributing
 
