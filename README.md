@@ -4,10 +4,10 @@
 
 <!-- Concern: Does this convey that these apps are running on a website? Gif is  -->
 
-|                                                                                                                   |                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| [<img  alt="snippetApp" src="./assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)  | [<img  alt="snippetApp" src="./assets/readme/json-example.png">](https://felvin.com/search?q=format+json)       |
-| [<img  alt="snippetApp" src="./assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="snippetApp" src="./assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer) |
+|                                                                                                                                                                                             |                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<img  alt="snippetApp" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)  | [<img  alt="snippetApp" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/json-example.png">](https://felvin.com/search?q=format+json)       |
+| [<img  alt="snippetApp" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="snippetApp" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer) |
 
 ## How to use?
 
