@@ -6,10 +6,12 @@
 
 |                                                                                                                   |                                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| [<img  alt="snippetApp" src="./assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="snippetApp" src="./assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer) |
 | [<img  alt="snippetApp" src="./assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)  | [<img  alt="snippetApp" src="./assets/readme/json-example.png">](https://felvin.com/search?q=format+json)       |
+| [<img  alt="snippetApp" src="./assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="snippetApp" src="./assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer) |
 
-[checkout more apps]() or even [create one for yourself]()!
+## How to use?
+
+[felvin.com](https://felvin.com)
 
 ## What are instant apps?
 
@@ -21,13 +23,14 @@ We can build instant apps for all kinds of use cases like dictionary, checking f
 
 Try them out live - [neera.ai](https://neera.ai)
 
-## Who can create instant apps?
-
-You! Neera is a platform - create apps for yourself as well as others.
-
 ## Contributing
 
-Try creating a new app, it's fun and it's a new kind of superpower. 😎
+There are many ways in which you can contribute to the project
+
+- Try creating a new app, it's fun and it's a new kind of superpower. 😎
+- Take a look at [existing suggestions](https://github.com/felvin-search/instant-apps/issues?q=is%3Aopen+is%3Aissue+label%3Aproposal) of new apps and implement one!
+- [Suggest a new instant app](https://github.com/felvin-search/instant-apps/issues/new/choose), anything useful for you is a valid suggestion.
+- Add features to existing apps. See all [open issues](https://github.com/felvin-search/instant-apps/issues?q=is%3Aopen+is%3Aissue).
 
 <!--
 ```sh
@@ -36,31 +39,36 @@ cd something
 ```
  -->
 
-You could also contribute by suggesting a new instant app!
+## How to create a new app?
 
-## How to create a Neera snippet app?
+Anyone can create an instant app! Felvin Search is a platform - create apps for yourself, as well as others.
 
 - Fork the repository
-- Add a js/ts file with the app.
-- Commit and send a pull request!
+- Run `./utils/create_sample_app.sh`.
+- Update your new app, commit and send a pull request!
 
 <!--- Insert a minute explainer --->
 
 Checkout our [CONTRIBUTING](./CONTRIBUTING.md) guide for more details.
 
-## Example Snippet Apps
-
-- [Dictionary App](https://github.com/hargup/neera-snippet-apps/blob/master/src/SnippetApps/DictionaryApp.js)
-- [Currency Conversion App](https://github.com/hargup/neera-snippet-apps/blob/master/src/SnippetApps/CurrencyConversionApp.js)
-- [JSON Formatter App](https://github.com/Neera-AI/neera-snippet-apps/blob/master/src/SnippetApps/JSONFormatterApp.js)
-
 ## Anatomy of Snippet App
 
-A snippet app is a Javascript object with following keys:
+A snippet app is a Javascript object with following schema:
 
-- `name`: String -> Name of the snippet app
-- `id`: String
-- `description`: String
-- `logo`: Link to a PNG/SVG File
-- `dataFetcher`: A function with input `{query: "<user query>"}` and ouput is any data you want to render.
-- `renderer`: Its a React component with the data from `dataFetcher` passed a into `props.data`
+- `name`
+- `description`
+- `queryToData`: A function which takes a search query and converts into any data which could be displayed.
+- `Component`: The React component of the app. The data from `queryToData` is passed as a prop.
+
+Read more about the [architecture](https://github.com/felvin-search/docs/blob/master/rfcs/001_snippet_apps.md).
+
+## Available Apps
+
+<!-- Expand this with screenshots and example queries, as well as author(s). Write a script to generate this section automatically. -->
+
+See [src/apps/](src/apps).
+
+## Community
+
+- [Discord chatroom](https://discord.gg/2W8PgyaxHA) - Join us on Discord to engage.
+- Give us a star ⭐️ - if you appreciate what we are doing, we would love a star on GitHub ❤️
