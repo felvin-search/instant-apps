@@ -47,7 +47,7 @@ const InstantAppRenderer = (props: RendererProps) => {
   }, [props.query]);
 
   return (
-    <InstantAppContainer>
+    <InstantAppContainer key={props.query}>
       <div id="instant_apps_root"></div>
     </InstantAppContainer>
   );

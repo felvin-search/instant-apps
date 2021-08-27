@@ -75,6 +75,8 @@ function Results() {
   useEffect(() => {
     const fetchResults = async () => {
       const q = new URLSearchParams(window.location.search).get("q") || "";
+      document.title = `${q} - Felvin Search` || "Felvin Search";
+
       if (q.length === 0) {
         // Redirect users to homepage if they directly visit the url without any q
         history.push("/");
@@ -93,8 +95,8 @@ function Results() {
     <Container>
       {/* TODO: See if refs are useful and this search box shouldn't be re-rendered. */}
       <SearchBox resultsView />
-      <InstantAppRenderer query={query} />
       <ResultsContainer>
+        <InstantAppRenderer query={query} />
         {results.map((result) => (
           <ResultContainer key={result.link}>
             <Title href={result.link} target="_blank" rel="noopener noreferrer">

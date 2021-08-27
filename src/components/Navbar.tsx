@@ -36,6 +36,17 @@ const GitHubIcon = styled.svg`
   right: -0.5rem;
 `;
 
+const TriangularDiv = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+  clip-path: polygon(0px 0px, 100% 0, 100% 100%);
+`;
+
 //======================================
 
 function Navbar() {
@@ -50,6 +61,7 @@ function Navbar() {
         rel="noreferrer noopener"
       >
         <GitHubIcon as={GitHub} />
+        <TriangularDiv></TriangularDiv>
       </Link>
     </Container>
   );
