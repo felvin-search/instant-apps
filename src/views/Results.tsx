@@ -75,7 +75,7 @@ function Results() {
   useEffect(() => {
     const fetchResults = async () => {
       const q = new URLSearchParams(window.location.search).get("q") || "";
-      document.title = q || "Felvin Search";
+      document.title = `${q} - Felvin Search` || "Felvin Search";
 
       if (q.length === 0) {
         // Redirect users to homepage if they directly visit the url without any q
