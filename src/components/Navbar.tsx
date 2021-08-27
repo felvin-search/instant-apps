@@ -37,16 +37,14 @@ const GitHubIcon = styled.svg`
 `;
 
 const TriangularDiv = styled.div`
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 7rem;
-    height: 7rem;
-    transform-origin: 9.5rem 6rem;
-    transform: rotate(45deg);
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+  clip-path: polygon(0px 0px, 100% 0, 100% 100%);
 `;
 
 //======================================
