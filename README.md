@@ -6,8 +6,8 @@
 
 |                                                                                                                                                                                             |                                                                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<img  alt="snippetApp" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)  | [<img  alt="snippetApp" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/json-example.png">](https://felvin.com/search?q=format+json)       |
-| [<img  alt="snippetApp" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="snippetApp" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer) |
+| [<img  alt="currency instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)  | [<img  alt="json formatter instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/json-example.png">](https://felvin.com/search?q=format+json)       |
+| [<img  alt="dictionary instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="timer instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer) |
 
 ## How to use?
 
@@ -49,9 +49,9 @@ Anyone can create an instant app! Felvin Search is a platform - create apps for 
 
 Checkout our [CONTRIBUTING](./CONTRIBUTING.md) guide for more details.
 
-## Anatomy of Snippet App
+## Anatomy of Instant App
 
-A snippet app is a Javascript object with following schema:
+A instant app is a Javascript object with following schema:
 
 - `name`
 - `description`
