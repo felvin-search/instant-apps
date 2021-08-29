@@ -41,6 +41,11 @@ const currencies = [
 
 //------------Styled Components-----------------
 
+const Result = styled.div`
+  padding: 0 0 20px 0;
+  text-align: center;
+`;
+
 const Input = styled.input`
   color: #363636;
   background-color: #fff;
@@ -127,6 +132,7 @@ function CurrencyConvertor(props) {
 
   return (
     <ColContainer>
+    <Result>{outputValue} {outputCurrency}</Result>
       <RowContainer>
         <Input
           type="number"
