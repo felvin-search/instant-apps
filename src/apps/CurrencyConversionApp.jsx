@@ -41,7 +41,8 @@ const currencies = [
 
 //------------Styled Components-----------------
 
-const Result = styled.div`
+const OutputString = styled.div`
+  font-size: medium;
   padding: 0 0 20px 0;
   text-align: center;
 `;
@@ -97,6 +98,10 @@ const RowContainer = styled.div`
 
 //===========================================
 
+function ResultString({inputValue, inputCurrency, outputValue, outputCurrency}){
+  return <OutputString>{inputValue} {currencyLabelToCurrencyName(inputCurrency)} equals <b>{outputValue} {currencyLabelToCurrencyName(outputCurrency)}</b></OutputString>
+}
+
 function CurrencyConvertor(props) {
   const [inputCurrency, setInputCurrency] = useState(
     props.data.inputCurrency || "USD"
@@ -132,7 +137,7 @@ function CurrencyConvertor(props) {
 
   return (
     <ColContainer>
-    <Result>{outputValue} {outputCurrency}</Result>
+    <ResultString inputValue={inputValue} inputCurrency={inputCurrency} outputValue={outputValue} outputCurrency={outputCurrency}/>
       <RowContainer>
         <Input
           type="number"
@@ -185,6 +190,10 @@ function CurrencyConvertor(props) {
       </RowContainer>
     </ColContainer>
   );
+}
+
+const currencyLabelToCurrencyName = (currencyLabel) => {
+  return currencies.find(item => (item.value === currencyLabel))?.label
 }
 
 const parseConversionString = (query) => {
