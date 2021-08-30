@@ -43,7 +43,7 @@ const currencies = [
 
 const OutputString = styled.div`
   font-size: medium;
-  padding: 0 0 20px 0;
+  padding: 0 0 1.25rem 0;
   text-align: center;
 `;
 
