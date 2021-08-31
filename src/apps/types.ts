@@ -23,6 +23,7 @@ export type InstantAppProps = { data: queryToDataOutput };
  * @param Component UI logic of the Instant app.
  */
 export type InstantApp = {
+  id?: string;
   apiVersion?: string;
   name: string;
   description: string;
