@@ -124,6 +124,7 @@ async function shouldTriggerJSONFormatter({ query }) {
 }
 
 const JSONFormatterApp = {
+  id: "jsonformatter",
   name: "JSONFormatter",
   description:
     "Formats the JSON with right indentation for easier human consumption",

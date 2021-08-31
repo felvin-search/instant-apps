@@ -3,7 +3,7 @@
  */
 import CurrencyConversionApp from "./currency";
 import dictionary from "./dictionary";
-import JSONFormatterApp from "./JSONFormatterApp";
+import JSONFormatterApp from "./jsonformatter";
 import TicTacToe from "./TicTacToe";
 import TimerApp from "./TimerApp";
 import { InstantApp } from "./types";
