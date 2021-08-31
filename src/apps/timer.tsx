@@ -108,6 +108,7 @@ const parseTimerQuery = async ({ query }: queryToDataInput) => {
 };
 
 const TimerApp: InstantApp = {
+  id: "timer",
   name: "Timer App",
   description: "Set an instant timer using search. e.g. 15 minutes timer",
   queryToData: parseTimerQuery,
