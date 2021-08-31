@@ -4,7 +4,7 @@
 import CurrencyConversionApp from "./currency";
 import dictionary from "./dictionary";
 import JSONFormatterApp from "./jsonformatter";
-import TicTacToe from "./TicTacToe";
+import TicTacToe from "./tictactoe";
 import TimerApp from "./TimerApp";
 import { InstantApp } from "./types";
 

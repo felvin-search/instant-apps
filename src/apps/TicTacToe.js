@@ -134,6 +134,7 @@ const shouldRunMyApp = async ({ query }) => {
 };
 
 const TicTacToe = {
+  id: "tictactoe",
   name: "Tic-Tac-Toe",
   description: "Play Tic-Tac-Toe with someone or yourself",
   queryToData: shouldRunMyApp,
