@@ -323,6 +323,7 @@ async function fetchRates({ query }) {
 
 // Accept an object, gives you more flexibility
 const CurrencyConversionApp = {
+  id: "currency",
   name: "Currency Convertor",
   description: "Convert currencies",
   queryToData: fetchRates,
