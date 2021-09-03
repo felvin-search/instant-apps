@@ -1,6 +1,5 @@
 import Logo from "./Logo";
 import styled from "styled-components";
-import Breakpoints from "../shared/Breakpoints";
 
 //-----------Styled Components-------------
 
@@ -85,8 +84,6 @@ function Footer() {
           </Link>
         </li>
       </List>
-
-      <Icon as={Logo.Text} />
     </Container>
   );
 }
