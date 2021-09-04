@@ -1,13 +1,23 @@
-# Felvin Search - Instant Apps
+<div align="center">
+<!-- Logo -->
+<img height="100" src="/.github/assets/readme/logo_large.png" alt="Logo" />
+<h1>Felvin Search</h1>
 
-> Your search box is now an app store! 🎉 - [Felvin](https://felvin.com)
+<!-- Badges -->
+
+<a href="https://discord.gg/2W8PgyaxHA"><img src="https://img.shields.io/discord/877966745699246140?color=%237289DA&label=Discord&logo=discord&logoColor=%237289DA&style=flat-square" alt="Discord" /></a>
+<a href="https://github.com/felvin-search/instant-apps/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22"><img alt="GitHub issues by-label" src="https://img.shields.io/github/issues-raw/felvin-search/instant-apps/good%20first%20issue?color=green&label=Good%20first%20issues&logo=github&style=flat-square"></a>
+
+Your search box is now an app store! 🎉 - [Felvin](https://felvin.com)
+
+</div>
 
 <!-- Concern: Does this convey that these apps are running on a website? Gif is  -->
 
-|                                                                                                                                                                                             |                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<img  alt="currency instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)  | [<img  alt="json formatter instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/json-example.png">](https://felvin.com/search?q=format+json)       |
-| [<img  alt="dictionary instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="timer instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer) |
+|                                                                                                                                                                                                         |                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<img  alt="currency instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)    | [<img  alt="json formatter instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/json-example.png">](https://felvin.com/search?q=format+json) |
+| [<img  alt="dictionary instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="timer instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer)    |
 
 ## How to use?
 
