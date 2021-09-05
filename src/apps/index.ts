@@ -6,6 +6,7 @@ import dictionary from "./DictionaryApp";
 import JSONFormatterApp from "./JSONFormatterApp";
 import TicTacToe from "./TicTacToe";
 import TimerApp from "./TimerApp";
+import LatexRenderer from "./LatexRender"
 import { InstantApp } from "./types";
 
 /**
@@ -17,6 +18,7 @@ const availableApps: Array<InstantApp> = [
   dictionary,
   CurrencyConversionApp,
   TimerApp,
+  LatexRenderer
 ];
 
 export default availableApps;
