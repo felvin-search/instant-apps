@@ -1,12 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { InstantApp, InstantAppProps, queryToDataInput } from "./types";
 import { BlockMath } from 'react-katex';
 import styled from "styled-components";
 import 'katex/dist/katex.min.css';
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+import html2pdf from 'html-to-pdf-js'
 
 const Container = styled.div`
+    // width: 100%;
+    width: 500px;
+    min-height:300px;
+    // margin:20px 0;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @media only screen and (max-width:900px){
+        width:100%;
+    }
+}
 `;
 
 const InputField = styled.textarea`
@@ -19,8 +29,6 @@ const InputField = styled.textarea`
     }
 `;
 
-const Alert = styled.div`
-`;
 
 const Button = styled.button`
     border: none;
@@ -35,7 +43,31 @@ const Button = styled.button`
         color:white;
     }
 `;
+const ErrorButton = styled.button`
+    border: none;
+    background: none;
+    border: 1px solid red;
+    padding: 6px 20px;
+    border-radius: 52px;
+    cursor:pointer;
+    margin:20px 0;
 
+    &:active{
+        background:red;
+        color:white;
+    }
+`;
+
+const ErrorHandler = (props) => {
+    const [showError, setShowError] = useState(true)
+    return (
+        <>
+            <ErrorButton onClick={() => { setShowError(!showError) }}>{showError ? `Hide` : `Show`} error</ErrorButton>
+            {showError && <p style={{ fontSize: '1rem' }}>{props.error.message}</p>}
+        </>
+    )
+
+}
 
 const LatexRendererComponent = (props: InstantAppProps) => {
     const [content, setContent] = useState("c = \\pm \\sqrt{a^2 + b^2}")
@@ -44,35 +76,46 @@ const LatexRendererComponent = (props: InstantAppProps) => {
     }
     const downloadLatex = (e) => {
         const filename = 'latex-renderer-felvin-search.pdf';
-        html2canvas(document.querySelector('#rendererElement'),
-            { scale: 5 }
-        ).then(canvas => {
-            let pdf = new jsPDF();
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 10, 215, 29);
-            pdf.save(filename);
-        });
+        var element = document.getElementById('rendererElement');
+        var opt = {
+            margin: 1,
+            filename: filename,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        // New Promise-based usage:
+        html2pdf().set(opt).from(element).save();
+
     }
 
     return (
-        <Container>
-            <h2>Enter your latex string below to render 👇</h2>
-            <InputField onChange={captureInput} placeholder="c = \pm \sqrt{a^2 + b^2}" />
-            <div
-                id="rendererElement"
-            >
-                <BlockMath
-                    errorColor={'#cc0000'}
-                >{content}</BlockMath>
+        <div style={{ margin: "20px 0px" }}>
+            <Container>
+                <h2>Enter LaTeX below 👇</h2>
+                <InputField onChange={captureInput} placeholder="c = \pm \sqrt{a^2 + b^2}" />
+                <div
+                    id="rendererElement"
+                >
+                    <BlockMath
+                        errorColor={'#cc0000'}
+                        renderError={(error) => {
+                            return <ErrorHandler error={error} />
+                        }}
+                    >{content}</BlockMath>
 
-            </div>
+                </div>
+            </Container>
             {content.length > 0 && <Button onClick={downloadLatex} title="This is still experimental">📃 download</Button>}
-        </Container>)
+        </div>
+    )
 };
 
 
 const parseLatexQuery = async ({ query }: queryToDataInput) => {
     const triggerWord = "latex";
-    if (!query.includes(triggerWord)) {
+    if (!query.toLowerCase().includes(triggerWord)) {
         return;
     }
     return { query }
