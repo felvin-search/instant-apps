@@ -48,7 +48,7 @@ const LatexRendererComponent = (props: InstantAppProps) => {
             { scale: 5 }
         ).then(canvas => {
             let pdf = new jsPDF();
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 215, 29);
+            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 10, 215, 29);
             pdf.save(filename);
         });
     }
