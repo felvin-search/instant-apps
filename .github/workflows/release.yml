@@ -1,8 +1,9 @@
 name: Publish package on new release
 
 on:
-  release:
-    types: [published]
+  push
+  # release:
+  #   types: [published]
 
 jobs:
   main:
@@ -12,7 +13,7 @@ jobs:
         with: 
           token: ${{secrets.PAT}}
       - run: |
-          yarn version --minor
+          yarn version --patch
           git config user.name sahil-shubham
           git config user.email sahil.shubham2000@gmail.com
           git add .
