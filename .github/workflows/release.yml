@@ -13,9 +13,9 @@ jobs:
         with: 
           token: ${{secrets.PAT}}
       - run: |
-          yarn version --patch
           git config user.name sahil-shubham
           git config user.email sahil.shubham2000@gmail.com
+          yarn version --patch
           git add .
           git commit -m "version bump;" 
           git push
