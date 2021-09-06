@@ -76,6 +76,12 @@ Read more about the [architecture](https://github.com/felvin-search/docs/blob/ma
 
 See [src/apps/](src/apps).
 
+## How do releases take place?
+
+All the instant apps are published to npm registry [here](https://www.npmjs.com/package/@felvin-search/apps). Currently, we have an action setup which bumps up the package version, commits the tag and publishes the release.
+
+These are minor releases i.e. `v0.3.0` -> `v0.4.0`
+
 ## Community
 
 - [Discord chatroom](https://discord.gg/2W8PgyaxHA) - Join us on Discord to engage.
