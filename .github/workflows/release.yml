@@ -1,8 +1,8 @@
-name: Publish package on new release
+name: Publish package at midnight everyday 
 
 on:
-  release:
-    types: [published]
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   main:
