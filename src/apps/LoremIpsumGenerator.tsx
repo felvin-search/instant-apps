@@ -86,14 +86,6 @@ const Output = styled.div`
   max-height: 20rem;
   overflow-y: scroll;
   padding: 1rem 1.5rem;
-
-  background: repeating-linear-gradient(
-    -45deg,
-    #fff,
-    #fff 8px,
-    #f4f6f8 8px,
-    #f4f6f8 16px
-  );
 `;
 
 //========================================
