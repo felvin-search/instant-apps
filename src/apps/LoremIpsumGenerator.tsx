@@ -2,6 +2,7 @@ import { InstantApp } from "./types";
 import styled from "styled-components";
 import { useState } from "react";
 import { loremIpsum } from "lorem-ipsum";
+import * as Icon from "react-feather";
 
 //-----------Styled Components------------
 
@@ -21,21 +22,18 @@ const SettingsContainer = styled.div`
   justify-content: space-between;
 
   padding: 1rem;
-
   border-bottom: 3px solid #d3dbe4;
   background-color: #f4f6f8;
 `;
 
 const Input = styled.input`
   width: 4rem;
-  padding: 0.5rem;
   margin: 0 1rem 0 0;
   padding: 0.7rem;
 
   outline: none;
   border: 3px solid #d3dbe4;
   border-radius: 0.375em;
-  box-shadow: none;
   background-color: #ffffff;
   color: #7b8898;
 
@@ -43,7 +41,6 @@ const Input = styled.input`
   font-size: 14px;
   line-height: 1.25rem;
   font-weight: 700;
-  text-transform: uppercase;
 `;
 
 const Select = styled.select`
@@ -57,7 +54,6 @@ const Select = styled.select`
   border: 3px solid #d3dbe4;
   border-radius: 0.375rem;
 
-  box-shadow: none;
   background-color: #ffffff;
   color: #7b8898;
 
@@ -68,32 +64,29 @@ const Select = styled.select`
   text-transform: uppercase;
 `;
 
-const Option = styled.option<{ selected: boolean }>`
+const Option = styled.option`
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 0.3rem;
-  padding: 1rem 1rem 0.875rem;
+  padding: 1rem;
   margin: 0 0.75rem;
 `;
 
-const Button = styled.button`
+const CopyButton = styled.button`
   cursor: pointer;
   color: #fff;
   background-color: #ff6a67;
 
   border: none;
   border-radius: 0.3rem;
-  padding: 1rem 1rem 0.875rem;
-
-  font-size: 14px;
-  line-height: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  padding: 0.7rem 0.65rem;
 `;
 
 const Output = styled.div`
-  position: relative;
-  padding: 1em 1.5em;
+  max-height: 20rem;
+  overflow-y: scroll;
+  padding: 1rem 1.5rem;
+
   background: repeating-linear-gradient(
     -45deg,
     #fff,
@@ -101,22 +94,33 @@ const Output = styled.div`
     #f4f6f8 8px,
     #f4f6f8 16px
   );
-  background-size: auto;
-  background-size: 180px 180px;
 `;
 
 //========================================
 
 function TextGenerator() {
+  const [numCount, setNumCount] = useState("1");
+  const [copy, setCopy] = useState(false);
   const [selectedType, setSeletedType] = useState<
     "words" | "sentences" | "paragraphs"
   >("words");
-  const [numCount, setNumCount] = useState("1");
 
   const handleTypeChange = (typeName: "words" | "sentences" | "paragraphs") => {
     if (selectedType != typeName) {
       setSeletedType(typeName);
     }
+  };
+
+  const handleCopy = (clipboard) => {
+    var copyText = document.getElementById("lorem-ipsum");
+
+    clipboard.writeText(copyText.innerText).then(() => {
+      setCopy(true);
+
+      setTimeout(() => {
+        setCopy(false);
+      }, 2000);
+    });
   };
 
   return (
@@ -129,37 +133,30 @@ function TextGenerator() {
             placeholder="1"
             value={numCount}
             onChange={(e) => {
+              // This is to ensure that only positive integers are assigned
               e.target.value.match(/[1-9][0-9]*/)
                 ? setNumCount(e.target.value.match(/[1-9][0-9]*/)[0])
                 : setNumCount("0");
             }}
           />
 
-          <Select>
-            <Option
-              selected={selectedType === "words"}
-              onClick={() => handleTypeChange("words")}
-            >
-              Words
-            </Option>
-            <Option
-              selected={selectedType === "sentences"}
-              onClick={() => handleTypeChange("sentences")}
-            >
+          <Select defaultValue={selectedType}>
+            <Option onClick={() => handleTypeChange("words")}>Words</Option>
+            <Option onClick={() => handleTypeChange("sentences")}>
               Sentences
             </Option>
-            <Option
-              selected={selectedType === "paragraphs"}
-              onClick={() => handleTypeChange("paragraphs")}
-            >
+            <Option onClick={() => handleTypeChange("paragraphs")}>
               Paragraph
             </Option>
           </Select>
         </div>
-        <Button>Copy</Button>
+
+        <CopyButton onClick={() => handleCopy(navigator.clipboard)}>
+          {copy ? <Icon.Check /> : <Icon.Clipboard />}
+        </CopyButton>
       </SettingsContainer>
 
-      <Output>
+      <Output id="lorem-ipsum">
         {loremIpsum({
           count: +numCount,
           format: "plain",
