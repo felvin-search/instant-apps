@@ -21,6 +21,7 @@
     "axios": "^0.21.1",
     "html-to-pdf-js": "^0.9.3",
     "katex": "^0.13.18",
+    "lorem-ipsum": "^2.0.3",
     "money": "^0.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
