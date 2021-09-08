@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { loremIpsum } from "lorem-ipsum";
 import * as Icon from "react-feather";
+import Breakpoints from "../shared/Breakpoints";
 
 //-----------Styled Components------------
 
@@ -10,10 +11,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 80ch;
   margin: 1rem 0 0;
   border: 3px solid #d3dbe4;
   border-radius: 0.25rem;
+
+  @media (min-width: ${Breakpoints.medium}) {
+    width: 80ch;
+  }
 `;
 
 const SettingsContainer = styled.div`
