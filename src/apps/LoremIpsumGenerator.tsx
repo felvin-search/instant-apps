@@ -31,7 +31,7 @@ const SettingsContainer = styled.div`
 `;
 
 const Input = styled.input`
-  width: 4rem;
+  width: 2rem;
   margin: 0 1rem 0 0;
   padding: 0.7rem;
 
@@ -45,6 +45,10 @@ const Input = styled.input`
   font-size: 14px;
   line-height: 1.25rem;
   font-weight: 700;
+
+  @media (min-width: ${Breakpoints.medium}) {
+    width: 4rem;
+  }
 `;
 
 const Select = styled.select`
@@ -52,7 +56,7 @@ const Select = styled.select`
 
   width: 9rem;
   margin-right: 1rem;
-  padding: 0.875rem 1rem 0.75rem;
+  padding: 0.875rem 0.7rem 0.75rem;
 
   outline: none;
   border: 3px solid #d3dbe4;
