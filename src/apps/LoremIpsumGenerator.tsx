@@ -150,7 +150,7 @@ function TextGenerator() {
       <Output id="lorem-ipsum">
         {/* TODO: The text re-renders on copy button click and timeout */}
         {loremIpsum({
-          count: +numCount,
+          count: Number(numCount),
           format: "plain",
           units: selectedType as "words" | "sentences" | "paragraphs",
         })}
