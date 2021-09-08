@@ -101,15 +101,7 @@ const Output = styled.div`
 function TextGenerator() {
   const [numCount, setNumCount] = useState("1");
   const [copy, setCopy] = useState(false);
-  const [selectedType, setSeletedType] = useState<
-    "words" | "sentences" | "paragraphs"
-  >("words");
-
-  const handleTypeChange = (typeName: "words" | "sentences" | "paragraphs") => {
-    if (selectedType != typeName) {
-      setSeletedType(typeName);
-    }
-  };
+  const [selectedType, setSeletedType] = useState("words");
 
   const handleCopy = (clipboard) => {
     var copyText = document.getElementById("lorem-ipsum");
@@ -140,14 +132,13 @@ function TextGenerator() {
             }}
           />
 
-          <Select defaultValue={selectedType}>
-            <Option onClick={() => handleTypeChange("words")}>Words</Option>
-            <Option onClick={() => handleTypeChange("sentences")}>
-              Sentences
-            </Option>
-            <Option onClick={() => handleTypeChange("paragraphs")}>
-              Paragraph
-            </Option>
+          <Select
+            defaultValue={selectedType}
+            onChange={(e) => setSeletedType(e.target.value)}
+          >
+            <Option value="words">words</Option>
+            <Option value="sentences">sentences</Option>
+            <Option value="paragraphs">paragraphs</Option>
           </Select>
         </div>
 
@@ -161,7 +152,7 @@ function TextGenerator() {
         {loremIpsum({
           count: +numCount,
           format: "plain",
-          units: selectedType,
+          units: selectedType as "words" | "sentences" | "paragraphs",
         })}
       </Output>
     </Container>
