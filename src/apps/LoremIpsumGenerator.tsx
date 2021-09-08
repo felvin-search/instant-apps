@@ -157,6 +157,7 @@ function TextGenerator() {
       </SettingsContainer>
 
       <Output id="lorem-ipsum">
+        {/* TODO: The text re-renders on copy button click and timeout */}
         {loremIpsum({
           count: +numCount,
           format: "plain",
