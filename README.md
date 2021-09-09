@@ -78,9 +78,13 @@ See [src/apps/](src/apps).
 
 ## How do releases take place?
 
-All the instant apps are published to npm registry [here](https://www.npmjs.com/package/@felvin-search/apps). Currently, we have an action setup which bumps up the package version, commits the tag and publishes the release.
+All the instant apps are published to npm registry [here](https://www.npmjs.com/package/@felvin-search/apps). Currently, we have an action setup which bumps up the package version, commits the tag and publishes the package.
 
 These are minor releases i.e. `v0.3.0` -> `v0.4.0`
+
+If there's a need for running the action manually, just go into the actions tab and click on the workflow to find the follow button:
+
+![run workflow button](https://i.imgur.com/2I43CnE.png)
 
 ## Community
 
