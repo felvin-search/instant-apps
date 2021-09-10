@@ -10,6 +10,10 @@ export type queryToDataInput = {
 
 export type queryToDataOutput = undefined | boolean | Array<any> | any;
 
+export type queryToData = (
+  input: queryToDataInput
+) => Promise<queryToDataOutput>;
+
 /**
  * @param data Successful response of how queryToData is implemented by the app.
  */
@@ -27,6 +31,6 @@ export type InstantApp = {
   name: string;
   description: string;
   iconUrl?: string;
-  queryToData: (input: queryToDataInput) => Promise<queryToDataOutput>;
+  queryToData: queryToData;
   Component: (props: InstantAppProps) => JSX.Element;
 };

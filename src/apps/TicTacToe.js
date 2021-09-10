@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { matchTriggerQueries } from "../lib/utilityApis";
 
 //------------Styled Components------------
 
@@ -123,20 +124,14 @@ function calculateWinner(squares) {
   return null;
 }
 
-const shouldRunMyApp = async ({ query }) => {
-  const triggerQueries = ["play tic tac toe"];
-  for (const triggerQuery of triggerQueries) {
-    if (query.toLowerCase() === triggerQuery) {
-      return { query };
-    }
-  }
-  return;
-};
-
 const TicTacToe = {
   name: "Tic-Tac-Toe",
   description: "Play Tic-Tac-Toe with someone or yourself",
-  queryToData: shouldRunMyApp,
+  queryToData: matchTriggerQueries([
+    "play tic tac toe",
+    "tic tac toe",
+    "tictactoe",
+  ]),
   Component: Board,
 };
 
