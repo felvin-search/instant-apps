@@ -40,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "create-app": "./utils/create_sample_app.sh",
-    "publish-apps": "tsc -d && yarn publish"
+    "publish-apps": "tsc -d --noEmit false && yarn publish"
   },
   "eslintConfig": {
     "extends": [
