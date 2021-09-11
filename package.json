@@ -39,8 +39,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "create-app": "./utils/create_sample_app.sh",
-    "publish-apps": "tsc -d && yarn publish"
+    "create-app": "node ./utils/create_new_app.js",
+    "publish-apps": "tsc -d --noEmit false && yarn publish"
   },
   "eslintConfig": {
     "extends": [
@@ -62,5 +62,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "devDependencies": {
+    "fs-extra": "^10.0.0"
+  }
 }

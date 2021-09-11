@@ -4,6 +4,7 @@ import { useState } from "react";
 import { loremIpsum } from "lorem-ipsum";
 import * as Icon from "react-feather";
 import Breakpoints from "../shared/Breakpoints";
+import { matchTriggerQueries } from "../lib/utilityApis";
 
 //-----------Styled Components------------
 
@@ -158,22 +159,13 @@ function TextGenerator() {
     </Container>
   );
 }
-const shouldRunMyApp = async ({ query }) => {
-  const triggerQueries = ["lorem ipsum generator", "lorem ipsum"];
-
-  for (const triggerQuery of triggerQueries) {
-    if (query.toLowerCase() === triggerQuery) {
-      return { query };
-    }
-  }
-
-  return;
-};
 
 const LoremIpsumGenerator: InstantApp = {
   name: "Lorem Ipsum Generator",
   description: "Lorem Ipsum Generator",
-  queryToData: shouldRunMyApp,
+  queryToData: matchTriggerQueries(["lorem ipsum generator", "lorem ipsum"], {
+    substringMatch: true,
+  }),
   Component: TextGenerator,
 };
 

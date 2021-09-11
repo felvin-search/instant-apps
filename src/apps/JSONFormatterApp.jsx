@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as Icon from "react-feather";
 import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
+import { matchTriggerQueries } from "../lib/utilityApis";
 
 //-----------Styled Components-----------------
 
@@ -114,20 +115,11 @@ function PrettifyJSON() {
   );
 }
 
-async function shouldTriggerJSONFormatter({ query }) {
-  const triggerQueries = ["json format", "format json"];
-  for (const triggerQuery of triggerQueries) {
-    if (query.toLowerCase() === triggerQuery) {
-      return true;
-    }
-  }
-}
-
 const JSONFormatterApp = {
   name: "JSONFormatter",
   description:
     "Formats the JSON with right indentation for easier human consumption",
-  queryToData: shouldTriggerJSONFormatter,
+  queryToData: matchTriggerQueries(["json format", "format json"]),
   Component: PrettifyJSON,
 };
 

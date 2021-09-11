@@ -4,6 +4,7 @@ import { BlockMath } from "react-katex";
 import styled from "styled-components";
 import "katex/dist/katex.min.css";
 import html2pdf from "html-to-pdf-js";
+import { matchTriggerQueries } from "../lib/utilityApis";
 
 const Container = styled.div`
   // width: 100%;
@@ -120,18 +121,10 @@ const LatexRendererComponent = (props: InstantAppProps) => {
   );
 };
 
-const parseLatexQuery = async ({ query }: queryToDataInput) => {
-  const triggerWord = "latex";
-  if (!query.toLowerCase().includes(triggerWord)) {
-    return;
-  }
-  return { query };
-};
-
 const LatexRenderer: InstantApp = {
   name: "Latex Renderer",
   description: "Enter latex strings to generate output on the fly ",
-  queryToData: parseLatexQuery,
+  queryToData: matchTriggerQueries(["latex"], { substringMatch: true }),
   Component: LatexRendererComponent,
 };
 

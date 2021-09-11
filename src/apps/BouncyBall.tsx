@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { matchTriggerQueries } from "../lib/utilityApis";
 
 //------------Styled Components-------------
 
@@ -66,22 +67,15 @@ function Renderer() {
   );
 }
 
-const shouldRunMyApp = async ({ query }) => {
-  const triggerQueries = ["bouncy ball", "ball bouncing", "bouncing ball"];
-
-  for (const triggerQuery of triggerQueries) {
-    if (query.toLowerCase() === triggerQuery) {
-      return { query };
-    }
-  }
-
-  return;
-};
-
 const BouncyBall = {
   name: "Bouncy ball",
   description: "It's just a bouncy ball",
-  queryToData: shouldRunMyApp,
+  queryToData: matchTriggerQueries([
+    "bouncy ball",
+    "ball bouncing",
+    "ball bounce",
+    "bouncing ball",
+  ]),
   Component: Renderer,
 };
 
