@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
-import apps from "../apps";
 import styled from "styled-components";
+import apps from "../apps";
 
 const InstantAppContainer = styled.div`
   display: flex;

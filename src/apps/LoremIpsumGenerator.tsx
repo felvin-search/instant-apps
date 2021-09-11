@@ -1,10 +1,10 @@
-import { InstantApp } from "./types";
-import styled from "styled-components";
-import { useState } from "react";
 import { loremIpsum } from "lorem-ipsum";
+import { useState } from "react";
 import * as Icon from "react-feather";
-import Breakpoints from "../shared/Breakpoints";
+import styled from "styled-components";
 import { matchTriggerQueries } from "../lib/utilityApis";
+import Breakpoints from "../shared/Breakpoints";
+import { InstantApp } from "./types";
 
 //-----------Styled Components------------
 

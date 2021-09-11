@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-
 import GlobalStyles from "./shared/GlobalStyles";
 import Theme from "./shared/Theme";
-
 import MainArea from "./views/MainArea";
 import Results from "./views/Results";
 

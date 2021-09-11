@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "./Logo";
-import styled from "styled-components";
 import { GitHub } from "react-feather";
+import styled from "styled-components";
+import Logo from "./Logo";
 
 //----------Styled Components------------
 
