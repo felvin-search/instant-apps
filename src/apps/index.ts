@@ -13,12 +13,14 @@ import TicTacToe from "./TicTacToe";
 import time from "./time";
 import TimerApp from "./TimerApp";
 import { InstantApp } from "./types";
+import uuid from "./uuid";
 
 const availableApps: Array<InstantApp> = [
   /**
    * Note: Update me when adding a new app.
    */
   // myApp,
+  uuid,
   calculator,
   time,
   BouncyBall,
