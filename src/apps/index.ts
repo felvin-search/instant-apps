@@ -2,15 +2,15 @@
  * Note: Add a new import here when adding a new app.
  */
 // import myApp from "./myApp";
+import BouncyBall from "./BouncyBall";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import dictionary from "./DictionaryApp";
 import JSONFormatterApp from "./JSONFormatterApp";
+import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
 import TicTacToe from "./TicTacToe";
 import TimerApp from "./TimerApp";
-import LatexRenderer from "./LatexRender";
 import { InstantApp } from "./types";
-import BouncyBall from "./BouncyBall";
 
 const availableApps: Array<InstantApp> = [
   /**

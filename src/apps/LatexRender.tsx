@@ -1,10 +1,10 @@
+import html2pdf from "html-to-pdf-js";
+import "katex/dist/katex.min.css";
 import { useState } from "react";
-import { InstantApp, InstantAppProps, queryToDataInput } from "./types";
 import { BlockMath } from "react-katex";
 import styled from "styled-components";
-import "katex/dist/katex.min.css";
-import html2pdf from "html-to-pdf-js";
 import { matchTriggerQueries } from "../lib/utilityApis";
+import { InstantApp, InstantAppProps } from "./types";
 
 const Container = styled.div`
   // width: 100%;

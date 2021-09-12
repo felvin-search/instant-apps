@@ -40,7 +40,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "create-app": "node ./utils/create_new_app.js",
-    "publish-apps": "tsc -d --noEmit false && yarn publish"
+    "publish-apps": "tsc -d --noEmit false && yarn publish",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +65,13 @@
     "dist"
   ],
   "devDependencies": {
-    "fs-extra": "^10.0.0"
+    "fs-extra": "^10.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "2.4.0",
+    "prettier-plugin-organize-imports": "^2.3.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import styled from "styled-components";
 import SearchBox from "../components/SearchBox";
-import Breakpoints from "../shared/Breakpoints";
-import { Result } from "../types";
 import sampleResults from "../data/sample_results.json";
 import InstantAppRenderer from "../lib/renderer";
+import Breakpoints from "../shared/Breakpoints";
+import { Result } from "../types";
 
 //--------------Styled Components--------------
 

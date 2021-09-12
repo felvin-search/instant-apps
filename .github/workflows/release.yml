@@ -1,4 +1,4 @@
-name: Publish package at midnight everyday 
+name: Publish package at midnight everyday
 
 on:
   schedule:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with: 
+        with:
           token: ${{secrets.PAT}}
       - run: |
           git config user.name sahil-shubham
