@@ -3,12 +3,14 @@
  */
 // import myApp from "./myApp";
 import BouncyBall from "./BouncyBall";
+import calculator from "./calculator";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import dictionary from "./DictionaryApp";
 import JSONFormatterApp from "./JSONFormatterApp";
 import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
 import TicTacToe from "./TicTacToe";
+import time from "./time";
 import TimerApp from "./TimerApp";
 import { InstantApp } from "./types";
 import uuid from "./uuid";
@@ -19,6 +21,8 @@ const availableApps: Array<InstantApp> = [
    */
   // myApp,
   uuid,
+  calculator,
+  time,
   BouncyBall,
   LoremIpsumGenerator,
   TicTacToe,
