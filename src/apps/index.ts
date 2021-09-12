@@ -3,6 +3,7 @@
  */
 // import myApp from "./myApp";
 import BouncyBall from "./BouncyBall";
+import calculator from "./calculator";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import dictionary from "./DictionaryApp";
 import JSONFormatterApp from "./JSONFormatterApp";
@@ -18,6 +19,7 @@ const availableApps: Array<InstantApp> = [
    * Note: Update me when adding a new app.
    */
   // myApp,
+  calculator,
   time,
   BouncyBall,
   LoremIpsumGenerator,
