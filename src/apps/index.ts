@@ -11,12 +11,14 @@ import LoremIpsumGenerator from "./LoremIpsumGenerator";
 import TicTacToe from "./TicTacToe";
 import TimerApp from "./TimerApp";
 import { InstantApp } from "./types";
+import uuid from "./uuid";
 
 const availableApps: Array<InstantApp> = [
   /**
    * Note: Update me when adding a new app.
    */
   // myApp,
+  uuid,
   BouncyBall,
   LoremIpsumGenerator,
   TicTacToe,
