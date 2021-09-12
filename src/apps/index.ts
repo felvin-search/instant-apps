@@ -9,6 +9,7 @@ import JSONFormatterApp from "./JSONFormatterApp";
 import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
 import TicTacToe from "./TicTacToe";
+import time from "./time";
 import TimerApp from "./TimerApp";
 import { InstantApp } from "./types";
 
@@ -17,6 +18,7 @@ const availableApps: Array<InstantApp> = [
    * Note: Update me when adding a new app.
    */
   // myApp,
+  time,
   BouncyBall,
   LoremIpsumGenerator,
   TicTacToe,
