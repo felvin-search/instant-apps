@@ -1,8 +1,43 @@
 import countryTimezone from "country-timezone";
-import { InstantAppProps } from "./types";
+import dayjs from "dayjs";
+import LocalizedFormat from "dayjs/plugin/localizedFormat";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
 
-function Renderer(props: InstantAppProps) {
-  return <div>{JSON.stringify(props.data)}</div>;
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.extend(LocalizedFormat);
+
+type rendererData = {
+  location: string;
+  ianaTimezones: Array<string>;
+};
+
+function Renderer({ data }: { data: rendererData }) {
+  // Multiple timezones can have the same time. Group timezones by the actual time
+  const mapTimeToTz = {};
+  data.ianaTimezones.forEach((tz) => {
+    const localeTime = dayjs().tz(tz).format("LT");
+    try {
+      mapTimeToTz[localeTime].push(tz);
+    } catch (err) {
+      mapTimeToTz[localeTime] = [tz];
+    }
+  });
+
+  return (
+    <div key={data.location}>
+      {Object.entries(mapTimeToTz).map(([time, timezones]) => (
+        <>
+          <h1 key={time}>{time}</h1>
+          <em>
+            {timezones[0]} {dayjs().tz(timezones[0]).offsetName("short")}{" "}
+            {dayjs().tz(timezones[0]).offsetName("long")}
+          </em>
+        </>
+      ))}
+    </div>
+  );
 }
 
 /**
@@ -13,7 +48,7 @@ function Renderer(props: InstantAppProps) {
  *
  * returns null if conversion is not possible
  */
-function getIanaTimezonesFromLocation(location: string) {
+function getIanaTimezonesFromLocation(location: string): Array<string> {
   // First try using an exact country code match
   // e.g. time in us
   let timezones = countryTimezone.getTimezonesWithCountryCode(
@@ -28,7 +63,11 @@ function getIanaTimezonesFromLocation(location: string) {
   return null;
 }
 
-const queryToData = async ({ query }: { query: string }) => {
+const queryToData = async ({
+  query,
+}: {
+  query: string;
+}): Promise<rendererData> => {
   /**
    * Check if the query has time in it. Expecting the following queries:
    * time in Delhi
@@ -47,20 +86,41 @@ const queryToData = async ({ query }: { query: string }) => {
   // of a location
   processedQuery = processedQuery.replace(" in ", "");
   processedQuery = processedQuery.replace(" at ", "");
+  // especial case when user searched "time in", "in time", "time at", etc.
+  if ([" in", "in ", " at", "at "].includes(processedQuery)) {
+    processedQuery = "";
+  }
   const location = processedQuery.trim();
 
-  // Convert location into a timezone
-  const ianaTimezone = getIanaTimezonesFromLocation(location);
+  if (location === "") {
+    const tz = dayjs.tz.guess();
 
-  return { location, time: ianaTimezone };
+    return {
+      location,
+      ianaTimezones: [tz],
+    };
+  }
+
+  // Convert location into a timezone or multiple timezones (in case of cities)
+  const ianaTimezones = getIanaTimezonesFromLocation(location);
+
+  if (!ianaTimezones) {
+    // Unable to parse location
+    return;
+  }
+
+  return { location, ianaTimezones };
 };
 
 /**
  * Works using an offline library. Should use a more reliable and vast API in future.
+ *
+ * Caveat 1: time in cities is not super pleasant, since multiple cities with same name exists
+ * in different countries.
  */
 const MyApp = {
   name: "time",
-  description: "I know time at places.",
+  description: "I know time at places",
   queryToData,
   Component: Renderer,
 };
