@@ -17,7 +17,6 @@ function renderApps(query: string) {
     // Question: Not all apps need to return data.
     // TODO: Clearly define what is success and what is failure criteria for these apps somewhere.
     const data = await app.queryToData({ query });
-    console.log("data from dictionary app", data);
     // TODO: This will always render the first app
     if (!!data) {
       ReactDOM.render(
