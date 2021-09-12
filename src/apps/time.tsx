@@ -1,35 +1,31 @@
-import styled, { keyframes } from "styled-components";
+import countryTimezone from "country-timezone";
 import { InstantAppProps } from "./types";
-
-//------------Styled Components-------------
-
-const sbinnala = keyframes`
-	from {
-		transform: rotate(10deg);
-	}
-	to {
-		transform: rotate(80deg);
-	}
-`;
-
-const rangDe = keyframes`
-	0% { fill: rgba(251, 87, 58, 1); }
-  50% { fill: rgba(251, 87, 58, 1); }
-  51% { fill: rgba(50, 153, 79, 1); }
-  100% { fill: rgba(50, 153, 79, 1); }
-`;
-
-const Logo = styled.svg`
-  animation: ${sbinnala} 1s linear infinite alternate;
-  path {
-    animation: ${rangDe} 2s linear infinite;
-  }
-`;
-
-//=========================================
 
 function Renderer(props: InstantAppProps) {
   return <div>{JSON.stringify(props.data)}</div>;
+}
+
+/**
+ * Tries to convert a location into an IANA timezone.
+ * https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+ * Example: get "delhi" return Asia/Kolkata
+ * get "japan" return Asia/Tokyo
+ *
+ * returns null if conversion is not possible
+ */
+function getIanaTimezonesFromLocation(location: string) {
+  // First try using an exact country code match
+  // e.g. time in us
+  let timezones = countryTimezone.getTimezonesWithCountryCode(
+    location.toUpperCase()
+  );
+  if (timezones?.length > 0) return timezones;
+
+  // If country code doesn't match, try using country name or city name
+  timezones = countryTimezone.getTimezones(location);
+  if (timezones?.length > 0) return timezones;
+
+  return null;
 }
 
 const queryToData = async ({ query }: { query: string }) => {
@@ -54,10 +50,14 @@ const queryToData = async ({ query }: { query: string }) => {
   const location = processedQuery.trim();
 
   // Convert location into a timezone
+  const ianaTimezone = getIanaTimezonesFromLocation(location);
 
-  return { location };
+  return { location, time: ianaTimezone };
 };
 
+/**
+ * Works using an offline library. Should use a more reliable and vast API in future.
+ */
 const MyApp = {
   name: "time",
   description: "I know time at places.",

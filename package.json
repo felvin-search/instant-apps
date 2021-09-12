@@ -19,6 +19,7 @@
     "@types/react-router-dom": "^5.1.8",
     "@types/styled-components": "^5.1.11",
     "axios": "^0.21.1",
+    "country-timezone": "^1.0.8",
     "html-to-pdf-js": "^0.9.3",
     "katex": "^0.13.18",
     "lorem-ipsum": "^2.0.3",
