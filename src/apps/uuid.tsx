@@ -15,11 +15,11 @@ function Renderer(props: Props) {
 }
 
 // @DoNotCacheMe
-const shouldRunMyApp = async ({ query }) => {
-  const triggerQueries = ["uuid", "uuidv4", "unique id"];
+const shouldRunMyApp = async ({ query }: { query: string }) => {
+  const triggerQueries = ["uuid", "uuidv4"];
 
   for (const triggerQuery of triggerQueries) {
-    if (query.toLowerCase().trim() === triggerQuery) {
+    if (query.toLowerCase().includes(triggerQuery)) {
       return { uuid: uuidv4() };
     }
   }
