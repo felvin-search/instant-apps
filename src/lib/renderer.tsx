@@ -15,8 +15,17 @@ const InstantAppContainer = styled.div`
 function renderApps(query: string) {
   apps.every(async (app) => {
     // Question: Not all apps need to return data.
-    // TODO: Clearly define what is success and what is failure criteria for these apps somewhere.
-    const data = await app.queryToData({ query });
+    // Will try to render an app if it returns a "truthy" value
+    // App should return falsy values of throw an error if it doesn't want to serve a query.
+    let data;
+    try {
+      data = await app.queryToData({ query });
+    } catch (err) {
+      // This doesn't have to be an actual error.
+      console.warn(`error received from app "${app.name}" on query "${query}"`);
+      console.warn(err);
+      return false;
+    }
     // TODO: This will always render the first app
     if (!!data) {
       ReactDOM.render(
@@ -35,9 +44,6 @@ type RendererProps = {
 
 const InstantAppRenderer = (props: RendererProps) => {
   useEffect(() => {
-    console.log("inside useEffect of rendered");
-    console.log("props.query", props.query);
-
     if (!props.query) {
       return;
     }

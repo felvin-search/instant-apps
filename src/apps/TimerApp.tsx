@@ -100,7 +100,6 @@ const parseTimerQuery = async ({ query }: queryToDataInput) => {
     const durationInSeconds = convertNaturalStringToDate(query);
     const minutes = Math.floor(durationInSeconds / 60);
     const seconds = durationInSeconds % 60;
-    console.log({ minutes, seconds });
     return { minutes, seconds };
   } catch (err) {
     return;
