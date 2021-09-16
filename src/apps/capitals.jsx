@@ -1,19 +1,30 @@
+import styled from "styled-components";
 import capitalsData from "./capitalsData.json";
 
-function territoryToCapital(territory) {
-  return capitalsData.find(
-    (elem) => elem.CountryName.toLowerCase() === territory.toLowerCase()
-  )?.CapitalName;
-}
+const Territory = styled.div`
+  text-transform: capitalize;
+`;
+
+const Capital = styled.div`
+  text-transform: capitalize;
+  font-weight: bold;
+`;
 
 //=========================================
 
 function Renderer({ data }) {
   return (
     <div>
-      Capital of {data.territory} is <b>{data.capital}</b>
+      Capital of <Territory>{data.territory}</Territory> is{" "}
+      <Capital>{data.capital}</Capital>
     </div>
   );
+}
+
+function territoryToCapital(territory) {
+  return capitalsData.find(
+    (elem) => elem.CountryName.toLowerCase() === territory.toLowerCase()
+  )?.CapitalName;
 }
 
 const queryToTerritory = async ({ query }) => {
