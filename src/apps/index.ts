@@ -4,6 +4,7 @@
 // import myApp from "./myApp";
 import BouncyBall from "./BouncyBall";
 import calculator from "./calculator";
+import CapitalsApp from "./capitals";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import dictionary from "./DictionaryApp";
 import JSONFormatterApp from "./JSONFormatterApp";
@@ -20,6 +21,7 @@ const availableApps: Array<InstantApp> = [
    * Note: Update me when adding a new app.
    */
   // myApp,
+  CapitalsApp,
   uuid,
   calculator,
   time,
