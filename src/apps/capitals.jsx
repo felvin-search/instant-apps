@@ -1,21 +1,25 @@
 import styled from "styled-components";
 import capitalsData from "./capitalsData.json";
 
-const Territory = styled.div`
+const Territory = styled.span`
   text-transform: capitalize;
 `;
 
-const Capital = styled.div`
+const Capital = styled.span`
   text-transform: capitalize;
   font-weight: bold;
 `;
 
 //=========================================
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function Renderer({ data }) {
   return (
     <div>
-      Capital of <Territory>{data.territory}</Territory> is{" "}
+      Capital of <Territory> {data.territory} </Territory> is{" "}
       <Capital>{data.capital}</Capital>
     </div>
   );
