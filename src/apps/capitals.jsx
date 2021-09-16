@@ -42,7 +42,7 @@ const queryToTerritory = async ({ query }) => {
     "capital",
   ];
   for (const triggerQuery of triggerQueries) {
-    if (normalizedQuery.startsWith(triggerQuery)) {
+    if (normalizedQuery.includes(triggerQuery)) {
       const territoryName = normalizedQuery.replace(triggerQuery, "").trim();
       const capitalName = territoryToCapital(territoryName);
       if (capitalName) {
