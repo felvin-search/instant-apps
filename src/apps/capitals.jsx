@@ -1,29 +1,10 @@
-import styled, { keyframes } from "styled-components";
+import capitalsData from "./capitalsData.json";
 
-//------------Styled Components-------------
-
-const sbinnala = keyframes`
-	from {
-		transform: rotate(10deg);
-	}
-	to {
-		transform: rotate(80deg);
-	}
-`;
-
-const rangDe = keyframes`
-	0% { fill: rgba(251, 87, 58, 1); }
-  50% { fill: rgba(251, 87, 58, 1); }
-  51% { fill: rgba(50, 153, 79, 1); }
-  100% { fill: rgba(50, 153, 79, 1); }
-`;
-
-const Logo = styled.svg`
-  animation: ${sbinnala} 1s linear infinite alternate;
-  path {
-    animation: ${rangDe} 2s linear infinite;
-  }
-`;
+function territoryToCapital(territory) {
+  return capitalsData.find(
+    (elem) => elem.CountryName.toLowerCase() === territory.toLowerCase()
+  )?.CapitalName;
+}
 
 //=========================================
 
@@ -36,15 +17,27 @@ function Renderer({ data }) {
 }
 
 const queryToTerritory = async ({ query }) => {
-  return { territory: "India", capital: "New Delhi" };
+  const normalizedQuery = query.toLowerCase();
+  // I can use the standard function here probably
+  // Need to remove question marks
+  // The function should return normalized query without
+  // special characters
+  const triggers = ["capital of", "what is the capital of"];
+  if (normalizedQuery.startsWith("capital of")) {
+    const TerritoryName = normalizedQuery.replace("capital of", "").trim();
+    const CapitalName = territoryToCapital(TerritoryName);
+    if (CapitalName) {
+      return { territory: TerritoryName, capital: CapitalName };
+    } else {
+      return;
+    }
+  }
+  return;
 };
 
 const CapitalsApp = {
   name: "CapitalsApp",
   description: "Given the name of a territory, I show the name of the capital",
-  // queryToData takes in the query and returns data which
-  // the Component displays on the website.
-  // If queryToData returns no data, we do not display the app.
   queryToData: queryToTerritory,
   Component: Renderer,
 };
