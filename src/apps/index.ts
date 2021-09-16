@@ -5,6 +5,7 @@
 import BouncyBall from "./BouncyBall";
 import calculator from "./calculator";
 import CapitalsApp from "./capitals";
+import CsvToJSON from "./csvToJson";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import dictionary from "./DictionaryApp";
 import JSONFormatterApp from "./JSONFormatterApp";
@@ -21,6 +22,7 @@ const availableApps: Array<InstantApp> = [
    * Note: Update me when adding a new app.
    */
   // myApp,
+  CsvToJSON,
   CapitalsApp,
   uuid,
   calculator,
