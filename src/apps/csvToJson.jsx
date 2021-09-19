@@ -11,8 +11,6 @@ import Breakpoints from "../shared/Breakpoints";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 
   margin: 1rem 0;
@@ -50,9 +48,7 @@ const RightColumn = styled.div`
 
 const JSONContainer = styled.div`
   width: 310px;
-  height: 210px;
   overflow-x: scroll;
-
   outline: none;
   padding: 0.5rem;
   margin: 0.5rem 0;
@@ -64,7 +60,7 @@ const JSONContainer = styled.div`
   border-radius: 4px;
 `;
 
-const CopyButton = styled.button`
+const CopyButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,6 +112,7 @@ function Renderer() {
         placeholder="Paste CSV here"
         onChange={(e) => setCSVData(e.target.value)}
       />
+
       <RightColumn>
         <JSONContainer as={JSONPretty} id="json-pretty" data={jsonData} />
         <CopyButton onClick={() => handleCopy(navigator.clipboard)}>
