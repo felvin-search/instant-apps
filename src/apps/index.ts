@@ -6,6 +6,7 @@ import BouncyBall from "./BouncyBall";
 import calculator from "./calculator";
 import CapitalsApp from "./capitals";
 import CurrencyConversionApp from "./CurrencyConversionApp";
+import DiceRoller from "./DiceRoller";
 import dictionary from "./DictionaryApp";
 import JokeApp from "./joke";
 import JSONFormatterApp from "./JSONFormatterApp";
@@ -22,6 +23,7 @@ const availableApps: Array<InstantApp> = [
    * Note: Update me when adding a new app.
    */
   // myApp,
+  DiceRoller,
   JokeApp,
   CapitalsApp,
   uuid,

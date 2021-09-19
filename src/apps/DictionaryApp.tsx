@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { isTriggered } from "../lib/utilityApis";
 import {
   InstantApp,
   InstantAppProps,
@@ -95,17 +96,7 @@ async function queryToData({
 }: queryToDataInput): Promise<queryToDataOutput> {
   // If the query does not contain the following words, do not trigger the app
   // `define`, `meaning`
-  let triggered = false;
-  triggerWords.forEach((word) => {
-    if (query.toLowerCase().split(" ").includes(word)) {
-      triggered = true;
-    }
-  });
-
-  if (!triggered) {
-    return undefined;
-  }
-
+  if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
   const cleanedQuery = cleanQuery(query);
 
   const response = await fetch(

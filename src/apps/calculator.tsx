@@ -1,4 +1,5 @@
 import { evaluate as mathjsEvaluate } from "mathjs";
+import { isTriggered } from "../lib/utilityApis";
 import { InstantApp, InstantAppProps } from "./types";
 
 function Renderer(props: InstantAppProps) {
@@ -6,13 +7,12 @@ function Renderer(props: InstantAppProps) {
 }
 
 const shouldRunMyApp = async ({ query }) => {
-  const mathOperators = ["+", "-", "*", "/", "%", "^"];
-
-  let foundMathExpression = false;
-  for (const operator of mathOperators) {
-    if (query.includes(operator)) foundMathExpression = true;
-  }
-  if (!foundMathExpression) return;
+  if (
+    !isTriggered(query, ["+", "-", "*", "/", "%", "^"], {
+      substringMatch: true,
+    })
+  )
+    return;
 
   try {
     const result = JSON.stringify(mathjsEvaluate(query));

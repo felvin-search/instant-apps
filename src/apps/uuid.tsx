@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { isTriggered } from "../lib/utilityApis";
 
 type Props = {
   data: {
@@ -17,14 +18,8 @@ function Renderer(props: Props) {
 // @DoNotCacheMe
 const shouldRunMyApp = async ({ query }: { query: string }) => {
   const triggerQueries = ["uuid", "uuidv4"];
-
-  for (const triggerQuery of triggerQueries) {
-    if (query.toLowerCase().includes(triggerQuery)) {
-      return { uuid: uuidv4() };
-    }
-  }
-
-  return;
+  if (!isTriggered(query, triggerQueries, { substringMatch: true })) return;
+  return { uuid: uuidv4() };
 };
 
 const MyApp = {
