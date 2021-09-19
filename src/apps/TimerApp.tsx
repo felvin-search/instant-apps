@@ -83,11 +83,6 @@ const countdownString = (minutes: number, seconds: number): string => {
 const parseTimerQuery = async ({ query }: queryToDataInput) => {
   // Trigger timer only if the query string
   // contains the word "timer"
-  const triggerWord = "timer";
-  if (!query.includes(triggerWord)) {
-    return;
-  }
-
   if (!isTriggered(query, ["timer"], { substringMatch: true })) return;
   try {
     // TODO(orkohunter) Very basic for now. Needs a better library to
