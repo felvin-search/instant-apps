@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { isTriggered } from "../lib/utilityApis";
 import { InstantApp, InstantAppProps, queryToDataInput } from "./types";
 
 const Timer = (props: InstantAppProps) => {
@@ -87,6 +88,7 @@ const parseTimerQuery = async ({ query }: queryToDataInput) => {
     return;
   }
 
+  if (!isTriggered(query, ["timer"], { substringMatch: true })) return;
   try {
     // TODO(orkohunter) Very basic for now. Needs a better library to
     // handle all kinds of natural language duration conversion

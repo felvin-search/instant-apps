@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat";
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
+import { isTriggered } from "../lib/utilityApis";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -76,11 +77,10 @@ const queryToData = async ({
    * UTC time
    * time at Tokyo
    */
-  let processedQuery = query.toLowerCase();
+  if (!isTriggered(query, ["time"], { substringMatch: true })) return;
 
-  if (!processedQuery.includes("time")) return;
   // omit "time" from query
-  processedQuery = processedQuery.replace("time", "");
+  let processedQuery = query.toLowerCase().replace("time", "");
   // omit prepositions
   // can't replace "in" without spaces since in could be part
   // of a location
