@@ -26,6 +26,7 @@
     "lorem-ipsum": "^2.0.3",
     "mathjs": "^9.4.4",
     "money": "^0.2.0",
+    "papaparse": "^5.3.1",
     "react": "^17.0.2",
     "react-dice-roll": "^1.2.2",
     "react-dom": "^17.0.2",
@@ -37,7 +38,8 @@
     "styled-components": "^5.3.0",
     "typescript": "^4.3.5",
     "uuid": "^8.3.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yargs": "^17.1.1"
   },
   "scripts": {
     "start": "REACT_APP_MODE=development TSC_COMPILE_ON_ERROR=true react-scripts start",

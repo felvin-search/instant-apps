@@ -2,10 +2,16 @@
 
 const { resolve, join } = require("path");
 const fs = require("fs-extra");
+const yargs = require("yargs");
+const argv = yargs
+  .command("create_app", "Creates a template instant app")
+  .help()
+  .alias("help", "h").argv;
+const appName = argv._[0] || "myApp";
 
 const projecthome = resolve(__dirname, "..");
 const TEMPLATE_APP_PATH = join(projecthome, "utils/myApp.jsx");
-const FINAL_APP_PATH = join(projecthome, "src/apps/myApp.jsx");
+const FINAL_APP_PATH = join(projecthome, `src/apps/${appName}.jsx`);
 
 async function main() {
   console.log("Create new app...");
