@@ -13,6 +13,7 @@ import JokeApp from "./joke";
 import JSONFormatterApp from "./JSONFormatterApp";
 import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
+import PongGame from "./pong";
 import TicTacToe from "./TicTacToe";
 import time from "./time";
 import TimerApp from "./TimerApp";
@@ -24,6 +25,7 @@ const availableApps: Array<InstantApp> = [
    * Note: Update me when adding a new app.
    */
   // myApp,
+  PongGame,
   CsvToJSON,
   DiceRoller,
   JokeApp,
