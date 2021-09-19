@@ -4,83 +4,86 @@ import * as Icon from "react-feather";
 import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
 import { matchTriggerQueries } from "../lib/utilityApis";
+import Breakpoints from "../shared/Breakpoints";
 
 //------------Styled Components-------------
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 700px;
-  margin: 1rem 0;
-`;
 
-const Column = styled.div`
-  padding: 0.6rem;
-  margin: 0.8rem;
-  background: #ffffff;
-  border: 1px solid #d0d0d0;
-  box-sizing: border-box;
-  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  width: 300px;
-  height: 400px;
+  margin: 1rem 0;
+
+  @media (min-width: ${Breakpoints.medium}) {
+    flex-direction: row;
+  }
 `;
 
 const CSVArea = styled.textarea`
+  border: 1px solid #d0d0d0;
+  box-sizing: border-box;
+  box-shadow: inset 0px 2px 6px rgba(163, 162, 162, 0.05);
+  border-radius: 4px;
+
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  resize: none;
+
   line-height: inherit;
   font-family: inherit;
   font-size: inherit;
-  outline: none;
-  resize: none;
-  &:focus,
-  &:active {
-    border: 1px soild #5f26ff;
-  }
+`;
+
+const RightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  position: relative;
+  margin: 0 1rem;
 `;
 
 const JSONContainer = styled.div`
+  width: 310px;
+  height: 210px;
+  overflow-x: scroll;
+
   outline: none;
-  padding: 0.6rem;
-  margin: 1rem 0 0 0;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+
   background: #ffffff;
   border: 1px solid #d0d0d0;
   box-sizing: border-box;
   box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
-  line-height: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  min-height: 50px;
-
-  &:focus,
-  &:active {
-    border: 1px soild #5f26ff;
-  }
 `;
 
 const CopyButton = styled.button`
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  top: 10px;
+
   background: transparent;
   cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 20px;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
 
   border: 1px solid #8b949e;
   padding: 0.25rem;
+  margin: 0.5rem;
   border-radius: 5px;
 `;
 
-const FormattedJSONContainer = styled.div`
-  position: relative;
-
-  &:hover {
-    ${CopyButton} {
-      display: block;
-    }
-  }
-`;
 //=========================================
 
 function Renderer() {
@@ -108,19 +111,17 @@ function Renderer() {
 
   return (
     <Container>
-      <Column>
-        <CSVArea
-          rows="10"
-          placeholder="Paste CSV here"
-          onChange={(e) => setCSVData(e.target.value)}
-        />
-      </Column>
-      <Column>
-        <CopyButton onClick={() => handleCopy(navigator.clipboard)}>
-          {copy ? <Icon.Check /> : <Icon.Clipboard />}
-        </CopyButton>
+      <CSVArea
+        rows="10"
+        placeholder="Paste CSV here"
+        onChange={(e) => setCSVData(e.target.value)}
+      />
+      <RightColumn>
         <JSONContainer as={JSONPretty} id="json-pretty" data={jsonData} />
-      </Column>
+        <CopyButton onClick={() => handleCopy(navigator.clipboard)}>
+          Copy {copy ? <Icon.Check /> : <Icon.Clipboard />}
+        </CopyButton>
+      </RightColumn>
     </Container>
   );
 }
