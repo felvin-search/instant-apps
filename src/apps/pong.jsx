@@ -1,8 +1,6 @@
 import Pong from "react-pong";
 import { matchTriggerQueries } from "../lib/utilityApis";
-require("@babel/core").transformSync("code", {
-  plugins: ["@babel/plugin-proposal-class-properties"],
-});
+
 function Component({ data }) {
   return <Pong />;
 }
