@@ -52,6 +52,7 @@ const JSONContainer = styled.div`
   outline: none;
   padding: 0.5rem;
   margin: 0.5rem 0;
+  height: 100%;
 
   background: #ffffff;
   border: 1px solid #d0d0d0;
@@ -66,7 +67,7 @@ const CopyButton = styled.div`
   justify-content: center;
 
   position: relative;
-  top: 10px;
+  top: 2px;
 
   background: transparent;
   cursor: pointer;
@@ -76,7 +77,7 @@ const CopyButton = styled.div`
 
   border: 1px solid #8b949e;
   padding: 0.25rem;
-  margin: 0.5rem;
+  margin: 0.25rem;
   border-radius: 5px;
 `;
 
