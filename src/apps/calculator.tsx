@@ -1,5 +1,5 @@
 import { evaluate as mathjsEvaluate } from "mathjs";
-import { InstantAppProps } from "./types";
+import { InstantApp, InstantAppProps } from "./types";
 
 function Renderer(props: InstantAppProps) {
   return <h1>{props.data?.result}</h1>;
@@ -22,7 +22,7 @@ const shouldRunMyApp = async ({ query }) => {
   }
 };
 
-const MyApp = {
+const MyApp: InstantApp = {
   name: "math",
   description: "App which can do math stuff",
   // queryToData takes in the query and returns data which
