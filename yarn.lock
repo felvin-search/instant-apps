@@ -9640,6 +9640,11 @@ react-dev-utils@^11.0.3:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
+react-dice-roll@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-dice-roll/-/react-dice-roll-1.2.2.tgz#df77249133f12f4cce2512d52b5b6354ed15c236"
+  integrity sha512-QNG+RVs3CymhTkNLwfDdJ93kL4vWO+luHkQAhuNxnus9jOFUZY54AJhlDa4y576S20oEuW47nO7HvEDCtST9wQ==
+
 react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
