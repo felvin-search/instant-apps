@@ -8,6 +8,7 @@ import CapitalsApp from "./capitals";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import DiceRoller from "./DiceRoller";
 import dictionary from "./DictionaryApp";
+import JokeApp from "./joke";
 import JSONFormatterApp from "./JSONFormatterApp";
 import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
@@ -23,6 +24,7 @@ const availableApps: Array<InstantApp> = [
    */
   // myApp,
   DiceRoller,
+  JokeApp,
   CapitalsApp,
   uuid,
   calculator,
