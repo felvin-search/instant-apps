@@ -1,6 +1,7 @@
 services:
   sandbox:
     image: tugboatqa/node:lts
+    expose: 5000
     default: true
     commands:
       init:
