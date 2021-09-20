@@ -8,4 +8,5 @@ services:
       build:
         - yarn install --frozen-lockfile
         - yarn build
+      start:
         - serve -s build
