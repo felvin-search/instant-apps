@@ -1,0 +1,12 @@
+{
+  "name": "@felvin-search-apps/capitals",
+  "description": "Given the name of a territory, I show the name of the capital",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
+  }
+}

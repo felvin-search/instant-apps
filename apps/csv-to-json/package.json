@@ -1,0 +1,13 @@
+{
+  "name": "@felvin-search-apps/csv-to-json",
+  "description": "convert csv to json",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "main": "index.jsx",
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
+  }
+}

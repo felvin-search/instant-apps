@@ -1,0 +1,23 @@
+{
+  "name": "@felvin-search-apps/bouncy-ball",
+  "description": "It's just a bouncy ball",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "main": "./src/server.js",
+  "browser": "./src/app.jsx",
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/server.cjs.js",
+    "browser": "./dist/app.esm.js",
+    "types": "./dist/index.d.ts"
+  },
+  "dependencies": {
+    "@felvin-search/core": "^1.0.0",
+    "react": "^17.0.2",
+    "styled-components": "^5.3.1"
+  },
+  "devDependencies": {
+    "@felvin-search/cli": "^1.0.0"
+  }
+}

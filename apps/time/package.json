@@ -1,0 +1,12 @@
+{
+  "name": "@felvin-search-apps/time",
+  "description": "I know time at places",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
+  }
+}

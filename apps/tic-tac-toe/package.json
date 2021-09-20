@@ -1,0 +1,12 @@
+{
+  "name": "@felvin-search-apps/tic-tac-toe",
+  "description": "Play Tic-Tac-Toe with someone or yourself",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@felvin-search-apps/timer",
+  "description": "Set an instant timer using search. e.g. 15 minutes timer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
+  }
+}

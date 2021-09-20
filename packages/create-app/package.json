@@ -1,0 +1,8 @@
+{
+  "name": "@felvin-search/create-app",
+  "description": "Create a new instant app",
+  "version": "1.0.0",
+  "devDependencies": {
+    "ts-node": "^10.2.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@felvin-search-apps/lorem-ipsum-generator",
+  "description": "Lorem Ipsum Generator",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
+  }
+}

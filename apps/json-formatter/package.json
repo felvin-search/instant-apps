@@ -1,0 +1,12 @@
+{
+  "name": "@felvin-search-apps/json-formatter",
+  "description": "Formats the JSON with right indentation for easier human consumption",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
+  }
+}

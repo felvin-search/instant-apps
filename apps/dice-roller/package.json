@@ -1,0 +1,18 @@
+{
+  "name": "@felvin-search-apps/dice-roller",
+  "description": "Roll a dice and get a number from 1 to 6",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "browser": "./src/app.tsx",
+  "main": "./src/server.ts",
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/server.cjs.js",
+    "browser": "./dist/app.esm.js",
+    "types": "dist/index.d.ts"
+  },
+  "dependencies": {
+    "react-dice-roll": "^1.2.2"
+  }
+}
