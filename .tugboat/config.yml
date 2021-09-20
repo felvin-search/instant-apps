@@ -1,7 +1,11 @@
 services:
   sandbox:
     image: tugboatqa/node:lts
+    default: true
     commands:
+      init:
+        - yarn global add serve
       build:
         - yarn install --frozen-lockfile
         - yarn build
+        - serve -s build
