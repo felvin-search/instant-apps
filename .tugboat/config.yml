@@ -1,0 +1,7 @@
+services:
+  sandbox:
+    image: tugboatqa/node:lts
+    commands:
+      build:
+        - yarn install --frozen-lockfile
+        - yarn build
