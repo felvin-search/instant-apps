@@ -19,6 +19,7 @@ import time from "./time";
 import TimerApp from "./TimerApp";
 import { InstantApp } from "./types";
 import uuid from "./uuid";
+import WordCounter from "./WordCounter";
 
 const availableApps: Array<InstantApp> = [
   /**
@@ -41,6 +42,7 @@ const availableApps: Array<InstantApp> = [
   CurrencyConversionApp,
   TimerApp,
   LatexRenderer,
+  WordCounter,
 ];
 
 export default availableApps;
