@@ -1,29 +1,4 @@
-import styled from "styled-components";
-import capitalsData from "./capitalsData.json";
-
-const Territory = styled.span`
-  text-transform: capitalize;
-`;
-
-const Capital = styled.span`
-  text-transform: capitalize;
-  font-weight: bold;
-`;
-
-//=========================================
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function Renderer({ data }) {
-  return (
-    <div>
-      Capital of <Territory> {data.territory} </Territory> is{" "}
-      <Capital>{data.capital}</Capital>
-    </div>
-  );
-}
+import capitalsData from "../files/capitalsData.json";
 
 function territoryToCapital(territory) {
   return capitalsData.find(
@@ -56,9 +31,4 @@ const queryToTerritory = async ({ query }) => {
   return;
 };
 
-const CapitalsApp = {
-  queryToData: queryToTerritory,
-  Component: Renderer,
-};
-
-export default CapitalsApp;
+export default queryToTerritory;

@@ -2,3 +2,5 @@
 - Sandbox uses react-scripts which has its own version of webpack and babel-loader. Conflicts with felvin-cli. Make sure to create a minimal react app for a sandbox and delete sandbox in the root.
 - See if root dist-types can be used to publish types in packages.
 - add a serve command to felvin-cli using webpack dev server
+- Caching on server side, not on Lambdas.
+- manifest.json declare env vars needed to run the app. Write how to declare key.

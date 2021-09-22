@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import * as Icon from "react-feather";
 import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
-import { matchTriggerQueries } from "../lib/utilityApis";
 import Breakpoints from "../shared/Breakpoints";
 
 //------------Styled Components-------------
@@ -124,12 +123,4 @@ function Renderer() {
   );
 }
 
-const CsvToJSON = {
-  // queryToData takes in the query and returns data which
-  // the Component displays on the website.
-  // If queryToData returns no data, we do not display the app.
-  queryToData: matchTriggerQueries(["csv to json"]),
-  Component: Renderer,
-};
-
-export default CsvToJSON;
+export default Renderer;

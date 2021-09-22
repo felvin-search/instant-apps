@@ -1,17 +1,20 @@
 const path = require("path");
-
-const appPath = process.cwd();
-const rootPath = path.dirname(path.dirname(appPath));
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-  mode: "development",
+  entry: "./src/server/index.js",
   target: "node",
-  entry: "./src/index.js",
+  externals: [nodeExternals()],
+
+  output: {
+    path: path.resolve("dist"),
+    filename: "server.cjs.js",
+  },
+
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
@@ -22,7 +25,12 @@ module.exports = {
             ],
             plugins: [
               "babel-plugin-styled-components",
-              "@babel/plugin-transform-runtime",
+              [
+                "@babel/plugin-transform-runtime",
+                {
+                  corejs: 2,
+                },
+              ],
             ],
           },
         },
@@ -32,9 +40,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "ts-loader",
-          options: {
-            configFile: path.join(rootPath, "tsconfig.json"),
-          },
         },
       },
     ],

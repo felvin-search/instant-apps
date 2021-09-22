@@ -6,6 +6,10 @@
   "private": false,
   "main": "./src/server.js",
   "browser": "./src/app.jsx",
+  "scripts": {
+    "build": "felvin-cli build",
+    "dev": "felvin-cli cli"
+  },
   "publishConfig": {
     "access": "public",
     "main": "./dist/server.cjs.js",

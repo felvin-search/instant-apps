@@ -11,7 +11,7 @@ type triggerQueriesOptions = {
 };
 
 /**
- * Simple utility function to be used inside the dataToQuery for quickly matching trigger queries.
+ * Simple utility function to be used inside the queryToData for quickly matching trigger queries.
  *
  * Example (Dice roller app)
  *
@@ -64,7 +64,7 @@ export function isTriggered(
 }
 
 /**
- * Simple utility function which can be assigned to dataToQuery when an app should trigger
+ * Simple utility function which can be assigned to queryToData when an app should trigger
  * based on one or more keywords.
  *
  * Example
