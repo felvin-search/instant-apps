@@ -4,9 +4,16 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
+  "main": "./src/server.js",
+  "browser": "./src/app.tsx",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.esm.js",
     "types": "dist/index.d.ts"
+  },
+  "dependencies": {
+    "lorem-ipsum": "^2.0.3",
+    "react-feather": "^2.0.9",
+    "styled-components": "^5.3.1"
   }
 }

@@ -4,9 +4,14 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
+  "main": "src/server.js",
+  "browser": "src/app.jsx",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.esm.js",
     "types": "dist/index.d.ts"
+  },
+  "dependencies": {
+    "axios": "^0.21.4"
   }
 }

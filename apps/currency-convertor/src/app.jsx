@@ -1,4 +1,3 @@
-import axios from "axios";
 import fx from "money";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -316,32 +315,4 @@ const currencyNameToCurrencyCode = (currencyName) => {
   return namesToCodes[currencyName] || currencyName;
 };
 
-async function fetchRates({ query }) {
-  const { data } = await axios.get("https://api.frankfurter.app/latest");
-  try {
-    let { amount, from, to } = parseConversionString(query);
-    from = currencyNameToCurrencyCode(from);
-    to = currencyNameToCurrencyCode(to);
-    if (isValidCurrencyCode(from) && isValidCurrencyCode(to)) {
-      return {
-        rates: data.rates,
-        base: data.base,
-        amount,
-        inputCurrency: from,
-        outputCurrency: to,
-      };
-    } else {
-      return null;
-    }
-  } catch {
-    return null;
-  }
-}
-
-// Accept an object, gives you more flexibility
-const CurrencyConversionApp = {
-  queryToData: fetchRates,
-  Component: CurrencyConvertor,
-};
-
-export default CurrencyConversionApp;
+export default CurrencyConvertor;

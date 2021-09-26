@@ -1,6 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { matchTriggerQueries } from "../lib/utilityApis";
 
 //------------Styled Components------------
 
@@ -124,13 +123,4 @@ function calculateWinner(squares) {
   return null;
 }
 
-const TicTacToe = {
-  queryToData: matchTriggerQueries([
-    "play tic tac toe",
-    "tic tac toe",
-    "tictactoe",
-  ]),
-  Component: Board,
-};
-
-export default TicTacToe;
+export default Board;

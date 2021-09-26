@@ -1,10 +1,8 @@
+import { Breakpoints } from "@felvin-search/core";
 import { loremIpsum } from "lorem-ipsum";
-import { useState } from "react";
+import React, { useState } from "react";
 import * as Icon from "react-feather";
 import styled from "styled-components";
-import { matchTriggerQueries } from "../lib/utilityApis";
-import Breakpoints from "../shared/Breakpoints";
-import { InstantApp } from "./types";
 
 //-----------Styled Components------------
 
@@ -160,11 +158,4 @@ function TextGenerator() {
   );
 }
 
-const LoremIpsumGenerator: InstantApp = {
-  queryToData: matchTriggerQueries(["lorem ipsum generator", "lorem ipsum"], {
-    substringMatch: true,
-  }),
-  Component: TextGenerator,
-};
-
-export default LoremIpsumGenerator;
+export default TextGenerator;

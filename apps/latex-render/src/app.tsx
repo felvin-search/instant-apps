@@ -1,10 +1,9 @@
+import { InstantAppProps } from "@felvin-search/core";
 import html2pdf from "html-to-pdf-js";
 import "katex/dist/katex.min.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import { BlockMath } from "react-katex";
 import styled from "styled-components";
-import { matchTriggerQueries } from "../lib/utilityApis";
-import { InstantApp, InstantAppProps } from "./types";
 
 const Container = styled.div`
   // width: 100%;
@@ -121,9 +120,4 @@ const LatexRendererComponent = (props: InstantAppProps) => {
   );
 };
 
-const LatexRenderer: InstantApp = {
-  queryToData: matchTriggerQueries(["latex"], { substringMatch: true }),
-  Component: LatexRendererComponent,
-};
-
-export default LatexRenderer;
+export default LatexRendererComponent;

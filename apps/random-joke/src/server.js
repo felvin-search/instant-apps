@@ -1,10 +1,6 @@
-import { InstantApp, InstantAppProps, queryToDataInput } from "./types";
+import fetch from "node-fetch";
 
-function Component(props: InstantAppProps) {
-  return <strong>{props.data.joke}</strong>;
-}
-
-async function queryToData({ query }: queryToDataInput) {
+export default async function queryToData({ query }) {
   const triggerWords = ["joke", "jokes", "tell me a joke", "random joke"];
   if (!triggerWords.includes(query.toLowerCase())) {
     return;
@@ -28,10 +24,3 @@ async function queryToData({ query }: queryToDataInput) {
 
   return { joke: responseJson.joke };
 }
-
-const JokeApp: InstantApp = {
-  queryToData,
-  Component,
-};
-
-export default JokeApp;

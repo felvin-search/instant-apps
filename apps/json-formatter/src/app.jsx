@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import * as Icon from "react-feather";
 import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
-import { matchTriggerQueries } from "../lib/utilityApis";
 
 //-----------Styled Components-----------------
 
@@ -115,9 +114,4 @@ function PrettifyJSON() {
   );
 }
 
-const JSONFormatterApp = {
-  queryToData: matchTriggerQueries(["json format", "format json"]),
-  Component: PrettifyJSON,
-};
-
-export default JSONFormatterApp;
+export default PrettifyJSON;

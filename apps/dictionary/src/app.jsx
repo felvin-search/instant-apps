@@ -1,12 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { isTriggered } from "../lib/utilityApis";
-import {
-  InstantApp,
-  InstantAppProps,
-  queryToDataInput,
-  queryToDataOutput,
-} from "./types";
 
 const RowContainer = styled.div`
   display: flex;
@@ -55,7 +48,7 @@ function Definition(props) {
 /**
  * The UI logic of the app.
  */
-function Component(props: InstantAppProps) {
+function Component(props) {
   const data = props.data;
 
   return (
@@ -83,47 +76,4 @@ function Component(props: InstantAppProps) {
   );
 }
 
-const triggerWords = ["define", "meaning"];
-function cleanQuery(query: string): string {
-  let newQuery = query;
-  triggerWords.forEach((word) => (newQuery = newQuery.replace(word, "")));
-  newQuery = newQuery.trim();
-  return newQuery;
-}
-
-async function queryToData({
-  query,
-}: queryToDataInput): Promise<queryToDataOutput> {
-  // If the query does not contain the following words, do not trigger the app
-  // `define`, `meaning`
-  if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
-  const cleanedQuery = cleanQuery(query);
-
-  const response = await fetch(
-    `https://api.dictionaryapi.dev/api/v2/entries/en_US/${cleanedQuery}`
-  );
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(
-      `Something went wrong with API request. Status ${response.status} ${response.statusText} ${data}`
-    );
-  }
-
-  if (data && Array.isArray(data) && data.length > 0) {
-    return data[0];
-  }
-}
-
-/**
- * Definition of the instant app.
- */
-const DictionaryApp: InstantApp = {
-  iconUrl:
-    "https://upload.wikimedia.org/wikipedia/commons/4/4b/Books-aj.svg_aj_ashton_01.svg",
-  queryToData,
-  Component,
-};
-
-export default DictionaryApp;
+export default Component;
