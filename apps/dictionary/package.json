@@ -10,5 +10,9 @@
     "access": "public",
     "main": "dist/index.esm.js",
     "types": "dist/index.d.ts"
+  },
+  "dependencies": {
+    "@felvin-search/core": "^1.0.0",
+    "node-fetch": "^3.0.0"
   }
 }

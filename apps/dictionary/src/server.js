@@ -1,3 +1,6 @@
+import { isTriggered } from "@felvin-search/core";
+import fetch from "node-fetch";
+
 const triggerWords = ["define", "meaning"];
 function cleanQuery(query) {
   let newQuery = query;

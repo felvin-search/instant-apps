@@ -4,3 +4,6 @@
 - add a serve command to felvin-cli using webpack dev server
 - Caching on server side, not on Lambdas.
 - manifest.json declare env vars needed to run the app. Write how to declare key.
+- dep check, make sure packages are declaring their dependencies in package.json
+- Bundler: webpack bundler is too web by default.
+- exploring rollup for server side build. webpack is quite slower

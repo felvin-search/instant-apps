@@ -1,5 +1,6 @@
 import bouncyBall from "@felvin-search-apps/bouncy-ball";
 import capitals from "@felvin-search-apps/capitals";
+import csvToJson from "@felvin-search-apps/csv-to-json";
 import currencyConvertor from "@felvin-search-apps/currency-convertor";
 import diceRoller from "@felvin-search-apps/dice-roller";
 import dictionary from "@felvin-search-apps/dictionary";
@@ -12,7 +13,6 @@ import ticTacToe from "@felvin-search-apps/tic-tac-toe";
 import time from "@felvin-search-apps/time";
 import timer from "@felvin-search-apps/timer";
 import uuid from "@felvin-search-apps/uuid";
-import csvToJson from "../../../../apps/csv-to-json/src/app";
 
 const apps = [
   bouncyBall,

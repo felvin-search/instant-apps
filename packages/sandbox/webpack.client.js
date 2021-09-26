@@ -6,7 +6,8 @@ module.exports = {
   target: "web",
   output: {
     filename: "client.esm.js",
-    path: path.resolve(__dirname, "dist"),
+    // All of build folder will be exposed as static file, hence separating build from dist.
+    path: path.resolve(__dirname, "build"),
   },
   module: {
     rules: [

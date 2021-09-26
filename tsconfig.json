@@ -21,7 +21,8 @@
     "jsx": "react",
     "pretty": true,
     "removeComments": false,
-    "sourceMap": true
+    "sourceMap": true,
+    "noImplicitAny": false
   },
   "include": ["apps/*/src", "packages/*/src"]
 }

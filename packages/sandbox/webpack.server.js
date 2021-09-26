@@ -7,6 +7,9 @@ module.exports = {
   externals: [nodeExternals()],
 
   output: {
+    library: {
+      type: "commonjs",
+    },
     path: path.resolve("dist"),
     filename: "server.cjs.js",
   },
@@ -18,6 +21,9 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
+            // https://stackoverflow.com/questions/52407499/how-do-i-use-babels-usebuiltins-usage-option-on-the-vendors-bundle
+            sourceType: "unambiguous",
+            ignore: [/\/core-js/, /\/web-streams-polyfill/],
             presets: [
               "@babel/preset-env",
               "@babel/preset-react",
