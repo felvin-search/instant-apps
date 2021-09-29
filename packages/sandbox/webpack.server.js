@@ -48,6 +48,10 @@ module.exports = {
           loader: "ts-loader",
         },
       },
+      {
+        test: /\.css$/i,
+        use: ["file-loader"],
+      },
     ],
   },
   resolve: {

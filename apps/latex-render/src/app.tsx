@@ -1,5 +1,4 @@
 import { InstantAppProps } from "@felvin-search/core";
-import html2pdf from "html-to-pdf-js";
 import "katex/dist/katex.min.css";
 import React, { useState } from "react";
 import { BlockMath } from "react-katex";
@@ -89,7 +88,10 @@ const LatexRendererComponent = (props: InstantAppProps) => {
     };
 
     // New Promise-based usage:
-    html2pdf().set(opt).from(element).save();
+    if (typeof window !== "undefined") {
+      const html2pdf = require("html-to-pdf-js");
+      html2pdf().set(opt).from(element).save();
+    }
   };
 
   return (

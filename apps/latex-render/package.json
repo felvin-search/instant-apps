@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
-  "main": "src/index.ts",
+  "main": "./src/index.ts",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.esm.js",

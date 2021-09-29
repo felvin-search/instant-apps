@@ -5,7 +5,11 @@ const Timer = (props: InstantAppProps) => {
   // const [isValidQuery, setIsValidQuery] = useState(false);
   const [minutes, setMinutes] = useState(props.data.minutes || 0);
   const [seconds, setSeconds] = useState(props.data.seconds || 0);
-  var audio = new Audio("./ring.wav");
+
+  // TODO(himanshu): Can we go around without writing this by using Babel or something?
+  if (typeof window !== "undefined") {
+    var audio = new Audio("./ring.wav");
+  }
 
   useEffect(() => {
     let myInterval = setInterval(() => {
