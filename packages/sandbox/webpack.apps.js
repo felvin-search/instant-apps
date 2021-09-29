@@ -1,11 +1,17 @@
 const path = require("path");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/client/App.tsx",
+  // TODO: Automate this using CLI
+  entry: {
+    "bouncy-ball": "../../apps/bouncy-ball/src/app.jsx",
+    capitals: "../../apps/capitals/src/app.jsx",
+    "csv-to-json": "../../apps/csv-to-json/src/app.jsx",
+    "currency-convertor": "../../apps/currency-convertor/src/app.jsx",
+  },
   target: "web",
   output: {
-    filename: "client.esm.js",
+    // chunkFilename: "[id].esm.js",
+    filename: "[id].esm.js",
     path: path.resolve(__dirname, "dist", "public"),
   },
   module: {
@@ -47,9 +53,4 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
   },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/client/index.html",
-    }),
-  ],
 };
