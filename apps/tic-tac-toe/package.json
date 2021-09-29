@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
-  "main": "./src/server.js",
+  "main": "./src/index.ts",
   "browser": "./src/app.jsx",
   "publishConfig": {
     "access": "public",
