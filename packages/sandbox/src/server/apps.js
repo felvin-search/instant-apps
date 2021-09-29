@@ -7,7 +7,7 @@ import dictionary from "@felvin-search-apps/dictionary";
 import jsonFormatter from "@felvin-search-apps/json-formatter";
 // import latexRender from "@felvin-search-apps/latex-render";
 // import loremIpsum from "@felvin-search-apps/lorem-ipsum-generator";
-// import math from "@felvin-search-apps/math";
+import math from "@felvin-search-apps/math";
 import randomJoke from "@felvin-search-apps/random-joke";
 // import ticTacToe from "@felvin-search-apps/tic-tac-toe";
 // import time from "@felvin-search-apps/time";
@@ -26,7 +26,7 @@ const apps = [
   // TODO: window is undefined
   // latexRender,
   // loremIpsum,
-  // math,
+  math,
   randomJoke,
   // ticTacToe,
   // time,

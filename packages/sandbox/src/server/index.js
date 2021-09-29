@@ -33,10 +33,11 @@ expressApp.use("/search", express.static(path.resolve(__dirname, "public")));
 
 expressApp.get("/instant-apps", async (req, res) => {
   const q = req.query.q;
+  console.log("received query in sandbox");
   console.log(q);
 
   for (const app of instantApps) {
-    console.log("trying app", app);
+    // console.log("trying app", app);
     try {
       const data = await app.queryToData({ query: q });
       if (!!data) {

@@ -20,7 +20,9 @@ const InstantAppRenderer = (props: RendererProps) => {
   const [instantAppCss, setInstantAppCss] = useState("");
 
   const renderApps = async (query: string) => {
-    const response = await fetch(`/instant-apps?q=${query}`);
+    const response = await fetch(
+      `/instant-apps?q=${encodeURIComponent(query)}`
+    );
     const { html, scriptSrc } = await response.json();
     if (scriptSrc) {
       var script = document.createElement("script");
