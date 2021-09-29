@@ -22,15 +22,19 @@ export type InstantAppProps = { data: queryToDataOutput };
 /**
  * Interface for a snippet app.
  * @param apiVersion (Optional) Default is `instant-apps@v1`
+ * @param id A unique id of the app, usually its npm package name e.g. @felvin-search-apps/<app-name>
  * @param queryToData Function which acts as an entry point of the app, and is used to
  * convert a search query into data that could be rendered for the user.
  * @param Component UI logic of the Instant app.
  */
 export type InstantApp = {
-  apiVersion?: string;
+  id: string;
   name: string;
   description: string;
-  iconUrl?: string;
   queryToData: queryToData;
   Component: (props: InstantAppProps) => JSX.Element;
+  apiVersion?: string;
+  iconUrl?: string;
+  author?: string;
+  screenshotUrl?: string;
 };

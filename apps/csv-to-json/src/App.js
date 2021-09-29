@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import * as Icon from "react-feather";
 import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
-import Breakpoints from "../shared/Breakpoints";
+import { Breakpoints } from "@felvin-search/core";
 
 //------------Styled Components-------------
 

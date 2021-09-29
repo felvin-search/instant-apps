@@ -129,7 +129,7 @@ function CurrencyConvertor(props) {
   useEffect(() => {
     fx.rates = props.data.rates;
     fx.base = props.data.base;
-    setOutputValue(convert(inputValue, outputCurrency, inputCurrency, 1));
+    setOutputValue(convert(inputValue, outputCurrency, inputCurrency));
   }, []);
 
   const convert = (amount, input, output) => {

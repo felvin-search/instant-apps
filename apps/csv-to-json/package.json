@@ -4,11 +4,14 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
-  "main": "./src/server.js",
-  "browser": "./src/app.jsx",
+  "main": "./src/index.ts",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.esm.js",
     "types": "dist/index.d.ts"
+  },
+  "dependencies": {
+    "papaparse": "^5.3.1",
+    "react-json-pretty": "^2.2.0"
   }
 }
