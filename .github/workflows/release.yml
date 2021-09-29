@@ -13,10 +13,8 @@ jobs:
         with:
           token: ${{secrets.PAT}}
       - run: |
-          git config user.name sahil-shubham
-          git config user.email sahil.shubham2000@gmail.com
-          yarn version --minor
-          git push --follow-tags
+          chmod +x ./.github/workflows/check-release.sh
+          ./.github/workflows/check-release.sh
       - uses: actions/setup-node@v2
         with:
           node-version: "14.x"
