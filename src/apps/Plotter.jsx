@@ -46,12 +46,12 @@ function Renderer() {
         grid: true,
         data: [
           {
-            fn: text,
+            fn: text.trim(),
           },
         ],
       });
       changeError("");
-    } catch {
+    } catch (error) {
       changeError("Wrong Input, Please Correct it...");
     }
   }
