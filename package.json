@@ -21,6 +21,7 @@
     "axios": "^0.21.1",
     "country-timezone": "^1.0.8",
     "dayjs": "^1.10.7",
+    "function-plot": "^1.22.7",
     "html-to-pdf-js": "^0.9.3",
     "katex": "^0.13.18",
     "lorem-ipsum": "^2.0.3",
