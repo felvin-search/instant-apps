@@ -1,6 +1,8 @@
 import { useEffect } from "react";
+import styled from "styled-components";
+import { matchTriggerQueries } from "../lib/utilityApis";
 
-//=========================================
+//------------Styled Components-------------
 
 const Stage = styled.canvas`
   display: block;
@@ -15,15 +17,21 @@ const StageContainer = styled.div`
   margin: 20px 0;
 `;
 
-const NyanComponentRender = () => (
-  <StageContainer>
-    <Stage
-      id="stage"
-      width="800px"
-      height="600px"
-    />
-  </StageContainer>
-);
+//=========================================
+
+const NyanComponentRender = () => {
+  useEffect(() => {
+    gameLogic();
+  }, []);
+
+  return (
+    <StageContainer>
+      <Stage id="stage" width="800px" height="600px" />
+    </StageContainer>
+  );
+};
+
+//==============Game logic function==============
 
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo"];
 
@@ -322,38 +330,20 @@ const gameLogic = () => {
   }
 };
 
-function Renderer() {
-  useEffect(() => {
-    gameLogic();
-  }, []);
+//=========================================
 
-  return (
-    <div>
-      <NyanComponentRender />
-    </div>
-  );
-}
-
-const shouldRunMyApp = async ({ query }) => {
-  const triggerQueries = ["i am bored", "flappy bird", "nyan cat flappy bird"];
-
-  for (const triggerQuery of triggerQueries) {
-    if (query.toLowerCase() === triggerQuery) {
-      return { query };
-    }
-  }
-
-  return;
-};
-
-const MyApp = {
+const FlappyBird = {
   name: "FlappyBird",
   description: "A flappy bird game for when you are bored!",
   // queryToData takes in the query and returns data which
   // the Component displays on the website.
   // If queryToData returns no data, we do not display the app.
-  queryToData: shouldRunMyApp,
-  Component: Renderer,
+  queryToData: matchTriggerQueries([
+    "i am bored",
+    "flappy bird",
+    "nyan cat flappy bird",
+  ]),
+  Component: NyanComponentRender,
 };
 
-export default MyApp;
+export default FlappyBird;
