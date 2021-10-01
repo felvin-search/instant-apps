@@ -9,6 +9,7 @@ import CsvToJSON from "./csvToJson";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import DiceRoller from "./DiceRoller";
 import dictionary from "./DictionaryApp";
+import FlappyBird from "./FlappyBird";
 import JokeApp from "./joke";
 import JSONFormatterApp from "./JSONFormatterApp";
 import LatexRenderer from "./LatexRender";
@@ -43,6 +44,7 @@ const availableApps: Array<InstantApp> = [
   TimerApp,
   LatexRenderer,
   WordCounter,
+  FlappyBird,
 ];
 
 export default availableApps;
