@@ -2,30 +2,27 @@ import { useEffect } from "react";
 
 //=========================================
 
-const styles = {};
-styles.stage = {
-  display: "block",
-  maxWidth: "90vw",
-  borderRadius: "10px",
-  boxShadow: "0 0 20px rgb(0, 0, 0, 0.8)",
-};
+const Stage = styled.canvas`
+  display: block;
+  max-width: 90vw;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.8);
+`;
 
-styles.stageContainer = {
-  display: "block",
-  width: "100%",
-  margin: "20px 0",
-};
+const StageContainer = styled.div`
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+`;
 
 const NyanComponentRender = () => (
-  <div style={{ ...styles.stageContainer }} className="stageContainer">
-    <canvas
-      style={styles.stage}
-      className="stage"
+  <StageContainer>
+    <Stage
       id="stage"
       width="800px"
       height="600px"
     />
-  </div>
+  </StageContainer>
 );
 
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo"];
