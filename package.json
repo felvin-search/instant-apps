@@ -1,7 +1,7 @@
 {
   "name": "@felvin-search/apps",
   "license": "MIT",
-  "version": "0.32.0",
+  "version": "0.33.0",
   "private": false,
   "publishConfig": {
     "access": "public"
