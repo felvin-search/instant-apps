@@ -14,6 +14,7 @@ import JokeApp from "./joke";
 import JSONFormatterApp from "./JSONFormatterApp";
 import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
+import Plotter from "./Plotter";
 import SnakeGame from "./snake";
 import TicTacToe from "./TicTacToe";
 import time from "./time";
@@ -45,6 +46,7 @@ const availableApps: Array<InstantApp> = [
   LatexRenderer,
   WordCounter,
   FlappyBird,
+  Plotter,
 ];
 
 export default availableApps;
