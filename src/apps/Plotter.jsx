@@ -52,7 +52,6 @@ function Renderer() {
       });
       changeError(null);
     } catch (err) {
-      console.warn(err);
       changeError("Wrong Input, Please Correct it...");
     }
   }
