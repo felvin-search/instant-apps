@@ -82,6 +82,15 @@ function Footer() {
             Blog
           </Link>
         </li>
+        <li>
+          <Link
+            href="https://github.com/felvin-search/instant-apps"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Contribute
+          </Link>
+        </li>
       </List>
     </Container>
   );
