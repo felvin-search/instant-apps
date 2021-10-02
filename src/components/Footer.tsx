@@ -32,17 +32,6 @@ const List = styled.ul`
   }
 `;
 
-const Icon = styled.svg`
-  display: block;
-  position: absolute;
-  right: 2rem;
-  bottom: 2.5rem;
-
-  path {
-    fill: #878787;
-  }
-`;
-
 const Link = styled.a`
   text-decoration: none;
   color: inherit;

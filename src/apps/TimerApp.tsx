@@ -93,7 +93,6 @@ const parseTimerQuery = async ({ query }: queryToDataInput) => {
      * @returns Number of seconds
      */
     // TODO(orkohunter): Support words like 'five minutes'
-    const queryWithoutTrigger = query.replace("timer", "");
     const durationInSeconds = convertNaturalStringToDate(query);
     const minutes = Math.floor(durationInSeconds / 60);
     const seconds = durationInSeconds % 60;
