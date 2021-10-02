@@ -1,33 +1,5 @@
 import Tetris from "killing-time-react-tetris";
-import styled, { keyframes } from "styled-components";
 import { matchTriggerQueries } from "../lib/utilityApis";
-
-//------------Styled Components-------------
-
-const sbinnala = keyframes`
-	from {
-		transform: rotate(10deg);
-	}
-	to {
-		transform: rotate(80deg);
-	}
-`;
-
-const rangDe = keyframes`
-	0% { fill: rgba(251, 87, 58, 1); }
-  50% { fill: rgba(251, 87, 58, 1); }
-  51% { fill: rgba(50, 153, 79, 1); }
-  100% { fill: rgba(50, 153, 79, 1); }
-`;
-
-const Logo = styled.svg`
-  animation: ${sbinnala} 1s linear infinite alternate;
-  path {
-    animation: ${rangDe} 2s linear infinite;
-  }
-`;
-
-//=========================================
 
 function Renderer() {
   return (
