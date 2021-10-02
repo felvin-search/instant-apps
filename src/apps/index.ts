@@ -27,7 +27,7 @@ const availableApps: Array<InstantApp> = [
   /**
    * Note: Update me when adding a new app.
    */
-  // myApp,
+  // MyApp,
   SnakeGame,
   CsvToJSON,
   DiceRoller,
