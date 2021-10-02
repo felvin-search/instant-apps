@@ -1,6 +1,7 @@
 import functionPlot from "function-plot";
 import { useState } from "react";
 import styled from "styled-components";
+import { matchTriggerQueries } from "../lib/utilityApis";
 
 //------------Styled Components-------------
 
@@ -88,26 +89,17 @@ function Renderer() {
   );
 }
 
-const shouldRunMyApp = async ({ query }) => {
-  const triggerQueries = ["plot graph", "plotter", "graph generator"];
-
-  for (const triggerQuery of triggerQueries) {
-    if (query.toLowerCase() === triggerQuery) {
-      return { query };
-    }
-  }
-
-  return;
-};
-
 const Plotter = {
   name: "Plotter",
   description:
     "This App plots graph of functions that are passed in input. Extremes of x and y axis can be adjusted too",
-  // queryToData takes in the query and returns data which
-  // the Component displays on the website.
-  // If queryToData returns no data, we do not display the app.
-  queryToData: shouldRunMyApp,
+  queryToData: matchTriggerQueries([
+    "plot graph",
+    "plotter",
+    "graph generator",
+    "plot a graph",
+    "graph maker",
+  ]),
   Component: Renderer,
 };
 
