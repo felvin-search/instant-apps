@@ -23,6 +23,7 @@
     "dayjs": "^1.10.7",
     "html-to-pdf-js": "^0.9.3",
     "katex": "^0.13.18",
+    "killing-time-react-tetris": "^1.0.5",
     "lorem-ipsum": "^2.0.3",
     "mathjs": "^9.4.4",
     "money": "^0.2.0",

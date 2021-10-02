@@ -14,6 +14,7 @@ import JSONFormatterApp from "./JSONFormatterApp";
 import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
 import SnakeGame from "./snake";
+import Tetris from "./tetris";
 import TicTacToe from "./TicTacToe";
 import time from "./time";
 import TimerApp from "./TimerApp";
@@ -25,6 +26,7 @@ const availableApps: Array<InstantApp> = [
    * Note: Update me when adding a new app.
    */
   // myApp,
+  Tetris,
   SnakeGame,
   CsvToJSON,
   DiceRoller,
