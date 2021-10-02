@@ -22,17 +22,17 @@ const H3 = styled.h3`
 //=========================================
 
 let contentsBounds = document.body.getBoundingClientRect();
-let width = 1500;
-let height = 500;
-let ratio = contentsBounds.width / width;
-width *= ratio;
-height *= ratio;
+let width = 1000;
+let wratio = contentsBounds.width / width;
+width *= wratio;
+width = width > 800 ? 800 : width; //Large width results in zooming which makes the co-ordinates shift out of element
+let height = width / 2.35; //Cinemascope ratio between height and width
 
 function Renderer() {
   const [text, changeText] = useState("x^2");
   const [x_axis, changex] = useState(10);
   const [y_axis, changey] = useState(5);
-  const [error, changeError] = useState("");
+  const [error, changeError] = useState(null);
 
   function handleSubmit(e) {
     try {
@@ -50,8 +50,9 @@ function Renderer() {
           },
         ],
       });
-      changeError("");
-    } catch (error) {
+      changeError(null);
+    } catch (err) {
+      console.log(err);
       changeError("Wrong Input, Please Correct it...");
     }
   }
@@ -83,13 +84,13 @@ function Renderer() {
         ></Input>
       </label>
       <Input type="submit" value="Plot It!"></Input>
-      <H3>{error}</H3>
+      {error ? <H3>{error}</H3> : null}
     </Form>
   );
 }
 
 const shouldRunMyApp = async ({ query }) => {
-  const triggerQueries = ["plot", "plot graph", "Plotter", "graph"];
+  const triggerQueries = ["plot graph", "plotter", "graph generator"];
 
   for (const triggerQuery of triggerQueries) {
     if (query.toLowerCase() === triggerQuery) {
