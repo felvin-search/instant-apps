@@ -9,10 +9,12 @@ import CsvToJSON from "./csvToJson";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import DiceRoller from "./DiceRoller";
 import dictionary from "./DictionaryApp";
+import FlappyBird from "./FlappyBird";
 import JokeApp from "./joke";
 import JSONFormatterApp from "./JSONFormatterApp";
 import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
+import Plotter from "./Plotter";
 import SnakeGame from "./snake";
 import Tetris from "./tetris";
 import TicTacToe from "./TicTacToe";
@@ -20,6 +22,7 @@ import time from "./time";
 import TimerApp from "./TimerApp";
 import { InstantApp } from "./types";
 import uuid from "./uuid";
+import WordCounter from "./WordCounter";
 
 const availableApps: Array<InstantApp> = [
   /**
@@ -43,6 +46,9 @@ const availableApps: Array<InstantApp> = [
   CurrencyConversionApp,
   TimerApp,
   LatexRenderer,
+  WordCounter,
+  FlappyBird,
+  Plotter,
 ];
 
 export default availableApps;

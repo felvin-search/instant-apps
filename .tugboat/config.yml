@@ -1,0 +1,15 @@
+services:
+  sandbox:
+    image: tugboatqa/node:lts
+    expose: 5000
+    default: true
+    commands:
+      init:
+        - yarn global add serve
+        - mkdir -p /etc/service/serve
+        - echo "#!/bin/sh" > /etc/service/serve/run
+        - echo "serve -s ${TUGBOAT_ROOT}/build" >> /etc/service/serve/run
+        - chmod +x /etc/service/serve/run
+      build:
+        - yarn install --frozen-lockfile
+        - yarn build

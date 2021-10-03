@@ -29,7 +29,7 @@ Instant apps are the small interactive cards which you get for your search queri
 
 We can build instant apps for all kinds of use cases like dictionary, checking football scores, stock prices or notes from your notion or even search history from company slack or anything!
 
-Try them out live - [felvin.com](https://sandbox.felvin.com/search?q=gonzo%20meaning)
+Try them out live - [felvin.com](https://felvin.com/search?q=gonzo%20meaning)
 
 ## Contributing
 
