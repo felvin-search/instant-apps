@@ -6,6 +6,7 @@ import latexRender from "@felvin-search-apps/latex-render";
 import uuid from "@felvin-search-apps/uuid";
 import capitals from "@felvin-search-apps/capitals";
 import jsonFormatter from "@felvin-search-apps/json-formatter";
+import math from "@felvin-search-apps/math";
 
 const allApps = [
   bouncyBall,
@@ -16,6 +17,7 @@ const allApps = [
   uuid,
   capitals,
   jsonFormatter,
+  math,
 ];
 
 export default allApps;
