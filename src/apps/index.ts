@@ -5,6 +5,7 @@
 import BouncyBall from "./BouncyBall";
 import calculator from "./calculator";
 import CapitalsApp from "./capitals";
+import CourierTracking from "./courierTracking";
 import CsvToJSON from "./csvToJson";
 import CurrencyConversionApp from "./CurrencyConversionApp";
 import DiceRoller from "./DiceRoller";
@@ -33,6 +34,7 @@ const availableApps: Array<InstantApp> = [
   SnakeGame,
   CsvToJSON,
   DiceRoller,
+  CourierTracking,
   JokeApp,
   CapitalsApp,
   uuid,
