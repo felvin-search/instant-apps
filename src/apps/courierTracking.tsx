@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { isTriggered } from "../lib/utilityApis";
 import { InstantAppProps, queryToDataInput, queryToDataOutput } from "./types";
 
-const _ = require("lodash");
+import _ from 'lodash'
 
 //------------Styled Components-------------
 const RowContainer = styled.div`
@@ -185,7 +185,7 @@ async function queryToData({
 
 const CourierTracking = {
   name: "Courier Tracking",
-  description: "I am a template app, please change this description",
+  description: "View any courier package status using Pickrr API",
   // queryToData takes in the query and returns data which
   // the Component displays on the website.
   // If queryToData returns no data, we do not display the app.
