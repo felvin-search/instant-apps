@@ -82,7 +82,13 @@ function Renderer() {
     setMainRef(false);
   }, []);
   window.addEventListener("keydown", function (e) {
-    if (e.code == "Space" && e.target == document.body) {
+    if (e.code === "Space" && e.target === document.body) {
+      e.preventDefault();
+    }
+    if (e.code === "ArrowUp" && e.target === document.body) {
+      e.preventDefault();
+    }
+    if (e.code === "ArrowDown" && e.target === document.body) {
       e.preventDefault();
     }
   });
@@ -130,8 +136,8 @@ function Renderer() {
 }
 
 const MyApp = {
-  name: "MyApp",
-  description: "I am a template app, please change this description",
+  name: "Tetris-game",
+  description: "Play tetris game",
   // queryToData takes in the query and returns data which
   // the Component displays on the website.
   // If queryToData returns no data, we do not display the app.

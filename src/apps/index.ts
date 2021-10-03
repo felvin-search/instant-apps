@@ -24,6 +24,7 @@ import uuid from "./uuid";
 const availableApps: Array<InstantApp> = [
   /**
    * Note: Update me when adding a new app.
+    // MyApp
    */
   Tetris,
   SnakeGame,
