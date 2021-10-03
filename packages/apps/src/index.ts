@@ -8,6 +8,7 @@ import capitals from "@felvin-search-apps/capitals";
 import jsonFormatter from "@felvin-search-apps/json-formatter";
 import math from "@felvin-search-apps/math";
 import flappyBird from "@felvin-search-apps/flappy-bird";
+import timeAtPlace from "@felvin-search-apps/time-at-place";
 
 const allApps = [
   bouncyBall,
@@ -20,6 +21,7 @@ const allApps = [
   jsonFormatter,
   math,
   flappyBird,
+  timeAtPlace,
 ];
 
 export default allApps;
