@@ -40,13 +40,11 @@ const Wrapper = styled.section`
 const StyledContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #080909;
   padding: 10px;
 `;
 
 const StyledItem = styled.div`
-  background-color: #aaaaaa;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid #ccc;
   padding: 10px;
   font-size: 1rem;
   text-align: center;
