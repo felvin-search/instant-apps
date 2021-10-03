@@ -5986,13 +5986,6 @@ is-root@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-root/-/is-root-2.1.0.tgz#809e18129cf1129644302a4f8544035d51984a9c"
 
-<<<<<<< HEAD
-is-shared-array-buffer@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/is-shared-array-buffer/-/is-shared-array-buffer-1.0.1.tgz#97b0c85fbdacb59c9c446fe653b82cf2b5b7cfe6"
-
-is-stream@^1.0.1, is-stream@^1.1.0:
-=======
 is-safe-integer@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-safe-integer/-/is-safe-integer-2.0.0.tgz#4042a188b355aae72a0c883f39ed957cbf63d3b6"
@@ -6000,8 +5993,11 @@ is-safe-integer@^2.0.0:
   dependencies:
     max-safe-integer "^1.0.0"
 
-is-stream@^1.1.0:
->>>>>>> upstream/master
+is-shared-array-buffer@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-shared-array-buffer/-/is-shared-array-buffer-1.0.1.tgz#97b0c85fbdacb59c9c446fe653b82cf2b5b7cfe6"
+
+is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
