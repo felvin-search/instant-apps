@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": false,
   "main": "./src/index.ts",
+  "browser": "./src/App.jsx",
   "scripts": {
     "build": "felvin-cli build",
     "dev": "felvin-cli cli"

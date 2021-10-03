@@ -23,10 +23,11 @@ const InstantAppRenderer = (props: RendererProps) => {
     const response = await fetch(
       `/instant-apps?q=${encodeURIComponent(query)}`
     );
-    const { html, scriptSrc } = await response.json();
-    if (scriptSrc) {
+    const { html, scriptUrl } = await response.json();
+    if (scriptUrl) {
+      console.log("Setting script for the app from source", scriptUrl);
       var script = document.createElement("script");
-      script.src = scriptSrc;
+      script.src = scriptUrl;
       script.type = "text/javascript";
       document.body.appendChild(script);
     }

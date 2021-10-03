@@ -31,6 +31,10 @@ expressApp.use("/search", express.static(path.resolve(__dirname, "public")));
 //   });
 // });
 
+function getAppScriptUrl(app) {
+  return `/${app.id}.esm.js`;
+}
+
 expressApp.get("/instant-apps", async (req, res) => {
   const q = req.query.q;
   console.log("received query in sandbox");
@@ -51,7 +55,8 @@ expressApp.get("/instant-apps", async (req, res) => {
           const html = `${css}${_html}`;
           console.log("Sending html with stylesheet");
           console.log(html);
-          res.status(200).json({ html });
+          const scriptUrl = getAppScriptUrl(app);
+          res.status(200).json({ html, scriptUrl });
         } catch (err) {
           console.log("Error in rendering app");
           console.log(err);
@@ -60,7 +65,8 @@ expressApp.get("/instant-apps", async (req, res) => {
             const html = ReactDOMServer.renderToString(
               <app.Component data={data} />
             );
-            res.status(200).json({ html });
+            const scriptUrl = getAppScriptUrl(app);
+            res.status(200).json({ html, scriptUrl });
           } catch (err) {
             console.log("Without styled components failed as well");
             console.log(err);

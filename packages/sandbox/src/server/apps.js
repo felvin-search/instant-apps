@@ -23,7 +23,6 @@ const apps = [
   diceRoller,
   dictionary,
   jsonFormatter,
-  // TODO: window is undefined
   latexRender,
   loremIpsum,
   math,

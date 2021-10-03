@@ -3,15 +3,17 @@ const path = require("path");
 module.exports = {
   // TODO: Automate this using CLI
   entry: {
-    "bouncy-ball": "../../apps/bouncy-ball/src/app.jsx",
-    capitals: "../../apps/capitals/src/app.jsx",
-    "csv-to-json": "../../apps/csv-to-json/src/app.jsx",
-    "currency-convertor": "../../apps/currency-convertor/src/app.jsx",
+    "bouncy-ball": "../../apps/bouncy-ball/src/App.jsx",
+    capitals: "../../apps/capitals/src/App.jsx",
+    "csv-to-json": "../../apps/csv-to-json/src/App.jsx",
+    "currency-convertor": "../../apps/currency-convertor/src/App.tsx",
+    "tic-tac-toe": "../../apps/tic-tac-toe/src/App.jsx",
   },
   target: "web",
   output: {
     // chunkFilename: "[id].esm.js",
-    filename: "[id].esm.js",
+    // TODO: This should use the npm package name
+    filename: "@felvin-search-apps/[id].esm.js",
     path: path.resolve(__dirname, "dist", "public"),
   },
   module: {

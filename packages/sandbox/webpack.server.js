@@ -48,7 +48,7 @@ module.exports = {
           loader: "ts-loader",
         },
       },
-      // https://stackoverflow.com/a/61761653/4698026
+      // Effective CSS loading https://stackoverflow.com/a/61761653/4698026
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"], // load project styles via style-loader
