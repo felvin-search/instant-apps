@@ -2,7 +2,6 @@
   "name": "@felvin-search/core",
   "description": "Core utilities for instant apps.",
   "version": "1.0.0",
-  "private": "false",
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public",

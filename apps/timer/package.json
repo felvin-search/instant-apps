@@ -2,7 +2,6 @@
   "name": "@felvin-search-apps/timer",
   "version": "1.0.0",
   "license": "MIT",
-  "private": false,
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public",
