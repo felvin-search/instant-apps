@@ -128,7 +128,6 @@ function Component(props: InstantAppProps) {
       _.map(data.track_arr, (track_object) => track_object.status_array)
     )
   );
-  console.log(data);
   return (
     <TrackingContainer>
       <h1>Courier Tracking Status</h1>
@@ -161,11 +160,9 @@ async function queryToData({
 }: queryToDataInput): Promise<queryToDataOutput> {
   // If the query does not contain the following words, do not trigger the app
   // `define`, `meaning`
-  console.log(isTriggered(query, triggerWords, { substringMatch: true }));
   if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
   // Extract tracking number from the query
   let trackingNumbers = query.match(numberPattern);
-  console.log(trackingNumbers);
   const baseUrl =
     "https://cfapi.pickrr.com/plugins/tracking/?format=json&tracking_id=";
   let results = await Promise.all(
@@ -182,8 +179,6 @@ async function queryToData({
     })
   );
   results = _.compact(results);
-  console.log("All results");
-  console.log(results);
 
   return results[0];
 }
