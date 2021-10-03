@@ -5,6 +5,7 @@ import graphPlotter from "@felvin-search-apps/graph-plotter";
 import latexRender from "@felvin-search-apps/latex-render";
 import uuid from "@felvin-search-apps/uuid";
 import capitals from "@felvin-search-apps/capitals";
+import jsonFormatter from "@felvin-search-apps/json-formatter";
 
 const allApps = [
   bouncyBall,
@@ -14,6 +15,7 @@ const allApps = [
   latexRender,
   uuid,
   capitals,
+  jsonFormatter,
 ];
 
 export default allApps;
