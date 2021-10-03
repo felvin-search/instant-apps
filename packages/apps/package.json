@@ -3,5 +3,35 @@
   "description": "Wrapper package which re-exports all available Instant Apps",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "./src/index.ts"
+  "main": "./src/index.ts",
+  "devDependencies": {
+    "depcheck": "^1.4.2"
+  },
+  "dependencies": {
+    "@felvin-search-apps/bouncy-ball": "^1.0.0",
+    "@felvin-search-apps/capitals": "^1.0.0",
+    "@felvin-search-apps/csv-to-json": "^1.0.0",
+    "@felvin-search-apps/currency-convertor": "^1.0.0",
+    "@felvin-search-apps/dice-roller": "^1.0.0",
+    "@felvin-search-apps/dictionary": "^1.0.0",
+    "@felvin-search-apps/flappy-bird": "^1.0.0",
+    "@felvin-search-apps/graph-plotter": "^1.0.0",
+    "@felvin-search-apps/joke-generator": "^1.0.0",
+    "@felvin-search-apps/json-formatter": "^1.0.0",
+    "@felvin-search-apps/latex-render": "^1.0.0",
+    "@felvin-search-apps/lorem-ipsum-generator": "^1.0.0",
+    "@felvin-search-apps/math": "^1.0.0",
+    "@felvin-search-apps/snake-game": "^1.0.0",
+    "@felvin-search-apps/tic-tac-toe": "^1.0.0",
+    "@felvin-search-apps/time-at-place": "^1.0.0",
+    "@felvin-search-apps/timer": "^1.0.0",
+    "@felvin-search-apps/uuid": "^1.0.0",
+    "@felvin-search-apps/word-counter": "^1.0.0",
+    "@felvin-search/core": "^1.0.0",
+    "@types/react": "^17.0.0",
+    "@types/styled-components": "^5.1.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0"
+  }
 }
