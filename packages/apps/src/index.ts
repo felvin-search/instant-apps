@@ -4,6 +4,7 @@ import loremIpsumGenerator from "@felvin-search-apps/lorem-ipsum-generator";
 import graphPlotter from "@felvin-search-apps/graph-plotter";
 import latexRender from "@felvin-search-apps/latex-render";
 import uuid from "@felvin-search-apps/uuid";
+import capitals from "@felvin-search-apps/capitals";
 
 const allApps = [
   bouncyBall,
@@ -12,6 +13,7 @@ const allApps = [
   graphPlotter,
   latexRender,
   uuid,
+  capitals,
 ];
 
 export default allApps;
