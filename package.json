@@ -1,10 +1,13 @@
 {
-  "name": "@felvin-search/apps",
+  "name": "private-mono-repo",
   "license": "MIT",
-  "version": "0.35.0",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
   },
   "main": "dist/apps/index.js",
   "types": "dist/apps/index.d.ts",
@@ -46,7 +49,7 @@
     "yargs": "^17.1.1"
   },
   "scripts": {
-    "start": "TSC_COMPILE_ON_ERROR=true react-scripts start",
+    "start": "TSC_COMPILE_ON_ERROR=true yarn --cwd=packages/sandbox start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
