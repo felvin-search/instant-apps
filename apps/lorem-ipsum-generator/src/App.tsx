@@ -105,6 +105,7 @@ function Component() {
   const handleCopy = (clipboard) => {
     var copyText = document.getElementById("lorem-ipsum");
 
+    // @ts-ignore
     clipboard.writeText(copyText.innerText).then(() => {
       setCopy(true);
 
@@ -126,7 +127,8 @@ function Component() {
             onChange={(e) => {
               // This is to ensure that only positive integers are assigned
               e.target.value.match(/[1-9][0-9]*/)
-                ? setNumCount(e.target.value.match(/[1-9][0-9]*/)[0])
+                ? // @ts-ignore
+                  setNumCount(e.target.value.match(/[1-9][0-9]*/)[0])
                 : setNumCount("0");
             }}
           />
