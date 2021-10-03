@@ -23,7 +23,8 @@
     "webpack-node-externals": "^3.0.0"
   },
   "scripts": {
-    "start": "yarn webpack serve --mode=development"
+    "start": "yarn webpack serve --mode=development",
+    "build": "yarn webpack --config webpack.config.js --mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
