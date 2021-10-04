@@ -16,6 +16,7 @@ import LatexRenderer from "./LatexRender";
 import LoremIpsumGenerator from "./LoremIpsumGenerator";
 import Plotter from "./Plotter";
 import SnakeGame from "./snake";
+import Tetris from "./tetris";
 import TicTacToe from "./TicTacToe";
 import time from "./time";
 import TimerApp from "./TimerApp";
@@ -27,7 +28,8 @@ const availableApps: Array<InstantApp> = [
   /**
    * Note: Update me when adding a new app.
    */
-  // MyApp,
+  // myApp,
+  Tetris,
   SnakeGame,
   CsvToJSON,
   DiceRoller,
