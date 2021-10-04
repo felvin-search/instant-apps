@@ -2,6 +2,7 @@ import bouncyBall from "@felvin-search-apps/bouncy-ball";
 import csvToJson from "@felvin-search-apps/csv-to-json";
 import loremIpsumGenerator from "@felvin-search-apps/lorem-ipsum-generator";
 import graphPlotter from "@felvin-search-apps/graph-plotter";
+import currencyConvertor from "@felvin-search-apps/currency-convertor";
 import latexRender from "@felvin-search-apps/latex-render";
 import uuid from "@felvin-search-apps/uuid";
 import capitals from "@felvin-search-apps/capitals";
@@ -24,6 +25,7 @@ const allApps = [
   csvToJson,
   loremIpsumGenerator,
   graphPlotter,
+  currencyConvertor,
   latexRender,
   uuid,
   capitals,
