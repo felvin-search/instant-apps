@@ -96,7 +96,9 @@ function Renderer() {
   return (
     <>
       <StyledHiddenOuter>
+        {/* style to prevent overflow */}
         <StyledHidden>
+          {/* style to move text field outside screen */}
           {/* hidden input text field to divert focus off search box */}
           <input type="text" ref={mainRef} tabindex="-1" />
         </StyledHidden>
