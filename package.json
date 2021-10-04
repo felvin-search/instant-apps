@@ -24,6 +24,7 @@
     "function-plot": "^1.22.7",
     "html-to-pdf-js": "^0.9.3",
     "katex": "^0.13.18",
+    "lodash": "^4.17.21",
     "lorem-ipsum": "^2.0.3",
     "mathjs": "^9.4.4",
     "money": "^0.2.0",
