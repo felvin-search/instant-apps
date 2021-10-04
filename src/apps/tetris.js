@@ -64,6 +64,7 @@ const StyledHiddenOuter = styled.div`
 function Renderer() {
   const useFocus = () => {
     const mainRef = useRef(null);
+    //code to divert focus from search box
     const setFocus = (condition = true) => {
       if (condition) {
         return mainRef.current && mainRef.current.focus();
