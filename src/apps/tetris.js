@@ -79,6 +79,8 @@ function Renderer() {
     setMainRef();
     setMainRef(false);
   }, []);
+
+  //code to prevent scrolling behaviour on spacebar and arrow key press
   window.addEventListener("keydown", function (e) {
     if (e.code === "Space" && e.target === document.body) {
       e.preventDefault();
@@ -90,17 +92,15 @@ function Renderer() {
       e.preventDefault();
     }
   });
+
   return (
     <>
       <StyledHiddenOuter>
+        {/* style to prevent overflow */}
         <StyledHidden>
-          <input
-            type="text"
-            name="name"
-            STYLE=" background-color: #aaaaaa;border: transparent"
-            ref={mainRef}
-            tabindex="-1"
-          />
+          {/* style to move text field outside screen */}
+          {/* hidden input text field to divert focus off search box */}
+          <input type="text" ref={mainRef} tabindex="-1" />
         </StyledHidden>
       </StyledHiddenOuter>
 
@@ -136,9 +136,6 @@ function Renderer() {
 const MyApp = {
   name: "Tetris-game",
   description: "Play tetris game",
-  // queryToData takes in the query and returns data which
-  // the Component displays on the website.
-  // If queryToData returns no data, we do not display the app.
   queryToData: matchTriggerQueries([
     "tetris",
     "play tetris",
