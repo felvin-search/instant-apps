@@ -9,6 +9,15 @@ import jsonFormatter from "@felvin-search-apps/json-formatter";
 import math from "@felvin-search-apps/math";
 import flappyBird from "@felvin-search-apps/flappy-bird";
 import timeAtPlace from "@felvin-search-apps/time-at-place";
+import TicTacToe from "@felvin-search-apps/tic-tac-toe";
+import JokeGenerator from "@felvin-search-apps/joke-generator";
+import DiceRoller from "@felvin-search-apps/dice-roller";
+import Timer from "@felvin-search-apps/timer";
+import SnakeGame from "@felvin-search-apps/snake-game";
+import Dictionary from "@felvin-search-apps/dictionary";
+import WordCounter from "@felvin-search-apps/word-counter";
+import Tetris from "@felvin-search-apps/tetris";
+import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
   bouncyBall,
@@ -22,6 +31,15 @@ const allApps = [
   math,
   flappyBird,
   timeAtPlace,
+  TicTacToe,
+  JokeGenerator,
+  DiceRoller,
+  Timer,
+  SnakeGame,
+  Dictionary,
+  WordCounter,
+  Tetris,
+  CourierTracker,
 ];
 
 export default allApps;
