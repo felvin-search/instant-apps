@@ -1572,7 +1572,6 @@
 "@types/assert@^1.4.6":
   version "1.5.6"
   resolved "https://registry.yarnpkg.com/@types/assert/-/assert-1.5.6.tgz#a8b5a94ce5fb8f4ba65fdc37fc9507609114189e"
-  integrity sha512-Y7gDJiIqb9qKUHfBQYOWGngUpLORtirAVPuj/CWJrU2C6ZM4/y3XLwuwfGMF8s7QzW746LQZx23m0+1FSgjfug==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.16"
@@ -2841,7 +2840,6 @@ buffer@^4.3.0:
 built-in-math-eval@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/built-in-math-eval/-/built-in-math-eval-0.3.0.tgz#240dc21cb389439588c61c460eb0076497efc41c"
-  integrity sha1-JA3CHLOJQ5WIxhxGDrAHZJfvxBw=
   dependencies:
     math-codegen "^0.3.5"
 
@@ -3096,7 +3094,6 @@ cjs-module-lexer@^0.6.0:
 clamp@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/clamp/-/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
-  integrity sha1-ZqDmQBGBbjcZaCj9yMjBRzEshjQ=
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -3727,29 +3724,24 @@ cyclist@^1.0.1:
 d3-array@2, d3-array@^2.3.0:
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-2.12.1.tgz#e20b41aafcdffdf5d50928004ececf815a465e81"
-  integrity sha512-B0ErZK/66mHtEsR1TkPEEkwdy+WDesimkM5gpZr5Dsg54BiTA5RXtYW5qTLIAcekaS9xfZrzBLF/OAkB3Qn1YQ==
   dependencies:
     internmap "^1.0.0"
 
 d3-axis@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/d3-axis/-/d3-axis-2.1.0.tgz#978db534092711117d032fad5d733d206307f6a0"
-  integrity sha512-z/G2TQMyuf0X3qP+Mh+2PimoJD41VOCjViJzT0BHeL/+JQAofkiWZbWxlwFGb1N8EN+Cl/CW+MUKbVzr1689Cw==
 
 "d3-color@1 - 2", d3-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-color/-/d3-color-2.0.0.tgz#8d625cab42ed9b8f601a1760a389f7ea9189d62e"
-  integrity sha512-SPXi0TSKPD4g9tw0NMZFnR95XVgUZiBH+uUTqQuDu1OsE2zomHU7ho0FISciaPvosimixwHFl3WHLGabv6dDgQ==
 
 "d3-dispatch@1 - 2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-dispatch/-/d3-dispatch-2.0.0.tgz#8a18e16f76dd3fcaef42163c97b926aa9b55e7cf"
-  integrity sha512-S/m2VsXI7gAti2pBoLClFFTMOO1HTtT0j99AuXLoGFKO6deHDdnv6ZGTxSTTUTgO1zVcv82fCOtDjYK4EECmWA==
 
 d3-drag@2:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-drag/-/d3-drag-2.0.0.tgz#9eaf046ce9ed1c25c88661911c1d5a4d8eb7ea6d"
-  integrity sha512-g9y9WbMnF5uqB9qKqwIIa/921RYWzlUDv9Jl1/yONQwxbOfszAWTCm8u7HOTgJgRDXiRZN56cHT9pd24dmXs8w==
   dependencies:
     d3-dispatch "1 - 2"
     d3-selection "2"
@@ -3757,29 +3749,24 @@ d3-drag@2:
 "d3-ease@1 - 2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-ease/-/d3-ease-2.0.0.tgz#fd1762bfca00dae4bacea504b1d628ff290ac563"
-  integrity sha512-68/n9JWarxXkOWMshcT5IcjbB+agblQUaIsbnXmrzejn2O82n3p2A9R2zEB9HIEFWKFwPAEDDN8gR0VdSAyyAQ==
 
 "d3-format@1 - 2", d3-format@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-format/-/d3-format-2.0.0.tgz#a10bcc0f986c372b729ba447382413aabf5b0767"
-  integrity sha512-Ab3S6XuE/Q+flY96HXT0jOXcM4EAClYFnRGY5zsjRGNy6qCYrQsMffs7cV5Q9xejb35zxW5hf/guKw34kvIKsA==
 
 "d3-interpolate@1 - 2", "d3-interpolate@1.2.0 - 2", d3-interpolate@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/d3-interpolate/-/d3-interpolate-2.0.1.tgz#98be499cfb8a3b94d4ff616900501a64abc91163"
-  integrity sha512-c5UhwwTs/yybcmTpAVqwSFl6vrQ8JZJoT5F7xNFK9pymv5C0Ymcc9/LIJHtYIggg/yS9YHw8i8O8tgb9pupjeQ==
   dependencies:
     d3-color "1 - 2"
 
 "d3-path@1 - 2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-path/-/d3-path-2.0.0.tgz#55d86ac131a0548adae241eebfb56b4582dd09d8"
-  integrity sha512-ZwZQxKhBnv9yHaiWd6ZU4x5BtCQ7pXszEV9CU6kRgwIQVQGLMv1oiL4M+MK/n79sYzsj+gcgpPQSctJUsLN7fA==
 
 d3-scale@^3.2.2:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/d3-scale/-/d3-scale-3.3.0.tgz#28c600b29f47e5b9cd2df9749c206727966203f3"
-  integrity sha512-1JGp44NQCt5d1g+Yy+GeOnZP7xHo0ii8zsQp6PGzd+C1/dl0KGsp9A7Mxwp+1D1o4unbTTxVdU/ZOIEBoeZPbQ==
   dependencies:
     d3-array "^2.3.0"
     d3-format "1 - 2"
@@ -3790,38 +3777,32 @@ d3-scale@^3.2.2:
 d3-selection@2, d3-selection@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-selection/-/d3-selection-2.0.0.tgz#94a11638ea2141b7565f883780dabc7ef6a61066"
-  integrity sha512-XoGGqhLUN/W14NmaqcO/bb1nqjDAw5WtSYb2X8wiuQWvSZUsUVYsOSkOybUrNvcBjaywBdYPy03eXHMXjk9nZA==
 
 d3-shape@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/d3-shape/-/d3-shape-2.1.0.tgz#3b6a82ccafbc45de55b57fcf956c584ded3b666f"
-  integrity sha512-PnjUqfM2PpskbSLTJvAzp2Wv4CZsnAgTfcVRTwW03QR3MkXF8Uo7B1y/lWkAsmbKwuecto++4NlsYcvYpXpTHA==
   dependencies:
     d3-path "1 - 2"
 
 "d3-time-format@2 - 3":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/d3-time-format/-/d3-time-format-3.0.0.tgz#df8056c83659e01f20ac5da5fdeae7c08d5f1bb6"
-  integrity sha512-UXJh6EKsHBTjopVqZBhFysQcoXSv/5yLONZvkQ5Kk3qbwiUYkdX17Xa1PT6U1ZWXGGfB1ey5L8dKMlFq2DO0Ag==
   dependencies:
     d3-time "1 - 2"
 
 "d3-time@1 - 2", d3-time@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/d3-time/-/d3-time-2.1.1.tgz#e9d8a8a88691f4548e68ca085e5ff956724a6682"
-  integrity sha512-/eIQe/eR4kCQwq7yxi7z4c6qEXf2IYGcjoWB5OOQy4Tq9Uv39/947qlDcN2TLkiTzQWzvnsuYPB9TrWaNfipKQ==
   dependencies:
     d3-array "2"
 
 "d3-timer@1 - 2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-timer/-/d3-timer-2.0.0.tgz#055edb1d170cfe31ab2da8968deee940b56623e6"
-  integrity sha512-TO4VLh0/420Y/9dO3+f9abDEFYeCUr2WZRlxJvbp4HPTQcSylXNiL6yZa9FIUvV1yRiFufl1bszTCLDqv9PWNA==
 
 d3-transition@2:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-transition/-/d3-transition-2.0.0.tgz#366ef70c22ef88d1e34105f507516991a291c94c"
-  integrity sha512-42ltAGgJesfQE3u9LuuBHNbGrI/AJjNL2OAUdclE70UE6Vy239GCBEYD38uBPoLeNsOhFStGpPI0BAOV+HMxog==
   dependencies:
     d3-color "1 - 2"
     d3-dispatch "1 - 2"
@@ -3832,7 +3813,6 @@ d3-transition@2:
 d3-zoom@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-zoom/-/d3-zoom-2.0.0.tgz#f04d0afd05518becce879d04709c47ecd93fba54"
-  integrity sha512-fFg7aoaEm9/jf+qfstak0IYpnesZLiMX6GZvXtUSdv8RH2o4E2qeelgdU09eKS6wGuiGMfcnMI0nTIqWzRHGpw==
   dependencies:
     d3-dispatch "1 - 2"
     d3-drag "2"
@@ -4139,7 +4119,6 @@ dotenv@8.2.0:
 double-bits@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/double-bits/-/double-bits-1.1.1.tgz#58abba45494da4d0fa36b73ad11a286c9184b1c6"
-  integrity sha1-WKu6RUlNpND6Nrc60RoobJGEscY=
 
 duplexer@^0.1.1:
   version "0.1.2"
@@ -5087,7 +5066,6 @@ function-bind@^1.1.1:
 function-plot@^1.22.7:
   version "1.22.7"
   resolved "https://registry.yarnpkg.com/function-plot/-/function-plot-1.22.7.tgz#208d9be815ea1298ded0849741944d06be202822"
-  integrity sha512-rB6FeVqvgNECmt5PhIvFFEOyEjM9AWLIpMkj9Nzbzq9f81Irgn3ZrXAuv5+qnuzM99jPL7ZM4kK3+ImiKXcSHA==
   dependencies:
     built-in-math-eval "^0.3.0"
     clamp "^1.0.1"
@@ -5702,12 +5680,10 @@ internal-slot@^1.0.3:
 internmap@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/internmap/-/internmap-1.0.1.tgz#0017cc8a3b99605f0302f2b198d272e015e5df95"
-  integrity sha512-lDB5YccMydFBtasVtxnZ3MRBHuaoE8GKsppq+EchKL2U4nK/DmEpPHNH8MZe5HkMtpSiTSOZwfN0tzYjO/lJEw==
 
 interval-arithmetic-eval@^0.4.7:
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/interval-arithmetic-eval/-/interval-arithmetic-eval-0.4.7.tgz#6f24958fecba8a6a8cf98d7df6788df98d224f72"
-  integrity sha512-ClK+N4efbsgjlZR8h0qd0LQbyzUzJ9IkrjmTnD5MVb4Ytebd0lesoVP4AxLclcsEI+nIieskQ8cepHIWUPaRhQ==
   dependencies:
     interval-arithmetic "^1.0.6"
     math-codegen "^0.3.5"
@@ -5715,7 +5691,6 @@ interval-arithmetic-eval@^0.4.7:
 interval-arithmetic@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/interval-arithmetic/-/interval-arithmetic-1.0.6.tgz#7979561c7e1b1fb4ab5e47062bc109bb024ad868"
-  integrity sha512-eVotDGYPNiEaJ63oa4CeEHgOczZJ3gNHqG5wfVQ2o8sN2CEczQyR82Sjey/Bp36x8e7PtBcBvitcMnw6VUpjgQ==
   dependencies:
     "@types/assert" "^1.4.6"
     is-safe-integer "^2.0.0"
@@ -5986,22 +5961,17 @@ is-root@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-root/-/is-root-2.1.0.tgz#809e18129cf1129644302a4f8544035d51984a9c"
 
-<<<<<<< HEAD
+is-safe-integer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-safe-integer/-/is-safe-integer-2.0.0.tgz#4042a188b355aae72a0c883f39ed957cbf63d3b6"
+  dependencies:
+    max-safe-integer "^1.0.0"
+
 is-shared-array-buffer@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-shared-array-buffer/-/is-shared-array-buffer-1.0.1.tgz#97b0c85fbdacb59c9c446fe653b82cf2b5b7cfe6"
 
 is-stream@^1.0.1, is-stream@^1.1.0:
-=======
-is-safe-integer@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/is-safe-integer/-/is-safe-integer-2.0.0.tgz#4042a188b355aae72a0c883f39ed957cbf63d3b6"
-  integrity sha512-eDaA39/1+3SNtYTRP28lRYOHMwiB1gfqXQaXcf/+f4mLwKgm8TTDkwJldsdtbgrK1R5CoDbf6AQ0KqP7BKoGtQ==
-  dependencies:
-    max-safe-integer "^1.0.0"
-
-is-stream@^1.1.0:
->>>>>>> upstream/master
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
@@ -7019,7 +6989,6 @@ match-at@^0.1.1:
 math-codegen@^0.3.5:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/math-codegen/-/math-codegen-0.3.5.tgz#4799ee4677ded147766d003cca4b7879edd40cca"
-  integrity sha1-R5nuRnfe0Ud2bQA8ykt4ee3UDMo=
   dependencies:
     extend "^3.0.0"
     mr-parser "^0.2.1"
@@ -7041,7 +7010,6 @@ mathjs@^9.4.4:
 max-safe-integer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/max-safe-integer/-/max-safe-integer-1.0.1.tgz#f38060be2c563d8c02e6d48af39122fd83b6f410"
-  integrity sha1-84BgvixWPYwC5tSK85Ei/YO29BA=
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -7270,7 +7238,6 @@ move-concurrently@^1.0.1:
 mr-parser@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/mr-parser/-/mr-parser-0.2.1.tgz#8618b9ba417e28e9f439a41c695b554eafeed927"
-  integrity sha1-hhi5ukF+KOn0OaQcaVtVTq/u2Sc=
 
 ms@2.0.0:
   version "2.0.0"
@@ -7352,7 +7319,6 @@ next-tick@~1.0.0:
 nextafter@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/nextafter/-/nextafter-1.0.0.tgz#b7d77b535310e3e097e6025abb0a903477ec1a3a"
-  integrity sha1-t9d7U1MQ4+CX5gJauwqQNHfsGjo=
   dependencies:
     double-bits "^1.1.0"
 

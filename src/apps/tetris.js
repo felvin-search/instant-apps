@@ -40,13 +40,11 @@ const Wrapper = styled.section`
 const StyledContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #080909;
   padding: 10px;
 `;
 
 const StyledItem = styled.div`
-  background-color: #aaaaaa;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid #ccc;
   padding: 10px;
   font-size: 1rem;
   text-align: center;
@@ -81,6 +79,8 @@ function Renderer() {
     setMainRef();
     setMainRef(false);
   }, []);
+
+  //code to prevent scrolling behaviour on spacebar and arrow key press
   window.addEventListener("keydown", function (e) {
     if (e.code === "Space" && e.target === document.body) {
       e.preventDefault();
@@ -92,17 +92,13 @@ function Renderer() {
       e.preventDefault();
     }
   });
+
   return (
     <>
       <StyledHiddenOuter>
         <StyledHidden>
-          <input
-            type="text"
-            name="name"
-            STYLE=" background-color: #aaaaaa;border: transparent"
-            ref={mainRef}
-            tabindex="-1"
-          />
+          {/* hidden input text field to divert focus off search box */}
+          <input type="text" ref={mainRef} tabindex="-1" />
         </StyledHidden>
       </StyledHiddenOuter>
 
@@ -138,9 +134,6 @@ function Renderer() {
 const MyApp = {
   name: "Tetris-game",
   description: "Play tetris game",
-  // queryToData takes in the query and returns data which
-  // the Component displays on the website.
-  // If queryToData returns no data, we do not display the app.
   queryToData: matchTriggerQueries([
     "tetris",
     "play tetris",
