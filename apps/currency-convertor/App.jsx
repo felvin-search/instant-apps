@@ -219,7 +219,7 @@ const parseConversionString = (query) => {
   // Example: 5 USD TO INR => {amount: 5, from: 'USD', to: 'INR'}
   const normalizedQuery = query.toUpperCase();
   if (normalizedQuery.includes(" TO ") || normalizedQuery.includes(" IN ")) {
-    const tokens = normalizedQuery.split(" ");
+    const tokens = normalizedQuery.split(/([0-9]+)/).join(" ").split(" ").filter(s => s!=="");
     if (tokens.length === 3) {
       return { amount: 1, from: tokens[0], to: tokens[2] };
     } else if (tokens.length === 4) {
