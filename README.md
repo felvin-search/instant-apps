@@ -74,7 +74,7 @@ Read more about the [architecture](https://github.com/felvin-search/docs/blob/ma
 
 <!-- Expand this with screenshots and example queries, as well as author(s). Write a script to generate this section automatically. -->
 
-See [src/apps/](src/apps).
+See [apps/](apps).
 
 ## How do releases take place?
 
