@@ -1,0 +1,17 @@
+{
+  "name": "@felvin-search/cli",
+  "description": "CLI for developing instant apps for Felvin",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "felvin-cli": "bin/felvin-cli"
+  },
+  "files": [
+    "bin"
+  ],
+  "dependencies": {
+    "commander": "^8.2.0",
+    "ts-node": "^10.2.1"
+  }
+}

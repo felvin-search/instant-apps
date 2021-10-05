@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+const path = require("path");
+
+// Figure out whether we're running inside the repo or as an installed dependency
+
+const isLocal = require("fs").existsSync(path.resolve(__dirname, "../src"));
+
+if (!isLocal) {
+  require("../");
+} else {
+  require("ts-node").register({
+    project: path.resolve(__dirname, "../../../tsconfig.json"),
+    compilerOptions: {
+      module: "CommonJS",
+    },
+  });
+
+  require("../src");
+}

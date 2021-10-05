@@ -1,19 +1,23 @@
-#!/usr/bin/env node
+import { resolve, join } from "path";
+import fs from "fs-extra";
+import yargs from "yargs";
 
-const { resolve, join } = require("path");
-const fs = require("fs-extra");
-const yargs = require("yargs");
 const argv = yargs
   .command("create_app", "Creates a template instant app")
   .help()
   .alias("help", "h").argv;
 const appName = argv._[0] || "myApp";
 
-const projecthome = resolve(__dirname, "..");
-const TEMPLATE_APP_PATH = join(projecthome, "utils/myApp.jsx");
-const FINAL_APP_PATH = join(projecthome, `src/apps/${appName}.jsx`);
+const projecthome = resolve(__dirname, "../../../../..");
+const TEMPLATE_APP_PATH = join(
+  projecthome,
+  "packages/cli/templates/default-app"
+);
+// TODO: take the name, id as input from user
+const FINAL_APP_PATH = join(projecthome, `apps/default-app`);
 
-async function main() {
+// TODO: fill in the values obtained as the input in the templates
+export async function main() {
   console.log("Create new app...");
   await fs.copy(TEMPLATE_APP_PATH, FINAL_APP_PATH);
   console.log(`New app created! Path: ${FINAL_APP_PATH}`);
