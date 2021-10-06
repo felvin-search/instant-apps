@@ -217,11 +217,11 @@ const parseConversionString = (query) => {
   // Default amount is 1
   // Example: USD TO INR => {amount: 1, from: 'USD', to: 'INR'}
   // Example: 5 USD TO INR => {amount: 5, from: 'USD', to: 'INR'}
-  // Example 5USD TO INR => {amount: 5, from: 'USD', to: 'INR'}
+  // Example 5.5USD TO INR => {amount: 5.5, from: 'USD', to: 'INR'}
   const normalizedQuery = query.toUpperCase();
   if (normalizedQuery.includes(" TO ") || normalizedQuery.includes(" IN ")) {
-    // The regex passed to the 1st split (/([0-9]+)/) splits a string around a sequence of integers (like "word123word" -> ["word", "123", "word"])
-    const tokens = normalizedQuery.split(/([0-9]+)/).join(" ").split(" ").filter(s => s!=="");
+    // The regex passed to the 1st split (/([0-9.]+)/) splits a string around a number (like "word12.3word" -> ["word", "12.3", "word"])
+    const tokens = normalizedQuery.split(/([0-9.]+)/).join(" ").split(" ").filter(s => s!=="");
     if (tokens.length === 3) {
       return { amount: 1, from: tokens[0], to: tokens[2] };
     } else if (tokens.length === 4) {
