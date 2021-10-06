@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@babel/runtime-corejs2": "^7.15.4",
+    "@felvin-search/core": "^1.0.0",
     "babel-plugin-styled-components": "^1.13.2",
     "cors": "^2.8.5",
     "css-loader": "^6.3.0",
