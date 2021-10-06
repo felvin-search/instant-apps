@@ -30,13 +30,17 @@ export async function main() {
 
   console.log("Checking if ID is availaible");
 
-  const FINAL_APP_PATH = join(PROJECT_HOME, `apps/${answers.id}`);
+  let FINAL_APP_PATH = join(PROJECT_HOME, `apps/${answers.id}`);
   if (await fs.pathExists(FINAL_APP_PATH)) {
-    console.log(chalk.red("ID already exists, try again with different ID"));
-  } else {
-    await fs.copy(TEMPLATE_APP_PATH, FINAL_APP_PATH);
-    console.log(chalk.green(`New app created! Path: ${FINAL_APP_PATH}`));
+    console.log(
+      chalk.red("ID already exists, making an app with the id 'default-app'")
+    );
+
+    FINAL_APP_PATH = join(PROJECT_HOME, `apps/default-app`);
   }
+
+  await fs.copy(TEMPLATE_APP_PATH, FINAL_APP_PATH);
+  console.log(chalk.green(`New app created! Path: ${FINAL_APP_PATH}`));
 
   // TODO: fill in the values obtained as the input in the templates
 }
