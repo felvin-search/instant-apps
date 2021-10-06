@@ -13,11 +13,13 @@
   "dependencies": {
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "^8.1.3",
+    "@types/lodash": "^4.14.175",
     "@types/recursive-readdir": "^2.2.0",
     "chalk": "^4.1.2",
     "commander": "^8.2.0",
     "handlebars": "^4.7.7",
     "inquirer": "^8.2.0",
+    "lodash": "^4.17.21",
     "recursive-readdir": "^2.2.2",
     "ts-node": "^10.2.1"
   }
