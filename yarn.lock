@@ -1776,7 +1776,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -8410,7 +8410,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "private-mono-repo@workspace:."
   dependencies:
-    "@felvin-search/cli": "workspace:packages/cli"
+    "@felvin-search/cli": ^1.0.0
     depcheck: ^1.4.2
     fs-extra: ^10.0.0
     husky: ^7.0.2

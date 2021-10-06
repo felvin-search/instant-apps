@@ -17,7 +17,7 @@
     "depcheck": "yarn workspaces foreach exec \"yarn depcheck\" --parallel"
   },
   "devDependencies": {
-    "@felvin-search/cli": "workspace:packages/cli",
+    "@felvin-search/cli": "^1.0.0",
     "depcheck": "^1.4.2",
     "fs-extra": "^10.0.0",
     "husky": "^7.0.2",
