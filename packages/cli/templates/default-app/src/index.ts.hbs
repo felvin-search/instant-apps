@@ -1,4 +1,10 @@
-import { InstantApp } from "@felvin-search/core"; import { Component,
-queryToData } from "./App"; const App: InstantApp = { id: "@felvin-search-apps/{{appId}}",
-name: "{{appName}}", description: "{{appDescription}}", queryToData, Component,
-}; export default App;
+import { InstantApp } from "@felvin-search/core";
+import { Component, queryToData } from "./App";
+const App: InstantApp = {
+  id: "@felvin-search-apps/{{appId}}",
+  name: "{{appName}}",
+  description: "{{appDescription}}",
+  queryToData,
+  Component,
+};
+export default App;
