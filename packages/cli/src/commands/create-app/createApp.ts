@@ -1,29 +1,44 @@
 import { resolve, join } from "path";
 import fs from "fs-extra";
-import yargs from "yargs";
+import inquirer, { Answers } from "inquirer";
+import chalk from "chalk";
 
-const argv = yargs
-  .command("create_app", "Creates a template instant app")
-  .help()
-  .alias("help", "h").argv;
-const appName = argv._[0] || "myApp";
-
-const projecthome = resolve(__dirname, "../../../../..");
-const TEMPLATE_APP_PATH = join(
-  projecthome,
-  "packages/cli/templates/default-app"
-);
-// TODO: take the name, id as input from user
-const FINAL_APP_PATH = join(projecthome, `apps/default-app`);
-
-// TODO: fill in the values obtained as the input in the templates
 export async function main() {
-  console.log("Create new app...");
-  await fs.copy(TEMPLATE_APP_PATH, FINAL_APP_PATH);
-  console.log(`New app created! Path: ${FINAL_APP_PATH}`);
-  console.log(
-    "\n[NEXT STEP]: Open `src/apps/index.ts` file and update the `availableApps` array after importing the new app which just got created."
+  const PROJECT_HOME = resolve(__dirname, "../../../../..");
+  const TEMPLATE_APP_PATH = join(
+    PROJECT_HOME,
+    "packages/cli/templates/default-app"
   );
+
+  const answers: Answers = await inquirer.prompt([
+    {
+      type: "input",
+      name: "id",
+      message: "Enter an ID for the app [required]",
+      validate: (value: any) => {
+        if (!value) {
+          chalk.red("Please enter an ID for the app");
+        } else if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(value)) {
+          return chalk.red(
+            "Plugin IDs must be lowercase and contain only letters, digits, and dashes."
+          );
+        }
+        return true;
+      },
+    },
+  ]);
+
+  console.log("Checking if ID is availaible");
+
+  const FINAL_APP_PATH = join(PROJECT_HOME, `apps/${answers.id}`);
+  if (await fs.pathExists(FINAL_APP_PATH)) {
+    console.log(chalk.red("ID already exists, try again with different ID"));
+  } else {
+    await fs.copy(TEMPLATE_APP_PATH, FINAL_APP_PATH);
+    console.log(chalk.green(`New app created! Path: ${FINAL_APP_PATH}`));
+  }
+
+  // TODO: fill in the values obtained as the input in the templates
 }
 
 main().catch((error) => {
