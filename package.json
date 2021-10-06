@@ -11,12 +11,13 @@
   },
   "scripts": {
     "start": "yarn workspace sandbox start",
-    "create-app": "node ./utils/create_new_app.js",
+    "create-app": "felvin-cli create-app",
     "publish-apps": "tsc -d --noEmit false && yarn publish",
     "prepare": "husky install",
     "depcheck": "yarn workspaces foreach exec \"yarn depcheck\" --parallel"
   },
   "devDependencies": {
+    "@felvin-search/cli": "^1.0.0",
     "depcheck": "^1.4.2",
     "fs-extra": "^10.0.0",
     "husky": "^7.0.2",
