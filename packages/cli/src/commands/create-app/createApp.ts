@@ -19,7 +19,7 @@ export async function main() {
       message: "Enter an ID for the app [required]",
       validate: (value: any) => {
         if (!value) {
-          chalk.red("Please enter an ID for the app");
+          return chalk.red("Please enter an ID for the app");
         } else if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(value)) {
           return chalk.red(
             "Plugin IDs must be lowercase and contain only letters, digits, and dashes."
@@ -31,10 +31,10 @@ export async function main() {
     {
       type: "input",
       name: "name",
-      message: "Enter a name for the app [required]",
+      message: "enter a name for the app [required]",
       validate: (value: any) => {
         if (!value) {
-          chalk.red("Please enter a name for the app");
+          return chalk.red("please enter a name for the app");
         }
         return true;
       },
@@ -42,10 +42,10 @@ export async function main() {
     {
       type: "input",
       name: "description",
-      message: "Enter a description for the app [required]",
+      message: "enter a description for the app [required]",
       validate: (value: any) => {
         if (!value) {
-          chalk.red("Please enter a description for the app");
+          return chalk.red("please enter a description for the app");
         }
         return true;
       },
@@ -74,15 +74,9 @@ export async function main() {
     }
   }
 
-  console.log("Checking if ID is availaible");
-
   let FINAL_APP_PATH = join(PROJECT_HOME, `apps/${answers.id}`);
   if (await fs.pathExists(FINAL_APP_PATH)) {
-    console.log(
-      chalk.red("ID already exists, making an app with the id 'default-app'")
-    );
-
-    FINAL_APP_PATH = join(PROJECT_HOME, `apps/default-app`);
+    throw new Error("ID already exists, please try again with different id");
   }
 
   await fs.copy(TEMPLATE_APP_PATH, FINAL_APP_PATH);
