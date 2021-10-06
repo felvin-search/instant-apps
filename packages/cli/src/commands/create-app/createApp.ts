@@ -4,6 +4,7 @@ import inquirer, { Answers } from "inquirer";
 import chalk from "chalk";
 import handlebars from "handlebars";
 import recursive from "recursive-readdir";
+import { exec } from "child_process";
 
 export async function main() {
   const PROJECT_HOME = resolve(__dirname, "../../../../..");
@@ -98,6 +99,9 @@ export async function main() {
   await generateTemplate(FINAL_APP_PATH);
 
   console.log(chalk.green(`New app created! Path: ${FINAL_APP_PATH}`));
+
+  console.log(chalk.blue("Installing dependencies"));
+  exec("yarn install");
 }
 
 main().catch((error) => {
