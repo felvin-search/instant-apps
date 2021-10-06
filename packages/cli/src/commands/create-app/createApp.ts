@@ -31,10 +31,10 @@ export async function main() {
     {
       type: "input",
       name: "name",
-      message: "enter a name for the app [required]",
+      message: "Enter a name for the app [required]",
       validate: (value: any) => {
         if (!value) {
-          return chalk.red("please enter a name for the app");
+          return chalk.red("Please enter a name for the app");
         }
         return true;
       },
@@ -42,10 +42,21 @@ export async function main() {
     {
       type: "input",
       name: "description",
-      message: "enter a description for the app [required]",
+      message: "Enter a description for the app [required]",
       validate: (value: any) => {
         if (!value) {
-          return chalk.red("please enter a description for the app");
+          return chalk.red("Please enter a description for the app");
+        }
+        return true;
+      },
+    },
+    {
+      type: "input",
+      name: "triggerWords",
+      message: "Enter comma separated trigger words for the app [required]",
+      validate: (value: any) => {
+        if (!value) {
+          return chalk.red("please enter trigger words for the app");
         }
         return true;
       },
@@ -63,6 +74,9 @@ export async function main() {
             appId: answers.id,
             appName: answers.name,
             appDescription: answers.description,
+            triggerWords: answers.triggerWords
+              .split(",")
+              .map((item) => `"${item.trim()}"`),
           });
 
           await fs.writeFile(file, contents);
@@ -84,8 +98,6 @@ export async function main() {
   await generateTemplate(FINAL_APP_PATH);
 
   console.log(chalk.green(`New app created! Path: ${FINAL_APP_PATH}`));
-
-  // TODO: fill in the values obtained as the input in the templates
 }
 
 main().catch((error) => {
