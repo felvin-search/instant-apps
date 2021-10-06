@@ -226,7 +226,7 @@ const parseConversionString = (query) => {
       return { amount: 1, from: tokens[0], to: tokens[2] };
     } else if (tokens.length === 4) {
       try {
-        const amount = parseInt(tokens[0]);
+        const amount = parseFloat(tokens[0]);
         return { amount, from: tokens[1], to: tokens[3] };
       } catch {
         return null;
