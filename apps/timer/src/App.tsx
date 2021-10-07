@@ -46,7 +46,7 @@ const convertNaturalStringToDate = (query: string): number => {
 
   const [number, duration] = processedQuery.split(" ");
 
-  const parsedNumber = parseInt(number);
+  const parsedNumber = parseFloat(number);
   if (isNaN(parsedNumber)) {
     throw new Error(`${number} is not a number.`);
   }
@@ -96,7 +96,7 @@ const queryToData = async ({ query }: queryToDataInput) => {
      * @returns Number of seconds
      */
     // TODO(orkohunter): Support words like 'five minutes'
-    const durationInSeconds = convertNaturalStringToDate(query);
+    const durationInSeconds = Math.floor(convertNaturalStringToDate(query));
     const minutes = Math.floor(durationInSeconds / 60);
     const seconds = durationInSeconds % 60;
     return { minutes, seconds };
