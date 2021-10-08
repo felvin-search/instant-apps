@@ -17,6 +17,7 @@
     "@felvin-search-apps/dictionary": "^1.0.0",
     "@felvin-search-apps/flappy-bird": "^1.0.0",
     "@felvin-search-apps/graph-plotter": "^1.0.0",
+    "@felvin-search-apps/ip-address": "^1.0.0",
     "@felvin-search-apps/joke-generator": "^1.0.0",
     "@felvin-search-apps/json-formatter": "^1.0.0",
     "@felvin-search-apps/latex-render": "^1.0.0",
