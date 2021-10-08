@@ -19,7 +19,7 @@ const Container = styled.div`
 function Component({ data }) {
   return (
     <Container>
-      Your IP6 Address is: <strong> {data.ip}</strong> 
+      Your IPv6 Address is: <strong> {data.ip}</strong> 
     </Container>
   );
 }
