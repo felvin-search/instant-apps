@@ -21,8 +21,7 @@ function Component({ data }) {
   const { height, width } = window.screen;
   return (
     <Container>
-      <div>The Height of your screen is : {height}px</div>
-      <div>The Width of your screen is : {width}px</div>
+      <p>Your screen resolution is : <strong>{width}x{height} px</strong></p>
     </Container>
   );
 }
@@ -34,11 +33,17 @@ const queryToData = ({ query }) => {
   if (
     !isTriggered(query, [
       "What is my screen resolution?",
+      "What is my screen resolution",
       "what is the resolution of my screen?",
+      "what is the resolution of my screen",
       "my screen resolution",
-      "what is my display resolution.",
+      "screen resolution",
+      "what is my display resolution",
+      "what is my display resolution?",
       "what is the size of screen",
+      "what is the size of screen?",
       "size of my screen",
+      "screen size",
     ])
   ) {
     return;
