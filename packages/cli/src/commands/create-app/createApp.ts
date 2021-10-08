@@ -113,7 +113,7 @@ export async function main() {
   );
   console.log(
     `Here is a short guide on how your app works ${chalk.blue(
-      "https://docs.felvin.com/features/instant-apps/getting-started"
+      "https://docs.felvin.com/instant-apps/getting-started"
     )}`
   );
 }
