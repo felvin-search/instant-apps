@@ -1,3 +1,4 @@
+import ScreenSize from "@felvin-search-apps/screen-size";
 import bouncyBall from "@felvin-search-apps/bouncy-ball";
 import csvToJson from "@felvin-search-apps/csv-to-json";
 import loremIpsumGenerator from "@felvin-search-apps/lorem-ipsum-generator";
@@ -21,6 +22,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  ScreenSize,
   bouncyBall,
   csvToJson,
   loremIpsumGenerator,
