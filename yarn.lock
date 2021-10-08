@@ -1638,6 +1638,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/screen-size@^1.0.0, @felvin-search-apps/screen-size@workspace:apps/screen-size":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/screen-size@workspace:apps/screen-size"
+  dependencies:
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/snake-game@^1.0.0, @felvin-search-apps/snake-game@workspace:apps/snake-game":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/snake-game@workspace:apps/snake-game"
@@ -1759,6 +1772,7 @@ __metadata:
     "@felvin-search-apps/latex-render": ^1.0.0
     "@felvin-search-apps/lorem-ipsum-generator": ^1.0.0
     "@felvin-search-apps/math": ^1.0.0
+    "@felvin-search-apps/screen-size": ^1.0.0
     "@felvin-search-apps/snake-game": ^1.0.0
     "@felvin-search-apps/tetris": ^1.0.0
     "@felvin-search-apps/tic-tac-toe": ^1.0.0
