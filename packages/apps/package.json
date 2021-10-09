@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "./src/index.ts",
   "devDependencies": {
-    "depcheck": "^1.4.2"
+    "@felvin-search/cli": "^1.0.0"
   },
   "dependencies": {
     "@felvin-search-apps/bouncy-ball": "^1.0.0",

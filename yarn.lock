@@ -1449,10 +1449,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/bouncy-ball@workspace:apps/bouncy-ball"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1463,10 +1463,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/capitals@workspace:apps/capitals"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1477,10 +1477,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/courier-tracker@workspace:apps/courier-tracker"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     lodash: ^4.17.21
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1492,10 +1492,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/csv-to-json@workspace:apps/csv-to-json"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     papaparse: ^5.3.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1509,11 +1509,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/currency-convertor@workspace:apps/currency-convertor"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     axios: ^0.21.1
-    depcheck: ^1.4.2
     money: ^0.2.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1525,10 +1525,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/dice-roller@workspace:apps/dice-roller"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dice-roll: ^1.2.2
     react-dom: ^17.0.2
@@ -1540,10 +1540,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/dictionary@workspace:apps/dictionary"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1554,10 +1554,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/flappy-bird@workspace:apps/flappy-bird"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1568,10 +1568,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/graph-plotter@workspace:apps/graph-plotter"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     function-plot: ^1.22.7
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1596,10 +1596,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/joke-generator@workspace:apps/joke-generator"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1610,10 +1610,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/json-formatter@workspace:apps/json-formatter"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     react-feather: ^2.0.9
@@ -1626,10 +1626,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/latex-render@workspace:apps/latex-render"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     html-to-pdf-js: ^0.9.3
     katex: ^0.13.18
     react: ^17.0.2
@@ -1643,10 +1643,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/lorem-ipsum-generator@workspace:apps/lorem-ipsum-generator"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     lorem-ipsum: ^2.0.3
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1659,10 +1659,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/math@workspace:apps/math"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     mathjs: ^9.4.4
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1700,10 +1700,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/snake-game@workspace:apps/snake-game"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     snake-game-react: ^1.0.6
@@ -1715,10 +1715,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/tetris@workspace:apps/tetris"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     react-tetris: ^0.1.2
@@ -1730,10 +1730,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/tic-tac-toe@workspace:apps/tic-tac-toe"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1744,12 +1744,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/time-at-place@workspace:apps/time-at-place"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     country-timezone: ^1.0.8
     dayjs: ^1.10.7
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1760,10 +1760,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/timer@workspace:apps/timer"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1774,10 +1774,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/uuid@workspace:apps/uuid"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1789,10 +1789,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/word-counter@workspace:apps/word-counter"
   dependencies:
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -1827,10 +1827,10 @@ __metadata:
     "@felvin-search-apps/timer": ^1.0.0
     "@felvin-search-apps/uuid": ^1.0.0
     "@felvin-search-apps/word-counter": ^1.0.0
+    "@felvin-search/cli": ^1.0.0
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
-    depcheck: ^1.4.2
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0

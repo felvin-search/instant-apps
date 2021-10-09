@@ -17,6 +17,6 @@
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
-    "depcheck": "^1.4.2"
+    "@felvin-search/cli": "^1.0.0"
   }
 }
