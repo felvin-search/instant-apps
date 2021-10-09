@@ -1,12 +1,24 @@
-const path = require("path");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+import path from "path";
+import fs from "fs-extra";
 
-module.exports = {
-  entry: "./src/App.tsx",
+// Path to where the instant app's package.json lives.
+const appPath = process.cwd();
+console.log(`Running build:app inside ${appPath}`);
+const rootPath = path.dirname(path.dirname(appPath));
+
+// Read package.json
+const packageJson = fs.readJsonSync("package.json");
+const entrypoint = packageJson?.main;
+
+export default {
+  entry: entrypoint,
   target: "web",
   output: {
-    filename: "client.esm.js",
-    path: path.resolve(__dirname, "dist", "public"),
+    path: path.resolve(appPath, "dist"),
+    filename: "index.cjs.js",
+    library: {
+      type: "commonjs",
+    },
   },
   module: {
     rules: [
@@ -41,6 +53,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "ts-loader",
+          options: {
+            configFile: path.join(rootPath, "tsconfig.json"),
+          },
         },
       },
       // Effective CSS loading https://stackoverflow.com/a/61761653/4698026
@@ -53,16 +68,5 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
-  },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-    }),
-  ],
-  // We need this to redirect all requests to index.html
-  // https://stackoverflow.com/a/34125010/4698026
-  devServer: {
-    port: 3000,
-    historyApiFallback: true,
   },
 };
