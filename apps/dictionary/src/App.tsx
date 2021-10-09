@@ -62,7 +62,7 @@ function Component(props: InstantAppProps) {
     <DictionaryContainer>
       <h1>{data.word}</h1>
       <RowContainer>
-        <div>{data.phonetics[0]?.text}</div>
+        <div id="phonetics-text">{data.phonetics[0]?.text}</div>
         <audio controls src={data.phonetics[0]?.audio}>
           Your browser does not support the
           <code>audio</code> element.
