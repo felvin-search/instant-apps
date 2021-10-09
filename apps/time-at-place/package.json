@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "@felvin-search/cli": "^1.0.0"
+  },
+  "scripts": {
+    "build": "felvin-cli build:app"
   }
 }
