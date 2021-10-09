@@ -4,6 +4,13 @@
   "version": "1.0.0",
   "license": "MIT",
   "main": "./src/index.ts",
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/index.cjs.js"
+  },
+  "scripts": {
+    "build": "felvin-cli build:app"
+  },
   "devDependencies": {
     "@felvin-search/cli": "^1.0.0"
   },
