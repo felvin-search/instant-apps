@@ -19,7 +19,7 @@ const Container = styled.div`
 function Component({ data }) {
   return (
     <Container>
-      Your IPv6 Address is: <strong> {data.ip}</strong> 
+      Your IP Address is: <strong> {data.ip}</strong> 
     </Container>
   );
 }
@@ -28,7 +28,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "What is my ip","What is my ip?","my ip address","ip address" ])) {
+  if (!isTriggered(query, [ "What is my ip","What is my ip?","my ip address","ip address" ],{substringMatch:true})) {
     return;
   }
 
