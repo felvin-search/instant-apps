@@ -22,6 +22,7 @@
     "@felvin-search-apps/latex-render": "^1.0.0",
     "@felvin-search-apps/lorem-ipsum-generator": "^1.0.0",
     "@felvin-search-apps/math": "^1.0.0",
+    "@felvin-search-apps/morse-code-generator": "^1.0.0",
     "@felvin-search-apps/screen-size": "^1.0.0",
     "@felvin-search-apps/snake-game": "^1.0.0",
     "@felvin-search-apps/tetris": "^1.0.0",
