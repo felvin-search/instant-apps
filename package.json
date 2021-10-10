@@ -14,15 +14,22 @@
     "create-app": "felvin-cli create-app",
     "publish-apps": "tsc -d --noEmit false && yarn publish",
     "prepare": "husky install",
-    "depcheck": "yarn workspaces foreach exec \"yarn depcheck\" --parallel"
+    "depcheck": "yarn workspaces foreach exec \"yarn depcheck\" --parallel",
+    "test": "jest"
   },
   "devDependencies": {
     "@felvin-search/cli": "^1.0.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
+    "cross-fetch": "^3.1.4",
     "depcheck": "^1.4.2",
     "fs-extra": "^10.0.0",
     "husky": "^7.0.2",
+    "jest": "^27.2.4",
     "lint-staged": "^11.1.2",
+    "msw": "^0.35.0",
     "prettier": "2.4.0",
+    "ts-jest": "^27.0.5",
     "typescript": "^4.4.3"
   },
   "lint-staged": {

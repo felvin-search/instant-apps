@@ -10,13 +10,41 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
 
-  margin: 1rem 0;
+  font-size: 1rem;
 
-  @media (min-width: ${Breakpoints.medium}) {
+  border-radius: 0.25rem;
+  width: 55ch;
+
+  // using bootstrap's breakpoint as Breakpoints only has property 'medium'
+  @media (min-width: ${Breakpoints.large || "992px"}) {
+    width: 100ch;
     flex-direction: row;
   }
+`;
+
+const Column = styled.div`
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  min-height: 14rem;
+
+  &:first-child {
+    margin-bottom: 20px;
+  }
+
+  // using bootstrap's breakpoint as Breakpoints only has property 'medium'
+  @media (min-width: ${Breakpoints.large || "992px"}) {
+    &:first-child {
+      margin-right: 20px;
+      margin-bottom: 0px;
+    }
+  }
+`;
+
+const FormLabel = styled.label`
+  font-weight: bold;
+  margin-bottom: 0.25rem;
 `;
 
 const CSVArea = styled.textarea`
@@ -24,60 +52,51 @@ const CSVArea = styled.textarea`
   box-sizing: border-box;
   box-shadow: inset 0px 2px 6px rgba(163, 162, 162, 0.05);
   border-radius: 4px;
+  overflow-x: scroll;
+  overflow-y: scroll;
 
-  margin: 0.5rem 0;
-  padding: 0.5rem;
+  // fill remaining space
+  flex: 1;
+
   resize: none;
 
   line-height: inherit;
   font-family: inherit;
-  font-size: inherit;
-`;
 
-const RightColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-  position: relative;
-  margin: 0 1rem;
+  padding: 0.5rem;
 `;
 
 const JSONContainer = styled.div`
-  width: 310px;
   overflow-x: scroll;
   outline: none;
-  padding: 0.5rem;
-  margin: 0.5rem 0;
-  height: 100%;
 
-  background: #ffffff;
+  // fill remaining space
+  flex: 1;
+
   border: 1px solid #d0d0d0;
   box-sizing: border-box;
   box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
+
+  padding: 0.5rem;
 `;
 
-const CopyButton = styled.div`
+const CopyButton = styled.button`
+  font-weight: bold;
+
   display: flex;
   align-items: center;
   justify-content: center;
-
-  position: relative;
-  top: 2px;
+  margin-top: 0.75rem;
 
   background: transparent;
   cursor: pointer;
   line-height: inherit;
   font-family: inherit;
-  font-size: inherit;
 
   border: 1px solid #8b949e;
-  padding: 0.25rem;
-  margin: 0.25rem;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 `;
 
 //=========================================
@@ -106,20 +125,26 @@ function Component() {
   };
 
   return (
-    <Container>
-      <CSVArea
-        rows="10"
-        placeholder="Paste CSV here"
-        onChange={(e) => setCSVData(e.target.value)}
-      />
+    <>
+      <Container>
+        <Column>
+          <FormLabel htmlFor="csv-textarea">CSV Data</FormLabel>
+          <CSVArea
+            id="csv-textarea"
+            placeholder="Paste CSV here"
+            onChange={(e) => setCSVData(e.target.value)}
+          />
+        </Column>
+        <Column>
+          <FormLabel htmlFor="json-pretty">Generated JSON</FormLabel>
+          <JSONContainer as={JSONPretty} id="json-pretty" data={jsonData} />
+        </Column>
+      </Container>
 
-      <RightColumn>
-        <JSONContainer as={JSONPretty} id="json-pretty" data={jsonData} />
-        <CopyButton onClick={() => handleCopy(navigator.clipboard)}>
-          Copy {copy ? <Icon.Check /> : <Icon.Clipboard />}
-        </CopyButton>
-      </RightColumn>
-    </Container>
+      <CopyButton type="button" onClick={() => handleCopy(navigator.clipboard)}>
+        Copy JSON &nbsp;{copy ? <Icon.Check /> : <Icon.Clipboard />}
+      </CopyButton>
+    </>
   );
 }
 
