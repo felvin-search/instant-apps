@@ -22,9 +22,6 @@ const TextArea = styled.textarea`
   font-size: inherit;
   line-height: inherit;
   resize: none;
-  // display: block;
-  // margin-left: auto;
-  // margin_right: auto;
 `;
 
 const Button = styled.button`
