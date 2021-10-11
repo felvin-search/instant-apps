@@ -4,6 +4,10 @@ import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import data from "./morseCode.json";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4ae1edfca8222ccede0eebcfeb230fc95d37338
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
@@ -156,8 +160,12 @@ function isMorseCode(str) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
+<<<<<<< HEAD
   if (!isTriggered(query, ["generate morse code", "convert morse code to text", "convert text to morse", "morse code generator"]))
   {
+=======
+  if (!isTriggered(query, ["generate morse code", "convert morse code to text", "convert text to morse", "morse code generator"])) {
+>>>>>>> e4ae1edfca8222ccede0eebcfeb230fc95d37338
     return;
   }
 
