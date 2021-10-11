@@ -36,15 +36,7 @@ export default {
               "@babel/preset-react",
               "@babel/preset-typescript",
             ],
-            plugins: [
-              "babel-plugin-styled-components",
-              // [
-              //   "@babel/plugin-transform-runtime",
-              //   {
-              //     corejs: 2,
-              //   },
-              // ],
-            ],
+            plugins: ["babel-plugin-styled-components"],
           },
         },
       },
