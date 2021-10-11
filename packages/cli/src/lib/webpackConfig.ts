@@ -69,4 +69,12 @@ export default {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
+  // https://styled-components.com/docs/faqs#i-am-a-library-author-should-i-bundle-styledcomponents-with-my-library
+  externals: {
+    "styled-components": {
+      commonjs: "styled-components",
+      commonjs2: "styled-components",
+      amd: "styled-components",
+    },
+  },
 };
