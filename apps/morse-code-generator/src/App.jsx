@@ -37,9 +37,6 @@ const Button = styled.button`
 
 const Result = styled.div`
   display: block;
-  // justify-content: center;
-  // align-items: center;
-  // text-align: center;
   margin-left: 4rem;
   margin-right: 4rem;
 `;
