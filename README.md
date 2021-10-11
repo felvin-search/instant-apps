@@ -19,6 +19,12 @@ Your search box is now an app store! 🎉 - [Felvin](https://felvin.com)
 | [<img  alt="currency instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/currency-example.png">](https://felvin.com/search?q=500+usd+to+inr)    | [<img  alt="json formatter instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/json-example.png">](https://felvin.com/search?q=format+json) |
 | [<img  alt="dictionary instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/dictionary-example.png">](https://felvin.com/search?q=gonzo+meaning) | [<img  alt="timer instant app" src="https://raw.githubusercontent.com/felvin-search/instant-apps/master/.github/assets/readme/timer-example.png">](https://felvin.com/search?q=10+minutes+timer)    |
 
+## 🏆 Hackathon
+
+We're hosting a hackathon this weekend (15-17 October). Create awesome open source Instant Apps and win prizes!
+
+[Register now](https://docs.google.com/forms/d/e/1FAIpQLSfVdEqYcKpXn5oA_7Xk8okBAYGWGogQi1_Dt7w6-ok30bat8A/viewform) and [read more](https://docs.felvin.com/events/hackathon) about the event.
+
 ## How to use?
 
 [felvin.com](https://felvin.com)
