@@ -1,5 +1,10 @@
 name: CI
 on: [pull_request]
+
+# This is needed for yarn to run because .yarnrc.yml contains this env variable
+env:
+  NPM_TOKEN: dummy
+
 jobs:
   build:
     name: Test
@@ -9,7 +14,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
-
       - run: yarn install
-
       - run: yarn test
