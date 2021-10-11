@@ -31,7 +31,7 @@ const StrongAccept = styled.strong`
   color: green;
 `;
 const Input=styled.input`
-size:20
+  size:20;
 `
 const StrongReject = styled.strong`
   color: red;
