@@ -28,14 +28,13 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "What is my ip","What is my ip?","my ip address","ip address" ],{substringMatch:true})) {
+  if (!isTriggered(query, [ "What is my ip?","my ip address"],{substringMatch:true})) {
     return;
   }
 
   const response = await fetch("https://api64.ipify.org?format=json", {
     headers: {
       Accept: "application/json",
-      "User-Agent": "Felvin Search (felvin.com)",
     },
   });
   if (!response.ok) {
