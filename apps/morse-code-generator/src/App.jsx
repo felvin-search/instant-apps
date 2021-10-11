@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import data from "./morseCode.json";
 
-console.log(data);
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
