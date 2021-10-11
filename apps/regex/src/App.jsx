@@ -51,7 +51,7 @@ display: flex;
 function Component({ data }) {
   const [regex, setRegex] = useState("");
   const [text, setText] = useState("");
-  const [Value, setValue] = useState("");
+  const [value, setValue] = useState("");
   const [result, setresult] = useState("");
   async function handleSubmit(e) {
     try {
