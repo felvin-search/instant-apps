@@ -146,7 +146,7 @@ function MorseTranslator() {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, ["generateMorse", "generate Morse", "Morse to Text", "Text to Morse", "Morse generator"])) {
+  if (!isTriggered(query, ["generate morse code", "convert morse code to text", "convert text to morse", "morse code generator"])) {
     return;
   }
 
