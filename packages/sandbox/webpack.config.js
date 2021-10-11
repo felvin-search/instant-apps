@@ -26,12 +26,12 @@ module.exports = {
             ],
             plugins: [
               "babel-plugin-styled-components",
-              // [
-              //   "@babel/plugin-transform-runtime",
-              //   {
-              //     corejs: 2,
-              //   },
-              // ],
+              [
+                "@babel/plugin-transform-runtime",
+                {
+                  corejs: 2,
+                },
+              ],
             ],
           },
         },
