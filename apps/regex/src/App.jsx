@@ -22,10 +22,27 @@ const Div = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: left;
+  margin: 2px;
 `;
 const Label = styled.label`
   padding: 2px 10px 0 0;
 `;
+const StrongAccept = styled.strong`
+  color: green;
+`;
+const Input=styled.input`
+size:20
+`
+const StrongReject = styled.strong`
+  color: red;
+`;
+
+const Result=styled.div`
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction:column
+`
 
 //=========================================
 
@@ -35,11 +52,17 @@ function Component({ data }) {
   const [regex, setRegex] = useState("");
   const [text, setText] = useState("");
   const [Value, setValue] = useState("");
+  const [result, setresult] = useState("");
   async function handleSubmit(e) {
     try {
       e.preventDefault();
-      let reg = new RegExp(regex);
+      let flags = regex.replace(/.*\/([gimy]*)$/, "$1");
+      let pattern = regex.replace(new RegExp("^/(.*?)/" + flags + "$"), "$1");
+      let reg = new RegExp(pattern, flags);
       let check = reg.test(text);
+      let result = text;
+      result = result.replace(reg, (match) => `<mark>${match}</mark>`);
+      setresult(result);
       if (regex == "") {
         setValue("Enter the regular expression");
         return;
@@ -51,6 +74,8 @@ function Component({ data }) {
       check ? setValue(true) : setValue(false);
     } catch (err) {
       setValue("Sorry, An error occured!Please try again");
+      setRegex("");
+      setText("");
     }
   }
   return (
@@ -58,16 +83,18 @@ function Component({ data }) {
       <Form onSubmit={handleSubmit}>
         <Div>
           <Label>Enter Regex:</Label>
-          <input
+          <Input
             type="text"
+            placeholder="Regex"
             value={regex}
             onChange={(e) => setRegex(e.target.value)}
-          ></input>
+          ></Input>
         </Div>
         <Div>
           <Label>Enter String:</Label>
           <input
             type="text"
+            placeholder="Test String"
             value={text}
             onChange={(e) => setText(e.target.value)}
           ></input>
@@ -76,12 +103,17 @@ function Component({ data }) {
       </Form>
       {typeof Value === "boolean" ? (
         Value ? (
-          <h3>The string matches the regex</h3>
+          <Result>
+            <StrongAccept>The Test String matches the Regex</StrongAccept>
+            <h3>
+              <Div dangerouslySetInnerHTML={{ __html: result }}></Div>
+            </h3>
+          </Result>
         ) : (
-          <h3>The String Does not match the regex</h3>
+          <StrongReject>The Test String Does not match the Regex</StrongReject>
         )
       ) : (
-        <h3>{Value}</h3>
+        <StrongReject>{Value}</StrongReject>
       )}
     </Container>
   );
