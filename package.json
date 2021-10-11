@@ -12,7 +12,7 @@
   "scripts": {
     "start": "yarn workspace sandbox start",
     "create-app": "felvin-cli create-app",
-    "build-apps": "yarn workspaces foreach -pv run build",
+    "build-packages": "yarn workspaces foreach -pv run build",
     "bump-version": "yarn workspaces foreach -v version minor",
     "publish-packages": "yarn workspaces foreach -pv npm publish",
     "prepare": "husky install",
