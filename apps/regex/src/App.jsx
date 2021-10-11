@@ -130,7 +130,7 @@ const queryToData = ({ query }) => {
       "match regex",
       "regex checker",
       "regex tester",
-    ])
+    ], { substringMatch: true })
   ) {
     return;
   }
