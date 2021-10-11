@@ -106,7 +106,7 @@ function Component({ data }) {
           <Result>
             <StrongAccept>The Test String matches the Regex</StrongAccept>
             <h3>
-              <Div dangerouslySetInnerHTML={{ __html: result }}></Div>
+              <p dangerouslySetInnerHTML={{ __html: result }}></p>
             </h3>
           </Result>
         ) : (
