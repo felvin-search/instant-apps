@@ -4,8 +4,6 @@ import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import data from "./morseCode.json";
 
-console.log(data);
-
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
@@ -23,9 +21,6 @@ const TextArea = styled.textarea`
   font-size: inherit;
   line-height: inherit;
   resize: none;
-  // display: block;
-  // margin-left: auto;
-  // margin_right: auto;
 `;
 
 const Button = styled.button`
@@ -41,9 +36,6 @@ const Button = styled.button`
 
 const Result = styled.div`
   display: block;
-  // justify-content: center;
-  // align-items: center;
-  // text-align: center;
   margin-left: 4rem;
   margin-right: 4rem;
 `;
@@ -52,6 +44,33 @@ const Result = styled.div`
 // Your UI logic goes here.
 
 function Component({ data }) {
+  const [input, setInput] = useState("");
+  const [morse, setMorse] = useState("");
+  const [text, setText] = useState("");
+
+  function MorseTranslator(e) {
+
+    e.preventDefault();
+    let msgInput = input;
+
+    if (isMorseCode(msgInput) == true) {
+      let decoded = decode(msgInput);
+      if (decoded.includes("undefined")) {
+        setText("Morse Code could not be decoded. Try again!")
+      } else {
+        setText(decoded);
+      }
+      setMorse(msgInput);
+    } else {
+      let encoded = encode(msgInput);
+      if (encoded.includes("undefined")) {
+        setMorse("Text message could not be encoded. Try again!")
+      } else {
+        setMorse(encoded);
+      }
+      setText(msgInput);
+    }
+  }
   return (
     <>
       <Container>
@@ -59,22 +78,31 @@ function Component({ data }) {
           <h3>
             Covert Morse Code to Text Message or Text Message to Morse Code
           </h3>
-          <h5>Note: In the Morse Code, code for every letter is separated by &lt;space&gt; and every word is separated by &lt;space&gt;|&lt;space&gt;</h5>
-          <h5>Remember to input Morse Code correctly, if you want a proper decoded message!</h5>
+          <h5>
+            Note: In the Morse Code, code for every letter is separated by
+            &lt;space&gt; and every word is separated by
+            &lt;space&gt;|&lt;space&gt;
+          </h5>
+          <h5>
+            Remember to input Morse Code correctly, if you want a proper decoded
+            message!
+          </h5>
           <TextArea
             id="input"
             rows={5}
             placeholder="Enter Text or Morse Code Here"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
           />
           <br />
           <Button onClick={MorseTranslator}>Convert</Button>
         </div>
       </Container>
       <Result>
-        <div id="MorseOutput">Morse Code:</div>
-        <div id="TextOutput">Text:</div>
+        <div >Morse Code: {morse}</div>
+        <div>Text: {text}</div>
       </Result>
-    </ >
+    </>
   );
 }
 
@@ -83,7 +111,6 @@ function flipObject(obj) {
     prop;
 
   for (prop in obj) characters[obj[prop]] = prop;
-
   return characters;
 }
 
@@ -124,36 +151,13 @@ function isMorseCode(str) {
   return true;
 }
 
-function MorseTranslator() {
-  let msgInput = document.getElementById("input");
-  let mOutput = document.getElementById("MorseOutput");
-  let tOutput = document.getElementById("TextOutput");
-
-  if (isMorseCode(msgInput.value) == true) {
-    let decoded = decode(msgInput.value);
-    if (decoded.includes("undefined")) {
-      tOutput.innerHTML = `Text: Morse Code could not be decoded.`;
-    } else {
-      tOutput.innerHTML = `Text: ${decoded}`;
-    }
-    mOutput.innerHTML = `Morse Code: ${msgInput.value}`;
-  } else {
-    let encoded = encode(msgInput.value);
-    if (encoded.includes("undefined")) {
-      mOutput.innerHTML = `Morse Code: Text message could not be encoded.`;
-    } else {
-      mOutput.innerHTML = `Morse Code: ${encoded}`;
-    }
-    tOutput.innerHTML = `Text: ${msgInput.value}`;
-  }
-}
-
 // `data` prop is exactly what is returned by queryToData.
 //=========================================
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, ["generateMorse", "generate Morse", "Morse to Text", "Text to Morse", "Morse generator"])) {
+  if (!isTriggered(query, ["generate morse code", "convert morse code to text", "convert text to morse", "morse code generator"]))
+  {
     return;
   }
 
