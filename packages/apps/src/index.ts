@@ -1,5 +1,6 @@
 import MorseCodeGenerator from "@felvin-search-apps/morse-code-generator";
 import IpAddress from "@felvin-search-apps/ip-address";
+import Regex from "@felvin-search-apps/regex";
 import ScreenSize from "@felvin-search-apps/screen-size";
 import bouncyBall from "@felvin-search-apps/bouncy-ball";
 import csvToJson from "@felvin-search-apps/csv-to-json";
@@ -26,6 +27,7 @@ import CourierTracker from "@felvin-search-apps/courier-tracker";
 const allApps = [
   MorseCodeGenerator,
   IpAddress,
+  Regex,
   ScreenSize,
   bouncyBall,
   csvToJson,
