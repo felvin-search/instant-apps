@@ -53,7 +53,7 @@ function Component({ data }) {
   const [text, setText] = useState("");
   const [value, setValue] = useState("");
   const [result, setresult] = useState("");
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     try {
       e.preventDefault();
       let flags = regex.replace(/.*\/([gimy]*)$/, "$1");
