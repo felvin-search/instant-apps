@@ -30,19 +30,19 @@ const Label = styled.label`
 const StrongAccept = styled.strong`
   color: green;
 `;
-const Input=styled.input`
-  size:20;
-`
+const Input = styled.input`
+  size: 20;
+`;
 const StrongReject = styled.strong`
   color: red;
 `;
 
-const Result=styled.div`
-display: flex;
+const Result = styled.div`
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction:column;
-`
+  flex-direction: column;
+`;
 
 //=========================================
 
@@ -56,6 +56,8 @@ function Component({ data }) {
   function handleSubmit(e) {
     try {
       e.preventDefault();
+      // directly converting the input string into regex results in backslash getting escaped
+      // https://stackoverflow.com/a/874742
       let flags = regex.replace(/.*\/([gimy]*)$/, "$1");
       let pattern = regex.replace(new RegExp("^/(.*?)/" + flags + "$"), "$1");
       let reg = new RegExp(pattern, flags);
@@ -124,13 +126,17 @@ function Component({ data }) {
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
   if (
-    !isTriggered(query, [
-      "regex validator",
-      "check regex",
-      "match regex",
-      "regex checker",
-      "regex tester",
-    ], { substringMatch: true })
+    !isTriggered(
+      query,
+      [
+        "regex validator",
+        "check regex",
+        "match regex",
+        "regex checker",
+        "regex tester",
+      ],
+      { substringMatch: true }
+    )
   ) {
     return;
   }
