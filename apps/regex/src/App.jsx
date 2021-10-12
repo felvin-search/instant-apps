@@ -22,10 +22,10 @@ const Div = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: left;
-  margin: 2px;
+  margin: 0.2rem;
 `;
 const Label = styled.label`
-  padding: 2px 10px 0 0;
+  padding: 0.2rem;
 `;
 const StrongAccept = styled.strong`
   color: green;
@@ -101,8 +101,8 @@ function Component({ data }) {
         </Div>
         <input type="submit" value="Check"></input>
       </Form>
-      {typeof Value === "boolean" ? (
-        Value ? (
+      {typeof value === "boolean" ? (
+        value ? (
           <Result>
             <StrongAccept>The Test String matches the Regex</StrongAccept>
             <h3>
@@ -113,7 +113,7 @@ function Component({ data }) {
           <StrongReject>The Test String Does not match the Regex</StrongReject>
         )
       ) : (
-        <StrongReject>{Value}</StrongReject>
+        <StrongReject>{value}</StrongReject>
       )}
     </Container>
   );
