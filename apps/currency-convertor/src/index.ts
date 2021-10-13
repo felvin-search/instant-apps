@@ -7,5 +7,7 @@ const App: InstantApp = {
   description: "Converts currencies",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["100 usd to inr", "50 eur to usd"],
 };
 export default App;

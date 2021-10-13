@@ -7,6 +7,8 @@ const App: InstantApp = {
   description: "It's just a bouncy ball",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["bouncy ball"],
 };
 
 export default App;
