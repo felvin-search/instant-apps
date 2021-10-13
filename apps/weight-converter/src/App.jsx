@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import conversionsTable from "./conversions.json";
-// import styled from "styled-components";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
