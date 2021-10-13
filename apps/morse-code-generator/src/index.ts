@@ -7,6 +7,8 @@ const App: InstantApp = {
   description: "Encodes text message to Morse Code and Vice-Versa",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["convert morse code to text"],
 };
 
 export default App;

@@ -7,6 +7,8 @@ const App: InstantApp = {
   description: "A simple dictionary app to define as english word.",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["define gonzo", "farrago meaning"],
 };
 
 export default App;

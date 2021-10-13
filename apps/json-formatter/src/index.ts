@@ -8,5 +8,7 @@ const App: InstantApp = {
     "Formats the JSON with right indentation for easier human consumption",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["format json"],
 };
 export default App;
