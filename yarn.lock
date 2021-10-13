@@ -1841,6 +1841,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/weight-converter@^1.0.0, @felvin-search-apps/weight-converter@workspace:apps/weight-converter":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/weight-converter@workspace:apps/weight-converter"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    measurement-toolkit: ^0.4.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/word-counter@^1.2.0, @felvin-search-apps/word-counter@workspace:apps/word-counter":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/word-counter@workspace:apps/word-counter"
@@ -1885,6 +1902,7 @@ __metadata:
     "@felvin-search-apps/time-at-place": ^1.2.0
     "@felvin-search-apps/timer": ^1.2.0
     "@felvin-search-apps/uuid": ^1.2.0
+    "@felvin-search-apps/weight-converter": ^1.0.0
     "@felvin-search-apps/word-counter": ^1.2.0
     "@felvin-search/cli": ^1.1.0
     "@felvin-search/core": ^1.2.0
@@ -7753,6 +7771,13 @@ __metadata:
   version: 1.0.1
   resolution: "max-safe-integer@npm:1.0.1"
   checksum: ed138daf11c7e9b6a71b49f4300f4a29b4680feae2799324cbcdbb1d5f00b55f135cf0311532ff377a96b76b05d20536bd5993bf925160c9a44ff8ef523fc202
+  languageName: node
+  linkType: hard
+
+"measurement-toolkit@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "measurement-toolkit@npm:0.4.0"
+  checksum: 0d6f812671831409e60325dfa86cf47915a865716a19635cc14d304a4181a36ff47a435b77318d9ec7c83ec34994e11773dc922730e81d6d84a9d7439b8b1550
   languageName: node
   linkType: hard
 

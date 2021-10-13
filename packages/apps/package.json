@@ -45,6 +45,7 @@
     "@felvin-search-apps/time-at-place": "^1.2.0",
     "@felvin-search-apps/timer": "^1.2.0",
     "@felvin-search-apps/uuid": "^1.2.0",
+    "@felvin-search-apps/weight-converter": "^1.0.0",
     "@felvin-search-apps/word-counter": "^1.2.0",
     "@felvin-search/core": "^1.2.0",
     "react": "^17.0.2",
