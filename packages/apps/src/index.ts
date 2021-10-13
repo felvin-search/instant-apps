@@ -1,3 +1,4 @@
+import AsyncApiValidator from "@felvin-search-apps/async-api-validator";
 import MorseCodeGenerator from "@felvin-search-apps/morse-code-generator";
 import IpAddress from "@felvin-search-apps/ip-address";
 import Regex from "@felvin-search-apps/regex";
@@ -25,6 +26,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  AsyncApiValidator,
   MorseCodeGenerator,
   IpAddress,
   Regex,
