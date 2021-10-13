@@ -7,6 +7,8 @@ const App: InstantApp = {
   description: "Play snake game",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["snake game", "play snake"],
 };
 
 export default App;
