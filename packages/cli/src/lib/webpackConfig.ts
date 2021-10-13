@@ -1,6 +1,7 @@
 import path from "path";
 import fs from "fs-extra";
 
+import NodePolyfillPlugin from "node-polyfill-webpack-plugin";
 // Path to where the instant app's package.json lives.
 const appPath = process.cwd();
 console.log(`Running build:app inside ${appPath}`);
@@ -61,6 +62,7 @@ export default {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
+  plugins: [new NodePolyfillPlugin()],
   // https://styled-components.com/docs/faqs#i-am-a-library-author-should-i-bundle-styledcomponents-with-my-library
   externals: {
     "styled-components": {
