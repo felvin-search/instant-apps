@@ -65,7 +65,6 @@ module.exports = {
           globOptions: {
             ignore: ["**/index.html"],
           },
-          to: "public",
         },
       ],
     }),
