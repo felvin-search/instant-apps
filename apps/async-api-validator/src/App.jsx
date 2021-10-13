@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
-
+import _ from "lodash";
 import parser from "@asyncapi/parser";
 
 //-----------Styled Components-----------------
@@ -32,8 +32,6 @@ const TextArea = styled.textarea`
   font-family: inherit;
   font-size: inherit;
 
-  width: 100%;
-
   &:focus,
   &:active {
     border: 1px solid #5f26ff;
@@ -45,6 +43,7 @@ const Input = styled.input`
 `;
 
 const ErrorLabel = styled.label`
+  width: 100%;
   span.error {
     color: red;
   }
@@ -53,8 +52,6 @@ const ErrorLabel = styled.label`
   }
 `;
 //=========================================
-
-async function parseApiSchema(schema) {}
 
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
@@ -71,29 +68,45 @@ function Component({ data }) {
         const doc = await parser.parse(apiSchema);
         changeError(null);
       } catch (e) {
-        changeError(e.title);
+        let errorMsg = e.title;
+        console.log(e.validationErrors);
+        if (_.has(e, "validationErrors")) {
+          _.forEach(e.validationErrors, (error) => {
+            if (error.title) {
+              errorMsg += `<br>- ${error.title}`;
+            }
+          });
+        }
+        changeError(errorMsg);
+        console.log(e.validationErrors);
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   }
   return (
     <Container>
       <Form onSubmit={handleSubmit}>
+        <TextArea
+          rows={5}
+          placeholder="Paste Async API schema here (YAML/JSON)"
+          value={apiSchema}
+          onChange={(e) => {
+            changeValidateClicked(false);
+            changeApiSchema(e.target.value);
+          }}
+        />
+
+        <Input type="submit" value="Validate"></Input>
         <ErrorLabel>
-          <TextArea
-            rows={5}
-            placeholder="Paste Async API schema here (YAML/JSON)"
-            value={apiSchema}
-            onChange={(e) => {
-              changeValidateClicked(false);
-              changeApiSchema(e.target.value);
-            }}
-          />
-          <span className="error">{error}</span>
+          <span
+            className="error"
+            dangerouslySetInnerHTML={{ __html: error }}
+          ></span>
           <span className="success">
             {validateClicked && !error ? "AsyncAPI schema is valid" : null}{" "}
           </span>
         </ErrorLabel>
-        <Input type="submit" value="Validate"></Input>
       </Form>
     </Container>
   );
