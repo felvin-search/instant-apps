@@ -36,5 +36,6 @@ export type InstantApp = {
   apiVersion?: string;
   iconUrl?: string;
   author?: string;
-  screenshotUrl?: string;
+  screenshotPath?: string;
+  exampleSearchQueries?: Array<string>;
 };
