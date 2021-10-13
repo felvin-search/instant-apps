@@ -1,4 +1,6 @@
 const path = require("path");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -58,6 +60,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
+    new NodePolyfillPlugin(),
   ],
   // We need this to redirect all requests to index.html
   // https://stackoverflow.com/a/34125010/4698026
