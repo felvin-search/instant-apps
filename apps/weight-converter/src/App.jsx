@@ -49,12 +49,12 @@ function Component({ data }) {
 
   return (
     <ColContainer>
-      <ResultString
-        inputValue={inputValue}
-        inputWeight={inputWeight}
-        outputValue={outputValue}
-        outputWeight={outputWeight}
-      />
+    <OutputString>
+      {inputValue} {inputWeight} equals{" "}
+      <b>
+        {outputValue} {outputWeight}
+      </b>
+    </OutputString>
     </ColContainer>
   );
 }
