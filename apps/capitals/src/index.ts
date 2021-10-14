@@ -5,6 +5,11 @@ const App: InstantApp = {
   id: "@felvin-search-apps/capitals",
   name: "Capitals",
   description: "Given the name of a territory, I show the name of the capital",
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: [
+    "capital of Canada",
+    "What is the capital of Bangladesh",
+  ],
   queryToData,
   Component,
 };
