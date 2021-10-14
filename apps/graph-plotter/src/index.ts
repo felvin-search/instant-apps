@@ -8,6 +8,8 @@ const App: InstantApp = {
     "This App plots graph of functions that are passed in input. Extremes of x and y axis can be adjusted too",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["plot graph", "plotter"],
 };
 
 export default App;

@@ -7,5 +7,7 @@ const App: InstantApp = {
   description: "Roll a dice and get a number from 1 to 6",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["roll a dice", "dice"],
 };
 export default App;

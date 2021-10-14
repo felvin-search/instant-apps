@@ -7,6 +7,14 @@ const App: InstantApp = {
   description: "Checks whether the regex matches the String",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: [
+    "check regex",
+    "match regex",
+    "regex validator",
+    "regex checker",
+    "regex tester",
+  ],
 };
 
 export default App;

@@ -7,5 +7,7 @@ const App: InstantApp = {
   description: "A flappy bird game for when you are bored!",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["i am bored", "flappy bird"],
 };
 export default App;
