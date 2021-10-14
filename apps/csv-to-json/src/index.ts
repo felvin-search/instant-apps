@@ -6,7 +6,7 @@ const App: InstantApp = {
   name: "csv-to-json",
   description: "Convert a CSV file to JSON",
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["tic tac toe", "play tic tic toe"],
+  exampleSearchQueries: ["csv to json"],
   queryToData,
   Component,
 };
