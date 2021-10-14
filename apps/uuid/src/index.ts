@@ -7,5 +7,7 @@ const App: InstantApp = {
   description: "I generate uuid strings",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["uuid"],
 };
 export default App;

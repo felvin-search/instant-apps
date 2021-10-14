@@ -7,5 +7,7 @@ const App: InstantApp = {
   description: "App which can do math stuff",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["2+2", "10/5"],
 };
 export default App;
