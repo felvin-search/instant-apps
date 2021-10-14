@@ -5,6 +5,8 @@ const App: InstantApp = {
   id: "@felvin-search-apps/time-at-place",
   name: "Time at place",
   description: "App which shows time at places",
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["Time in India", "Time in Mexico"],
   queryToData,
   Component,
 };
