@@ -21,17 +21,6 @@ const ColContainer = styled.div`
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 
-function ResultString({ inputValue, inputWeight, outputValue, outputWeight }) {
-  return (
-    <OutputString>
-      {inputValue} {inputWeight} equals{" "}
-      <b>
-        {outputValue} {outputWeight}
-      </b>
-    </OutputString>
-  );
-}
-
 function Component({ data }) {
   const [inputWeight, setInputWeight] = useState(data.inputWeight);
   const [outputWeight, setOutputWeight] = useState(data.outputWeight);
@@ -49,12 +38,12 @@ function Component({ data }) {
 
   return (
     <ColContainer>
-      <ResultString
-        inputValue={inputValue}
-        inputWeight={inputWeight}
-        outputValue={outputValue}
-        outputWeight={outputWeight}
-      />
+      <OutputString>
+        {inputValue} {inputWeight} equals{" "}
+        <b>
+          {outputValue} {outputWeight}
+        </b>
+      </OutputString>
     </ColContainer>
   );
 }
@@ -71,6 +60,41 @@ const isValidWeightUnit = (str) => {
   ];
   if (weightUnits.includes(str)) return true;
 };
+
+const mapUnits = (str) => {
+  if(str == "kg" || str == "kilograms" || str == "kgs")
+  {
+    return "kilogram";
+  }
+  else if(str == "grams" || str == "gm" || str == "gms" || str == "g")
+  {
+    return "gram";
+  }
+  else if(str == "milligrams" || str == "mg" || str == "mgs")
+  {
+    return "milligram";
+  }
+  else if(str == "ton" || str == "tons" || str == "tonnes")
+  {
+    return "tonne";
+  }
+  else if(str == "pounds" || str == "lbs")
+  {
+    return "pound";
+  }
+  else if(str == "stones" || str == "st")
+  {
+    return "stone";
+  }
+  else if(str == "ounces" || str == "oz")
+  {
+    return "ounce";
+  }
+  else 
+  {
+    return str;
+  }
+}
 
 const parseConversionString = (query) => {
   const normalizedQuery = query.toLowerCase();
@@ -98,6 +122,8 @@ const parseConversionString = (query) => {
 async function queryToData({ query }) {
   try {
     let { amount, from, to } = parseConversionString(query);
+    from = mapUnits(from);
+    to = mapUnits(to);
     if (isValidWeightUnit(from) && isValidWeightUnit(to)) {
       return {
         amount,
