@@ -1,3 +1,4 @@
+import WeightConverter from "@felvin-search-apps/weight-converter";
 import AsyncApiValidator from "@felvin-search-apps/async-api-validator";
 import MorseCodeGenerator from "@felvin-search-apps/morse-code-generator";
 import IpAddress from "@felvin-search-apps/ip-address";
@@ -26,6 +27,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  WeightConverter,
   AsyncApiValidator,
   MorseCodeGenerator,
   IpAddress,
