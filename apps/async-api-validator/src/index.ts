@@ -5,6 +5,9 @@ const App: InstantApp = {
   id: "@felvin-search-apps/async-api-validator",
   name: "Async API Validator",
   description: "Validate async api schema",
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["validate async api schema", "async api"],
+
   queryToData,
   Component,
 };
