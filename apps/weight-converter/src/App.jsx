@@ -25,7 +25,7 @@ function Component({ data }) {
   const [inputWeight, setInputWeight] = useState(data.inputWeight);
   const [outputWeight, setOutputWeight] = useState(data.outputWeight);
 
-  const [inputValue, setInputValue] = useState(data.amount || 1);
+  const [inputValue, setInputValue] = useState(data.amount);
   const [outputValue, setOutputValue] = useState(0);
   const converter = () => {
     const kilos = conversionsTable[inputWeight]["kilogram"] * inputValue;
