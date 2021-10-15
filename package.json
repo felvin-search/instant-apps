@@ -14,7 +14,7 @@
     "create-app": "felvin-cli create-app",
     "build-packages": "yarn workspaces foreach -pv run build",
     "bump-version": "yarn workspaces foreach -v version minor",
-    "publish-packages": "yarn workspaces foreach -pv npm publish",
+    "publish-packages": "yarn workspaces foreach -pv --exclude sandbox npm publish",
     "prepare": "husky install",
     "depcheck": "yarn workspaces foreach exec \"yarn depcheck\" --parallel",
     "test": "jest"
