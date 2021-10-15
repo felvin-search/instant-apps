@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import {
+  InstantAppProps,
   isTriggered,
   queryToDataInput,
   queryToDataOutput,
@@ -55,6 +56,18 @@ const PickrrLink = styled.a`
   float: right;
 `;
 
+const TrackButton = styled.button`
+  font-size: 1rem;
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+`;
+
+const IdInput = styled.input`
+  padding: 0.1Srem;
+  font-size: 1rem;
+`;
+
 //=========================================
 function TrackingNumberInput({ setData }) {
   const numInput = useRef<HTMLInputElement>(null);
@@ -72,8 +85,8 @@ function TrackingNumberInput({ setData }) {
     <>
       <label>Enter tracking id:</label>
       <form onSubmit={submitHandler}>
-        <input type="number" ref={numInput}></input>
-        <button type="submit">Track</button>
+        <IdInput type="number" ref={numInput}></IdInput>
+        <TrackButton type="submit">Track</TrackButton>
       </form>
       {error.length ? <div style={{color: "red"}} >{error}</div> : null}
     </>
@@ -147,8 +160,8 @@ const triggerWords = [
 /**
  * The UI logic of the app.
  */
-function Component() {
-  const [data, setData] = useState<any>("takeInput");
+function Component(props: InstantAppProps) {
+  const [data, setData] = useState<any>(props.data);
   const statusArray = _.reverse(
     _.flatten(
       _.map(data?.track_arr, (track_object) => track_object.status_array)
@@ -199,7 +212,6 @@ async function queryToFetchedData(trackingNumbers: string[]): Promise<queryToDat
     })
   );
   results = _.compact(results);
-  console.log(results[0]);
   return results[0];
 }
 
@@ -208,7 +220,10 @@ async function queryToData({
 }: queryToDataInput): Promise<queryToDataOutput> {
   // If the query does not contain the following words, do not trigger the app
   if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
+  const ids = query.split(" ").filter(e => !isNaN(+e));
+  const data = await queryToFetchedData(ids);
+  if(data) return data;
   return Promise.resolve("takeInput");
-}
+} // courier status of 8695542668
 
 export { queryToData, Component };
