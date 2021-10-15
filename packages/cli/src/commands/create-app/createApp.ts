@@ -42,7 +42,7 @@ async function generateTemplate(directory, answers) {
   }
 }
 
-export async function main() {
+export default async function main() {
   const answers: Answers = await inquirer.prompt([
     {
       type: "input",

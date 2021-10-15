@@ -12,4 +12,4 @@ RUN yarn install
 RUN yarn workspace sandbox build
 RUN yarn global add serve
 
-CMD ["serve", "packages/sandbox/dist/public"]
+CMD ["serve", "packages/sandbox/dist"]

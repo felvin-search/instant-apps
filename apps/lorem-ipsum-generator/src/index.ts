@@ -7,5 +7,7 @@ const App: InstantApp = {
   description: "Lorem Ipsum Generator",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["lorem ipsum generator", "lorem ipsum"],
 };
 export default App;

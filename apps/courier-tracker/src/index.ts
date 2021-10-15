@@ -7,6 +7,8 @@ const App: InstantApp = {
   description: "View any courier package status using Pickrr API",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["current status of 8695542668"],
 };
 
 export default App;

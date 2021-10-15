@@ -1,4 +1,6 @@
 const path = require("path");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -6,7 +8,7 @@ module.exports = {
   target: "web",
   output: {
     filename: "client.esm.js",
-    path: path.resolve(__dirname, "dist", "public"),
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
@@ -55,9 +57,21 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
+    // This copies the public folder except index.html
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public",
+          globOptions: {
+            ignore: ["**/index.html"],
+          },
+        },
+      ],
     }),
+    new HtmlWebPackPlugin({
+      template: "./public/index.html",
+    }),
+    new NodePolyfillPlugin(),
   ],
   // We need this to redirect all requests to index.html
   // https://stackoverflow.com/a/34125010/4698026

@@ -7,6 +7,8 @@ const App: InstantApp = {
   description: "Displays the resolution of the user&#x27;s screen",
   queryToData,
   Component,
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["screen resolution", "screen size"],
 };
 
 export default App;

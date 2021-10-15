@@ -1,6 +1,6 @@
 {
   "name": "@felvin-search-apps/bouncy-ball",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
@@ -9,14 +9,20 @@
     "types": "./dist/index.d.ts"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.0.0",
-    "@types/react": "^17.0.0",
-    "@types/styled-components": "^5.1.11",
+    "@felvin-search/core": "^1.3.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": "^5.3.0"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "depcheck": "^1.4.2"
+    "@felvin-search/cli": "^1.3.0",
+    "@types/react": "^17.0.0",
+    "@types/styled-components": "^5.1.11",
+    "styled-components": "^5.3.0"
+  },
+  "scripts": {
+    "build": "felvin-cli build:app"
+  },
+  "peerDependencies": {
+    "styled-components": ">= 5"
   }
 }

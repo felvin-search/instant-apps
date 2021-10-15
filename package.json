@@ -1,7 +1,7 @@
 {
   "name": "private-mono-repo",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.3.0",
   "private": true,
   "workspaces": {
     "packages": [
@@ -12,13 +12,15 @@
   "scripts": {
     "start": "yarn workspace sandbox start",
     "create-app": "felvin-cli create-app",
-    "publish-apps": "tsc -d --noEmit false && yarn publish",
+    "build-packages": "yarn workspaces foreach -pv run build",
+    "bump-version": "yarn workspaces foreach -v version minor",
+    "publish-packages": "yarn workspaces foreach -pv npm publish",
     "prepare": "husky install",
     "depcheck": "yarn workspaces foreach exec \"yarn depcheck\" --parallel",
     "test": "jest"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.0.0",
+    "@felvin-search/cli": "^1.3.0",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
     "cross-fetch": "^3.1.4",
@@ -34,8 +36,5 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
-  },
-  "dependencies": {
-    "react-dom": "^17.0.2"
   }
 }
