@@ -13,6 +13,11 @@ const Container = styled.div`
   align-items: flex-start;
   width: 70rem;
   padding: 1rem 1.5rem;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const InputContainer = styled.div`
@@ -22,6 +27,12 @@ const InputContainer = styled.div`
   align-items: center;
   min-height: 30rem;
   margin-right: 5rem;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
 `;
 
 const Input = styled.textarea`
@@ -34,6 +45,10 @@ const Input = styled.textarea`
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
   border: none;
   outline: none;
+
+  @media (max-width: 1200px) {
+    width: 60vw;
+  }
 `;
 
 const ErrorMessage = styled.div`
@@ -58,17 +73,25 @@ const OutputSubContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
+  padding: .7rem 1rem;
   border-radius: 10px;
   background-color: #eee;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 1200px) {
+    width: 60vw;
+  }
 `;
 
 const Output = styled.pre`
-  width: 20rem;
+  width: 30rem;
   min-height: 10rem;
   max-height: 10rem;
-  padding: 1rem 1.5rem;
   overflow: scroll;
+
+  @media (max-width: 1200px) {
+    width: 50vw;
+  }
 `;
 
 const PrimaryHeading = styled.h2`
