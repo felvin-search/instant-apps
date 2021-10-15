@@ -7,7 +7,7 @@ const App: InstantApp = {
   description: "Converts markdown text to html which has the same output",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
+  screenshotPath: "./files/screenshot.png",
   exampleSearchQueries: ["convert markdown into html", "markdown to html", "md to html"]
 };
 
