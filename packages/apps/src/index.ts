@@ -1,3 +1,4 @@
+import LiveMarkdown from "@felvin-search-apps/live-markdown";
 import WeightConverter from "@felvin-search-apps/weight-converter";
 import AsyncApiValidator from "@felvin-search-apps/async-api-validator";
 import MorseCodeGenerator from "@felvin-search-apps/morse-code-generator";
@@ -27,6 +28,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  LiveMarkdown,
   WeightConverter,
   AsyncApiValidator,
   MorseCodeGenerator,
