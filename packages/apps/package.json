@@ -31,6 +31,7 @@
     "@felvin-search-apps/dice-roller": "^1.7.0",
     "@felvin-search-apps/dictionary": "^1.7.0",
     "@felvin-search-apps/flappy-bird": "^1.7.0",
+    "@felvin-search-apps/flip-a-coin": "^1.0.0",
     "@felvin-search-apps/graph-plotter": "^1.7.0",
     "@felvin-search-apps/ip-address": "^1.5.0",
     "@felvin-search-apps/joke-generator": "^1.7.0",
