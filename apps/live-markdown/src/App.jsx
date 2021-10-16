@@ -27,7 +27,7 @@ const Input = styled.textarea`
   margin: 0.1rem;
   padding: 0.5rem;
   height: 100%;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
 `;
 
@@ -42,7 +42,7 @@ const Output = styled(MarkdownPreview)`
   margin: 0.1rem;
   padding: 0.5rem;
   height: 100%;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
 `;
 
