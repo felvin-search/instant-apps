@@ -1695,6 +1695,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder"
+  dependencies:
+    "@felvin-search/cli": ^1.5.0
+    "@felvin-search/core": ^1.5.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    jwt-decode: ^3.1.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/latex-render@^1.5.0, @felvin-search-apps/latex-render@workspace:apps/latex-render":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/latex-render@workspace:apps/latex-render"
@@ -9355,6 +9372,13 @@ __metadata:
     json-schema: 0.2.3
     verror: 1.10.0
   checksum: 6bcb20ec265ae18bb48e540a6da2c65f9c844f7522712d6dfcb01039527a49414816f4869000493363f1e1ea96cbad00e46188d5ecc78257a19f152467587373
+  languageName: node
+  linkType: hard
+
+"jwt-decode@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "jwt-decode@npm:3.1.2"
+  checksum: 20a4b072d44ce3479f42d0d2c8d3dabeb353081ba4982e40b83a779f2459a70be26441be6c160bfc8c3c6eadf9f6380a036fbb06ac5406b5674e35d8c4205eeb
   languageName: node
   linkType: hard
 
