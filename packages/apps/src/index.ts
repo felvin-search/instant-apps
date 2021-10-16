@@ -13,6 +13,7 @@ import MarkdownToHtml from "@felvin-search-apps/markdown-to-html";
 import FlipACoin from "@felvin-search-apps/flip-a-coin";
 import QrCodeGenerator from "@felvin-search-apps/qr-code-generator";
 import Crypto from "@felvin-search-apps/crypto";
+import WebsiteIcons from "@felvin-search-apps/website-icons";
 import WeightConverter from "@felvin-search-apps/weight-converter";
 import AsyncApiValidator from "@felvin-search-apps/async-api-validator";
 import MorseCodeGenerator from "@felvin-search-apps/morse-code-generator";
@@ -56,6 +57,7 @@ const allApps = [
   FlipACoin,
   QrCodeGenerator,
   Crypto,
+  WebsiteIcons,
   WeightConverter,
   AsyncApiValidator,
   MorseCodeGenerator,

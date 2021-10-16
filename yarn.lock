@@ -2228,6 +2228,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/website-icons@^1.0.0, @felvin-search-apps/website-icons@workspace:apps/website-icons":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/website-icons@workspace:apps/website-icons"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/weight-converter@^1.15.0, @felvin-search-apps/weight-converter@workspace:apps/weight-converter":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/weight-converter@workspace:apps/weight-converter"
@@ -2308,6 +2324,7 @@ __metadata:
     "@felvin-search-apps/tv-shows": ^1.6.0
     "@felvin-search-apps/url-shortener": ^1.6.0
     "@felvin-search-apps/uuid": ^1.18.0
+    "@felvin-search-apps/website-icons": ^1.0.0
     "@felvin-search-apps/weight-converter": ^1.15.0
     "@felvin-search-apps/word-counter": ^1.18.0
     "@felvin-search/cli": ^1.18.0
