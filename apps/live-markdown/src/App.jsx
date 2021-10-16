@@ -25,14 +25,14 @@ const TextArea = styled.textarea`
   resize: none;
 `;
 
-const P=styled.p`
-border:1px solid;
-word-break: break-all;
-white-space: normal;
-overflow:auto;
-height:100%;
-margin:0;
-auto-scroll:on;
+const P = styled.p`
+  border:1px solid;
+  word-break: break-all;
+  white-space: normal;
+  overflow:auto;
+  height:100%;
+  margin:0;
+  auto-scroll:on;
 `
 
 //=========================================
