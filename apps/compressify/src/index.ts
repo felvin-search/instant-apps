@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Takes an image and compresses it",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["compress image","image compressor"],
 };
 
 export default App;
