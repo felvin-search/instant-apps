@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { isTriggered } from "@felvin-search/core";
+import { isTriggered, Breakpoints } from "@felvin-search/core";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 
 //------------Styled Components-------------
@@ -9,14 +9,13 @@ import MarkdownPreview from "@uiw/react-markdown-preview";
 
 const Container = styled.div`
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-`;
-const Area = styled.div`
   display: flex;
   width: 70vw;
   height: 20rem;
-  @media (max-width: 564px) {
-    flex-direction: column;
+  @media (min-width: ${Breakpoints.large || "992px"}) {
+    flex-direction: row;
   }
 `;
 const Input = styled.textarea`
@@ -24,10 +23,12 @@ const Input = styled.textarea`
   resize: none;
   overflow-y: auto;
   word-break: break-word;
-  border: 1px #00000 solid;
   font-size: 1rem;
   margin: 0.1rem;
   padding: 0.5rem;
+  height: 100%;
+  width:100%;
+  box-sizing: border-box;
 `;
 
 const Output = styled(MarkdownPreview)`
@@ -40,6 +41,9 @@ const Output = styled(MarkdownPreview)`
   auto-scroll: on;
   margin: 0.1rem;
   padding: 0.5rem;
+  height: 100%;
+  width:100%;
+  box-sizing: border-box;
 `;
 
 //=========================================
@@ -51,15 +55,13 @@ function Component({ data }) {
 
   return (
     <Container>
-      <Area>
-        <Input
-          value={text}
-          name="Input Text"
-          onChange={(e) => setText(e.target.value)}
-        ></Input>
+      <Input
+        value={text}
+        name="Input Text"
+        onChange={(e) => setText(e.target.value)}
+      ></Input>
 
-        <Output source={text} />
-      </Area>
+      <Output source={text} />
     </Container>
   );
 }
