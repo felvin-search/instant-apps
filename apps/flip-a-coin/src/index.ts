@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "an instant app which simulates flipping a coin and results in either Heads or Tails",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["flip a coin", "flip", "toss", "toss a coin"],
 };
 
 export default App;
