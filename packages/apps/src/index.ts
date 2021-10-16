@@ -2,6 +2,7 @@ import ColorPicker from "@felvin-search-apps/color-picker";
 import MergePdfs from "@felvin-search-apps/merge-pdfs";
 import HelloWorldInDifferentLanguages from "@felvin-search-apps/hello-world-in-different-languages";
 import Compressify from "@felvin-search-apps/compressify";
+import TrendingOnGithub from "@felvin-search-apps/trending-on-github";
 import LiveMarkdown from "@felvin-search-apps/live-markdown";
 import JwtDecoder from "@felvin-search-apps/jwt-decoder";
 import MarkdownToHtml from "@felvin-search-apps/markdown-to-html";
@@ -40,6 +41,7 @@ const allApps = [
   MergePdfs,
   HelloWorldInDifferentLanguages,
   Compressify,
+  TrendingOnGithub,
   LiveMarkdown,
   JwtDecoder,
   MarkdownToHtml,
