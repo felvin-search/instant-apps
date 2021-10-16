@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Renders mardown text in md.",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["live markdown preview"],
 };
 
 export default App;
