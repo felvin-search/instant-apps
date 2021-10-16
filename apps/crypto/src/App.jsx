@@ -13,6 +13,27 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const Head = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const Body = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 564px) {
+    flex-direction: column;
+  }
+`;
+
+const Element = styled.div`
+  padding: 0.8rem;
+  margin: 0 auto;
+`;
+
 //=========================================
 
 // Your UI logic goes here.
@@ -23,21 +44,57 @@ function Component({ data }) {
   values.forEach((e) => {
     names.push({ name: e.name });
   });
-  const [name, setName] = useState({ value: values[0].name });
+  const [name, setName] = useState(values[0].name);
   const handleChange = (e) => {
-    setName({ value: e.target.value });
+    setName(e.target.value);
   };
   return (
     <Container>
-      <div>
-        <select value={name.value} onChange={handleChange}>
-          {values.map((e) => (
-            <option key={e.name} name={e.name}>
-              {e.name}
-            </option>
-          ))}
-        </select>
-      </div>
+      <select value={name} onChange={handleChange}>
+        {values.map((e) => (
+          <option key={e.name} name={e.name}>
+            {e.name}
+          </option>
+        ))}
+      </select>
+
+      {values.map((e) => {
+        if (e.name === name) {
+          return (
+            <Head key={e.name}>
+              <Body>
+                <Element>
+                  Name🪙 :<strong>{e.name}</strong>
+                </Element>
+                <Element>
+                  Symbol:<strong>{e.symbol}</strong>
+                </Element>
+              </Body>
+              <Element>Price💰:{e.metrics.market_data.price_usd}USD</Element>
+              <Body>
+                <Element>
+                  24Hr High📈 :{e.metrics.market_data.ohlcv_last_24_hour.high}
+                  USD
+                </Element>
+                <Element>
+                  24Hr Low📉 :{e.metrics.market_data.ohlcv_last_24_hour.low}
+                  USD
+                </Element>
+              </Body>
+              <Body>
+                <Element>
+                  24Hr Open :{e.metrics.market_data.ohlcv_last_24_hour.open}
+                  USD
+                </Element>
+                <Element>
+                  24Hr Close :{e.metrics.market_data.ohlcv_last_24_hour.close}
+                  USD
+                </Element>
+              </Body>
+            </Head>
+          );
+        }
+      })}
     </Container>
   );
 }
