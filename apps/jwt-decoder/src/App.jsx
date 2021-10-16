@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { isTriggered } from "@felvin-search/core";
+import { Breakpoints, isTriggered } from "@felvin-search/core";
 import jwt_decode from 'jwt-decode';
 
 //------------Styled Components-------------
@@ -9,14 +9,15 @@ import jwt_decode from 'jwt-decode';
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
   width: 70rem;
   padding: 1rem 1.5rem;
 
-  @media (max-width: 1200px) {
-    flex-direction: column;
-    align-items: center;
+  @media (min-width: ${Breakpoints.medium}) {
+    flex-direction: row;
+    align-items: flex-start;
   }
 `;
 
@@ -26,17 +27,14 @@ const InputContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   min-height: 30rem;
-  margin-right: 5rem;
 
-  @media (max-width: 1200px) {
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
+  @media (min-width: ${Breakpoints.medium}) {
+    margin-right: 5rem;
   }
 `;
 
 const Input = styled.textarea`
-  width: 30rem;
+  width: 60vw;
   min-height: 20rem;
   font-size: 1.5rem;
   padding: 1rem 1.5rem;
@@ -46,8 +44,8 @@ const Input = styled.textarea`
   border: none;
   outline: none;
 
-  @media (max-width: 1200px) {
-    width: 60vw;
+  @media (min-width: ${Breakpoints.medium}) {
+    width: 30rem;
   }
 `;
 
@@ -67,7 +65,7 @@ const OutputContainer = styled.div`
 `;
 
 const OutputSubContainer = styled.div`
-  width: 30rem;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,19 +76,19 @@ const OutputSubContainer = styled.div`
   background-color: #eee;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
 
-  @media (max-width: 1200px) {
-    width: 60vw;
+  @media (min-width: ${Breakpoints.medium}) {
+    width: 30rem;
   }
 `;
 
 const Output = styled.pre`
-  width: 30rem;
+  width: 50vw;
   min-height: 10rem;
   max-height: 10rem;
   overflow: scroll;
 
-  @media (max-width: 1200px) {
-    width: 50vw;
+  @media (min-width: ${Breakpoints.medium}) {
+    width: 30rem;
   }
 `;
 
@@ -127,22 +125,28 @@ function Component({ data }) {
   }
   return (
     <Container>
+
       <InputContainer>
         <PrimaryHeading>Encoded JWT</PrimaryHeading>
+
         <Input type="text" placeholder="Paste your JWT token here" value={token} onChange={(event) => setToken(event.target.value)}></Input>
         <ErrorMessage>{errorMsg}</ErrorMessage>
       </InputContainer>
+
       <OutputContainer>
         <PrimaryHeading>Decoded JWT</PrimaryHeading>
+
         <OutputSubContainer>
           <SecondaryHeading>header</SecondaryHeading>
           <Output>{header !== null ? header : ``}</Output>
         </OutputSubContainer>
+
         <OutputSubContainer>
           <SecondaryHeading>payload</SecondaryHeading>
           <Output>{payload !== null ? payload : ``}</Output>
         </OutputSubContainer>
       </OutputContainer>
+
     </Container>
   );
 }
@@ -151,7 +155,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, [ "decode JWT","JWT decoder" ])) {
+  if (!isTriggered(query, [ "decode JWT","JWT decoder" ], {substringMatch: true})) {
     return;
   }
 

@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "An instant app which decodes the data stored ina jwt token",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["decode JWT","JWT decoder"],
 };
 
 export default App;
