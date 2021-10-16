@@ -28,10 +28,14 @@ function Component({ data }) {
   const [url, setUrl] = useState(data);
   const [qrUrl, setQrUrl] = useState(data);
   const inputRef = useRef();
+  const submitHandler = e => {
+    e.preventDefault();
+    setQrUrl(inputRef.current.value);
+  }
   return (
     <Container>
         <h2>Generate QR Code</h2>
-        <Form onSubmit={() => setQrUrl(inputRef.current.value)}>
+        <Form onSubmit={submitHandler}>
           <input ref={inputRef} value={url} onChange={() => setUrl(inputRef.current.value)} />
           <button type="submit">Generate!</button>
         </Form>
