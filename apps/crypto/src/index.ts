@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Provides crypto currency prices",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["price of cryto coin"],
 };
 
 export default App;
