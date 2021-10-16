@@ -14,10 +14,10 @@ const Container = styled.div`
 
 const Form = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: clamp(100px,20vh,70vh);
   grid-gap: 0.5rem;
-  width: max(70vw, 300px); 
-  height: clamp(100px,20vh,70vh)
+  width: max(70vw, 300px);
 `;
 
 const Input = styled.textarea`
@@ -40,7 +40,8 @@ const Button = styled.button`
   margin: 0.5rem auto;
 `;
 
-const Noti = styled.div`
+const Notification = styled.div`
+  visibility: ${props => props.show ? "visible" : "hidden"};
   text-align: center;
 `;
 
@@ -50,12 +51,12 @@ const Noti = styled.div`
 // `data` prop is exactly what is returned by queryToData.
 function Component() {
   const [md, setMd] = useState("## Heading *Italic*");
-  const [noti, setNoti] = useState(false);
+  const [notification, setNotification] = useState(false);
   const  copyHandler = () => {
     navigator.clipboard.writeText(marked(md, {sanitised: true}));
-    setNoti(true);
+    setNotification(true);
     setTimeout(() => {
-      setNoti(false)
+      setNotification(false)
     }, 800);
   }
   const inputRef = useRef();
@@ -71,7 +72,7 @@ function Component() {
         </Output>
       </Form>
       <Button onClick={copyHandler}>Copy HTML to Clipboard</Button>
-      <Noti>{noti ? "Copied!" : null}</Noti>
+      <Notification show={notification}>Copied!</Notification>
     </Container>
   );
 }
