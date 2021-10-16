@@ -81,7 +81,7 @@ function Component() {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, [ "markdown to html","markdown into html","md to html","md into html" ]), { substringMatch: true }) {
+  if (!isTriggered(query, [ "markdown to html","markdown into html","md to html","md into html" ], { substringMatch: true })) {
     return Promise.resolve(false);
   }
   return Promise.resolve(true);
