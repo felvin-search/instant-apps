@@ -8,37 +8,39 @@ import MarkdownPreview from "@uiw/react-markdown-preview";
 // start here https://styled-components.com/docs/basics#getting-started
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 1rem;
   justify-content: center;
-
-  @media (max-width: 768px) {
+  align-items: center;
+`;
+const Area = styled.div`
+  display: flex;
+  width: 70vw;
+  height: 20rem;
+  @media (max-width: 564px) {
     flex-direction: column;
   }
-
 `;
-
-const Div = styled.div`
-  height: 15rem;
-  width: 20rem;
-`;
-
-const TextArea = styled.textarea`
-  height:100%;
-  width: 90%;
+const Input = styled.textarea`
+  flex: 1;
   resize: none;
+  overflow-y: auto;
+  word-break: break-word;
+  border: 1px #00000 solid;
+  font-size: 1rem;
+  margin: 0.1rem;
+  padding: 0.5rem;
 `;
 
-const P = styled.p`
-  border:1px solid;
-  word-break: break-all;
+const Output = styled(MarkdownPreview)`
+  flex: 1;
+  border: 1px solid;
+  wrap: word-break;
   white-space: normal;
-  overflow:auto;
-  height:100%;
-  margin:0;
-  auto-scroll:on;
-`
+  overflow: auto;
+  margin: 0;
+  auto-scroll: on;
+  margin: 0.1rem;
+  padding: 0.5rem;
+`;
 
 //=========================================
 
@@ -49,19 +51,15 @@ function Component({ data }) {
 
   return (
     <Container>
-      <Div>
-        <TextArea
+      <Area>
+        <Input
           value={text}
           name="Input Text"
           onChange={(e) => setText(e.target.value)}
-        ></TextArea>
-      </Div>
+        ></Input>
 
-      <Div>
-        <P>
-          <MarkdownPreview source={text} />
-        </P>
-      </Div>
+        <Output source={text} />
+      </Area>
     </Container>
   );
 }
@@ -70,7 +68,11 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, ["markdown","live markdown preview"],{substringMatch:true})) {
+  if (
+    !isTriggered(query, ["markdown", "live markdown preview"], {
+      substringMatch: true,
+    })
+  ) {
     return;
   }
 
