@@ -25,6 +25,7 @@
     "@felvin-search-apps/bouncy-ball": "^1.9.0",
     "@felvin-search-apps/capitals": "^1.9.0",
     "@felvin-search-apps/color-picker": "^1.2.0",
+    "@felvin-search-apps/compressify": "^1.0.0",
     "@felvin-search-apps/courier-tracker": "^1.9.0",
     "@felvin-search-apps/csv-to-json": "^1.9.0",
     "@felvin-search-apps/currency-convertor": "^1.9.0",
