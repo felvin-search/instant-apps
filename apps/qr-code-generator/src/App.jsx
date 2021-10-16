@@ -20,26 +20,30 @@ const Form = styled.form`
   align-items: center;
 `;
 
+const Textarea = styled.textarea`
+  resize: none;
+`;
+
 //=========================================
 
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
-  const [url, setUrl] = useState(data);
-  const [qrUrl, setQrUrl] = useState(data);
+  const [content, setContent] = useState(data);
+  const [qrContent, setQrContent] = useState(encodeURI(data));
   const inputRef = useRef();
   const submitHandler = e => {
     e.preventDefault();
-    setQrUrl(inputRef.current.value);
+    setQrContent(encodeURI(inputRef.current.value));
   }
   return (
     <Container>
         <h2>Generate QR Code</h2>
         <Form onSubmit={submitHandler}>
-          <input ref={inputRef} value={url} onChange={() => setUrl(inputRef.current.value)} />
+          <Textarea maxlength="900" ref={inputRef} onChange={() => setContent(inputRef.current.value)}>{content}</Textarea>
           <button type="submit">Generate!</button>
         </Form>
-      <img src={`https://qrtag.net/api/qr_6.png?url=${qrUrl}`} alt={qrUrl} />
+      <img src={`https://api.qrserver.com/v1/create-qr-code/?data=${qrContent}&size=200x200`} alt={qrContent} />
     </Container>
   );
 }
@@ -48,7 +52,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, [ "generate QR","make QR","QR for","QR code for" ], {
+  if (!isTriggered(query, [ "generate QR","make QR","QR for","QR code for","encode" ], {
     substringMatch: true
   })) {
     return Promise.resolve(false);
