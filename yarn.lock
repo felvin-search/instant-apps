@@ -1699,8 +1699,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder"
   dependencies:
-    "@felvin-search/cli": ^1.0.0
-    "@felvin-search/core": ^1.0.0
+    "@felvin-search/cli": ^1.5.0
+    "@felvin-search/core": ^1.5.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     jwt-decode: ^3.1.2
