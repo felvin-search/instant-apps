@@ -40,6 +40,15 @@ const SpaceSaved = styled.div`
   color: green;
 `;
 
+const Heading = styled.h3`
+  margin: 0.5rem;
+  text-decoration: underline;
+`;
+
+const Info = styled.p`
+  margin: 0.5rem;
+`;
+
 //=========================================
 
 // Your UI logic goes here.
@@ -66,6 +75,8 @@ function Component({ data }) {
 
   return (
     <Container>
+      <Heading>Image Compressor</Heading>
+      <Info>Upload Image below to compress it</Info>
       <input
         accept="image/*,capture=camera"
         capture="camera"
