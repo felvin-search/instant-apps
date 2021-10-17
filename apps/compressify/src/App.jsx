@@ -26,6 +26,7 @@ const Compressed = styled.img`
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  border-radius: 20px;
 `;
 
 const Content = styled.div`
@@ -57,7 +58,7 @@ function Component({ data }) {
       quality: 0.7,
       success: (result) => {
         let spaceSaved = ((image.size - result.size) * 100) / image.size;
-        setImageSize(spaceSaved);
+        setImageSize({ saved: spaceSaved, newSize: result.size / 1024 });
         setCompressedFile(URL.createObjectURL(result));
       },
     });
@@ -78,8 +79,15 @@ function Component({ data }) {
             <a href={compressedFile} download={fileName}>
               <button>Click to download</button>
             </a>
-            {imageSize > 0 ? (
-              <SpaceSaved>{imageSize.toFixed(2)}% Space saved</SpaceSaved>
+            {imageSize.saved > 0 ? (
+              <div>
+                <SpaceSaved>
+                  {imageSize.saved.toFixed(2)}% Space saved
+                </SpaceSaved>
+                <SpaceSaved>
+                  Compressed size: {imageSize.newSize.toFixed(2)}Kb
+                </SpaceSaved>
+              </div>
             ) : (
               <div>No Saving in this Image😔</div>
             )}
