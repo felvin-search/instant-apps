@@ -1,3 +1,4 @@
+import ColorPicker from "@felvin-search-apps/color-picker";
 import LiveMarkdown from "@felvin-search-apps/live-markdown";
 import JwtDecoder from "@felvin-search-apps/jwt-decoder";
 import MarkdownToHtml from "@felvin-search-apps/markdown-to-html";
@@ -30,6 +31,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  ColorPicker,
   LiveMarkdown,
   JwtDecoder,
   MarkdownToHtml,
