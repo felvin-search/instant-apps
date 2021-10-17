@@ -12,6 +12,7 @@ import TvShows from "@felvin-search-apps/tv-shows";
 import Pokedex from "@felvin-search-apps/pokedex";
 import CropImage from "@felvin-search-apps/crop-image";
 import ImageUploader from "@felvin-search-apps/image-uploader";
+import UnitConvertor from "@felvin-search-apps/unit-convertor";
 import LiveMarkdown from "@felvin-search-apps/live-markdown";
 import JwtDecoder from "@felvin-search-apps/jwt-decoder";
 import MarkdownToHtml from "@felvin-search-apps/markdown-to-html";
@@ -61,6 +62,7 @@ const allApps = [
   Pokedex,
   CropImage,
   ImageUploader,
+  UnitConvertor,
   LiveMarkdown,
   JwtDecoder,
   MarkdownToHtml,
