@@ -9,6 +9,7 @@ import { PDFDocument } from "pdf-lib"
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -73,6 +74,8 @@ function Component() {
   }
   return (
     <Container>
+      <h2>Merge PDFs</h2>
+      <label>Input 2 or more PDF files to merge</label>
       <input ref={inputRef} type="file" accept=".pdf" multiple onChange={bla}/>
       {!merging && canMerge ? <button onClick={mergeAndDownload}>Merge</button> : null}
       {merging ? "Merging..." : null}
