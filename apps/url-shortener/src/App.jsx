@@ -87,7 +87,6 @@ function Component({ data }) {
   const shortener = async () => {
     try {
       const response = await axios.get(`https://api.shrtco.de/v2/shorten?url=${inputUrl}`);
-      console.log(JSON.stringify(response.data))
       setOutputUrl(response.data.result.full_short_link);
       setHasError(false);
     }

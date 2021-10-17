@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "An instant app which shortens urls",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["shorten url", "url shortener", "online url shortener"],
 };
 
 export default App;
