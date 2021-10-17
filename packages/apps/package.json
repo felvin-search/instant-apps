@@ -37,6 +37,7 @@
     "@felvin-search-apps/flip-a-coin": "^1.12.0",
     "@felvin-search-apps/graph-plotter": "^1.19.0",
     "@felvin-search-apps/hello-world-in-different-languages": "^1.10.0",
+    "@felvin-search-apps/image-uploader": "^1.0.0",
     "@felvin-search-apps/ip-address": "^1.17.0",
     "@felvin-search-apps/joke-generator": "^1.19.0",
     "@felvin-search-apps/json-formatter": "^1.19.0",
