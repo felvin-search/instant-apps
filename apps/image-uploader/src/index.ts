@@ -7,8 +7,13 @@ const App: InstantApp = {
   description: "A Photo hosting service Instant App that greatly facilitates everyday work with various types of graphics. It helps to create a URL for our images quickly to promote sharing them with other users easily.",
   queryToData,
   Component,
+<<<<<<< HEAD
   screenshotPath: "./files/screenshot.png",
   exampleSearchQueries: ["upload image", "host an image", "get image url"],
+=======
+  // screenshotPath: "./files/screenshot.png",
+  // exampleSearchQueries: [],
+>>>>>>> added upload image support
 };
 
 export default App;

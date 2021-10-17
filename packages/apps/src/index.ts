@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Sudoku from "@felvin-search-apps/sudoku";
 import ColorPicker from "@felvin-search-apps/color-picker";
 import MergePdfs from "@felvin-search-apps/merge-pdfs";
@@ -8,6 +9,8 @@ import UrlShortener from "@felvin-search-apps/url-shortener";
 import TvShows from "@felvin-search-apps/tv-shows";
 import Pokedex from "@felvin-search-apps/pokedex";
 import CropImage from "@felvin-search-apps/crop-image";
+=======
+>>>>>>> added upload image support
 import ImageUploader from "@felvin-search-apps/image-uploader";
 import LiveMarkdown from "@felvin-search-apps/live-markdown";
 import JwtDecoder from "@felvin-search-apps/jwt-decoder";
@@ -45,6 +48,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+<<<<<<< HEAD
   Sudoku,
   ColorPicker,
   MergePdfs,
@@ -54,6 +58,8 @@ const allApps = [
   UrlShortener,
   Pokedex,
   CropImage,
+=======
+>>>>>>> added upload image support
   ImageUploader,
   LiveMarkdown,
   JwtDecoder,
