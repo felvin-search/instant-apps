@@ -18,7 +18,6 @@ const TailSide = styled.div`
   background-color: #bb0000;
   color: white;
   text-align: center;
-  z-index: 100;
 `;
 
 const HeadSide = styled.div`
@@ -135,11 +134,7 @@ function Component({ data }) {
 //=========================================
 
 const queryToData = ({ query }) => {
-  if (
-    !isTriggered(query, ["flip a coin", "flip", "toss", "toss a coin"], {
-      substringMatch: true,
-    })
-  ) {
+  if (!isTriggered(query, ["flip a coin", "flip", "toss", "toss a coin"])) {
     return;
   }
 
