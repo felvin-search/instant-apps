@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Shows to change and display colors to pick",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["color picker"],
 };
 
 export default App;
