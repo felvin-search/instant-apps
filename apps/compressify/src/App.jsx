@@ -46,9 +46,13 @@ const SpaceSaved = styled.div`
 function Component({ data }) {
   const [compressedFile, setCompressedFile] = useState(null);
   const [imageSize, setImageSize] = useState(null);
+  const [fileName, setFileName] = useState("");
 
   const handleCompressedUpload = (e) => {
     const image = e.target.files[0];
+    let name = image.name;
+    name = "compressed_" + name;
+    setFileName(name);
     new Compressor(image, {
       quality: 0.7,
       success: (result) => {
@@ -71,7 +75,7 @@ function Component({ data }) {
         <Element>
           <Compressed src={compressedFile} />
           <Content>
-            <a href={compressedFile} download>
+            <a href={compressedFile} download={fileName}>
               <button>Click to download</button>
             </a>
             {imageSize > 0 ? (
