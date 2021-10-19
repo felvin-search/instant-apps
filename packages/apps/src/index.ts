@@ -1,5 +1,6 @@
 import ColorPicker from "@felvin-search-apps/color-picker";
 import MergePdfs from "@felvin-search-apps/merge-pdfs";
+import HelloWorldInDifferentLanguages from "@felvin-search-apps/hello-world-in-different-languages";
 import LiveMarkdown from "@felvin-search-apps/live-markdown";
 import JwtDecoder from "@felvin-search-apps/jwt-decoder";
 import MarkdownToHtml from "@felvin-search-apps/markdown-to-html";
@@ -35,6 +36,7 @@ import CourierTracker from "@felvin-search-apps/courier-tracker";
 const allApps = [
   ColorPicker,
   MergePdfs,
+  HelloWorldInDifferentLanguages,
   LiveMarkdown,
   JwtDecoder,
   MarkdownToHtml,

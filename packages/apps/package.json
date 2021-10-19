@@ -33,6 +33,7 @@
     "@felvin-search-apps/flappy-bird": "^1.9.0",
     "@felvin-search-apps/flip-a-coin": "^1.2.0",
     "@felvin-search-apps/graph-plotter": "^1.9.0",
+    "@felvin-search-apps/hello-world-in-different-languages": "^1.0.0",
     "@felvin-search-apps/ip-address": "^1.7.0",
     "@felvin-search-apps/joke-generator": "^1.9.0",
     "@felvin-search-apps/json-formatter": "^1.9.0",
