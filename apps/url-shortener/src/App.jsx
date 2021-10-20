@@ -28,15 +28,16 @@ const Input = styled.input`
   max-width: 50vw;
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
-  background-color: #ECB390;
+  background-color: #ECB390; //To be changed later for uniform color scheme
   border: none;
   outline: none;
 `;
 
-const SubmitBtn = styled.div`
+const SubmitBtn = styled.button`
   padding: 1rem 1.5rem;
-  background-color: #DF7861;
+  background-color: #DF7861; //To be changed later for uniform color scheme
   font-size: 1.2rem;
+  margin: 0;
   border: none;
   outline: none;
 `;
@@ -74,6 +75,40 @@ const DividerMob = styled.div`
   }
 `;
 
+const LoaderBox = styled.div`
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+`;
+
+const Loader = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+
+  div {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: 10px solid #ecb390; //To be changed later for uniform color scheme
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loadingKF 1s linear infinite;
+    top: 50%;
+    left: 50%;
+  }
+
+  @keyframes loadingKF {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
+  }
+`;
+
 //=========================================
 
 // Your UI logic goes here.
@@ -83,15 +118,19 @@ function Component({ data }) {
   const [inputUrl, setInputUrl] = useState("");
   const [outputUrl, setOutputUrl] = useState("");
   const [hasError, setHasError] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
 
   const shortener = async () => {
     try {
+      setShowLoader(true);
       const response = await axios.get(`https://api.shrtco.de/v2/shorten?url=${inputUrl}`);
+      setShowLoader(false);
       setOutputUrl(response.data.result.full_short_link);
       setHasError(false);
     }
     catch(err) {
       setHasError(true);
+      setShowLoader(false);
     }
   }
 
@@ -109,12 +148,19 @@ function Component({ data }) {
     }
   }
 
+  const loader = (
+    <LoaderBox><Loader class="ldio-wh5s68ydb2d">
+      <div></div>
+    </Loader></LoaderBox>
+  )
+
   return (
     <Container>
       <InputBox>
         <Input value={inputUrl} onChange={(event) => setInputUrl(event.target.value)}></Input>
         <SubmitBtn onClick={shortener}>Shorten</SubmitBtn>
       </InputBox>
+      {showLoader ? loader : null}
       {output}
     </Container>
   );
