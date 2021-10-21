@@ -18,7 +18,7 @@ const H3 = styled.h3`
   text-align: center;
 `;
   
-const H4 = styled.h4`
+const P = styled.p`
   margin: 0.25rem;
   text-align: center;
 `;
@@ -36,9 +36,9 @@ const Cell = styled.div`
   overflow-wrap: break-word;
   border: 2px grey dashed;
   padding: 0.25rem;
-  `;
+`;
   
-  const Row = styled.div`
+const Row = styled.div`
   padding-top: 0.20rem;
   border-top: 2px grey dashed;
   display: flex;
@@ -69,7 +69,7 @@ function RepoDetails(props) {
   return (
     <Cell>
       <H3>{author}/<a href={url}>{name}</a></H3>
-      <H4>{description}</H4>
+      <P>{description}</P>
       <Row>
         <span>{stars}⭐</span>
         <span>{forks}🍴</span>      
