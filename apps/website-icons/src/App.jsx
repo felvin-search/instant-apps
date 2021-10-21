@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 
 //------------Styled Components-------------
@@ -13,6 +13,30 @@ const Container = styled.div`
   align-items: center;
 `;
 
+const Img = styled.img`
+  display: ${props => props.hide ? "none" : "block"};
+`;
+
+const RotateInfinitely = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Loader = styled.div`
+  box-sizing: border-box;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 10px black solid;
+  border-top-color: transparent;
+  transform: rotate(0deg);
+  animation: ${RotateInfinitely} 700ms ease-in-out infinite;
+`;
+
 //=========================================
 
 // Your UI logic goes here.
@@ -20,9 +44,11 @@ const Container = styled.div`
 function Component({ data }) {
   const [url, setUrl] = useState(data);
   const [iconUrl, setIconUrl] = useState(data);
+  const [loading, setLoading] = useState(true);
   const inputRef = useRef();
   const submitHandler = e => {
     e.preventDefault();
+    setLoading(true);
     setIconUrl(inputRef.current.value);
   }
   return (
@@ -32,7 +58,8 @@ function Component({ data }) {
         <input ref={inputRef} value={url} onChange={() => setUrl(inputRef.current.value)}/>
         <button type="submit">Get Icon</button>
       </form>
-      <img src={`https:/icon.horse/icon/${iconUrl}`} alt={iconUrl}></img>
+      {loading ? <Loader/> : null}
+      <Img hide={loading} onLoad={()=>setLoading(false)} src={`https:/icon.horse/icon/${iconUrl}`} alt={iconUrl}></Img>
     </Container>
   );
 }
@@ -48,8 +75,10 @@ const queryToData = ({ query }) => {
   }
   const urlRegex = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
   const url = query.match(urlRegex)?.[0].toString();
-  if(url) return Promise.resolve(url)
-  return Promise.resolve("felvin.com");
+  if(url) return Promise.resolve(url);
+  const words = query.split(" ").map(w => w.toLowerCase());
+  if(words.includes("website") || words.includes("site")) return Promise.resolve("felvin.com");
+  return Promise.resolve(false);
 }
 
 export { queryToData, Component };
