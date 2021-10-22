@@ -44,6 +44,7 @@
     "@felvin-search-apps/math": "^1.12.0",
     "@felvin-search-apps/merge-pdfs": "^1.4.0",
     "@felvin-search-apps/morse-code-generator": "^1.10.0",
+    "@felvin-search-apps/pokedex": "^1.0.0",
     "@felvin-search-apps/qr-code-generator": "^1.0.0",
     "@felvin-search-apps/regex": "^1.10.0",
     "@felvin-search-apps/screen-size": "^1.12.0",

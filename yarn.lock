@@ -1899,6 +1899,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/pokedex@^1.0.0, @felvin-search-apps/pokedex@workspace:apps/pokedex":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/pokedex@workspace:apps/pokedex"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    axios: ^0.21.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/qr-code-generator@^1.0.0, @felvin-search-apps/qr-code-generator@workspace:apps/qr-code-generator":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/qr-code-generator@workspace:apps/qr-code-generator"
@@ -2157,6 +2174,7 @@ __metadata:
     "@felvin-search-apps/math": ^1.12.0
     "@felvin-search-apps/merge-pdfs": ^1.4.0
     "@felvin-search-apps/morse-code-generator": ^1.10.0
+    "@felvin-search-apps/pokedex": ^1.0.0
     "@felvin-search-apps/qr-code-generator": ^1.0.0
     "@felvin-search-apps/regex": ^1.10.0
     "@felvin-search-apps/screen-size": ^1.12.0
