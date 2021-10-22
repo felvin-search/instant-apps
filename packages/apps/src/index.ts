@@ -3,6 +3,7 @@ import MergePdfs from "@felvin-search-apps/merge-pdfs";
 import HelloWorldInDifferentLanguages from "@felvin-search-apps/hello-world-in-different-languages";
 import Compressify from "@felvin-search-apps/compressify";
 import TrendingOnGithub from "@felvin-search-apps/trending-on-github";
+import UrlShortener from "@felvin-search-apps/url-shortener";
 import LiveMarkdown from "@felvin-search-apps/live-markdown";
 import JwtDecoder from "@felvin-search-apps/jwt-decoder";
 import MarkdownToHtml from "@felvin-search-apps/markdown-to-html";
@@ -42,6 +43,7 @@ const allApps = [
   HelloWorldInDifferentLanguages,
   Compressify,
   TrendingOnGithub,
+  UrlShortener,
   LiveMarkdown,
   JwtDecoder,
   MarkdownToHtml,
