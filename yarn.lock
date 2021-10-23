@@ -1761,7 +1761,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder":
+"@felvin-search-apps/jwt-decoder@^1.8.0, @felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder"
   dependencies:
@@ -1797,7 +1797,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/live-markdown@workspace:apps/live-markdown":
+"@felvin-search-apps/live-markdown@^1.8.0, @felvin-search-apps/live-markdown@workspace:apps/live-markdown":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/live-markdown@workspace:apps/live-markdown"
   dependencies:
@@ -2168,7 +2168,9 @@ __metadata:
     "@felvin-search-apps/ip-address": ^1.11.0
     "@felvin-search-apps/joke-generator": ^1.13.0
     "@felvin-search-apps/json-formatter": ^1.13.0
+    "@felvin-search-apps/jwt-decoder": ^1.8.0
     "@felvin-search-apps/latex-render": ^1.13.0
+    "@felvin-search-apps/live-markdown": ^1.8.0
     "@felvin-search-apps/lorem-ipsum-generator": ^1.13.0
     "@felvin-search-apps/markdown-to-html": ^1.8.0
     "@felvin-search-apps/math": ^1.13.0
