@@ -51,6 +51,7 @@
     "@felvin-search-apps/regex": "^1.16.0",
     "@felvin-search-apps/screen-size": "^1.18.0",
     "@felvin-search-apps/snake-game": "^1.18.0",
+    "@felvin-search-apps/sudoku": "^1.0.0",
     "@felvin-search-apps/tetris": "^1.18.0",
     "@felvin-search-apps/tic-tac-toe": "^1.18.0",
     "@felvin-search-apps/time-at-place": "^1.18.0",

@@ -2041,6 +2041,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/sudoku@^1.0.0, @felvin-search-apps/sudoku@workspace:apps/sudoku":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/sudoku@workspace:apps/sudoku"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+    sudoku-gen: ^1.0.0
+  peerDependencies:
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/tetris@^1.18.0, @felvin-search-apps/tetris@workspace:apps/tetris":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/tetris@workspace:apps/tetris"
@@ -2261,6 +2278,7 @@ __metadata:
     "@felvin-search-apps/regex": ^1.16.0
     "@felvin-search-apps/screen-size": ^1.18.0
     "@felvin-search-apps/snake-game": ^1.18.0
+    "@felvin-search-apps/sudoku": ^1.0.0
     "@felvin-search-apps/tetris": ^1.18.0
     "@felvin-search-apps/tic-tac-toe": ^1.18.0
     "@felvin-search-apps/time-at-place": ^1.18.0
@@ -2283,7 +2301,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.18.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.18.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2303,7 +2321,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.18.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.18.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:
@@ -14043,6 +14061,13 @@ __metadata:
     react-dom: ">= 16.8.0"
     react-is: ">= 16.8.0"
   checksum: 2d833d573c039f4af5c422ce33f06212dfa51a821994ec1d7a697355752b422cad6e92eeff712dbd9c0339aade8eb5bce10c30dfecb3c8e707530b6dda7dda10
+  languageName: node
+  linkType: hard
+
+"sudoku-gen@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "sudoku-gen@npm:1.0.0"
+  checksum: f7b97bd1e03d8d51723fdad91a8a10aa6b1408f2197d4a72629d1878222cef3f7d820b25c22949899104fc07484266f887fa8c1a7cfe2fd9b1abc14da878fc58
   languageName: node
   linkType: hard
 
