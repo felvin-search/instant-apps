@@ -12,8 +12,8 @@ const InstantAppContainer = styled.div`
   align-items: center;
 `;
 
-function renderApps(query: string) {
-  apps.every(async (app) => {
+async function renderApps(query: string) {
+  for (const app of apps) {
     // Question: Not all apps need to return data.
     // Will try to render an app if it returns a "truthy" value
     // App should return falsy values of throw an error if it doesn't want to serve a query.
@@ -24,7 +24,6 @@ function renderApps(query: string) {
       // This doesn't have to be an actual error.
       console.warn(`error received from app "${app.name}" on query "${query}"`);
       console.warn(err);
-      return false;
     }
     // TODO: This will always render the first app
     if (!!data) {
@@ -32,10 +31,9 @@ function renderApps(query: string) {
         <app.Component data={data} />,
         document.getElementById("instant_apps_root")
       );
-      return false;
+      return;
     }
-    return true;
-  });
+  }
 }
 
 type RendererProps = {
