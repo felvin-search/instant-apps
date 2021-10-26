@@ -17,17 +17,19 @@
     "https-browserify": "^1.0.0",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "path-browserify": "^1.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "util": "^0.12.4"
   },
   "devDependencies": {
     "@felvin-search/cli": "^1.15.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "styled-components": "^5.3.0"
   },
   "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "styled-components": ">= 5"
   }
 }
