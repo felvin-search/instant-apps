@@ -70,5 +70,15 @@ export default {
       commonjs2: "styled-components",
       amd: "styled-components",
     },
+    react: {
+      commonjs: "react",
+      commonjs2: "react",
+      amd: "react",
+    },
+    "react-dom": {
+      commonjs: "react-dom",
+      commonjs2: "react-dom",
+      amd: "react-dom",
+    },
   },
 };
