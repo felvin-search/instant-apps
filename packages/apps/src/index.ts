@@ -46,7 +46,6 @@ const allApps = [
   Compressify,
   TrendingOnGithub,
   UrlShortener,
-  TvShows,
   Pokedex,
   LiveMarkdown,
   JwtDecoder,
@@ -80,6 +79,7 @@ const allApps = [
   WordCounter,
   Tetris,
   CourierTracker,
+  TvShows,
 ];
 
 export default allApps;
