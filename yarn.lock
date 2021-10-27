@@ -1588,6 +1588,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/crypto@^1.0.0, @felvin-search-apps/crypto@workspace:apps/crypto":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/crypto@workspace:apps/crypto"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/csv-to-json@^1.18.0, @felvin-search-apps/csv-to-json@workspace:apps/csv-to-json":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/csv-to-json@workspace:apps/csv-to-json"
@@ -2256,6 +2274,7 @@ __metadata:
     "@felvin-search-apps/color-picker": ^1.11.0
     "@felvin-search-apps/compressify": ^1.9.0
     "@felvin-search-apps/courier-tracker": ^1.18.0
+    "@felvin-search-apps/crypto": ^1.0.0
     "@felvin-search-apps/csv-to-json": ^1.18.0
     "@felvin-search-apps/currency-convertor": ^1.18.0
     "@felvin-search-apps/dice-roller": ^1.18.0
