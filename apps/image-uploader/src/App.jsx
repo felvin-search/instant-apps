@@ -60,6 +60,7 @@ const Paragraph = styled.p`
 `;
 
 const Image = styled.img`
+  display: ${(props) => (props.display ? "block" : "none")};
   position: absolute;
   top: 0;
   left: 0;
@@ -70,6 +71,10 @@ const Image = styled.img`
   border-radius: 10px;
   z-index: 1000;
   transition: opacity 300ms ease-in-out;
+`;
+
+const Input = styled.input`
+  display: none;
 `;
 
 const Button = styled.input`
@@ -184,15 +189,14 @@ function Component({ data }) {
               alt="Preview"
               id="previewImage"
               draggable="false"
-              style={pth !== "" ? { display: "block" } : { display: "none" }}
+              display={pth !== ""}
             />
 
-            <input
+            <Input
               onChange={fileSelected}
               type="file"
               id="imageUpload"
               name="imageUpload"
-              style={{ display: "none" }}
               accept="image/*"
             />
           </UploadZone>
