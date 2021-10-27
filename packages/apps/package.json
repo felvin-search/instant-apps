@@ -50,6 +50,7 @@
     "@felvin-search-apps/morse-code-generator": "^1.16.0",
     "@felvin-search-apps/pokedex": "^1.6.0",
     "@felvin-search-apps/qr-code-generator": "^1.6.0",
+    "@felvin-search-apps/random-string-generator": "^1.0.0",
     "@felvin-search-apps/regex": "^1.16.0",
     "@felvin-search-apps/screen-size": "^1.18.0",
     "@felvin-search-apps/snake-game": "^1.18.0",
