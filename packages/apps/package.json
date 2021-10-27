@@ -61,6 +61,7 @@
     "@felvin-search-apps/tv-shows": "^1.6.0",
     "@felvin-search-apps/url-shortener": "^1.6.0",
     "@felvin-search-apps/uuid": "^1.18.0",
+    "@felvin-search-apps/website-icons": "^1.0.0",
     "@felvin-search-apps/weight-converter": "^1.15.0",
     "@felvin-search-apps/word-counter": "^1.18.0",
     "@felvin-search/core": "^1.18.0",
