@@ -1,3 +1,4 @@
+import Sudoku from "@felvin-search-apps/sudoku";
 import ColorPicker from "@felvin-search-apps/color-picker";
 import MergePdfs from "@felvin-search-apps/merge-pdfs";
 import HelloWorldInDifferentLanguages from "@felvin-search-apps/hello-world-in-different-languages";
@@ -40,6 +41,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  Sudoku,
   ColorPicker,
   MergePdfs,
   HelloWorldInDifferentLanguages,
