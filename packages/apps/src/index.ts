@@ -1,3 +1,4 @@
+import RandomStringGenerator from "@felvin-search-apps/random-string-generator";
 import Sudoku from "@felvin-search-apps/sudoku";
 import ColorPicker from "@felvin-search-apps/color-picker";
 import MergePdfs from "@felvin-search-apps/merge-pdfs";
@@ -44,6 +45,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  RandomStringGenerator,
   Sudoku,
   ColorPicker,
   MergePdfs,

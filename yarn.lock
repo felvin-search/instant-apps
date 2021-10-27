@@ -2023,6 +2023,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/random-string-generator@^1.0.0, @felvin-search-apps/random-string-generator@workspace:apps/random-string-generator":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/random-string-generator@workspace:apps/random-string-generator"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    randomstring: ^1.2.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/regex@^1.17.0, @felvin-search-apps/regex@workspace:apps/regex":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/regex@workspace:apps/regex"
@@ -2334,6 +2353,7 @@ __metadata:
     "@felvin-search-apps/morse-code-generator": ^1.17.0
     "@felvin-search-apps/pokedex": ^1.7.0
     "@felvin-search-apps/qr-code-generator": ^1.7.0
+    "@felvin-search-apps/random-string-generator": ^1.0.0
     "@felvin-search-apps/regex": ^1.17.0
     "@felvin-search-apps/screen-size": ^1.19.0
     "@felvin-search-apps/snake-game": ^1.19.0
@@ -2361,7 +2381,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.19.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.19.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2381,7 +2401,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.19.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.19.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:
@@ -3903,6 +3923,13 @@ __metadata:
   version: 2.1.0
   resolution: "array-union@npm:2.1.0"
   checksum: 5bee12395cba82da674931df6d0fea23c4aa4660cb3b338ced9f828782a65caa232573e6bf3968f23e0c5eb301764a382cef2f128b170a9dc59de0e36c39f98d
+  languageName: node
+  linkType: hard
+
+"array-uniq@npm:1.0.2":
+  version: 1.0.2
+  resolution: "array-uniq@npm:1.0.2"
+  checksum: 8c4beb94aa183791da1e155935aba4df3fe2eeb6f491c69e666ca7351f897b9b260fa04d016e0ce766ae8280129c16f11071e17359c81c01741289009bb5ac6d
   languageName: node
   linkType: hard
 
@@ -12430,6 +12457,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"randombytes@npm:2.0.3":
+  version: 2.0.3
+  resolution: "randombytes@npm:2.0.3"
+  checksum: 13e1abd143404dd87024bf345fb1a446b2e2ee46d8e1a5a073e8370c9b1e58000d81a97d4327ba7089087213eb6d8c77fa67ab4e91aa00605126d634fcccb9d4
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.0.0, randombytes@npm:^2.0.1, randombytes@npm:^2.0.5, randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -12446,6 +12480,18 @@ __metadata:
     randombytes: ^2.0.5
     safe-buffer: ^5.1.0
   checksum: 33734bb578a868d29ee1b8555e21a36711db084065d94e019a6d03caa67debef8d6a1bfd06a2b597e32901ddc761ab483a85393f0d9a75838f1912461d4dbfc7
+  languageName: node
+  linkType: hard
+
+"randomstring@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "randomstring@npm:1.2.1"
+  dependencies:
+    array-uniq: 1.0.2
+    randombytes: 2.0.3
+  bin:
+    randomstring: bin/randomstring
+  checksum: 501da2ec59638d502dbb66c237ab80790dbb0b50b493347cbf6abc2dfbf6fe08f195d85e37911689bc406f85d31cf9826757398b5af8c9cae7c0ad4f808f3ac0
   languageName: node
   linkType: hard
 
