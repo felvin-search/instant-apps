@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import {
-  isTriggered,
   InstantAppProps,
+  isTriggered,
   queryToDataInput,
   queryToDataOutput,
 } from "@felvin-search/core";
@@ -56,7 +56,42 @@ const PickrrLink = styled.a`
   float: right;
 `;
 
+const TrackButton = styled.button`
+  font-size: 1rem;
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+`;
+
+const IdInput = styled.input`
+  padding: 0.1Srem;
+  font-size: 1rem;
+`;
+
 //=========================================
+function TrackingNumberInput({ setData }) {
+  const numInput = useRef<HTMLInputElement>(null);
+  const [error, setError] = useState("");
+  const submitHandler = async e => {
+    setError("");
+    e.preventDefault();
+    if(numInput.current?.value) {
+      const data = await queryToFetchedData([numInput.current.value.toString()]);
+      if(data) setData(data);
+      else setError("No data found!");
+    }
+  }
+  return (
+    <>
+      <label>Enter tracking id:</label>
+      <form onSubmit={submitHandler}>
+        <IdInput type="number" ref={numInput}></IdInput>
+        <TrackButton type="submit">Track</TrackButton>
+      </form>
+      {error.length ? <div style={{color: "red"}} >{error}</div> : null}
+    </>
+  )
+}
 
 function TrackingInfo(props) {
   const data = props.data,
@@ -121,26 +156,26 @@ const triggerWords = [
   "delivery status",
   "current status",
 ];
-const numberPattern = /\d+/g;
 
 /**
  * The UI logic of the app.
  */
 function Component(props: InstantAppProps) {
-  const data = props.data;
+  const [data, setData] = useState<any>(props.data);
   const statusArray = _.reverse(
     _.flatten(
-      _.map(data.track_arr, (track_object) => track_object.status_array)
+      _.map(data?.track_arr, (track_object) => track_object.status_array)
     )
   );
   return (
     <TrackingContainer>
       <h1>Courier Tracking Status</h1>
-      {data.err && <div>{data.err}</div>}
-      <TrackingInfo data={data} />
+      {data?.err ? <div>{data.err}</div> : null}
+      
+      {statusArray.length ? <TrackingInfo data={data} /> : null}
 
-      <h2>Updates</h2>
-      <StatusArrayContainer>
+      {statusArray.length ? <h2>Updates</h2> : null}
+      {statusArray.length ? <StatusArrayContainer>
         {_.map(statusArray, (statusObject) => {
           return (
             <RowContainer>
@@ -155,19 +190,12 @@ function Component(props: InstantAppProps) {
             </RowContainer>
           );
         })}
-      </StatusArrayContainer>
+      </StatusArrayContainer> : <TrackingNumberInput setData={setData}/>}
     </TrackingContainer>
   );
 }
 
-async function queryToData({
-  query,
-}: queryToDataInput): Promise<queryToDataOutput> {
-  // If the query does not contain the following words, do not trigger the app
-  // `define`, `meaning`
-  if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
-  // Extract tracking number from the query
-  let trackingNumbers = query.match(numberPattern);
+async function queryToFetchedData(trackingNumbers: string[]): Promise<queryToDataOutput> {
   const baseUrl =
     "https://cfapi.pickrr.com/plugins/tracking/?format=json&tracking_id=";
   let results = await Promise.all(
@@ -184,8 +212,18 @@ async function queryToData({
     })
   );
   results = _.compact(results);
-
   return results[0];
 }
+
+async function queryToData({
+  query,
+}: queryToDataInput): Promise<queryToDataOutput> {
+  // If the query does not contain the following words, do not trigger the app
+  if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
+  const ids = query.split(" ").filter(e => !isNaN(+e));
+  const data = await queryToFetchedData(ids);
+  if(data) return data;
+  return Promise.resolve("takeInput");
+} // courier status of 8695542668
 
 export { queryToData, Component };
