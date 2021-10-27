@@ -94,6 +94,9 @@ const Output = styled.pre`
 
 const PrimaryHeading = styled.h2`
   font-size: 1.5rem;
+  span {
+    font-size: 1rem;
+  }
 `;
 
 const SecondaryHeading = styled.h3`
@@ -108,7 +111,7 @@ const SecondaryHeading = styled.h3`
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
 
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZWFyY2giOiJmZWx2aW4iLCJjb2RlIjoiT3BlbiBTb3VyY2UiLCJwcm9qZWN0IjoiaW5zdGFudC1hcHBzIn0.6ZiTWZhU0jB5YXRSdb-O8kVHPSpknz7NyxyRLYoInGc");
   var payload = null, header = null, errorMsg = null;
 
   try {
@@ -127,7 +130,7 @@ function Component({ data }) {
     <Container>
 
       <InputContainer>
-        <PrimaryHeading>Encoded JWT</PrimaryHeading>
+        <PrimaryHeading>Encoded JWT <span>(paste a token here)</span></PrimaryHeading>
 
         <Input type="text" placeholder="Paste your JWT token here" value={token} onChange={(event) => setToken(event.target.value)}></Input>
         <ErrorMessage>{errorMsg}</ErrorMessage>
