@@ -22,20 +22,6 @@ The text editor of choice. You can choose any other as long as they support [pre
 
 We have a `.prettierrc.json` file, which would make prettier consisitent across all the developers of the project.
 
-#### Extension - [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-
-#### Configuration - Settings.json
-
-```json
-{
-  "files.trimTrailingWhitespace": true,
-  "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "javascript.updateImportsOnFileMove.enabled": "always"
-}
-```
-
 ## Starting up
 
 Fork the repository and clone it locally. [Docs](https://docs.github.com/en/get-started/quickstart/fork-a-repo)

@@ -67,6 +67,12 @@ const Button = styled.button`
   width: 9rem;
 `;
 
+const DifficultySelection = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+`;
+
 //=========================================
 
 const convertSudoku = (input) =>
@@ -75,6 +81,7 @@ const convertSudoku = (input) =>
 function Component() {
   const [sudoku, setSudoku] = useState(getSudoku("easy"));
   const [userInput, setUserInput] = useState(convertSudoku(sudoku));
+  const [difficulty, setDifficulty] = useState("easy");
   const [msg, setMsg] = useState("");
   const [displayMsg, setDisplayMsg] = useState(false);
 
@@ -131,7 +138,8 @@ function Component() {
   };
 
   const getNewSudoku = () => {
-    setSudoku(getSudoku("easy"));
+    console.log(difficulty);
+    setSudoku(getSudoku(difficulty));
   };
 
   const getRow = (idx, blockRow) => {
@@ -168,6 +176,48 @@ function Component() {
         ))}
       </Board>
       <ButtonContainer>
+        <DifficultySelection
+          onChange={(e) => {
+            setDifficulty(e.target.value);
+          }}
+        >
+          <label>
+            <input
+              type="radio"
+              value="easy"
+              name="difficulty"
+              checked={difficulty === "easy"}
+            />{" "}
+            Easy
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="medium"
+              name="difficulty"
+              checked={difficulty === "medium"}
+            />{" "}
+            Medium
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="hard"
+              name="difficulty"
+              checked={difficulty === "hard"}
+            />{" "}
+            Hard
+          </label>
+          <label>
+            <input
+              type="radio"
+              value="expert"
+              name="difficulty"
+              checked={difficulty === "expert"}
+            />{" "}
+            Expert
+          </label>
+        </DifficultySelection>
         <Button onClick={() => setUserInput(convertSudoku(sudoku))}>
           Clear
         </Button>

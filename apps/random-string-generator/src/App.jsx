@@ -53,8 +53,6 @@ function Component({ data }) {
   const [isSmallLetter, setSmallLetter] = useState(true);
   const [isNumber, setNumber] = useState(true);
   const [isSymbol, setSymbol] = useState(false);
-  const [isCustomCharset, setCustomCharset] = useState(false);
-  const [userCharset, setUserCharset] = useState("");
   const [length, setLength] = useState(32);
   const [randomString, setRandomString] = useState(randomstring.generate());
 
@@ -67,14 +65,11 @@ function Component({ data }) {
     e.preventDefault();
     let charset = "";
 
-    if (isCustomCharset) {
-      charset = userCharset;
-    } else {
-      if (isCapitalLetter) charset = charset + capitalLetters;
-      if (isSmallLetter) charset = charset + smallLetters;
-      if (isNumber) charset = charset + numbers;
-      if (isSymbol) charset = charset + symbols;
-    }
+    if (isCapitalLetter) charset = charset + capitalLetters;
+    if (isSmallLetter) charset = charset + smallLetters;
+    if (isNumber) charset = charset + numbers;
+    if (isSymbol) charset = charset + symbols;
+
     setRandomString(getString(length, charset));
   };
 
@@ -125,20 +120,6 @@ function Component({ data }) {
             type="number"
             value={length}
             onChange={(e) => setLength(e.target.value)}
-          />
-        </Label>
-        <Label>
-          <input
-            type="checkbox"
-            checked={isCustomCharset}
-            onChange={() => setCustomCharset(!isCustomCharset)}
-          />
-          {`Use custom character set (abc >> "accbaabbbbcccb")`}
-          <br />
-          <input
-            type="text"
-            value={userCharset}
-            onChange={(e) => setUserCharset(e.target.value)}
           />
         </Label>
         <Submit value="Generate" />
