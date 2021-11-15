@@ -60,7 +60,7 @@ const TopBar = styled.div`
   justify-content: space-evenly;
   align-items: center;
   color: #444;
-  padding 1rem 1.5rem;
+  padding: 1rem 1.5rem;
   font-size: 1rem;
 
   @media (min-width: ${Breakpoints.medium}) {
@@ -125,6 +125,12 @@ const queryToData = async ({ query }) => {
   var response = "";
   try {
     response = await axios.get(`https://api.tvmaze.com/search/shows?q=${filteredQuery}`);
+
+    // To only render app when query is close to acutal names
+    // TODO: something to determine the score empirically rather than hardcode
+    if(response.data[0].score <= 0.8) {
+      return;
+    }
   }
   catch(err) {
     console.log(err);
