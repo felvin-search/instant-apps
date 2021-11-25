@@ -27,7 +27,7 @@ function Component({ data }) {
 //=========================================
 
 // This where you can process the query and try to convert it into some meaningful data.
-const queryToData = ({ query }) => {
+const queryToData = async ({ query }) => {
   if (!isTriggered(query, [ {{{ triggerWords }}} ])) {
     return;
   }
@@ -35,7 +35,7 @@ const queryToData = ({ query }) => {
   // You can do any external API call or use any library here
   // to convert the search query into some meaningful data.
   // The data gets passed to the UI Component defined above.
-  
+
   const data = query.toUpperCase();
 
   return data;
