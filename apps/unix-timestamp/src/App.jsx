@@ -39,20 +39,20 @@ function Component({ data }) {
   return (
     <Container>
       <h2>Unix Timestamp Conversion</h2>
-      <div>
+      <Container>
         <p>Current Unix Timestamp is: {uts}</p>
         <p>Current Date and Time is: {ls}</p>
-      </div>
-      <div>
+      </Container>
+      <Container>
         <h3>To Unix Timestamp</h3>
         <input type="datetime-local" ref = {datetimeInput} value = {input1} onChange = {()  => setInput1(datetimeInput.current.value)}/>
         <p>{Math.round(new Date(input1).getTime()/1000)}</p>
-      </div>
-      <div>
+      </Container>
+      <Container>
         <h3>From Unix Timestamp</h3>
         <input type="number" min="0" max="2147483647" ref = {utsInput} value = {input2} onChange = {() => setInput2(utsInput.current.value)}/>
         <p>{new Date(input2 * 1000).toLocaleString()}</p>
-      </div>
+      </Container>
     </Container>
   );
 }
@@ -61,7 +61,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "unix time","unix timestamp" ])) {
+  if (!isTriggered(query, [ "unix time","unix timestamp" ], { substringMatch: true })) {
     return;
   }
 
