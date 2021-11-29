@@ -2246,6 +2246,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/unix-timestamp@^1.0.0, @felvin-search-apps/unix-timestamp@workspace:apps/unix-timestamp":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/unix-timestamp@workspace:apps/unix-timestamp"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/url-shortener@^1.12.0, @felvin-search-apps/url-shortener@workspace:apps/url-shortener":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/url-shortener@workspace:apps/url-shortener"
@@ -2383,6 +2401,7 @@ __metadata:
     "@felvin-search-apps/timer": ^1.24.0
     "@felvin-search-apps/trending-on-github": ^1.12.0
     "@felvin-search-apps/tv-shows": ^1.12.0
+    "@felvin-search-apps/unix-timestamp": ^1.0.0
     "@felvin-search-apps/url-shortener": ^1.12.0
     "@felvin-search-apps/uuid": ^1.24.0
     "@felvin-search-apps/website-icons": ^1.6.0
@@ -2400,7 +2419,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.24.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.24.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2420,7 +2439,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.24.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.24.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:
