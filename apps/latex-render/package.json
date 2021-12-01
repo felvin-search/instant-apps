@@ -1,6 +1,6 @@
 {
   "name": "@felvin-search-apps/latex-render",
-  "version": "1.24.0",
+  "version": "1.25.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
@@ -12,13 +12,13 @@
     "build": "felvin-cli build:app"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.24.0",
+    "@felvin-search/core": "^1.25.0",
     "html-to-pdf-js": "^0.9.3",
     "katex": "^0.13.18",
     "react-katex": "^2.0.2"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.24.0",
+    "@felvin-search/cli": "^1.25.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
     "react": "^17.0.2",
