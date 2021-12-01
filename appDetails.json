@@ -1,0 +1,474 @@
+[
+    {
+        "id": "@felvin-search-apps/instant-app-details",
+        "name": "Instant App Details",
+        "description": "a meta instant app that shows details of all the felvin instant apps",
+        "exampleSearchQueries": [
+            "list all felvin instant app details"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/instant-app-details/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/random-string-generator",
+        "name": "Random String Generator",
+        "description": "App to generate a random string",
+        "exampleSearchQueries": [
+            "random password",
+            "random string",
+            "new password",
+            "new string"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/random-string-generator/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/sudoku",
+        "name": "Sudoku",
+        "description": "A Sudoku puzzle game",
+        "exampleSearchQueries": [
+            "play sudoku",
+            "sudoku"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/sudoku/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/color-picker",
+        "name": "color picker",
+        "description": "Shows to change and display colors to pick",
+        "exampleSearchQueries": [
+            "color picker"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/color-picker/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/merge-pdfs",
+        "name": "Merge PDFs",
+        "description": "Merges multiple PDF files into 1 PDF file",
+        "exampleSearchQueries": [
+            "merge pdf files",
+            "combine pdfs into single pdf"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/merge-pdfs/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/hello-world-in-different-languages",
+        "name": "Hello World In Different Languages",
+        "description": "Shows the introductory hello world code in many programming languages",
+        "exampleSearchQueries": [
+            "hello world program",
+            "code for hello world"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/hello-world-in-different-languages/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/compressify",
+        "name": "Image-compressor",
+        "description": "Takes an image and compresses it",
+        "exampleSearchQueries": [
+            "compress image",
+            "image compressor"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/compressify/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/trending-on-github",
+        "name": "Trending On Github",
+        "description": "shows trending repositories on github from that day",
+        "exampleSearchQueries": [
+            "What's trending on github today",
+            "list of github trending repositories"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/trending-on-github/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/url-shortener",
+        "name": "URL Shortener",
+        "description": "An instant app which shortens urls",
+        "exampleSearchQueries": [
+            "shorten url",
+            "url shortener",
+            "online url shortener"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/url-shortener/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/pokedex",
+        "name": "Pokedex",
+        "description": "An instant app that shows stats of pokemon",
+        "exampleSearchQueries": [
+            "regirock stats",
+            "bulbasaur info"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/pokedex/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/crop-image",
+        "name": "Image Cropper",
+        "description": "Instant app for cropping images.",
+        "exampleSearchQueries": [
+            "crop image",
+            "crop photo",
+            "crop picture",
+            "image cropper",
+            "photo cropper"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/crop-image/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/image-uploader",
+        "name": "Image Uploader",
+        "description": "A Photo hosting service Instant App that greatly facilitates everyday work with various types of graphics. It helps to create a URL for our images quickly to promote sharing them with other users easily.",
+        "exampleSearchQueries": [
+            "upload image",
+            "host an image",
+            "get image url"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/image-uploader/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/live-markdown",
+        "name": "live markdown",
+        "description": "Renders mardown text in md.",
+        "exampleSearchQueries": [
+            "live markdown preview"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/live-markdown/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/jwt-decoder",
+        "name": "JWT Decoder",
+        "description": "An instant app which decodes the data stored ina jwt token",
+        "exampleSearchQueries": [
+            "decode JWT",
+            "JWT decoder"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/jwt-decoder/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/markdown-to-html",
+        "name": "Markdown To HTML",
+        "description": "Converts markdown text to html which has the same output",
+        "exampleSearchQueries": [
+            "convert markdown into html",
+            "markdown to html",
+            "md to html"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/markdown-to-html/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/flip-a-coin",
+        "name": "flip-a-coin",
+        "description": "an instant app which simulates flipping a coin and results in either Heads or Tails",
+        "exampleSearchQueries": [
+            "flip a coin",
+            "flip",
+            "toss",
+            "toss a coin"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/flip-a-coin/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/qr-code-generator",
+        "name": "QR Code Generator",
+        "description": "Generates a temporary QR tag for any url (valid for a day)",
+        "exampleSearchQueries": [
+            "Generate QR code for website",
+            "QR code for url",
+            "Make QR for felvin"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/qr-code-generator/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/crypto",
+        "name": "cryptocurrency",
+        "description": "Provides crypto currency prices",
+        "exampleSearchQueries": [
+            "price of cryto coin"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/crypto/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/website-icons",
+        "name": "Website Icons",
+        "description": "Shows the icon/favicon for any website",
+        "exampleSearchQueries": [
+            "wikipedia.org icon",
+            "website favicon"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/website-icons/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/weight-converter",
+        "name": "Weight Converter",
+        "description": "Converts weight from one unit to another",
+        "exampleSearchQueries": [
+            "convert 5 kg to pounds"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/weight-converter/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/async-api-validator",
+        "name": "Async API Validator",
+        "description": "Validate async api schema",
+        "exampleSearchQueries": [
+            "validate async api schema",
+            "async api"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/async-api-validator/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/morse-code-generator",
+        "name": "Morse Code Generator",
+        "description": "Encodes text message to Morse Code and Vice-Versa",
+        "exampleSearchQueries": [
+            "convert morse code to text"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/morse-code-generator/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/ip-address",
+        "name": "my-ip",
+        "description": "Returns the Ip address of the user",
+        "exampleSearchQueries": [
+            "what is my ip address?",
+            "ip address"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/ip-address/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/regex",
+        "name": "Regex-Validator",
+        "description": "Checks whether the regex matches the String",
+        "exampleSearchQueries": [
+            "check regex",
+            "match regex",
+            "regex validator",
+            "regex checker",
+            "regex tester"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/regex/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/screen-size",
+        "name": "Sizer",
+        "description": "Displays the resolution of the user&#x27;s screen",
+        "exampleSearchQueries": [
+            "screen resolution",
+            "screen size"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/screen-size/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/bouncy-ball",
+        "name": "Bouncy Ball",
+        "description": "It's just a bouncy ball",
+        "exampleSearchQueries": [
+            "bouncy ball"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/bouncy-ball/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/csv-to-json",
+        "name": "csv-to-json",
+        "description": "Convert a CSV file to JSON",
+        "exampleSearchQueries": [
+            "csv to json"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/csv-to-json/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/lorem-ipsum",
+        "name": "Lorem Ipsum Generator",
+        "description": "Lorem Ipsum Generator",
+        "exampleSearchQueries": [
+            "lorem ipsum generator",
+            "lorem ipsum"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/lorem-ipsum/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/graph-plotter",
+        "name": "Graph Plotter",
+        "description": "This App plots graph of functions that are passed in input. Extremes of x and y axis can be adjusted too",
+        "exampleSearchQueries": [
+            "plot graph",
+            "plotter"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/graph-plotter/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/currency-convertor",
+        "name": "Currency Convertor",
+        "description": "Converts currencies",
+        "exampleSearchQueries": [
+            "100 usd to inr",
+            "50 eur to usd"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/currency-convertor/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/latex-render",
+        "name": "Latex Renderer",
+        "description": "Enter latex strings to generate output on the fly",
+        "exampleSearchQueries": [
+            "render latex"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/latex-render/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/uuid",
+        "name": "uuid",
+        "description": "I generate uuid strings",
+        "exampleSearchQueries": [
+            "uuid"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/uuid/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/capitals",
+        "name": "Capitals",
+        "description": "Given the name of a territory, I show the name of the capital",
+        "exampleSearchQueries": [
+            "capital of Canada",
+            "What is the capital of Bangladesh"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/capitals/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/json-formatter",
+        "name": "JSONFormatter",
+        "description": "Formats the JSON with right indentation for easier human consumption",
+        "exampleSearchQueries": [
+            "format json"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/json-formatter/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/math",
+        "name": "math",
+        "description": "App which can do math stuff",
+        "exampleSearchQueries": [
+            "2+2",
+            "10/5"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/math/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/flappy-bird",
+        "name": "FlappyBird",
+        "description": "A flappy bird game for when you are bored!",
+        "exampleSearchQueries": [
+            "i am bored",
+            "flappy bird"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/flappy-bird/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/time-at-place",
+        "name": "Time at place",
+        "description": "App which shows time at places",
+        "exampleSearchQueries": [
+            "Time in India",
+            "Time in Mexico"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/time-at-place/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/tic-tac-toe",
+        "name": "Tic-Tac-Toe",
+        "description": "Play Tic-Tac-Toe with someone or yourself",
+        "exampleSearchQueries": [
+            "tic tac toe",
+            "play tic tic toe"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/tic-tac-toe/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/joke-generator",
+        "name": "Random Joke Generator",
+        "description": "I tell random jokes",
+        "exampleSearchQueries": [
+            "tell me a joke",
+            "random joke"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/joke-generator/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/dice-roller",
+        "name": "Dice Roller",
+        "description": "Roll a dice and get a number from 1 to 6",
+        "exampleSearchQueries": [
+            "roll a dice",
+            "dice"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/dice-roller/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/timer",
+        "name": "Timer App",
+        "description": "Set an instant timer using searhc. e.g. 15 minutes timer",
+        "exampleSearchQueries": [
+            "10 minutes timer"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/timer/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/snake-game",
+        "name": "Snake Game",
+        "description": "Play snake game",
+        "exampleSearchQueries": [
+            "snake game",
+            "play snake"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/snake-game/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/dictionary",
+        "name": "Dictionary App",
+        "description": "A simple dictionary app to define as english word.",
+        "exampleSearchQueries": [
+            "define gonzo",
+            "farrago meaning"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/dictionary/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/word-counter",
+        "name": "Word Counter",
+        "description": "This counts words, letter/characters",
+        "exampleSearchQueries": [
+            "word counter",
+            "character count"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/word-counter/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/tetris",
+        "name": "Tetris Game",
+        "description": "Play tetris game",
+        "exampleSearchQueries": [
+            "tetris",
+            "play tetris"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/tetris/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/courier-tracker",
+        "name": "Courier Tracker",
+        "description": "View any courier package status using Pickrr API",
+        "exampleSearchQueries": [
+            "current status of 8695542668"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/courier-tracker/src/files/screenshot.png"
+    },
+    {
+        "id": "@felvin-search-apps/tv-shows",
+        "name": "TV Shows",
+        "description": "An instant app which shows info about tv shows",
+        "exampleSearchQueries": [
+            "breaking bad",
+            "friends tv show",
+            "the office series"
+        ],
+        "screenshotPath": "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/tv-shows/src/files/screenshot.png"
+    }
+]
