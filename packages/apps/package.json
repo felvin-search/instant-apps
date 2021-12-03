@@ -38,6 +38,7 @@
     "@felvin-search-apps/graph-plotter": "^1.25.0",
     "@felvin-search-apps/hello-world-in-different-languages": "^1.16.0",
     "@felvin-search-apps/image-uploader": "^1.6.0",
+    "@felvin-search-apps/instant-app-details": "^1.0.0",
     "@felvin-search-apps/ip-address": "^1.23.0",
     "@felvin-search-apps/joke-generator": "^1.25.0",
     "@felvin-search-apps/json-formatter": "^1.25.0",
