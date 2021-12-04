@@ -1,26 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import data from "../sample-data/data.json";
+import Editor from "@monaco-editor/react";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 //=========================================
 
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
-function Component({ data }) {
+function Component() {
   return (
-    <Container>
-      You searched for: {data}
-    </Container>
+    <Editor
+      height="50vh"
+      width="80vw"
+      defaultLanguage="cpp"
+      defaultValue={data.anagrams["c++"]}
+    />
   );
 }
 
@@ -28,7 +28,9 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "bfs in js","dfs in c++","binary search in python" ])) {
+  if (
+    !isTriggered(query, ["bfs in js", "dfs in c++", "binary search in python"])
+  ) {
     return;
   }
 
@@ -39,6 +41,6 @@ const queryToData = async ({ query }) => {
   const data = query.toUpperCase();
 
   return data;
-}
+};
 
 export { queryToData, Component };
