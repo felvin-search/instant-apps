@@ -7,7 +7,7 @@ const App: InstantApp = {
   description: "This simple app will help you to encode your url and then decode them easily",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
+  screenshotPath: "./files/screenshot.png",
   exampleSearchQueries: ["url encoder and decoder"],
 };
 
