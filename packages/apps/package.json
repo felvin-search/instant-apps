@@ -65,6 +65,7 @@
     "@felvin-search-apps/tv-shows": "^1.14.0",
     "@felvin-search-apps/unit-convertor": "^1.0.0",
     "@felvin-search-apps/unix-timestamp": "^1.2.0",
+    "@felvin-search-apps/url-encoder-decoder": "^1.0.0",
     "@felvin-search-apps/url-shortener": "^1.14.0",
     "@felvin-search-apps/uuid": "^1.26.0",
     "@felvin-search-apps/website-icons": "^1.8.0",

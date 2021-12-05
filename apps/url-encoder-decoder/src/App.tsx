@@ -10,6 +10,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: red;
 `;
 
 //=========================================
@@ -28,7 +29,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "url decoder","url encoder","url encoder decoder","encoding url","decoding url","encoding and decoding url" ])) {
+  if (!isTriggered(query, [ "url encoder and decoder", "url decoder","url encoder","url encoder decoder","encoding url","decoding url","encoding and decoding url" ])) {
     return;
   }
 

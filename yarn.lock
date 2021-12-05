@@ -2309,6 +2309,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/url-encoder-decoder@^1.0.0, @felvin-search-apps/url-encoder-decoder@workspace:apps/url-encoder-decoder":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/url-encoder-decoder@workspace:apps/url-encoder-decoder"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/url-shortener@^1.14.0, @felvin-search-apps/url-shortener@workspace:apps/url-shortener":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/url-shortener@workspace:apps/url-shortener"
@@ -2449,6 +2467,7 @@ __metadata:
     "@felvin-search-apps/tv-shows": ^1.14.0
     "@felvin-search-apps/unit-convertor": ^1.0.0
     "@felvin-search-apps/unix-timestamp": ^1.2.0
+    "@felvin-search-apps/url-encoder-decoder": ^1.0.0
     "@felvin-search-apps/url-shortener": ^1.14.0
     "@felvin-search-apps/uuid": ^1.26.0
     "@felvin-search-apps/website-icons": ^1.8.0
