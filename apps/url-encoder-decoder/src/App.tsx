@@ -6,24 +6,28 @@ import { isTriggered } from "@felvin-search/core";
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
 
-const Button_enc = styled.button`
+const TextBox = styled.input.attrs({type: 'text'})`
+  width: 100%;
+`;
+
+const ButtonEnc = styled.button`
   background: red;
-  width: 24%;
-  margin: 10px 5% 0 5%;
+  width: 4.5rem;
+  margin: 0.8rem 1rem 0 0;
   color: white;
 `;
 
-const Button_dec = styled.button`
+const ButtonDec = styled.button`
   background: green;
-  width: 24%;
-  margin: 10px 5% 0 4%;
+  width: 4.5rem;
+  margin: 0.8rem 1rem 0 0;
   color: white;
 `;
 
-const Button_copy = styled.button`
+const ButtonCopy = styled.button`
   background: blue;
-  width: 24%;
-  margin: 10px 5% 0 4%;
+  width: 4.5rem;
+  margin: 0.8rem 1rem 0 0;
   color: white;
 `;
 
@@ -53,17 +57,17 @@ function Component({ data }) {
         event.target.innerHTML = 'Copy';
       }, 1000);
     }, function(err) {
-      // console.error('Async: Could not copy url: ', err);
+      console.error('Async: Could not copy url: ', err);
     });
   }
 
   return (
     <div>
       <div>
-        <input type="text" style={{"width":"100%"}} placeholder="Enter url here..." id="url-text-box" value={url} onChange={onChangeHandler}/>  
-        <Button_enc onClick={handleEncode}>Encode</Button_enc>
-        <Button_copy onClick={handleCopy} id="copy-button">Copy</Button_copy>
-        <Button_dec onClick={handleDecode}>Decode</Button_dec>
+        <TextBox type="text" placeholder="Enter url here..." value={url} onChange={onChangeHandler}/>  
+        <ButtonEnc onClick={handleEncode}>Encode</ButtonEnc>
+        <ButtonCopy onClick={handleCopy} id="copy-button">Copy</ButtonCopy>
+        <ButtonDec onClick={handleDecode}>Decode</ButtonDec>
       </div>
     </div>
   );
@@ -73,7 +77,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "url encoder and decoder", "url decoder","url encoder","url encoder decoder","encoding url","decoding url","encoding and decoding url" ])) {
+  if (!isTriggered(query, [ "url encoder and decoder", "url decoder","url encoder","url encoder decoder","encoding url","decoding url","encoding and decoding url" ], { substringMatch: true })) {
     return;
   }
 
