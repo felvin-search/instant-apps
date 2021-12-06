@@ -2,6 +2,8 @@ import apps from "@felvin-search/apps";
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+import { Carousel } from "react-responsive-carousel";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -12,6 +14,17 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const Screenshot = styled.img`
+  object-fit: contain;
+  height: 300px;
+  width:300px;
+  margin: 1rem;
+`;
+
+const Info = styled.div`
+  font-szie: 1rem;
 `;
 
 //=========================================
@@ -34,20 +47,20 @@ function Component({ data }) {
   return (
     <Container>
       {/* <button onClick={copyJSON}>Copy all JSON data to clipboard</button> */}
-      {/* this button is temporary, has served its purpose, not for prod */}
-      <select ref={inputRef} onChange={()=>setCurrentApp(getAppById(inputRef.current.value))} value={currentApp.id}>
-        {data.map(app => <option value={app.id}>{app.name}</option>)}
-      </select>
-      <Container>
+      {/* this button is not for prod */}
+      <Info>Felvin currently has {data.length} instant apps!</Info>
+      <Carousel
+        width="300px"
+        showIndicators = {false}>
+      {data.map(currentApp => 
+      <Container key={currentApp.id}>
         <h3>{currentApp.name}</h3>
         <p>{currentApp.description}</p>
-        <ul>
-          {currentApp.exampleSearchQueries.map(query => <li>
-            <a href={"https://felvin.com/search?q="+query}>{query}</a>
-          </li>)}
-        </ul>
-        <img alt="screenshot showing the instant app" src={currentApp.screenshotPath}></img>
+        <p><a href={"https://felvin.com/search?q="+currentApp.exampleSearchQueries[0]}>{currentApp.exampleSearchQueries[0]}</a></p>
+        <Screenshot alt="screenshot showing the instant app" src={currentApp.screenshotPath}></Screenshot>
       </Container>
+      )}
+      </Carousel>
     </Container>
   );
 }
@@ -56,7 +69,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "felvin instant apps" ], { substringMatch: true })) {
+  if (!isTriggered(query, [ "instant apps" ], { substringMatch: true })) {
     return;
   }
 
