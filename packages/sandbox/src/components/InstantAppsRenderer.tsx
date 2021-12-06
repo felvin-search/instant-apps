@@ -10,6 +10,11 @@ const InstantAppContainer = styled.div`
   width: 95%;
   justify-content: center;
   align-items: center;
+
+  /* TODO: (@sahil-shubham) check if this breaks other apps */
+  #instant_apps_root {
+    width: 100%;
+  }
 `;
 
 async function renderApps(query: string) {
