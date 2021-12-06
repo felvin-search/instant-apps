@@ -12,7 +12,8 @@
     "build": "felvin-cli build:app"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.27.0"
+    "@felvin-search/core": "^1.27.0",
+    "react-responsive-carousel": "^3.2.22"
   },
   "devDependencies": {
     "@felvin-search/cli": "^1.27.0",

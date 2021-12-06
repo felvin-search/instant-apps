@@ -1811,6 +1811,7 @@ __metadata:
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-responsive-carousel: ^3.2.22
     styled-components: ^5.3.0
   peerDependencies:
     react: ^17.0.2
@@ -5141,6 +5142,13 @@ __metadata:
   version: 1.0.1
   resolution: "clamp@npm:1.0.1"
   checksum: 799bd7083736eb975cd4a9a7e8f1a1e38cc3cb6be0384f9732c1da263accb3205385e5c2880e661a0d5a74e0066bfbf8fcd17dd2f509595ce52dd04c84522833
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.2.5":
+  version: 2.3.1
+  resolution: "classnames@npm:2.3.1"
+  checksum: 14db8889d56c267a591f08b0834989fe542d47fac659af5a539e110cc4266694e8de86e4e3bbd271157dbd831361310a8293e0167141e80b0f03a0f175c80960
   languageName: node
   linkType: hard
 
@@ -12672,7 +12680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.7.2, prop-types@npm:^15.0.0, prop-types@npm:^15.5.10, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:15.7.2, prop-types@npm:^15.0.0, prop-types@npm:^15.5.10, prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -12925,6 +12933,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-easy-swipe@npm:^0.0.21":
+  version: 0.0.21
+  resolution: "react-easy-swipe@npm:0.0.21"
+  dependencies:
+    prop-types: ^15.5.8
+  checksum: 225f12a9dd410db1c790220867ab1eb58e2ef0a2bdae8541330805fc5b9905e242ab307b019f9aaed76473849a753f363baff03fa8a77e7a1860d7b41dc83ec0
+  languageName: node
+  linkType: hard
+
 "react-feather@npm:^2.0.9":
   version: 2.0.9
   resolution: "react-feather@npm:2.0.9"
@@ -13006,6 +13023,17 @@ __metadata:
     "@types/react": ">=16"
     react: ">=16"
   checksum: fba9f0c8dca9b77a01dac1ecd7d01aef9054127712b77f63d281cd76e8f992b8bddc477ee3cd91c93d88853a2814260676c3220d242ba2caf01d68fa686e8917
+  languageName: node
+  linkType: hard
+
+"react-responsive-carousel@npm:^3.2.22":
+  version: 3.2.22
+  resolution: "react-responsive-carousel@npm:3.2.22"
+  dependencies:
+    classnames: ^2.2.5
+    prop-types: ^15.5.8
+    react-easy-swipe: ^0.0.21
+  checksum: 6e6ef7a2c140494bb0186af292dd8327ecb8626a3e93fb188923881c760bc996ab84346370066913481d9a4e967555e3c6386046c2aadde69496d1f41ffd5096
   languageName: node
   linkType: hard
 
