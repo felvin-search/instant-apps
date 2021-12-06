@@ -2402,6 +2402,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/what-day@^1.0.0, @felvin-search-apps/what-day@workspace:apps/what-day":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/what-day@workspace:apps/what-day"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/word-counter@^1.28.0, @felvin-search-apps/word-counter@workspace:apps/word-counter":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/word-counter@workspace:apps/word-counter"
@@ -2473,6 +2491,7 @@ __metadata:
     "@felvin-search-apps/uuid": ^1.28.0
     "@felvin-search-apps/website-icons": ^1.10.0
     "@felvin-search-apps/weight-converter": ^1.25.0
+    "@felvin-search-apps/what-day": ^1.0.0
     "@felvin-search-apps/word-counter": ^1.28.0
     "@felvin-search/cli": ^1.28.0
     "@felvin-search/core": ^1.28.0
@@ -2486,7 +2505,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.28.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.28.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2506,7 +2525,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.28.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.28.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:
