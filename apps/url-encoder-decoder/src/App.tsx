@@ -66,7 +66,7 @@ function Component({ data }) {
       <div>
         <TextBox type="text" placeholder="Enter url here..." value={url} onChange={onChangeHandler}/>  
         <ButtonEnc onClick={handleEncode}>Encode</ButtonEnc>
-        <ButtonCopy onClick={handleCopy} id="copy-button">Copy</ButtonCopy>
+        <ButtonCopy onClick={handleCopy}>Copy</ButtonCopy>
         <ButtonDec onClick={handleDecode}>Decode</ButtonDec>
       </div>
     </div>
