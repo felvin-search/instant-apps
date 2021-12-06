@@ -8,11 +8,14 @@ import { isTriggered } from "@felvin-search/core";
 
 const TextBox = styled.input.attrs({ type: "text" })`
   width: 100%;
+  font: inherit;
 `;
 
 const ButtonEnc = styled.button`
+  font: inherit;
+  cursor: pointer;
+
   background: red;
-  width: 4.5rem;
   margin: 0.8rem 1rem 0 0;
   color: white;
 `;
