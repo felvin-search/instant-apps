@@ -34,6 +34,10 @@ const Info = styled.div`
 const CarouselContainer = styled.div`
   width: 100%;
 
+  .carousel .control-arrow {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
   @media (min-width: 900px) {
     width: 600px;
   }
@@ -44,28 +48,26 @@ const CarouselContainer = styled.div`
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
-  function getAppById(id) {
-    const app = data.filter((app) => app.id === id);
-    return app[0];
-  }
-
   function copyJSON() {
     navigator.clipboard.writeText(JSON.stringify(data));
   }
 
-  const [currentApp, setCurrentApp] = useState(data[0]);
-  const inputRef = useRef();
   return (
     <Container>
       {/* <button onClick={copyJSON}>Copy all JSON data to clipboard</button> */}
       {/* this button is not for prod */}
       <Info>Felvin currently has {data.length} instant apps!</Info>
-      {/* TODO: make the arrows visible without the need of hover on desktop */}
-      <CarouselContainer as={Carousel} showIndicators={false}>
+
+      <CarouselContainer
+        as={Carousel}
+        showIndicators={false}
+        infiniteLoop={true}
+      >
         {data.map((currentApp) => (
           <div key={currentApp.id}>
             <h3>{currentApp.name}</h3>
             <p>{currentApp.description}</p>
+
             <p>
               <a
                 href={
@@ -78,6 +80,7 @@ function Component({ data }) {
                 {currentApp.exampleSearchQueries[0]}
               </a>
             </p>
+
             <Screenshot
               alt="screenshot showing the instant app"
               src={currentApp.screenshotPath}
