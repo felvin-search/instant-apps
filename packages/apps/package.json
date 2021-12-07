@@ -70,6 +70,7 @@
     "@felvin-search-apps/uuid": "^1.28.0",
     "@felvin-search-apps/website-icons": "^1.10.0",
     "@felvin-search-apps/weight-converter": "^1.25.0",
+    "@felvin-search-apps/what-day": "^1.0.0",
     "@felvin-search-apps/word-counter": "^1.28.0",
     "@felvin-search/core": "^1.28.0",
     "react": "^17.0.2",
