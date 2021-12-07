@@ -68,7 +68,7 @@ A instant app is a Javascript object with following schema:
 - `queryToData`: A function which takes a search query and converts into any data which could be displayed.
 - `Component`: The React component of the app. The data from `queryToData` is passed as a prop.
 
-Read more about the [architecture](https://github.com/felvin-search/docs/blob/master/rfcs/001_snippet_apps.md).
+Read more about the [architecture](https://docs.felvin.com/instant-apps/architecture).
 
 ## Available Apps
 
