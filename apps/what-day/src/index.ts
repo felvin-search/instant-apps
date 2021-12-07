@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Shows what day is on a particular date",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["what day is it", "what day is 01/01/2000", "what day is it tomorrow"],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["what day was yesterday", "what day is 01/01/2000", "what day is it tomorrow"],
 };
 
 export default App;

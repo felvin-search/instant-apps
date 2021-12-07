@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { isTriggered } from "@felvin-search/core";
+import { Breakpoints, isTriggered } from "@felvin-search/core";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -18,8 +18,6 @@ const Container = styled.div`
   font-size: 1.5rem;
   border-top: 3px solid rgb(0,0,0);
   font-weight: 600;
-
-
   border-radius: 8px;
   margin-bottom: 2rem;
 `;
@@ -36,9 +34,6 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  // if (!isTriggered(query, [ "what day" ])) {
-  //   return;
-  // }
 
   //filter the query to get the day
   var filteredQuery = query.split(" ");
@@ -47,6 +42,7 @@ const queryToData = async ({ query }) => {
       word.toLowerCase() !== "what" &&
       word.toLowerCase() !== "day" &&
       word.toLowerCase() !== "is" &&
+      word.toLowerCase() !== "on" &&
       word.toLowerCase() !== "was" &&
       word.toLowerCase() !== "it"
     );
@@ -77,7 +73,7 @@ const queryToData = async ({ query }) => {
 
   const date_altternate_search = new Date().getDay();
 
-  if (query.toLowerCase().includes("today" && query.toLowerCase().includes("what day"))) {
+  if (query.toLowerCase().includes("today") && query.toLowerCase().includes("what day") ) {
     return dayNames[date_altternate_search];
   }
   if (query.toLowerCase().includes("tomorrow") && query.toLowerCase().includes("day")) {
