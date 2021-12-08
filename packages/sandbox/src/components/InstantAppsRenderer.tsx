@@ -6,15 +6,11 @@ import styled from "styled-components";
 const InstantAppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  width: 95%;
   justify-content: center;
   align-items: center;
 
-  /* TODO: (@sahil-shubham) check if this breaks other apps */
-  #instant_apps_root {
-    width: 100%;
-  }
+  padding: 10px;
+  width: 95%;
 `;
 
 async function renderApps(query: string) {
