@@ -6,33 +6,30 @@ import Select from "@material-ui/core/Select";
 import styled from "styled-components";
 
 const ContainerDiv = styled.div`
-  border: 2px solid black;
-  padding: 10px 10px 0px 10px;
-  margin-bottom: 10px;
-  max-width: 360px;
-
-  #twochild {
-    display: block;
-    justify-content: center;
-    align-items: center;
+  border: 0.125rem solid black;
+  padding: 0.625rem 0.625rem 0rem 0.625rem;
+  margin-bottom: 0.625rem;
+  max-width: 22.5rem;
+  @media (min-width: 25rem) {
+    min-width: 22.5rem;
   }
-
-  #twochild .from-to {
-    width: 173.6px;
-  }
-
-  @media (min-width: 400px) {
-    min-width: 360px;
-
-    #twochild {
-      display: flex;
-      margin-left: -15px;
-    }
-  }
-
   & > * {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
+`;
+
+const TwochildDiv = styled.div`
+  display: block;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 25rem) {
+   	display: flex;
+    margin-left: -0.938rem;
+  }
+`;
+
+const FromtoDiv = styled.div`
+  width: 10.85rem;
 `;
 
 const UnitConverter = (props) => {
@@ -135,9 +132,9 @@ const UnitConverter = (props) => {
       {/* <div>
         <p />
       </div> */}
-      <div id="twochild">
+      <TwochildDiv>
         {/* FROM */}
-        <div className="from-to">
+        <FromtoDiv>
           <InputLabel htmlFor="select-native-simple">From</InputLabel>
           <Select
             native
@@ -150,9 +147,9 @@ const UnitConverter = (props) => {
             </option>
             {fromUnits}
           </Select>
-        </div>
+        </FromtoDiv>
         {/* TO */}
-        <div className="from-to">
+        <FromtoDiv>
           <InputLabel htmlFor="select-native-simple">To</InputLabel>
           <Select
             native
@@ -165,8 +162,8 @@ const UnitConverter = (props) => {
             </option>
             {toUnits}
           </Select>
-        </div>
-      </div>
+        </FromtoDiv>
+      </TwochildDiv>
 
       {/* AMOUNT */}
       <div>
