@@ -2141,6 +2141,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/stopwatch@^1.0.0, @felvin-search-apps/stopwatch@workspace:apps/stopwatch":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/stopwatch@workspace:apps/stopwatch"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/sudoku@^1.12.0, @felvin-search-apps/sudoku@workspace:apps/sudoku":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/sudoku@workspace:apps/sudoku"
@@ -2477,6 +2495,7 @@ __metadata:
     "@felvin-search-apps/regex": ^1.28.0
     "@felvin-search-apps/screen-size": ^1.30.0
     "@felvin-search-apps/snake-game": ^1.30.0
+    "@felvin-search-apps/stopwatch": ^1.0.0
     "@felvin-search-apps/sudoku": ^1.12.0
     "@felvin-search-apps/tetris": ^1.30.0
     "@felvin-search-apps/tic-tac-toe": ^1.30.0
@@ -2505,7 +2524,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.30.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.30.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2525,7 +2544,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.30.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.30.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:
