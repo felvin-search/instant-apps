@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "it is a simple stopwatch",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["stopwatch"],
 };
 
 export default App;

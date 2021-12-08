@@ -5,6 +5,21 @@ import { isTriggered } from "@felvin-search/core";
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
+const Button = styled.button`
+  color: white;
+  cursor:pointer;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  background: blue;
+`;
+
+const Container = styled.div`;
+  align-self : center;
+  text-align : center;
+  width : 100%;
+`;
+
 
 
 
@@ -17,7 +32,6 @@ function Component({ data }) {
   const [currentTime,setCurrentTime] = useState(0);
   const [running,setRunning] = useState(false);
   const [reset,setReset] = useState(false);
-
   
   useEffect(() => {
     let interval;
@@ -54,15 +68,15 @@ function Component({ data }) {
   }
 
   return (
-    <div style={{justifyContent:"center", textAlign:"center",width:"100%"}}>
+    <Container>
       
       <h1 >{(Math.floor(currentTime/3600000) === 0)?"":(Math.floor(currentTime/3600000))+"h "}{(Math.floor(currentTime/60000) === 0)&&(Math.floor(currentTime/3600000) === 0)?"":(("0"+(Math.floor(currentTime/60000))%60)).slice(-2)+"m"}{" "+("0"+((Math.floor(currentTime/1000))%60)).slice(-2)}s{" "+("0"+(Math.floor(currentTime/10))%100).slice(-2)}</h1>
         
       <p >
-        <button style={{backgroundColor:(running)?"red":"green",color:"white",padding:"10px",margin:"10px",fontSize:"large"}} onClick={startStopButton}>{running?"STOP":"START"}</button>
-        <button style={{backgroundColor:"blue",color:"white",padding:"10px",margin:"10px",fontSize:"large"}} onClick={resetButton}>RESET</button>
+        <Button onClick={startStopButton}>{running?"STOP":"START"}</Button>
+        <Button onClick={resetButton}>RESET</Button>
       </p>
-    </div>
+    </Container>
   );
 }
 
