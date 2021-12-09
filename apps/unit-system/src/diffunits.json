@@ -1,33 +1,33 @@
 {
-  "meter": {
-    "meter": 1,
-    "centimeter": 100,
-    "millimeter": 1000,
-    "kilometer": 0.001,
+  "metre": {
+    "metre": 1,
+    "centimetre": 100,
+    "millimetre": 1000,
+    "kilometre": 0.001,
     "inch": 39.3701,
     "feet": 3.28,
-    "nanometer": 1000000000,
+    "nanometre": 1000000000,
     "yard": 1.09361
   },
-  "centimeter": {
-    "meter": 0.01
+  "centimetre": {
+    "metre": 0.01
   },
-  "millimeter": {
-    "meter": 0.001
+  "millimetre": {
+    "metre": 0.001
   },
-  "kilometer": {
-    "meter": 1000
+  "kilometre": {
+    "metre": 1000
   },
   "inch": {
-    "meter": 0.0254
+    "metre": 0.0254
   },
   "feet": {
-    "meter": 0.3048
+    "metre": 0.3048
   },
-  "nanometer": {
-    "meter": 0.000000001
+  "nanometre": {
+    "metre": 0.000000001
   },
   "yard": {
-    "meter": 0.9144
+    "metre": 0.9144
   }
 }

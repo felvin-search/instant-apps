@@ -22,6 +22,7 @@ const ColContainer = styled.div`
 // `data` prop is exactly what is returned by queryToData.
 
 function Component({ data }) {
+  
   const [inputWeight, setInputWeight] = useState(data.inputWeight);
   const [outputWeight, setOutputWeight] = useState(data.outputWeight);
 
