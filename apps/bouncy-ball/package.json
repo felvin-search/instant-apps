@@ -1,6 +1,6 @@
 {
   "name": "@felvin-search-apps/bouncy-ball",
-  "version": "1.29.0",
+  "version": "1.30.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
@@ -12,10 +12,10 @@
     "build": "felvin-cli build:app"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.29.0"
+    "@felvin-search/core": "^1.30.0"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.29.0",
+    "@felvin-search/cli": "^1.30.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
     "react": "^17.0.2",
