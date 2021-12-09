@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
-const Button = styled.button`
+const ButtonReset = styled.button`
   color: white;
   cursor:pointer;
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
   background: blue;
+`;
+
+const theme = {
+  bg:"red",
+};
+
+const invertTheme={
+  bg:"green",
+};
+
+const ButtonStartStop = styled(ButtonReset)`
+  background:${props=>props.theme.bg};
 `;
 
 const Container = styled.div`;
@@ -73,8 +85,10 @@ function Component({ data }) {
       <h1 >{(Math.floor(currentTime/3600000) === 0)?"":(Math.floor(currentTime/3600000))+"h "}{(Math.floor(currentTime/60000) === 0)&&(Math.floor(currentTime/3600000) === 0)?"":(("0"+(Math.floor(currentTime/60000))%60)).slice(-2)+"m"}{" "+("0"+((Math.floor(currentTime/1000))%60)).slice(-2)}s{" "+("0"+(Math.floor(currentTime/10))%100).slice(-2)}</h1>
         
       <p >
-        <Button onClick={startStopButton}>{running?"STOP":"START"}</Button>
-        <Button onClick={resetButton}>RESET</Button>
+      <ThemeProvider theme={running?theme:invertTheme}>
+        <ButtonStartStop onClick={startStopButton}>{running?"STOP":"START"}</ButtonStartStop>
+      </ThemeProvider>
+        <ButtonReset onClick={resetButton}>RESET</ButtonReset>
       </p>
     </Container>
   );
