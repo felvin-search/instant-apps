@@ -8,7 +8,7 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["convert 32 inch to metres"],
+  exampleSearchQueries: ["convert 32 inch to metre"],
 };
 
 export default App;
