@@ -15,7 +15,7 @@ const OutputString = styled.div`
 const ColContainer = styled.div`
   display: flex;
   flex-direction: column;
-`;
+`
 //=========================================
 
 // Your UI logic goes here.
