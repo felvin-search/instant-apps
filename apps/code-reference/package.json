@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@felvin-search/core": "^1.0.0",
-    "@monaco-editor/react": "^4.3.1"
+    "@monaco-editor/react": "^4.3.1",
+    "axios": "^0.24.0"
   },
   "devDependencies": {
     "@felvin-search/cli": "^1.0.0",
