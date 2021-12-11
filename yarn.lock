@@ -1538,6 +1538,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/code-reference@^1.0.0, @felvin-search-apps/code-reference@workspace:apps/code-reference":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/code-reference@workspace:apps/code-reference"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@monaco-editor/react": ^4.3.1
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    axios: ^0.24.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/color-picker@^1.24.0, @felvin-search-apps/color-picker@workspace:apps/color-picker":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/color-picker@workspace:apps/color-picker"
@@ -2481,6 +2501,7 @@ __metadata:
     "@felvin-search-apps/async-api-validator": ^1.29.0
     "@felvin-search-apps/bouncy-ball": ^1.31.0
     "@felvin-search-apps/capitals": ^1.31.0
+    "@felvin-search-apps/code-reference": ^1.0.0
     "@felvin-search-apps/color-picker": ^1.24.0
     "@felvin-search-apps/compressify": ^1.22.0
     "@felvin-search-apps/courier-tracker": ^1.31.0
@@ -2940,6 +2961,31 @@ __metadata:
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0
   checksum: 30e15b197c52bb607ba2f00293acbda66388427560e30f5dd82714dee69f565cf0896baa98f869b191a881e14e0df08155fd9d598b356ac2262b8e60e43a5499
+  languageName: node
+  linkType: hard
+
+"@monaco-editor/loader@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@monaco-editor/loader@npm:1.2.0"
+  dependencies:
+    state-local: ^1.0.6
+  peerDependencies:
+    monaco-editor: ">= 0.21.0 < 1"
+  checksum: b483d8d74830f8bcfe18111b0dfe526e038b704e9a461ce2ecb25d66db2abb19fbb704569ba84b06e4b5ead4e483ae7335e3d5e2201613d4f0c077401d540bd3
+  languageName: node
+  linkType: hard
+
+"@monaco-editor/react@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "@monaco-editor/react@npm:4.3.1"
+  dependencies:
+    "@monaco-editor/loader": ^1.2.0
+    prop-types: ^15.7.2
+  peerDependencies:
+    monaco-editor: ">= 0.25.0 < 1"
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  checksum: 477349e64078ab3fc30e75577fbe51519c5af621cd1e3fa557e21f2a5e7291c4eabe34caa3013d578be0379c5bc43b199ee1c74853d571b05598ce866ad5a3a1
   languageName: node
   linkType: hard
 
@@ -4311,6 +4357,15 @@ __metadata:
   dependencies:
     follow-redirects: ^1.14.0
   checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.24.0":
+  version: 0.24.0
+  resolution: "axios@npm:0.24.0"
+  dependencies:
+    follow-redirects: ^1.14.4
+  checksum: 468cf496c08a6aadfb7e699bebdac02851e3043d4e7d282350804ea8900e30d368daa6e3cd4ab83b8ddb5a3b1e17a5a21ada13fc9cebd27b74828f47a4236316
   languageName: node
   linkType: hard
 
@@ -7374,6 +7429,16 @@ __metadata:
     debug:
       optional: true
   checksum: d4ce74cf5c6f363168b97e706b914eb9ffb6bf4d4c6d8f8330b93088d9b90e566611ddbcf0e42c8ed5fd17598dfeda1d19230d3e9d6d6c6b4d1c10ec3a0b99be
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.14.4":
+  version: 1.14.6
+  resolution: "follow-redirects@npm:1.14.6"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 7fcdb089a733d2aa39041880790e9f772df009fcd0b243fee7e10acf0e14a8dab5208cf79eb1de35b9cc6033d4dde7f95becadfaa360c50d460b4c730b375e80
   languageName: node
   linkType: hard
 
@@ -14375,6 +14440,13 @@ __metadata:
   version: 1.0.0
   resolution: "stackblur@npm:1.0.0"
   checksum: 955f672817e23c128801ef707701d29c99100bca0ad53f37a756ca8467ff704b33dc7aeab3aefe287e57b42a75e4703d4a3c06227e97eda6a515b9f29d888d91
+  languageName: node
+  linkType: hard
+
+"state-local@npm:^1.0.6":
+  version: 1.0.7
+  resolution: "state-local@npm:1.0.7"
+  checksum: d1afcf1429e7e6eb08685b3a94be8797db847369316d4776fd51f3962b15b984dacc7f8e401ad20968e5798c9565b4b377afedf4e4c4d60fe7495e1cbe14a251
   languageName: node
   linkType: hard
 

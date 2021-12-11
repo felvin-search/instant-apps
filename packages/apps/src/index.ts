@@ -2,6 +2,7 @@ import Stopwatch from "@felvin-search-apps/stopwatch";
 import WhatDay from "@felvin-search-apps/what-day";
 import UrlEncoderDecoder from "@felvin-search-apps/url-encoder-decoder";
 import InstantAppDetails from "@felvin-search-apps/instant-app-details";
+import CodeReference from "@felvin-search-apps/code-reference";
 import UnixTimestamp from "@felvin-search-apps/unix-timestamp";
 import UnitSystem from "@felvin-search-apps/unit-system";
 import RandomStringGenerator from "@felvin-search-apps/random-string-generator";
@@ -57,6 +58,7 @@ const allApps = [
   WhatDay,
   UrlEncoderDecoder,
   InstantAppDetails,
+  CodeReference,
   UnixTimestamp,
   UnitSystem,
   RandomStringGenerator,
