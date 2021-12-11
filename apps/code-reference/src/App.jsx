@@ -1,6 +1,7 @@
 import React from "react";
 import code from "../sample-data/data.json";
 import Editor from "@monaco-editor/react";
+import axios from "axios";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -11,6 +12,7 @@ import Editor from "@monaco-editor/react";
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component(props) {
+  console.log(props.data.language, props.data.code);
   return (
     <div>
       <Editor
@@ -18,7 +20,7 @@ function Component(props) {
         width="60vw"
         theme="vs-dark"
         defaultLanguage={props.data.language}
-        defaultValue={code[props.data.algorithm][props.data.language]}
+        defaultValue={JSON.parse(props.data.code)}
       />
     </div>
   );
@@ -32,19 +34,15 @@ const queryToData = async ({ query }) => {
   //  -> Algorithm - may be multi word
   //  -> Language - Mostly Single Word
 
-  //Implementation:
-  // Would search if any language is present in the query , If yes
-  // Then look for algorithm by making substrings of all words in the query
-
   query = query.toLowerCase();
 
-  const [algorithm, language] = query.split(" in ");
-
-  if (
-    Object.keys(code).includes(algorithm) &&
-    Object.keys(code[algorithm]).includes(language)
-  ) {
-    return { algorithm, language };
+  const searchQuery = { query };
+  const value = await axios.post(
+    "https://felvin-service.herokuapp.com/api/query",
+    searchQuery
+  );
+  if (value.status == 200) {
+    return value.data;
   }
   return;
 };
