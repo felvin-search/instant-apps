@@ -65,6 +65,7 @@
     "@felvin-search-apps/trending-on-github": "^1.19.0",
     "@felvin-search-apps/tv-shows": "^1.19.0",
     "@felvin-search-apps/unit-convertor": "^1.5.0",
+    "@felvin-search-apps/unit-system": "^1.0.0",
     "@felvin-search-apps/unix-timestamp": "^1.7.0",
     "@felvin-search-apps/url-encoder-decoder": "^1.4.0",
     "@felvin-search-apps/url-shortener": "^1.19.0",

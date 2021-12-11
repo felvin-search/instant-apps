@@ -1,0 +1,33 @@
+{
+  "metre": {
+    "metre": 1,
+    "centimetre": 100,
+    "millimetre": 1000,
+    "kilometre": 0.001,
+    "inch": 39.3701,
+    "feet": 3.28,
+    "nanometre": 1000000000,
+    "yard": 1.09361
+  },
+  "centimetre": {
+    "metre": 0.01
+  },
+  "millimetre": {
+    "metre": 0.001
+  },
+  "kilometre": {
+    "metre": 1000
+  },
+  "inch": {
+    "metre": 0.0254
+  },
+  "feet": {
+    "metre": 0.3048
+  },
+  "nanometre": {
+    "metre": 0.000000001
+  },
+  "yard": {
+    "metre": 0.9144
+  }
+}

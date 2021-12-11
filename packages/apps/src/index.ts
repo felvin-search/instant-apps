@@ -3,6 +3,7 @@ import WhatDay from "@felvin-search-apps/what-day";
 import UrlEncoderDecoder from "@felvin-search-apps/url-encoder-decoder";
 import InstantAppDetails from "@felvin-search-apps/instant-app-details";
 import UnixTimestamp from "@felvin-search-apps/unix-timestamp";
+import UnitSystem from "@felvin-search-apps/unit-system";
 import RandomStringGenerator from "@felvin-search-apps/random-string-generator";
 import Sudoku from "@felvin-search-apps/sudoku";
 import ColorPicker from "@felvin-search-apps/color-picker";
@@ -57,6 +58,7 @@ const allApps = [
   UrlEncoderDecoder,
   InstantAppDetails,
   UnixTimestamp,
+  UnitSystem,
   RandomStringGenerator,
   Sudoku,
   ColorPicker,
