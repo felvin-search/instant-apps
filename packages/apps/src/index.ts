@@ -111,3 +111,15 @@ const allApps = [
 ];
 
 export default allApps;
+
+export const appDetails = allApps.map(
+  ({ id, name, description, screenshotPath, exampleSearchQueries }) => {
+    const details = { id, name, description, screenshotPath, exampleSearchQueries };
+    details.screenshotPath =
+      "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/" +
+      id.split("/")[1] +
+      "/src" +
+      screenshotPath?.substring(1);
+    return details;
+  }
+);
