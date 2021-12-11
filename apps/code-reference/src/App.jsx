@@ -1,5 +1,4 @@
 import React from "react";
-import code from "../sample-data/data.json";
 import Editor from "@monaco-editor/react";
 import axios from "axios";
 
