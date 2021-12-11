@@ -1622,7 +1622,10 @@ __metadata:
     "@felvin-search/core": ^1.29.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
+    chart.js: ^3.6.2
+    faker: ^5.5.3
     react: ^17.0.2
+    react-chartjs-2: ^4.0.0
     react-dom: ^17.0.2
     styled-components: ^5.3.0
   peerDependencies:
@@ -5086,6 +5089,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chart.js@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "chart.js@npm:3.6.2"
+  checksum: 0883adced890eb0ee77a8374e6f89412a82df694f25767a5b14a200735922adf6521366a1419a24025e53203ea00ed70ba1dfc86e2f030c9ef183c6909f9dbdd
+  languageName: node
+  linkType: hard
+
 "chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.4.2, chokidar@npm:^3.5.1":
   version: 3.5.2
   resolution: "chokidar@npm:3.5.2"
@@ -7133,6 +7143,13 @@ __metadata:
   version: 1.4.0
   resolution: "extsprintf@npm:1.4.0"
   checksum: 184dc8a413eb4b1ff16bdce797340e7ded4d28511d56a1c9afa5a95bcff6ace154063823eaf0206dbbb0d14059d74f382a15c34b7c0636fa74a7e681295eb67e
+  languageName: node
+  linkType: hard
+
+"faker@npm:^5.5.3":
+  version: 5.5.3
+  resolution: "faker@npm:5.5.3"
+  checksum: 684fd64c8d3897e54248f95b4f6319f75d97691b8500cd13adf4af2c28f9204f766c1d1aaa6b41338f0beaaa87256c3132f8708a1a8f189d122b92f6b98081c3
   languageName: node
   linkType: hard
 
@@ -12909,6 +12926,16 @@ __metadata:
   bin:
     rc: ./cli.js
   checksum: 2e26e052f8be2abd64e6d1dabfbd7be03f80ec18ccbc49562d31f617d0015fbdbcf0f9eed30346ea6ab789e0fdfe4337f033f8016efdbee0df5354751842080e
+  languageName: node
+  linkType: hard
+
+"react-chartjs-2@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "react-chartjs-2@npm:4.0.0"
+  peerDependencies:
+    chart.js: ^3.5.0
+    react: ^16.8.0 || ^17.0.0
+  checksum: 25998a4cc14910641c1184245c6672211d436877a456c70fa16bf67e2b470e7899cef578618fd8842a7d25103a973f25c7f7ec01200fdcbe1b04913fabb87650
   languageName: node
   linkType: hard
 

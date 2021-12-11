@@ -1,6 +1,39 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+import faker from "faker";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+  plugins: {
+    title: {
+      display: true,
+    },
+  },
+};
+
+const labels = [];
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -34,67 +67,102 @@ const Element = styled.div`
   margin: 0 auto;
 `;
 
+var cryptos = [
+  {
+    value: "btc",
+    text: "BTC",
+  },
+  {
+    value: "eth",
+    text: "ETH",
+  },
+];
+
 //=========================================
 
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
   let values = data.data;
-  let names = [];
-  values.forEach((e) => {
-    names.push({ name: e.name });
-  });
-  const [name, setName] = useState(values[0].name);
+
+  const [name, setName] = useState("BTC");
   const handleChange = (e) => {
     setName(e.target.value);
+    console.log(e.target.value);
   };
+
+  let priceArray = [];
+  let timestampArray = [];
+
+  for (let i = 0; i < values.values.length; i++) {
+    priceArray.push(values.values[i][1]);
+    let newTime = convertTimestamp(values.values[i][0]);
+    timestampArray.push(newTime);
+  }
+
+  // Convert timestampt to human readable
+  function convertTimestamp(timestamp) {
+    let date = new Date(timestamp);
+    return date.toLocaleString();
+  }
+
+  for (let i = 0; i < values.values.length; i++) {
+    labels.push(timestampArray[i]);
+  }
+
+  const crypto_data = {
+    labels,
+    datasets: [
+      {
+        label: "Price",
+        data: priceArray,
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  };
+
   return (
     <Container>
       <select value={name} onChange={handleChange}>
-        {values.map((e) => (
-          <option key={e.name} name={e.name}>
-            {e.name}
-          </option>
-        ))}
+        <option key={values.name} name={values.name}>
+          {values.name}
+        </option>
       </select>
-
-      {values.map((e) => {
-        if (e.name === name) {
-          return (
-            <Head key={e.name}>
-              <Body>
-                <Element>
-                  Name🪙 :<strong>{e.name}</strong>
-                </Element>
-                <Element>
-                  Symbol:<strong>{e.symbol}</strong>
-                </Element>
-              </Body>
-              <Element>Price💰:{e.metrics.market_data.price_usd}USD</Element>
-              <Body>
-                <Element>
-                  24Hr High📈 :{e.metrics.market_data.ohlcv_last_24_hour.high}
-                  USD
-                </Element>
-                <Element>
-                  24Hr Low📉 :{e.metrics.market_data.ohlcv_last_24_hour.low}
-                  USD
-                </Element>
-              </Body>
-              <Body>
-                <Element>
-                  24Hr Open :{e.metrics.market_data.ohlcv_last_24_hour.open}
-                  USD
-                </Element>
-                <Element>
-                  24Hr Close :{e.metrics.market_data.ohlcv_last_24_hour.close}
-                  USD
-                </Element>
-              </Body>
-            </Head>
-          );
-        }
-      })}
+      <Head>
+        <Body>
+          <Element>
+            Name :<strong>{values.name}</strong>
+          </Element>
+          <img src="https://img.icons8.com/color/24/000000/bitcoin--v1.png" />
+          <Element>
+            Symbol :<strong>{values.symbol}</strong>
+            {/* <img src="https://img.icons8.com/color/24/000000/bitcoin--v1.png" /> */}
+          </Element>
+        </Body>
+        <Body>
+          <Element>
+            Price :
+            <h1>
+              <strong>${values.values.at(-1)[1].toFixed(2)}</strong>
+            </h1>
+          </Element>
+        </Body>
+        <Body>
+          <Element>
+            <p>{convertTimestamp(values.values.at(-1)[0])}</p>
+          </Element>
+        </Body>
+        <Body>
+          <Element>
+            High :<strong>{values.values.at(-1)[2].toFixed(2)}</strong>
+          </Element>
+          <Element>
+            Low :<strong>{values.values.at(-1)[3].toFixed(2)}</strong>
+          </Element>
+        </Body>
+      </Head>
+      <Line options={options} data={crypto_data} />
     </Container>
   );
 }
@@ -119,8 +187,10 @@ const queryToData = async ({ query }) => {
     return;
   }
 
+  // fetchdata(coin);
+
   const response = await fetch(
-    "https://data.messari.io/api/v1/assets?fields=id,name,symbol,metrics/market_data/price_usd,metrics/market_data/ohlcv_last_24_hour",
+    `https://data.messari.io/api/v1/assets/btc/metrics/price/time-series`,
     {
       method: "GET",
       redirect: "follow",
