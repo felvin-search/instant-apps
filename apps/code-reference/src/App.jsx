@@ -35,10 +35,10 @@ const queryToData = async ({ query }) => {
 
   query = query.toLowerCase();
 
-  const searchQuery = { query };
-  const value = await axios.post(
-    "https://felvin-service.herokuapp.com/api/query",
-    searchQuery
+  const searchQuery = query;
+  const value = await axios.get(
+    "https://felvin-service.herokuapp.com/api/code",
+    { params: { searchQuery } }
   );
   if (value.status == 200) {
     return value.data;
