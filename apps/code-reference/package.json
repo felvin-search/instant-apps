@@ -1,6 +1,6 @@
 {
   "name": "@felvin-search-apps/code-reference",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
@@ -12,12 +12,12 @@
     "build": "felvin-cli build:app"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.32.0",
+    "@felvin-search/core": "^1.33.0",
     "@monaco-editor/react": "^4.3.1",
     "axios": "^0.24.0"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.32.0",
+    "@felvin-search/cli": "^1.33.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
     "react": "^17.0.2",
