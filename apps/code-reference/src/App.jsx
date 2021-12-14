@@ -1,10 +1,14 @@
 import React from "react";
 import Editor from "@monaco-editor/react";
 import axios from "axios";
+import styled from "styled-components";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
+const Source = styled.div`
+  font-size: 1rem;
+`;
 
 //=========================================
 
@@ -21,6 +25,9 @@ function Component(props) {
         defaultLanguage={props.data.language}
         defaultValue={JSON.parse(props.data.code)}
       />
+      <Source>
+        Source : <a href={props.data.source}>{props.data.name}</a>
+      </Source>
     </div>
   );
 }
