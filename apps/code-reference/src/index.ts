@@ -7,8 +7,12 @@ const App: InstantApp = {
   description: "Returns the code Reference of desired algorithm and language",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: [
+    "merge sort in javascript",
+    "word wrap in c",
+    "bubble sort in python",
+  ],
 };
 
 export default App;
