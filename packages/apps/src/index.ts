@@ -1,4 +1,5 @@
 import CronParser from "@felvin-search-apps/cron-parser";
+import Metronome from "@felvin-search-apps/metronome";
 import Stopwatch from "@felvin-search-apps/stopwatch";
 import WhatDay from "@felvin-search-apps/what-day";
 import UrlEncoderDecoder from "@felvin-search-apps/url-encoder-decoder";
@@ -56,6 +57,7 @@ import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
   CronParser,
+  Metronome,
   Stopwatch,
   WhatDay,
   UrlEncoderDecoder,
@@ -116,7 +118,13 @@ export default allApps;
 
 export const appDetails = allApps.map(
   ({ id, name, description, screenshotPath, exampleSearchQueries }) => {
-    const details = { id, name, description, screenshotPath, exampleSearchQueries };
+    const details = {
+      id,
+      name,
+      description,
+      screenshotPath,
+      exampleSearchQueries,
+    };
     details.screenshotPath =
       "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/" +
       id.split("/")[1] +
