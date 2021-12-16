@@ -1,3 +1,4 @@
+import Metronome from "@felvin-search-apps/metronome";
 import Stopwatch from "@felvin-search-apps/stopwatch";
 import WhatDay from "@felvin-search-apps/what-day";
 import UrlEncoderDecoder from "@felvin-search-apps/url-encoder-decoder";
@@ -54,6 +55,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  Metronome,
   Stopwatch,
   WhatDay,
   UrlEncoderDecoder,
