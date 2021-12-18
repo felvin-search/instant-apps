@@ -9,11 +9,12 @@ const App: InstantApp = {
   Component,
   screenshotPath: "./files/screenshot.png",
   exampleSearchQueries: [
-  "metronome",
-  "Metronome",
-  "bpm",
-  "play metronome",
-  "play bpm"],
+    "metronome",
+    "Metronome",
+    "bpm",
+    "play metronome",
+    "play bpm",
+  ],
 };
 
 export default App;
