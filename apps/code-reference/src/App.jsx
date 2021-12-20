@@ -2,12 +2,24 @@ import React from "react";
 import Editor from "@monaco-editor/react";
 import axios from "axios";
 import styled from "styled-components";
+import _ from "lodash";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
-const Source = styled.div`
+const Source = styled.span`
   font-size: 1rem;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5rem;
+`;
+
+const Clipboard = styled.button`
+  margin: 0;
 `;
 
 //=========================================
@@ -18,6 +30,7 @@ function Component(props) {
   console.log(props.data.language, props.data.code);
   return (
     <div>
+      <p>{_.startCase(props.data.algorithm)}</p>
       <Editor
         height="50vh"
         width="60vw"
@@ -25,9 +38,18 @@ function Component(props) {
         defaultLanguage={props.data.language}
         defaultValue={JSON.parse(props.data.code)}
       />
-      <Source>
-        Source : <a href={props.data.source}>{props.data.name}</a>
-      </Source>
+      <Container>
+        <Source>
+          Source : <a href={props.data.source}>{props.data.name}</a>
+        </Source>
+        <Clipboard
+          onClick={() => {
+            navigator.clipboard.writeText(JSON.parse(props.data.code));
+          }}
+        >
+          Copy to Clipboard
+        </Clipboard>
+      </Container>
     </div>
   );
 }
