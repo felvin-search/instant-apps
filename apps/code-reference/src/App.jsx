@@ -6,10 +6,20 @@ import styled from "styled-components";
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
-const Source = styled.div`
+const Source = styled.span`
   font-size: 1rem;
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5rem;
+`;
+
+const Clipboard = styled.button`
+  margin: 0;
+`;
 //=========================================
 
 // Your UI logic goes here.
@@ -25,9 +35,18 @@ function Component(props) {
         defaultLanguage={props.data.language}
         defaultValue={JSON.parse(props.data.code)}
       />
-      <Source>
-        Source : <a href={props.data.source}>{props.data.name}</a>
-      </Source>
+      <Container>
+        <Source>
+          Source : <a href={props.data.source}>{props.data.name}</a>
+        </Source>
+        <Clipboard
+          onClick={() => {
+            navigator.clipboard.writeText(JSON.parse(props.data.code));
+          }}
+        >
+          Copy to Clipboard
+        </Clipboard>
+      </Container>
     </div>
   );
 }
