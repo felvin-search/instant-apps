@@ -2,6 +2,7 @@ import React from "react";
 import Editor from "@monaco-editor/react";
 import axios from "axios";
 import styled from "styled-components";
+import _ from "lodash";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -20,6 +21,7 @@ const Container = styled.div`
 const Clipboard = styled.button`
   margin: 0;
 `;
+
 //=========================================
 
 // Your UI logic goes here.
@@ -28,6 +30,7 @@ function Component(props) {
   console.log(props.data.language, props.data.code);
   return (
     <div>
+      <p>{_.startCase(props.data.algorithm)}</p>
       <Editor
         height="50vh"
         width="60vw"
