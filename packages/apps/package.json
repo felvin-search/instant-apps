@@ -28,6 +28,7 @@
     "@felvin-search-apps/color-picker": "^1.30.0",
     "@felvin-search-apps/compressify": "^1.28.0",
     "@felvin-search-apps/courier-tracker": "^1.37.0",
+    "@felvin-search-apps/cron-parser": "^1.0.0",
     "@felvin-search-apps/crop-image": "^1.19.0",
     "@felvin-search-apps/crypto": "^1.19.0",
     "@felvin-search-apps/csv-to-json": "^1.37.0",
