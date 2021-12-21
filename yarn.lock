@@ -1616,6 +1616,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/cron-parser@^1.0.0, @felvin-search-apps/cron-parser@workspace:apps/cron-parser":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/cron-parser@workspace:apps/cron-parser"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    cronstrue: ^1.122.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/crop-image@^1.19.0, @felvin-search-apps/crop-image@workspace:apps/crop-image":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/crop-image@workspace:apps/crop-image"
@@ -2506,6 +2525,7 @@ __metadata:
     "@felvin-search-apps/color-picker": ^1.30.0
     "@felvin-search-apps/compressify": ^1.28.0
     "@felvin-search-apps/courier-tracker": ^1.37.0
+    "@felvin-search-apps/cron-parser": ^1.0.0
     "@felvin-search-apps/crop-image": ^1.19.0
     "@felvin-search-apps/crypto": ^1.19.0
     "@felvin-search-apps/csv-to-json": ^1.37.0
@@ -2565,7 +2585,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.37.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.37.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2585,7 +2605,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.37.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.37.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:
@@ -5845,6 +5865,13 @@ __metadata:
   version: 1.1.1
   resolution: "create-require@npm:1.1.1"
   checksum: a9a1503d4390d8b59ad86f4607de7870b39cad43d929813599a23714831e81c520bddf61bcdd1f8e30f05fd3a2b71ae8538e946eb2786dc65c2bbc520f692eff
+  languageName: node
+  linkType: hard
+
+"cronstrue@npm:^1.122.0":
+  version: 1.122.0
+  resolution: "cronstrue@npm:1.122.0"
+  checksum: fb542fd7a32a134292a74c47f9ccc8abb39abc271d23d7799acb06ebebfc085f198059cc8351f998790447d6172680ef4ea4bbee346847acd8dabf0e335a2fcb
   languageName: node
   linkType: hard
 
