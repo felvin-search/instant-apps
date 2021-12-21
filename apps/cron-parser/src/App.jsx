@@ -29,9 +29,6 @@ const Label = styled.label`
   padding: 0.2rem;
 `;
 
-const Input = styled.input`
-  size: 20;
-`;
 
 //=========================================
 
@@ -56,12 +53,12 @@ function Component({ data }) {
       <Form onSubmit={handleSubmit}>
         <Div>
           <Label>Enter Cron Statement:</Label>
-          <Input
+          <input
             type="text"
             placeholder="* * * * *"
             value={cron}
             onChange={(e) => setCron(e.target.value)}
-          ></Input>
+          ></input>
         </Div>
         <input type="submit" value="Parse"></input>
       </Form>
@@ -74,7 +71,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, ["cron","cronjob"])) {
+  if (!isTriggered(query, ["cron", "cronjob"], { substringMatch: true })) {
     return;
   }
 
