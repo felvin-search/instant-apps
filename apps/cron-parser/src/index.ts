@@ -7,7 +7,7 @@ const App: InstantApp = {
   description: "Parses cron commands to human readable statements",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
+  screenshotPath: "./files/screenshot.png",
   exampleSearchQueries: ["parse cron", "cron * * * * *", "cron parser"],
 };
 
