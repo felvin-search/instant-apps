@@ -8,7 +8,7 @@ const App: InstantApp = {
   queryToData,
   Component,
   // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  exampleSearchQueries: ["parse cron", "cron * * * * *", "cron parser"],
 };
 
 export default App;
