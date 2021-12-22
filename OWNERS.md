@@ -1,6 +1,6 @@
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for general contribution guidelines.
 
-This page lists all active sponsors and maintainers.
+This page lists all super admins and maintainers.
 
 # Super Admin
 
