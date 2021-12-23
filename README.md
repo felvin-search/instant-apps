@@ -33,7 +33,7 @@ Try them out live - [felvin.com](https://felvin.com/search?q=gonzo%20meaning)
 
 ## Contributing
 
-There are many ways in which you can contribute to the project
+There are many ways in which you can contribute to the project:
 
 - Try creating a new app, it's fun and it's a new kind of superpower. 😎
 - Take a look at [existing suggestions](https://github.com/felvin-search/instant-apps/issues?q=is%3Aopen+is%3Aissue+label%3Aproposal) of new apps and implement one!
@@ -51,7 +51,7 @@ cd something
 
 Anyone can create an instant app! Felvin Search is a platform - create apps for yourself, as well as others.
 
-- Fork the repository
+- Fork the repository.
 - Run `yarn create-app`.
 - Update your new app, commit and send a pull request!
 
