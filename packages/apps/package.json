@@ -21,6 +21,7 @@
     "styled-components": ">= 5"
   },
   "dependencies": {
+    "@felvin-search-apps/address-pincodes": "^1.0.0",
     "@felvin-search-apps/async-api-validator": "^1.39.0",
     "@felvin-search-apps/bouncy-ball": "^1.41.0",
     "@felvin-search-apps/capitals": "^1.41.0",
