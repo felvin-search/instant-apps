@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { isTriggered } from "@felvin-search/core";
 import axios from "axios";
 
 //------------Styled Components-------------
@@ -12,7 +11,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  padding: 25px 50px;
+  padding: 1.5rem 3rem;
 `;
 
 //=========================================
@@ -51,10 +50,6 @@ const queryToData = async ({ query }) => {
   if(!found){
     return;
   }
-  // if (!isTriggered(query, [ "Pincode of hauz khas delhi","Pincode of Ranchi" ])) {
-  //   return;
-  // }
-  
  
   filteredQuery = filteredQuery.filter((word) => (word !== 'pincode' && word !== 'of'));
   filteredQuery = filteredQuery.join(' ');
@@ -65,7 +60,7 @@ const queryToData = async ({ query }) => {
   let response = "";
   try {
     response = await axios.get(`https://api.postalpincode.in/postoffice/${filteredQuery}`);
-    // console.log(response.data[0].PostOffice)
+  //API Docs : http://www.postalpincode.in/Api-Details
   }
   catch(err) {
     console.log(err);
