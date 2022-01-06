@@ -59,7 +59,8 @@ function Component({ data }) {
   const inputRef = useRef();
   const submitHandler = e => {
     e.preventDefault();
-    setLoading(true);
+    // if user changes the input, only then set loading to true, as otherwise it causes perpetual loading error
+    if(encodeURI(inputRef.current.value) !== qrContent) setLoading(true);
     setQrContent(encodeURI(inputRef.current.value));
   }
   return (

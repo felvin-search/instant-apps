@@ -48,7 +48,8 @@ function Component({ data }) {
   const inputRef = useRef();
   const submitHandler = e => {
     e.preventDefault();
-    setLoading(true);
+    // if user changes the url, only then set loading to true, as otherwise it causes perpetual loading error
+    if(inputRef.current.value !== iconUrl) setLoading(true);
     setIconUrl(inputRef.current.value);
   }
   return (
@@ -59,7 +60,7 @@ function Component({ data }) {
         <button type="submit">Get Icon</button>
       </form>
       {loading ? <Loader/> : null}
-      <Img hide={loading} onLoad={()=>setLoading(false)} src={`https:/icon.horse/icon/${iconUrl}`} alt={iconUrl}></Img>
+      <Img hide={loading} onLoad={()=>setLoading(false)} src={`https://icon.horse/icon/${iconUrl}`} alt={iconUrl}></Img>
     </Container>
   );
 }
