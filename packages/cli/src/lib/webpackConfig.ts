@@ -17,6 +17,7 @@ export default {
   output: {
     path: path.resolve(appPath, "dist"),
     filename: "index.cjs.js",
+    publicPath: "",
     library: {
       type: "commonjs",
     },
