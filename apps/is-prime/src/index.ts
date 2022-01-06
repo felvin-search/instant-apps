@@ -7,7 +7,7 @@ const App: InstantApp = {
   description: "Check if a number is prime or not",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
+   screenshotPath: "./files/screenshot.png",
    exampleSearchQueries: ["is 29 a prime number"],
 };
 

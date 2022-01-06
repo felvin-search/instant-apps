@@ -20,7 +20,9 @@ function Component({ data }) {
   var matches = data.match(/(\d+)/);
   var number = matches[0];
   const isPrime=(num)=>{
-    for(let i=2;i<num;i++)
+    if(num%2==0)
+    return false;
+    for(let i=3;i*i<=num;i+=2)
     {
       if(num%i==0)
       return false;
@@ -37,21 +39,13 @@ function Component({ data }) {
 }
 
 //=========================================
-function stringContainsNumber(_input){
-  let string1 = String(_input);
-  for( let i = 0; i < string1.length; i++){
-      if(!isNaN(string1.charAt(i)) && !(string1.charAt(i) === " ") ){
-        return true;
-      }
-  }
-  return false;
-}
+
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if(!stringContainsNumber(query))
-  return;
   
   var matches = query.match(/(\d+)/);
+  if(matches==null)
+  return;
   var num = matches[0];
   if (!isTriggered(query, [ `is ${num} a prime number` ]) && !query.includes("prime") && !query.includes("composite") && !query.includes("Prime") && !query.includes("Composite")) {
     return;
