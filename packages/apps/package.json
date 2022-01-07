@@ -43,6 +43,7 @@
     "@felvin-search-apps/image-uploader": "^1.24.0",
     "@felvin-search-apps/instant-app-details": "^1.18.0",
     "@felvin-search-apps/ip-address": "^1.41.0",
+    "@felvin-search-apps/is-prime": "^1.0.0",
     "@felvin-search-apps/joke-generator": "^1.43.0",
     "@felvin-search-apps/json-formatter": "^1.43.0",
     "@felvin-search-apps/jwt-decoder": "^1.38.0",

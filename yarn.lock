@@ -1896,6 +1896,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/is-prime@^1.0.0, @felvin-search-apps/is-prime@workspace:apps/is-prime":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/is-prime@workspace:apps/is-prime"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/joke-generator@^1.43.0, @felvin-search-apps/joke-generator@workspace:apps/joke-generator":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/joke-generator@workspace:apps/joke-generator"
@@ -2577,6 +2595,7 @@ __metadata:
     "@felvin-search-apps/image-uploader": ^1.24.0
     "@felvin-search-apps/instant-app-details": ^1.18.0
     "@felvin-search-apps/ip-address": ^1.41.0
+    "@felvin-search-apps/is-prime": ^1.0.0
     "@felvin-search-apps/joke-generator": ^1.43.0
     "@felvin-search-apps/json-formatter": ^1.43.0
     "@felvin-search-apps/jwt-decoder": ^1.38.0
@@ -2624,7 +2643,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.43.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.43.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2644,7 +2663,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.43.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.43.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:

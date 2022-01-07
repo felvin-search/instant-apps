@@ -1,4 +1,5 @@
 import AddressPincodes from "@felvin-search-apps/address-pincodes";
+import IsPrime from "@felvin-search-apps/is-prime";
 import CronParser from "@felvin-search-apps/cron-parser";
 import Metronome from "@felvin-search-apps/metronome";
 import Stopwatch from "@felvin-search-apps/stopwatch";
@@ -58,6 +59,7 @@ import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
   AddressPincodes,
+  IsPrime,
   CronParser,
   Metronome,
   Stopwatch,
