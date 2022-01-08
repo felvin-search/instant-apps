@@ -40,6 +40,7 @@
     "@felvin-search-apps/flip-a-coin": "^1.37.0",
     "@felvin-search-apps/graph-plotter": "^1.44.0",
     "@felvin-search-apps/hello-world-in-different-languages": "^1.35.0",
+    "@felvin-search-apps/http-status-codes": "^1.0.0",
     "@felvin-search-apps/image-uploader": "^1.25.0",
     "@felvin-search-apps/instant-app-details": "^1.19.0",
     "@felvin-search-apps/ip-address": "^1.42.0",

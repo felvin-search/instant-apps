@@ -1,3 +1,4 @@
+import HttpStatusCodes from "@felvin-search-apps/http-status-codes";
 import AddressPincodes from "@felvin-search-apps/address-pincodes";
 import IsPrime from "@felvin-search-apps/is-prime";
 import CronParser from "@felvin-search-apps/cron-parser";
@@ -58,6 +59,7 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  HttpStatusCodes,
   AddressPincodes,
   IsPrime,
   CronParser,
