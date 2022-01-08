@@ -221,7 +221,11 @@ const parseConversionString = (query) => {
   const normalizedQuery = query.toUpperCase();
   if (normalizedQuery.includes(" TO ") || normalizedQuery.includes(" IN ")) {
     // The regex passed to the 1st split (/([0-9.]+)/) splits a string around a number (like "word12.3word" -> ["word", "12.3", "word"])
-    const tokens = normalizedQuery.split(/([0-9.]+)/).join(" ").split(" ").filter(s => s!=="");
+    const tokens = normalizedQuery
+      .split(/([0-9.]+)/)
+      .join(" ")
+      .split(" ")
+      .filter((s) => s !== "");
     if (tokens.length === 3) {
       return { amount: 1, from: tokens[0], to: tokens[2] };
     } else if (tokens.length === 4) {

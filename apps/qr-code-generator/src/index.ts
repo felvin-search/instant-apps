@@ -8,7 +8,11 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["Generate QR code for website", "QR code for url", "Make QR for felvin"],
+  exampleSearchQueries: [
+    "Generate QR code for website",
+    "QR code for url",
+    "Make QR for felvin",
+  ],
 };
 
 export default App;

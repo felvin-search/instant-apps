@@ -8,7 +8,11 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["convert markdown into html", "markdown to html", "md to html"]
+  exampleSearchQueries: [
+    "convert markdown into html",
+    "markdown to html",
+    "md to html",
+  ],
 };
 
 export default App;

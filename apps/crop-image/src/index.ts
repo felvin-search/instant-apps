@@ -8,11 +8,13 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["crop image",
-  "crop photo",
-  "crop picture",
-  "image cropper",
-  "photo cropper"],
+  exampleSearchQueries: [
+    "crop image",
+    "crop photo",
+    "crop picture",
+    "image cropper",
+    "photo cropper",
+  ],
 };
 
 export default App;

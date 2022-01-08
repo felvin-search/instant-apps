@@ -7,12 +7,11 @@ This page lists all super admins and maintainers.
 - Harsh Gupta ([hargup](https://github.com/hargup)) (hargup@felvin.com) (Discord: @hargup)
 - All employees of Felvin
 
-
 # Maintainers
+
 - Harsh Gupta ([hargup](https://github.com/hargup)) (hargup@felvin.com) (Discord: @hargup)
 - Himanshu Mishra ([orkohunter](https://github.com/orkohunter)) (himanshu@orkohunter.net) (Discord: @orkohunter)
 - Sahil Shubham ([sahil-shubham](https://github.com/sahil-shubham)) (sahil.shubham2000@gmail.com) (Discord: @sahil-shubham)
-
 
 # Ex maintainers
 

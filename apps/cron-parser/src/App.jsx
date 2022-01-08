@@ -29,7 +29,6 @@ const Label = styled.label`
   padding: 0.2rem;
 `;
 
-
 //=========================================
 
 // Your UI logic goes here.

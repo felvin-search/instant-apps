@@ -23,7 +23,7 @@ const TwochildDiv = styled.div`
   justify-content: center;
   align-items: center;
   @media (min-width: 25rem) {
-   	display: flex;
+    display: flex;
     margin-left: -0.938rem;
   }
 `;

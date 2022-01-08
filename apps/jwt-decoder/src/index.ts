@@ -8,7 +8,7 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["decode JWT","JWT decoder"],
+  exampleSearchQueries: ["decode JWT", "JWT decoder"],
 };
 
 export default App;

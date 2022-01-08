@@ -64,7 +64,7 @@ const TrackButton = styled.button`
 `;
 
 const IdInput = styled.input`
-  padding: 0.1Srem;
+  padding: 0.1srem;
   font-size: 1rem;
 `;
 
@@ -72,15 +72,17 @@ const IdInput = styled.input`
 function TrackingNumberInput({ setData }) {
   const numInput = useRef<HTMLInputElement>(null);
   const [error, setError] = useState("");
-  const submitHandler = async e => {
+  const submitHandler = async (e) => {
     setError("");
     e.preventDefault();
-    if(numInput.current?.value) {
-      const data = await queryToFetchedData([numInput.current.value.toString()]);
-      if(data) setData(data);
+    if (numInput.current?.value) {
+      const data = await queryToFetchedData([
+        numInput.current.value.toString(),
+      ]);
+      if (data) setData(data);
       else setError("No data found!");
     }
-  }
+  };
   return (
     <>
       <label>Enter tracking id:</label>
@@ -88,9 +90,9 @@ function TrackingNumberInput({ setData }) {
         <IdInput type="number" ref={numInput}></IdInput>
         <TrackButton type="submit">Track</TrackButton>
       </form>
-      {error.length ? <div style={{color: "red"}} >{error}</div> : null}
+      {error.length ? <div style={{ color: "red" }}>{error}</div> : null}
     </>
-  )
+  );
 }
 
 function TrackingInfo(props) {
@@ -171,31 +173,37 @@ function Component(props: InstantAppProps) {
     <TrackingContainer>
       <h1>Courier Tracking Status</h1>
       {data?.err ? <div>{data.err}</div> : null}
-      
+
       {statusArray.length ? <TrackingInfo data={data} /> : null}
 
       {statusArray.length ? <h2>Updates</h2> : null}
-      {statusArray.length ? <StatusArrayContainer>
-        {_.map(statusArray, (statusObject) => {
-          return (
-            <RowContainer>
-              <p>
-                <span className="statusHeading">
-                  {statusObject.status_body}
-                </span>{" "}
-                <br />
-                <small>at</small> {statusObject.status_location} <br />
-                <small>on</small> <em>{statusObject.status_time}</em>
-              </p>
-            </RowContainer>
-          );
-        })}
-      </StatusArrayContainer> : <TrackingNumberInput setData={setData}/>}
+      {statusArray.length ? (
+        <StatusArrayContainer>
+          {_.map(statusArray, (statusObject) => {
+            return (
+              <RowContainer>
+                <p>
+                  <span className="statusHeading">
+                    {statusObject.status_body}
+                  </span>{" "}
+                  <br />
+                  <small>at</small> {statusObject.status_location} <br />
+                  <small>on</small> <em>{statusObject.status_time}</em>
+                </p>
+              </RowContainer>
+            );
+          })}
+        </StatusArrayContainer>
+      ) : (
+        <TrackingNumberInput setData={setData} />
+      )}
     </TrackingContainer>
   );
 }
 
-async function queryToFetchedData(trackingNumbers: string[]): Promise<queryToDataOutput> {
+async function queryToFetchedData(
+  trackingNumbers: string[]
+): Promise<queryToDataOutput> {
   const baseUrl =
     "https://cfapi.pickrr.com/plugins/tracking/?format=json&tracking_id=";
   let results = await Promise.all(
@@ -220,9 +228,9 @@ async function queryToData({
 }: queryToDataInput): Promise<queryToDataOutput> {
   // If the query does not contain the following words, do not trigger the app
   if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
-  const ids = query.split(" ").filter(e => !isNaN(+e));
+  const ids = query.split(" ").filter((e) => !isNaN(+e));
   const data = await queryToFetchedData(ids);
-  if(data) return data;
+  if (data) return data;
   return Promise.resolve("takeInput");
 } // courier status of 8695542668
 

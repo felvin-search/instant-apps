@@ -17,7 +17,7 @@ const H3 = styled.h3`
   margin: 0.25rem;
   text-align: center;
 `;
-  
+
 const P = styled.p`
   margin: 0.25rem;
   text-align: center;
@@ -37,9 +37,9 @@ const Cell = styled.div`
   border: 2px grey dashed;
   padding: 0.25rem;
 `;
-  
+
 const Row = styled.div`
-  padding-top: 0.20rem;
+  padding-top: 0.2rem;
   border-top: 2px grey dashed;
   display: flex;
   justify-content: space-between;
@@ -52,27 +52,22 @@ const Row = styled.div`
 async function fetchData() {
   const url = `https://api.trending-github.com/github/repositories/?period=daily`;
   const res = await (await fetch(url)).json();
-  return res.slice(0,8);
+  return res.slice(0, 8);
 }
 
 //=========================================
 
 function RepoDetails(props) {
-  const {
-    name,
-    author,
-    url,
-    stars,
-    forks,
-    description
-  } = props;
+  const { name, author, url, stars, forks, description } = props;
   return (
     <Cell>
-      <H3>{author}/<a href={url}>{name}</a></H3>
+      <H3>
+        {author}/<a href={url}>{name}</a>
+      </H3>
       <P>{description}</P>
       <Row>
         <span>{stars}⭐</span>
-        <span>{forks}🍴</span>      
+        <span>{forks}🍴</span>
       </Row>
     </Cell>
   );
@@ -85,7 +80,9 @@ function Component({ data }) {
     <Container>
       <h2>Trending on GitHub Today...</h2>
       <Grid>
-        {data.map(repo => <RepoDetails key={repo.author+repo.name} {...repo}/>)}
+        {data.map((repo) => (
+          <RepoDetails key={repo.author + repo.name} {...repo} />
+        ))}
       </Grid>
     </Container>
   );
@@ -95,12 +92,14 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "trending on github","github trending" ], {
-    substringMatch: true
-  })) {
+  if (
+    !isTriggered(query, ["trending on github", "github trending"], {
+      substringMatch: true,
+    })
+  ) {
     return Promise.resolve(false);
   }
   return await fetchData();
-}
+};
 
 export { queryToData, Component };

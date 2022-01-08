@@ -19,21 +19,27 @@ const Container = styled.div`
 function Component({ data }) {
   var matches = data.match(/(\d+)/);
   var number = matches[0];
-  const isPrime=(num)=>{
-    if(num%2==0)
-    return false;
-    for(let i=3;i*i<=num;i+=2)
-    {
-      if(num%i==0)
-      return false;
+  const isPrime = (num) => {
+    if (num % 2 == 0) return false;
+    for (let i = 3; i * i <= num; i += 2) {
+      if (num % i == 0) return false;
     }
     return true;
-  }
-  
+  };
+
   return (
     <Container>
-      {(data.includes("prime") || data.includes("Prime"))?(isPrime(number) ? <h1>Yes! {number} is a prime number</h1>:<h1>No! {number} is not a prime number</h1>):(isPrime(number) ? <h1>No! {number} is not a composite number</h1>:<h1>Yes! {number} is a composite number</h1>)}
-      
+      {data.includes("prime") || data.includes("Prime") ? (
+        isPrime(number) ? (
+          <h1>Yes! {number} is a prime number</h1>
+        ) : (
+          <h1>No! {number} is not a prime number</h1>
+        )
+      ) : isPrime(number) ? (
+        <h1>No! {number} is not a composite number</h1>
+      ) : (
+        <h1>Yes! {number} is a composite number</h1>
+      )}
     </Container>
   );
 }
@@ -42,12 +48,16 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  
   var matches = query.match(/(\d+)/);
-  if(matches==null)
-  return;
+  if (matches == null) return;
   var num = matches[0];
-  if (!isTriggered(query, [ `is ${num} a prime number` ]) && !query.includes("prime") && !query.includes("composite") && !query.includes("Prime") && !query.includes("Composite")) {
+  if (
+    !isTriggered(query, [`is ${num} a prime number`]) &&
+    !query.includes("prime") &&
+    !query.includes("composite") &&
+    !query.includes("Prime") &&
+    !query.includes("Composite")
+  ) {
     return;
   }
 
@@ -58,6 +68,6 @@ const queryToData = async ({ query }) => {
   const data = query;
 
   return data;
-}
+};
 
 export { queryToData, Component };

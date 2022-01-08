@@ -49,14 +49,13 @@ function Component({ data }) {
   const [text, setText] = useState("");
 
   function MorseTranslator(e) {
-
     e.preventDefault();
     let msgInput = input;
 
     if (isMorseCode(msgInput) == true) {
       let decoded = decode(msgInput);
       if (decoded.includes("undefined")) {
-        setText("Morse Code could not be decoded. Try again!")
+        setText("Morse Code could not be decoded. Try again!");
       } else {
         setText(decoded);
       }
@@ -64,7 +63,7 @@ function Component({ data }) {
     } else {
       let encoded = encode(msgInput);
       if (encoded.includes("undefined")) {
-        setMorse("Text message could not be encoded. Try again!")
+        setMorse("Text message could not be encoded. Try again!");
       } else {
         setMorse(encoded);
       }
@@ -99,7 +98,7 @@ function Component({ data }) {
         </div>
       </Container>
       <Result>
-        <div >Morse Code: {morse}</div>
+        <div>Morse Code: {morse}</div>
         <div>Text: {text}</div>
       </Result>
     </>
@@ -156,8 +155,14 @@ function isMorseCode(str) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, ["generate morse code", "convert morse code to text", "convert text to morse", "morse code generator"]))
-  {
+  if (
+    !isTriggered(query, [
+      "generate morse code",
+      "convert morse code to text",
+      "convert text to morse",
+      "morse code generator",
+    ])
+  ) {
     return;
   }
 
