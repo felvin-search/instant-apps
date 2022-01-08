@@ -51,7 +51,7 @@ text-align: center;
  
   `
 const Description=styled.p`
-  font-size:0.8rem;
+  font-size:1.25rem;
   padding: 1rem 3rem;
 
   `
