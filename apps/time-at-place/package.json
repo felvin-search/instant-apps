@@ -1,6 +1,6 @@
 {
   "name": "@felvin-search-apps/time-at-place",
-  "version": "1.44.0",
+  "version": "1.45.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
@@ -12,12 +12,12 @@
     "build": "felvin-cli build:app"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.44.0",
+    "@felvin-search/core": "^1.45.0",
     "country-timezone": "^1.0.8",
     "dayjs": "^1.10.7"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.44.0",
+    "@felvin-search/cli": "^1.45.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
     "react": "^17.0.2",
