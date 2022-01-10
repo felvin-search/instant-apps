@@ -1562,13 +1562,13 @@ __metadata:
   dependencies:
     "@felvin-search/cli": ^1.45.0
     "@felvin-search/core": ^1.45.0
-    "@monaco-editor/react": ^4.3.1
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     axios: ^0.24.0
     lodash: ^4.17.21
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-syntax-highlighter: ^15.4.5
     styled-components: ^5.3.0
   peerDependencies:
     react: ^17.0.2
@@ -3109,31 +3109,6 @@ __metadata:
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0
   checksum: 30e15b197c52bb607ba2f00293acbda66388427560e30f5dd82714dee69f565cf0896baa98f869b191a881e14e0df08155fd9d598b356ac2262b8e60e43a5499
-  languageName: node
-  linkType: hard
-
-"@monaco-editor/loader@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@monaco-editor/loader@npm:1.2.0"
-  dependencies:
-    state-local: ^1.0.6
-  peerDependencies:
-    monaco-editor: ">= 0.21.0 < 1"
-  checksum: b483d8d74830f8bcfe18111b0dfe526e038b704e9a461ce2ecb25d66db2abb19fbb704569ba84b06e4b5ead4e483ae7335e3d5e2201613d4f0c077401d540bd3
-  languageName: node
-  linkType: hard
-
-"@monaco-editor/react@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "@monaco-editor/react@npm:4.3.1"
-  dependencies:
-    "@monaco-editor/loader": ^1.2.0
-    prop-types: ^15.7.2
-  peerDependencies:
-    monaco-editor: ">= 0.25.0 < 1"
-    react: ^16.8.0 || ^17.0.0
-    react-dom: ^16.8.0 || ^17.0.0
-  checksum: 477349e64078ab3fc30e75577fbe51519c5af621cd1e3fa557e21f2a5e7291c4eabe34caa3013d578be0379c5bc43b199ee1c74853d571b05598ce866ad5a3a1
   languageName: node
   linkType: hard
 
@@ -7486,6 +7461,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fault@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "fault@npm:1.0.4"
+  dependencies:
+    format: ^0.2.0
+  checksum: 5ac610d8b09424e0f2fa8cf913064372f2ee7140a203a79957f73ed557c0e79b1a3d096064d7f40bde8132a69204c1fe25ec23634c05c6da2da2039cff26c4e7
+  languageName: node
+  linkType: hard
+
 "faye-websocket@npm:^0.11.3":
   version: 0.11.4
   resolution: "faye-websocket@npm:0.11.4"
@@ -7682,6 +7666,13 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 10c1780fa13dbe1ff3100114c2ce1f9307f8be10b14bf16e103815356ff567b6be39d70fc4a40f8990b9660012dc24b0f5e1dde1b6426166eb23a445ba068ca3
+  languageName: node
+  linkType: hard
+
+"format@npm:^0.2.0":
+  version: 0.2.2
+  resolution: "format@npm:0.2.2"
+  checksum: 646a60e1336250d802509cf24fb801e43bd4a70a07510c816fa133aa42cdbc9c21e66e9cc0801bb183c5b031c9d68be62e7fbb6877756e52357850f92aa28799
   languageName: node
   linkType: hard
 
@@ -8404,6 +8395,13 @@ __metadata:
   version: 3.0.2
   resolution: "headers-utils@npm:3.0.2"
   checksum: 210fe65756d6de8a96afe68617463fb6faf675a24d864e849b17bddf051c4a24d621a510a1bb80fd9d4763b932eb44b5d8fd6fc4f14fa62fb211603456a57b4f
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:^10.4.1, highlight.js@npm:~10.7.0":
+  version: 10.7.3
+  resolution: "highlight.js@npm:10.7.3"
+  checksum: defeafcd546b535d710d8efb8e650af9e3b369ef53e28c3dc7893eacfe263200bba4c5fcf43524ae66d5c0c296b1af0870523ceae3e3104d24b7abf6374a4fea
   languageName: node
   linkType: hard
 
@@ -10837,6 +10835,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lowlight@npm:^1.17.0":
+  version: 1.20.0
+  resolution: "lowlight@npm:1.20.0"
+  dependencies:
+    fault: ^1.0.0
+    highlight.js: ~10.7.0
+  checksum: 14a1815d6bae202ddee313fc60f06d46e5235c02fa483a77950b401d85b4c1e12290145ccd17a716b07f9328bd5864aa2d402b6a819ff3be7c833d9748ff8ba7
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^4.0.1, lru-cache@npm:^4.1.5":
   version: 4.1.5
   resolution: "lru-cache@npm:4.1.5"
@@ -12923,6 +12931,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prismjs@npm:^1.25.0":
+  version: 1.26.0
+  resolution: "prismjs@npm:1.26.0"
+  checksum: 6de058930ce767d44d60322e625bbc255f5107c7bf82c441ade19a289358e01e35040cea0c17adf8f7b829f17aa48e2d84b40866b5b3f8c75a12c6b3f0ead231
+  languageName: node
+  linkType: hard
+
 "prismjs@npm:~1.25.0":
   version: 1.25.0
   resolution: "prismjs@npm:1.25.0"
@@ -13501,6 +13516,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-syntax-highlighter@npm:^15.4.5":
+  version: 15.4.5
+  resolution: "react-syntax-highlighter@npm:15.4.5"
+  dependencies:
+    "@babel/runtime": ^7.3.1
+    highlight.js: ^10.4.1
+    lowlight: ^1.17.0
+    prismjs: ^1.25.0
+    refractor: ^3.2.0
+  peerDependencies:
+    react: ">= 0.14.0"
+  checksum: 120bac5cfbd65eb47e513b8057e3cb71843ce15241bbf933c1818c294965b87d8e074c7929a8fc2ced66c3e3f38c4cc6bf04365a8345e3a382cd524d0093949f
+  languageName: node
+  linkType: hard
+
 "react-tetris@npm:^0.1.2":
   version: 0.1.2
   resolution: "react-tetris@npm:0.1.2"
@@ -13623,7 +13653,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"refractor@npm:^3.4.0":
+"refractor@npm:^3.2.0, refractor@npm:^3.4.0":
   version: 3.5.0
   resolution: "refractor@npm:3.5.0"
   dependencies:
@@ -14763,13 +14793,6 @@ __metadata:
   version: 1.0.0
   resolution: "stackblur@npm:1.0.0"
   checksum: 955f672817e23c128801ef707701d29c99100bca0ad53f37a756ca8467ff704b33dc7aeab3aefe287e57b42a75e4703d4a3c06227e97eda6a515b9f29d888d91
-  languageName: node
-  linkType: hard
-
-"state-local@npm:^1.0.6":
-  version: 1.0.7
-  resolution: "state-local@npm:1.0.7"
-  checksum: d1afcf1429e7e6eb08685b3a94be8797db847369316d4776fd51f3962b15b984dacc7f8e401ad20968e5798c9565b4b377afedf4e4c4d60fe7495e1cbe14a251
   languageName: node
   linkType: hard
 

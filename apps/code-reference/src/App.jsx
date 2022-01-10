@@ -1,5 +1,6 @@
 import React from "react";
-import Editor from "@monaco-editor/react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import axios from "axios";
 import styled from "styled-components";
 import _ from "lodash";
@@ -10,6 +11,13 @@ import _ from "lodash";
 const Source = styled.span`
   font-size: 1rem;
 `;
+
+const CodeBlock = styled.div`
+  height: 60vh;
+  width: clamp(300px, 60vw, 900px);
+  overflow-y: auto;
+  font-size: 1rem;
+`
 
 const Container = styled.div`
   display: flex;
@@ -31,13 +39,15 @@ function Component(props) {
   return (
     <div>
       <p>{_.startCase(props.data.algorithm)}</p>
-      <Editor
-        height="50vh"
-        width="60vw"
-        theme="vs-dark"
-        defaultLanguage={props.data.language}
-        defaultValue={JSON.parse(props.data.code)}
-      />
+      <CodeBlock>
+        <SyntaxHighlighter 
+          language={props.data.language} 
+          style={a11yDark}
+          wrapLongLines={true}
+        >
+          {JSON.parse(props.data.code)}
+        </SyntaxHighlighter>
+      </CodeBlock>
       <Container>
         <Source>
           Source : <a href={props.data.source}>{props.data.name}</a>

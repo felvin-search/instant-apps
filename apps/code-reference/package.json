@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@felvin-search/core": "^1.45.0",
-    "@monaco-editor/react": "^4.3.1",
     "axios": "^0.24.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "react-syntax-highlighter": "^15.4.5"
   },
   "devDependencies": {
     "@felvin-search/cli": "^1.45.0",
