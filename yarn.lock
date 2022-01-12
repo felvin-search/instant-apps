@@ -1615,6 +1615,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search-apps/convert-to-roman@^1.0.0, @felvin-search-apps/convert-to-roman@workspace:apps/convert-to-roman":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/convert-to-roman@workspace:apps/convert-to-roman"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search-apps/courier-tracker@^1.46.0, @felvin-search-apps/courier-tracker@workspace:apps/courier-tracker":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/courier-tracker@workspace:apps/courier-tracker"
@@ -2598,6 +2616,7 @@ __metadata:
     "@felvin-search-apps/code-reference": ^1.15.0
     "@felvin-search-apps/color-picker": ^1.39.0
     "@felvin-search-apps/compressify": ^1.37.0
+    "@felvin-search-apps/convert-to-roman": ^1.0.0
     "@felvin-search-apps/courier-tracker": ^1.46.0
     "@felvin-search-apps/cron-parser": ^1.9.0
     "@felvin-search-apps/crop-image": ^1.28.0
@@ -2662,7 +2681,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.46.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.46.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2682,7 +2701,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.46.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.46.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:
