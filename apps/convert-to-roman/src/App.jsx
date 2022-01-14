@@ -20,6 +20,7 @@ function Component({ data }) {
 
   const toRoman = (num)=>{
     var roman = {
+      V̅: 5000,
       M: 1000,
       CM: 900,
       D: 500,
@@ -47,7 +48,7 @@ function Component({ data }) {
 
   return (
     <Container>
-      <h1>{data} = {toRoman(data)}</h1> 
+      { data!=='0' ? <h1>{(toRoman(data))}</h1>:(<div><h1>nulla</h1><p> Roman system did not need any value to represent zero instead "nulla" was used to specify zero</p></div>)}
     </Container>
   );
 }
