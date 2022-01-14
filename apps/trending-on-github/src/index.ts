@@ -8,7 +8,10 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["What's trending on github today", "list of github trending repositories"],
+  exampleSearchQueries: [
+    "What's trending on github today",
+    "list of github trending repositories",
+  ],
 };
 
 export default App;

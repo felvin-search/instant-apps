@@ -8,7 +8,11 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["what day was yesterday", "what day is 01/01/2000", "what day is it tomorrow"],
+  exampleSearchQueries: [
+    "what day was yesterday",
+    "what day is 01/01/2000",
+    "what day is it tomorrow",
+  ],
 };
 
 export default App;

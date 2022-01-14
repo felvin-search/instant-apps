@@ -1,4 +1,4 @@
-import React, { useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 
@@ -25,7 +25,7 @@ const Textarea = styled.textarea`
 `;
 
 const Img = styled.img`
-  display: ${props => props.hide ? "none" : "block"};
+  display: ${(props) => (props.hide ? "none" : "block")};
 `;
 
 const RotateInfinitely = keyframes`
@@ -57,20 +57,32 @@ function Component({ data }) {
   const [qrContent, setQrContent] = useState(encodeURI(data));
   const [loading, setLoading] = useState(true);
   const inputRef = useRef();
-  const submitHandler = e => {
+  const submitHandler = (e) => {
     e.preventDefault();
-    setLoading(true);
+    // if user changes the input, only then set loading to true, as otherwise it causes perpetual loading error
+    if (encodeURI(inputRef.current.value) !== qrContent) setLoading(true);
     setQrContent(encodeURI(inputRef.current.value));
-  }
+  };
   return (
     <Container>
       <h2>Generate QR Code</h2>
       <Form onSubmit={submitHandler}>
-        <Textarea maxlength="900" ref={inputRef} onChange={() => setContent(inputRef.current.value)}>{content}</Textarea>
+        <Textarea
+          maxlength="900"
+          ref={inputRef}
+          onChange={() => setContent(inputRef.current.value)}
+        >
+          {content}
+        </Textarea>
         <button type="submit">Generate!</button>
       </Form>
-      {loading ? <Loader/> : null}
-      <Img hide={loading} onLoad={()=>setLoading(false)} src={`https://api.qrserver.com/v1/create-qr-code/?data=${qrContent}&size=200x200`} alt={qrContent} />
+      {loading ? <Loader /> : null}
+      <Img
+        hide={loading}
+        onLoad={() => setLoading(false)}
+        src={`https://api.qrserver.com/v1/create-qr-code/?data=${qrContent}&size=200x200`}
+        alt={qrContent}
+      />
     </Container>
   );
 }
@@ -79,15 +91,22 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, [ "generate QR","make QR","QR for","QR code for","encode" ], {
-    substringMatch: true
-  })) {
+  if (
+    !isTriggered(
+      query,
+      ["generate QR", "make QR", "QR for", "QR code for", "encode"],
+      {
+        substringMatch: true,
+      }
+    )
+  ) {
     return Promise.resolve(false);
   }
-  const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+  const urlRegex =
+    /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
   const url = query.match(urlRegex)?.[0].toString();
-  if(url) return Promise.resolve(url);
+  if (url) return Promise.resolve(url);
   return Promise.resolve("https://felvin.com");
-}
+};
 
 export { queryToData, Component };

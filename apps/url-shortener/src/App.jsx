@@ -28,14 +28,14 @@ const Input = styled.input`
   max-width: 50vw;
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
-  background-color: #ECB390; //To be changed later for uniform color scheme
+  background-color: #ecb390; //To be changed later for uniform color scheme
   border: none;
   outline: none;
 `;
 
 const SubmitBtn = styled.button`
   padding: 1rem 1.5rem;
-  background-color: #DF7861; //To be changed later for uniform color scheme
+  background-color: #df7861; //To be changed later for uniform color scheme
   font-size: 1.2rem;
   margin: 0;
   border: none;
@@ -55,21 +55,19 @@ const OutputBox = styled.div`
 `;
 
 const Message = styled.div`
-  color: ${props => props.color};
+  color: ${(props) => props.color};
   font-weight: bolder;
 `;
 
 const DividerPC = styled.div`
-
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   @media (max-width: ${Breakpoints.medium}) {
     display: none;
   }
 `;
 
 const DividerMob = styled.div`
-
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   @media (min-width: ${Breakpoints.medium}) {
     display: none;
   }
@@ -104,8 +102,12 @@ const Loader = styled.div`
   }
 
   @keyframes loadingKF {
-    0% { transform: translate(-50%,-50%) rotate(0deg); }
-    100% { transform: translate(-50%,-50%) rotate(360deg); }
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
 `;
 
@@ -114,7 +116,6 @@ const Loader = styled.div`
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
-
   const [inputUrl, setInputUrl] = useState("");
   const [outputUrl, setOutputUrl] = useState("");
   const [hasError, setHasError] = useState(false);
@@ -123,41 +124,51 @@ function Component({ data }) {
   const shortener = async () => {
     try {
       setShowLoader(true);
-      const response = await axios.get(`https://api.shrtco.de/v2/shorten?url=${inputUrl}`);
+      const response = await axios.get(
+        `https://api.shrtco.de/v2/shorten?url=${inputUrl}`
+      );
       setShowLoader(false);
       setOutputUrl(response.data.result.full_short_link);
       setHasError(false);
-    }
-    catch(err) {
+    } catch (err) {
       setHasError(true);
       setShowLoader(false);
     }
-  }
+  };
 
   var output = null;
 
-  if(outputUrl !== '') {
-    if(hasError) output = (<Message color="red">Bad Input</Message>);
+  if (outputUrl !== "") {
+    if (hasError) output = <Message color="red">Bad Input</Message>;
     else {
-      output = (<OutputBox>
-                  <Message color="green">Your Shortened URL is</Message>
-                  <DividerMob>&darr;</DividerMob>
-                  <DividerPC>&rarr;</DividerPC>
-                  <a href={outputUrl} target="_blank">{outputUrl}</a>
-                </OutputBox>)
+      output = (
+        <OutputBox>
+          <Message color="green">Your Shortened URL is</Message>
+          <DividerMob>&darr;</DividerMob>
+          <DividerPC>&rarr;</DividerPC>
+          <a href={outputUrl} target="_blank">
+            {outputUrl}
+          </a>
+        </OutputBox>
+      );
     }
   }
 
   const loader = (
-    <LoaderBox><Loader class="ldio-wh5s68ydb2d">
-      <div></div>
-    </Loader></LoaderBox>
-  )
+    <LoaderBox>
+      <Loader class="ldio-wh5s68ydb2d">
+        <div></div>
+      </Loader>
+    </LoaderBox>
+  );
 
   return (
     <Container>
       <InputBox>
-        <Input value={inputUrl} onChange={(event) => setInputUrl(event.target.value)}></Input>
+        <Input
+          value={inputUrl}
+          onChange={(event) => setInputUrl(event.target.value)}
+        ></Input>
         <SubmitBtn onClick={shortener}>Shorten</SubmitBtn>
       </InputBox>
       {showLoader ? loader : null}
@@ -170,7 +181,11 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, [ "shorten url","url shortener" ], {substringMatch: true})) {
+  if (
+    !isTriggered(query, ["shorten url", "url shortener"], {
+      substringMatch: true,
+    })
+  ) {
     return;
   }
 
@@ -181,6 +196,6 @@ const queryToData = ({ query }) => {
   const data = query.toUpperCase();
 
   return data;
-}
+};
 
 export { queryToData, Component };

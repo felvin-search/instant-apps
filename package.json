@@ -1,7 +1,7 @@
 {
   "name": "private-mono-repo",
   "license": "MIT",
-  "version": "0.29.0",
+  "version": "0.46.0",
   "private": true,
   "workspaces": {
     "packages": [
@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.29.0",
+    "@felvin-search/cli": "^1.46.0",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
     "cross-fetch": "^3.1.4",

@@ -1,29 +1,29 @@
 {
-    "kilogram": {
-        "kilogram": 1,
-        "gram": 1000,
-        "milligram": 1000000,
-        "ounce": 35.274,
-        "pound": 2.20462,
-        "tonne": 0.001,
-        "stone": 0.157473
-    },
-    "gram": {
-        "kilogram": 0.001
-    },
-    "milligram": {
-        "kilogram": 0.000001
-    },
-    "ounce": {
-        "kilogram": 0.0283495
-    },
-    "pound": {
-        "kilogram": 0.453592
-    },
-    "stone": {
-        "kilogram": 6.35029
-    },
-    "tonne": {
-        "kilogram": 1000
-    }
+  "kilogram": {
+    "kilogram": 1,
+    "gram": 1000,
+    "milligram": 1000000,
+    "ounce": 35.274,
+    "pound": 2.20462,
+    "tonne": 0.001,
+    "stone": 0.157473
+  },
+  "gram": {
+    "kilogram": 0.001
+  },
+  "milligram": {
+    "kilogram": 0.000001
+  },
+  "ounce": {
+    "kilogram": 0.0283495
+  },
+  "pound": {
+    "kilogram": 0.453592
+  },
+  "stone": {
+    "kilogram": 6.35029
+  },
+  "tonne": {
+    "kilogram": 1000
+  }
 }

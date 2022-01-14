@@ -16,7 +16,7 @@ const Container = styled.div`
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
   font-size: 1.5rem;
-  border-top: 3px solid rgb(0,0,0);
+  border-top: 3px solid rgb(0, 0, 0);
   font-weight: 600;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -34,7 +34,6 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-
   //filter the query to get the day
   var filteredQuery = query.split(" ");
   filteredQuery = filteredQuery.filter(function (word) {
@@ -70,16 +69,24 @@ const queryToData = async ({ query }) => {
     "Saturday",
   ];
 
-
   const date_altternate_search = new Date().getDay();
 
-  if (query.toLowerCase().includes("today") && query.toLowerCase().includes("what day") ) {
+  if (
+    query.toLowerCase().includes("today") &&
+    query.toLowerCase().includes("what day")
+  ) {
     return dayNames[date_altternate_search];
   }
-  if (query.toLowerCase().includes("tomorrow") && query.toLowerCase().includes("day")) {
+  if (
+    query.toLowerCase().includes("tomorrow") &&
+    query.toLowerCase().includes("day")
+  ) {
     return dayNames[date_altternate_search + 1];
   }
-  if (query.toLowerCase().includes("yesterday") && query.toLowerCase().includes("what day")) {
+  if (
+    query.toLowerCase().includes("yesterday") &&
+    query.toLowerCase().includes("what day")
+  ) {
     return dayNames[date_altternate_search - 1];
   }
 

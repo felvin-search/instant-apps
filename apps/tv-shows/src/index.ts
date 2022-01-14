@@ -8,7 +8,11 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["breaking bad", "friends tv show", "the office series"],
+  exampleSearchQueries: [
+    "breaking bad",
+    "friends tv show",
+    "the office series",
+  ],
 };
 
 export default App;

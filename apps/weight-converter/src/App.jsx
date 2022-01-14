@@ -34,7 +34,7 @@ function Component({ data }) {
 
   useEffect(() => {
     converter();
-  },[]);
+  }, []);
 
   return (
     <ColContainer>
@@ -62,39 +62,24 @@ const isValidWeightUnit = (str) => {
 };
 
 const mapUnits = (str) => {
-  if(str == "kg" || str == "kilograms" || str == "kgs")
-  {
+  if (str == "kg" || str == "kilograms" || str == "kgs") {
     return "kilogram";
-  }
-  else if(str == "grams" || str == "gm" || str == "gms" || str == "g")
-  {
+  } else if (str == "grams" || str == "gm" || str == "gms" || str == "g") {
     return "gram";
-  }
-  else if(str == "milligrams" || str == "mg" || str == "mgs")
-  {
+  } else if (str == "milligrams" || str == "mg" || str == "mgs") {
     return "milligram";
-  }
-  else if(str == "ton" || str == "tons" || str == "tonnes")
-  {
+  } else if (str == "ton" || str == "tons" || str == "tonnes") {
     return "tonne";
-  }
-  else if(str == "pounds" || str == "lbs")
-  {
+  } else if (str == "pounds" || str == "lbs") {
     return "pound";
-  }
-  else if(str == "stones" || str == "st")
-  {
+  } else if (str == "stones" || str == "st") {
     return "stone";
-  }
-  else if(str == "ounces" || str == "oz")
-  {
+  } else if (str == "ounces" || str == "oz") {
     return "ounce";
-  }
-  else 
-  {
+  } else {
     return str;
   }
-}
+};
 
 const parseConversionString = (query) => {
   const normalizedQuery = query.toLowerCase();

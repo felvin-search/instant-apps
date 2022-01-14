@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
-import codes from "./codes.json"
+import codes from "./codes.json";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -23,14 +23,18 @@ function Component({ data }) {
   const inputRef = useRef();
   return (
     <Container>
-      Hello World program in: 
-      <select ref={inputRef} onChange={()=>setLang(inputRef.current.value)} value={lang}>
-        {Object.keys(data).map(language => <option value={language}>{language}</option>)}
+      Hello World program in:
+      <select
+        ref={inputRef}
+        onChange={() => setLang(inputRef.current.value)}
+        value={lang}
+      >
+        {Object.keys(data).map((language) => (
+          <option value={language}>{language}</option>
+        ))}
       </select>
       <code>
-        <pre>
-          {data[lang]}
-        </pre>
+        <pre>{data[lang]}</pre>
       </code>
     </Container>
   );
@@ -40,17 +44,19 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "hello world" ], {
-    substringMatch: true
-  })) {
+  if (
+    !isTriggered(query, ["hello world"], {
+      substringMatch: true,
+    })
+  ) {
     return Promise.resolve(false);
   }
   const data = {};
-  codes.forEach(code => {
+  codes.forEach((code) => {
     data[code.language_name] = code.program;
-  })
+  });
   console.log(data);
   return Promise.resolve(data);
-}
+};
 
 export { queryToData, Component };

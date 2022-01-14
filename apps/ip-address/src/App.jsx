@@ -19,7 +19,7 @@ const Container = styled.div`
 function Component({ data }) {
   return (
     <Container>
-      Your IP Address is: <strong> {data.ip}</strong> 
+      Your IP Address is: <strong> {data.ip}</strong>
     </Container>
   );
 }
@@ -28,7 +28,11 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, [ "What is my ip?","my ip address"],{substringMatch:true})) {
+  if (
+    !isTriggered(query, ["What is my ip?", "my ip address"], {
+      substringMatch: true,
+    })
+  ) {
     return;
   }
 
@@ -42,7 +46,7 @@ const queryToData = async ({ query }) => {
   }
 
   const responseJson = await response.json();
-  return responseJson
-}
+  return responseJson;
+};
 
 export { queryToData, Component };

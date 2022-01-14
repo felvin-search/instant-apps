@@ -1,7 +1,16 @@
+import ConvertToRoman from "@felvin-search-apps/convert-to-roman";
+import HttpStatusCodes from "@felvin-search-apps/http-status-codes";
+import AddressPincodes from "@felvin-search-apps/address-pincodes";
+import IsPrime from "@felvin-search-apps/is-prime";
+import CronParser from "@felvin-search-apps/cron-parser";
+import Metronome from "@felvin-search-apps/metronome";
+import Stopwatch from "@felvin-search-apps/stopwatch";
 import WhatDay from "@felvin-search-apps/what-day";
 import UrlEncoderDecoder from "@felvin-search-apps/url-encoder-decoder";
 import InstantAppDetails from "@felvin-search-apps/instant-app-details";
+import CodeReference from "@felvin-search-apps/code-reference";
 import UnixTimestamp from "@felvin-search-apps/unix-timestamp";
+import UnitSystem from "@felvin-search-apps/unit-system";
 import RandomStringGenerator from "@felvin-search-apps/random-string-generator";
 import Sudoku from "@felvin-search-apps/sudoku";
 import ColorPicker from "@felvin-search-apps/color-picker";
@@ -51,10 +60,19 @@ import Tetris from "@felvin-search-apps/tetris";
 import CourierTracker from "@felvin-search-apps/courier-tracker";
 
 const allApps = [
+  ConvertToRoman,
+  HttpStatusCodes,
+  AddressPincodes,
+  IsPrime,
+  CronParser,
+  Metronome,
+  Stopwatch,
   WhatDay,
   UrlEncoderDecoder,
   InstantAppDetails,
+  CodeReference,
   UnixTimestamp,
+  UnitSystem,
   RandomStringGenerator,
   Sudoku,
   ColorPicker,
@@ -105,3 +123,21 @@ const allApps = [
 ];
 
 export default allApps;
+
+export const appDetails = allApps.map(
+  ({ id, name, description, screenshotPath, exampleSearchQueries }) => {
+    const details = {
+      id,
+      name,
+      description,
+      screenshotPath,
+      exampleSearchQueries,
+    };
+    details.screenshotPath =
+      "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/" +
+      id.split("/")[1] +
+      "/src" +
+      screenshotPath?.substring(1);
+    return details;
+  }
+);

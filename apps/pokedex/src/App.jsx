@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
-import axios from 'axios';
+import axios from "axios";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -12,7 +12,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid ${props => props.color};
+  border: 2px solid ${(props) => props.color};
   border-radius: 10px;
   background-color: #eee;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
@@ -34,7 +34,7 @@ const TitleBox = styled.div`
   align-items: center;
   width: 30rem;
   padding: 1rem 0;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
   text-transform: uppercase;
 `;
 
@@ -47,8 +47,8 @@ const ImageBox = styled.div`
 `;
 
 const TypeTag = styled.div`
-  margin-top: .5rem;
-  padding: .5rem .8rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.8rem;
   background-color: #ddd;
   border-radius: 5px;
 `;
@@ -78,7 +78,7 @@ const AbilityList = styled.div`
 `;
 
 const Ability = styled.div`
-  padding: .3rem 0;
+  padding: 0.3rem 0;
 `;
 
 const StatsBox = styled.div`
@@ -95,15 +95,15 @@ const StatsTitle = styled.div`
   justify-content: center;
   align-items: center;
   width: 30rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   font-sze: 1rem;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
 `;
 
 const Stat = styled.div`
   width: 100%;
-  margin: .5rem 0;
-  padding: .4rem .6rem;
+  margin: 0.5rem 0;
+  padding: 0.4rem 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,12 +116,12 @@ const Stat = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width: ${prop => prop.filled}%;
+    width: ${(prop) => prop.filled}%;
     min-height: 100%;
-    background-color: ${props => props.color};
+    background-color: ${(props) => props.color};
     z-index: 1;
     border-radius: 5px;
-    opacity: .5;
+    opacity: 0.5;
   }
 `;
 
@@ -136,20 +136,17 @@ const StatText = styled.div`
 function Component({ data }) {
   return (
     <Container color={data.color}>
-
       <TitleBox color={data.color}>{data.name}</TitleBox>
 
       <TopBox>
-
         <ImageBox>
           <img src={data.imgURL} width="120px"></img>
           {data.types.map((type) => {
-            return (<TypeTag>{type}</TypeTag>)
+            return <TypeTag>{type}</TypeTag>;
           })}
         </ImageBox>
 
         <ProfileBox>
-
           <Profile>
             <div>Weight</div>
             <div>{`${data.weight} Kg`}</div>
@@ -164,27 +161,25 @@ function Component({ data }) {
             <div>Abilities</div>
             <AbilityList>
               {data.abilities.map((ability) => {
-                return(<Ability>{ability}</Ability>)
+                return <Ability>{ability}</Ability>;
               })}
             </AbilityList>
           </Profile>
-
         </ProfileBox>
-
       </TopBox>
 
       <StatsTitle color={data.color}>Stats</StatsTitle>
 
       <StatsBox>
-          {data.stats.map((stat) => {
-            return (
-            <Stat filled={stat.stat*100/500} color={data.color}>
+        {data.stats.map((stat) => {
+          return (
+            <Stat filled={(stat.stat * 100) / 500} color={data.color}>
               <StatText>{`${stat.name}`}</StatText>
               <StatText>{`${stat.stat}`}</StatText>
-            </Stat>)
-          })}
-        </StatsBox>
-
+            </Stat>
+          );
+        })}
+      </StatsBox>
     </Container>
   );
 }
@@ -193,32 +188,35 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-
-  if (!isTriggered(query, [ "stats","info" ], {substringMatch: true})) {
+  if (!isTriggered(query, ["stats", "info"], { substringMatch: true })) {
     return;
   }
-  var triggerWords = query.split(' ');
-  triggerWords = triggerWords.filter((word) => (word !== "stats" && word !== "info"));
-  const apiRequest = triggerWords.join('-');
+  var triggerWords = query.split(" ");
+  triggerWords = triggerWords.filter(
+    (word) => word !== "stats" && word !== "info"
+  );
+  const apiRequest = triggerWords.join("-");
   var pokemonData = null;
 
   try {
-    pokemonData = await axios.get(`https://pokeapi.co/api/v2/pokemon/${apiRequest}`);
-  }
-  catch (err) {
+    pokemonData = await axios.get(
+      `https://pokeapi.co/api/v2/pokemon/${apiRequest}`
+    );
+  } catch (err) {
     console.log(err);
     return;
   }
 
   const speciesData = await axios.get(pokemonData.data.species.url);
   const types = pokemonData.data.types.map((type) => type.type.name);
-  const abilities = pokemonData.data.abilities.map((ability) => ability.ability.name);
+  const abilities = pokemonData.data.abilities.map(
+    (ability) => ability.ability.name
+  );
   const stats = pokemonData.data.stats.map((stat) => {
-    return ({
-        stat: stat.base_stat,
-        name: stat.stat.name
-      }
-    )
+    return {
+      stat: stat.base_stat,
+      name: stat.stat.name,
+    };
   });
   // You can do any external API call or use any library here
   // to convert the search query into some meaningful data.
@@ -226,16 +224,16 @@ const queryToData = async ({ query }) => {
 
   const myPokemonData = {
     name: pokemonData.data.name,
-    height: pokemonData.data.height/10,
-    weight: pokemonData.data.weight/10,
+    height: pokemonData.data.height / 10,
+    weight: pokemonData.data.weight / 10,
     imgURL: pokemonData.data.sprites.front_default,
     color: speciesData.data.color.name,
     types: types,
     abilities: abilities,
-    stats: stats
-  }
+    stats: stats,
+  };
 
   return myPokemonData;
-}
+};
 
 export { queryToData, Component };

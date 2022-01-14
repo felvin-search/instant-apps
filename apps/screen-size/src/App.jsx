@@ -21,7 +21,12 @@ function Component({ data }) {
   const { height, width } = window.screen;
   return (
     <Container>
-      <p>Your screen resolution is : <strong>{width}x{height}</strong></p>
+      <p>
+        Your screen resolution is :{" "}
+        <strong>
+          {width}x{height}
+        </strong>
+      </p>
     </Container>
   );
 }

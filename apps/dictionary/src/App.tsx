@@ -83,7 +83,7 @@ function Component(props: InstantAppProps) {
   );
 }
 
-const triggerWords = ["define", "meaning"];
+const triggerWords = ["define", "meaning","pronounce","pronunciation"];
 function cleanQuery(query: string): string {
   let newQuery = query;
   triggerWords.forEach((word) => (newQuery = newQuery.replace(word, "")));

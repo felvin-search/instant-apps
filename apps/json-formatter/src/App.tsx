@@ -50,6 +50,7 @@ const JSONContainer = styled.div`
   font-family: inherit;
   font-size: inherit;
   min-height: 50px;
+  overflow-x: scroll;
 
   &:focus,
   &:active {

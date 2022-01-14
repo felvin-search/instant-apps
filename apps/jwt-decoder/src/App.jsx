@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Breakpoints, isTriggered } from "@felvin-search/core";
-import jwt_decode from 'jwt-decode';
+import jwt_decode from "jwt-decode";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -71,7 +71,7 @@ const OutputSubContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 10px;
   background-color: #eee;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
@@ -110,29 +110,37 @@ const SecondaryHeading = styled.h3`
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
-
-  const [token, setToken] = useState("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZWFyY2giOiJmZWx2aW4iLCJjb2RlIjoiT3BlbiBTb3VyY2UiLCJwcm9qZWN0IjoiaW5zdGFudC1hcHBzIn0.6ZiTWZhU0jB5YXRSdb-O8kVHPSpknz7NyxyRLYoInGc");
-  var payload = null, header = null, errorMsg = null;
+  const [token, setToken] = useState(
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZWFyY2giOiJmZWx2aW4iLCJjb2RlIjoiT3BlbiBTb3VyY2UiLCJwcm9qZWN0IjoiaW5zdGFudC1hcHBzIn0.6ZiTWZhU0jB5YXRSdb-O8kVHPSpknz7NyxyRLYoInGc"
+  );
+  var payload = null,
+    header = null,
+    errorMsg = null;
 
   try {
     payload = JSON.stringify(jwt_decode(token), null, 2);
-    header = JSON.stringify(jwt_decode(token, {header: true}), null, 2);
-  }
-  catch(err) {
+    header = JSON.stringify(jwt_decode(token, { header: true }), null, 2);
+  } catch (err) {
     console.log(err);
     payload = null;
     header = null;
-    if(token !== "") {
+    if (token !== "") {
       errorMsg = "Invalid Token";
     }
   }
   return (
     <Container>
-
       <InputContainer>
-        <PrimaryHeading>Encoded JWT <span>(paste a token here)</span></PrimaryHeading>
+        <PrimaryHeading>
+          Encoded JWT <span>(paste a token here)</span>
+        </PrimaryHeading>
 
-        <Input type="text" placeholder="Paste your JWT token here" value={token} onChange={(event) => setToken(event.target.value)}></Input>
+        <Input
+          type="text"
+          placeholder="Paste your JWT token here"
+          value={token}
+          onChange={(event) => setToken(event.target.value)}
+        ></Input>
         <ErrorMessage>{errorMsg}</ErrorMessage>
       </InputContainer>
 
@@ -149,7 +157,6 @@ function Component({ data }) {
           <Output>{payload !== null ? payload : ``}</Output>
         </OutputSubContainer>
       </OutputContainer>
-
     </Container>
   );
 }
@@ -158,7 +165,9 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (!isTriggered(query, [ "decode JWT","JWT decoder" ], {substringMatch: true})) {
+  if (
+    !isTriggered(query, ["decode JWT", "JWT decoder"], { substringMatch: true })
+  ) {
     return;
   }
 
@@ -169,6 +178,6 @@ const queryToData = ({ query }) => {
   const data = query.toUpperCase();
 
   return data;
-}
+};
 
 export { queryToData, Component };

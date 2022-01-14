@@ -8,7 +8,11 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  exampleSearchQueries: ["shorten url", "url shortener", "online url shortener"],
+  exampleSearchQueries: [
+    "shorten url",
+    "url shortener",
+    "online url shortener",
+  ],
 };
 
 export default App;

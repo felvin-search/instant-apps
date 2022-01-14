@@ -1479,13 +1479,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@felvin-search-apps/async-api-validator@^1.27.0, @felvin-search-apps/async-api-validator@workspace:apps/async-api-validator":
+"@felvin-search-apps/address-pincodes@^1.5.0, @felvin-search-apps/address-pincodes@workspace:apps/address-pincodes":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/address-pincodes@workspace:apps/address-pincodes"
+  dependencies:
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/async-api-validator@^1.44.0, @felvin-search-apps/async-api-validator@workspace:apps/async-api-validator":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/async-api-validator@workspace:apps/async-api-validator"
   dependencies:
     "@asyncapi/parser": ^1.10.0
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     https-browserify: ^1.0.0
@@ -1502,12 +1520,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/bouncy-ball@^1.29.0, @felvin-search-apps/bouncy-ball@workspace:apps/bouncy-ball":
+"@felvin-search-apps/bouncy-ball@^1.46.0, @felvin-search-apps/bouncy-ball@workspace:apps/bouncy-ball":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/bouncy-ball@workspace:apps/bouncy-ball"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1520,12 +1538,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/capitals@^1.29.0, @felvin-search-apps/capitals@workspace:apps/capitals":
+"@felvin-search-apps/capitals@^1.46.0, @felvin-search-apps/capitals@workspace:apps/capitals":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/capitals@workspace:apps/capitals"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1538,12 +1556,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/color-picker@^1.22.0, @felvin-search-apps/color-picker@workspace:apps/color-picker":
+"@felvin-search-apps/code-reference@^1.15.0, @felvin-search-apps/code-reference@workspace:apps/code-reference":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/code-reference@workspace:apps/code-reference"
+  dependencies:
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    axios: ^0.24.0
+    lodash: ^4.17.21
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-syntax-highlighter: ^15.4.5
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/color-picker@^1.39.0, @felvin-search-apps/color-picker@workspace:apps/color-picker":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/color-picker@workspace:apps/color-picker"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1557,12 +1596,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/compressify@^1.20.0, @felvin-search-apps/compressify@workspace:apps/compressify":
+"@felvin-search-apps/compressify@^1.37.0, @felvin-search-apps/compressify@workspace:apps/compressify":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/compressify@workspace:apps/compressify"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     compressorjs: ^1.1.1
@@ -1576,12 +1615,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/courier-tracker@^1.29.0, @felvin-search-apps/courier-tracker@workspace:apps/courier-tracker":
+"@felvin-search-apps/convert-to-roman@^1.0.0, @felvin-search-apps/convert-to-roman@workspace:apps/convert-to-roman":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/convert-to-roman@workspace:apps/convert-to-roman"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/courier-tracker@^1.46.0, @felvin-search-apps/courier-tracker@workspace:apps/courier-tracker":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/courier-tracker@workspace:apps/courier-tracker"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     lodash: ^4.17.21
@@ -1595,12 +1652,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/crop-image@^1.11.0, @felvin-search-apps/crop-image@workspace:apps/crop-image":
+"@felvin-search-apps/cron-parser@^1.9.0, @felvin-search-apps/cron-parser@workspace:apps/cron-parser":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/cron-parser@workspace:apps/cron-parser"
+  dependencies:
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    cronstrue: ^1.122.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/crop-image@^1.28.0, @felvin-search-apps/crop-image@workspace:apps/crop-image":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/crop-image@workspace:apps/crop-image"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1614,12 +1690,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/crypto@^1.11.0, @felvin-search-apps/crypto@workspace:apps/crypto":
+"@felvin-search-apps/crypto@^1.28.0, @felvin-search-apps/crypto@workspace:apps/crypto":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/crypto@workspace:apps/crypto"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     chart.js: ^3.6.2
@@ -1635,12 +1711,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/csv-to-json@^1.29.0, @felvin-search-apps/csv-to-json@workspace:apps/csv-to-json":
+"@felvin-search-apps/csv-to-json@^1.46.0, @felvin-search-apps/csv-to-json@workspace:apps/csv-to-json":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/csv-to-json@workspace:apps/csv-to-json"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     papaparse: ^5.3.1
@@ -1656,12 +1732,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/currency-convertor@^1.29.0, @felvin-search-apps/currency-convertor@workspace:apps/currency-convertor":
+"@felvin-search-apps/currency-convertor@^1.46.0, @felvin-search-apps/currency-convertor@workspace:apps/currency-convertor":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/currency-convertor@workspace:apps/currency-convertor"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     axios: ^0.21.1
@@ -1676,12 +1752,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/dice-roller@^1.29.0, @felvin-search-apps/dice-roller@workspace:apps/dice-roller":
+"@felvin-search-apps/dice-roller@^1.46.0, @felvin-search-apps/dice-roller@workspace:apps/dice-roller":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/dice-roller@workspace:apps/dice-roller"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1695,12 +1771,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/dictionary@^1.29.0, @felvin-search-apps/dictionary@workspace:apps/dictionary":
+"@felvin-search-apps/dictionary@^1.46.0, @felvin-search-apps/dictionary@workspace:apps/dictionary":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/dictionary@workspace:apps/dictionary"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1713,12 +1789,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/flappy-bird@^1.29.0, @felvin-search-apps/flappy-bird@workspace:apps/flappy-bird":
+"@felvin-search-apps/flappy-bird@^1.46.0, @felvin-search-apps/flappy-bird@workspace:apps/flappy-bird":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/flappy-bird@workspace:apps/flappy-bird"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1731,12 +1807,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/flip-a-coin@^1.22.0, @felvin-search-apps/flip-a-coin@workspace:apps/flip-a-coin":
+"@felvin-search-apps/flip-a-coin@^1.39.0, @felvin-search-apps/flip-a-coin@workspace:apps/flip-a-coin":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/flip-a-coin@workspace:apps/flip-a-coin"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1749,12 +1825,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/graph-plotter@^1.29.0, @felvin-search-apps/graph-plotter@workspace:apps/graph-plotter":
+"@felvin-search-apps/graph-plotter@^1.46.0, @felvin-search-apps/graph-plotter@workspace:apps/graph-plotter":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/graph-plotter@workspace:apps/graph-plotter"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     function-plot: ^1.22.7
@@ -1768,12 +1844,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/hello-world-in-different-languages@^1.20.0, @felvin-search-apps/hello-world-in-different-languages@workspace:apps/hello-world-in-different-languages":
+"@felvin-search-apps/hello-world-in-different-languages@^1.37.0, @felvin-search-apps/hello-world-in-different-languages@workspace:apps/hello-world-in-different-languages":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/hello-world-in-different-languages@workspace:apps/hello-world-in-different-languages"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1786,12 +1862,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/image-uploader@^1.10.0, @felvin-search-apps/image-uploader@workspace:apps/image-uploader":
+"@felvin-search-apps/http-status-codes@^1.2.0, @felvin-search-apps/http-status-codes@workspace:apps/http-status-codes":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/http-status-codes@workspace:apps/http-status-codes"
+  dependencies:
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/image-uploader@^1.27.0, @felvin-search-apps/image-uploader@workspace:apps/image-uploader":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/image-uploader@workspace:apps/image-uploader"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1804,12 +1898,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/instant-app-details@^1.4.0, @felvin-search-apps/instant-app-details@workspace:apps/instant-app-details":
+"@felvin-search-apps/instant-app-details@^1.21.0, @felvin-search-apps/instant-app-details@workspace:apps/instant-app-details":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/instant-app-details@workspace:apps/instant-app-details"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1823,12 +1917,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/ip-address@^1.27.0, @felvin-search-apps/ip-address@workspace:apps/ip-address":
+"@felvin-search-apps/ip-address@^1.44.0, @felvin-search-apps/ip-address@workspace:apps/ip-address":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/ip-address@workspace:apps/ip-address"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1841,12 +1935,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/joke-generator@^1.29.0, @felvin-search-apps/joke-generator@workspace:apps/joke-generator":
+"@felvin-search-apps/is-prime@^1.3.0, @felvin-search-apps/is-prime@workspace:apps/is-prime":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/is-prime@workspace:apps/is-prime"
+  dependencies:
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/joke-generator@^1.46.0, @felvin-search-apps/joke-generator@workspace:apps/joke-generator":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/joke-generator@workspace:apps/joke-generator"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1859,12 +1971,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/json-formatter@^1.29.0, @felvin-search-apps/json-formatter@workspace:apps/json-formatter":
+"@felvin-search-apps/json-formatter@^1.46.0, @felvin-search-apps/json-formatter@workspace:apps/json-formatter":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/json-formatter@workspace:apps/json-formatter"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -1879,12 +1991,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/jwt-decoder@^1.24.0, @felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder":
+"@felvin-search-apps/jwt-decoder@^1.41.0, @felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/jwt-decoder@workspace:apps/jwt-decoder"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     jwt-decode: ^3.1.2
@@ -1898,12 +2010,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/latex-render@^1.29.0, @felvin-search-apps/latex-render@workspace:apps/latex-render":
+"@felvin-search-apps/latex-render@^1.46.0, @felvin-search-apps/latex-render@workspace:apps/latex-render":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/latex-render@workspace:apps/latex-render"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     html-to-pdf-js: ^0.9.3
@@ -1919,12 +2031,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/live-markdown@^1.24.0, @felvin-search-apps/live-markdown@workspace:apps/live-markdown":
+"@felvin-search-apps/live-markdown@^1.41.0, @felvin-search-apps/live-markdown@workspace:apps/live-markdown":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/live-markdown@workspace:apps/live-markdown"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     "@uiw/react-markdown-preview": ^3.4.0
@@ -1938,12 +2050,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/lorem-ipsum-generator@^1.29.0, @felvin-search-apps/lorem-ipsum-generator@workspace:apps/lorem-ipsum-generator":
+"@felvin-search-apps/lorem-ipsum-generator@^1.46.0, @felvin-search-apps/lorem-ipsum-generator@workspace:apps/lorem-ipsum-generator":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/lorem-ipsum-generator@workspace:apps/lorem-ipsum-generator"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     lorem-ipsum: ^2.0.3
@@ -1958,12 +2070,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/markdown-to-html@^1.24.0, @felvin-search-apps/markdown-to-html@workspace:apps/markdown-to-html":
+"@felvin-search-apps/markdown-to-html@^1.41.0, @felvin-search-apps/markdown-to-html@workspace:apps/markdown-to-html":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/markdown-to-html@workspace:apps/markdown-to-html"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     marked: ^3.0.7
@@ -1977,12 +2089,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/math@^1.29.0, @felvin-search-apps/math@workspace:apps/math":
+"@felvin-search-apps/math@^1.46.0, @felvin-search-apps/math@workspace:apps/math":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/math@workspace:apps/math"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     mathjs: ^9.4.4
@@ -1996,12 +2108,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/merge-pdfs@^1.21.0, @felvin-search-apps/merge-pdfs@workspace:apps/merge-pdfs":
+"@felvin-search-apps/merge-pdfs@^1.38.0, @felvin-search-apps/merge-pdfs@workspace:apps/merge-pdfs":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/merge-pdfs@workspace:apps/merge-pdfs"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     pdf-lib: ^1.17.0
@@ -2015,12 +2127,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/morse-code-generator@^1.27.0, @felvin-search-apps/morse-code-generator@workspace:apps/morse-code-generator":
+"@felvin-search-apps/metronome@^1.6.0, @felvin-search-apps/metronome@workspace:apps/metronome":
   version: 0.0.0-use.local
-  resolution: "@felvin-search-apps/morse-code-generator@workspace:apps/morse-code-generator"
+  resolution: "@felvin-search-apps/metronome@workspace:apps/metronome"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@kevinorriss/react-metronome": ^2.0.1
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2033,12 +2146,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/pokedex@^1.17.0, @felvin-search-apps/pokedex@workspace:apps/pokedex":
+"@felvin-search-apps/morse-code-generator@^1.44.0, @felvin-search-apps/morse-code-generator@workspace:apps/morse-code-generator":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/morse-code-generator@workspace:apps/morse-code-generator"
+  dependencies:
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/pokedex@^1.34.0, @felvin-search-apps/pokedex@workspace:apps/pokedex":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/pokedex@workspace:apps/pokedex"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     axios: ^0.21.1
@@ -2052,12 +2183,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/qr-code-generator@^1.17.0, @felvin-search-apps/qr-code-generator@workspace:apps/qr-code-generator":
+"@felvin-search-apps/qr-code-generator@^1.34.0, @felvin-search-apps/qr-code-generator@workspace:apps/qr-code-generator":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/qr-code-generator@workspace:apps/qr-code-generator"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2070,12 +2201,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/random-string-generator@^1.10.0, @felvin-search-apps/random-string-generator@workspace:apps/random-string-generator":
+"@felvin-search-apps/random-string-generator@^1.27.0, @felvin-search-apps/random-string-generator@workspace:apps/random-string-generator":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/random-string-generator@workspace:apps/random-string-generator"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     randomstring: ^1.2.1
@@ -2089,12 +2220,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/regex@^1.27.0, @felvin-search-apps/regex@workspace:apps/regex":
+"@felvin-search-apps/regex@^1.44.0, @felvin-search-apps/regex@workspace:apps/regex":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/regex@workspace:apps/regex"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2107,12 +2238,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/screen-size@^1.29.0, @felvin-search-apps/screen-size@workspace:apps/screen-size":
+"@felvin-search-apps/screen-size@^1.46.0, @felvin-search-apps/screen-size@workspace:apps/screen-size":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/screen-size@workspace:apps/screen-size"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2125,12 +2256,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/snake-game@^1.29.0, @felvin-search-apps/snake-game@workspace:apps/snake-game":
+"@felvin-search-apps/snake-game@^1.46.0, @felvin-search-apps/snake-game@workspace:apps/snake-game":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/snake-game@workspace:apps/snake-game"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2144,12 +2275,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/sudoku@^1.11.0, @felvin-search-apps/sudoku@workspace:apps/sudoku":
+"@felvin-search-apps/stopwatch@^1.16.0, @felvin-search-apps/stopwatch@workspace:apps/stopwatch":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/stopwatch@workspace:apps/stopwatch"
+  dependencies:
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/sudoku@^1.28.0, @felvin-search-apps/sudoku@workspace:apps/sudoku":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/sudoku@workspace:apps/sudoku"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2163,12 +2312,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/tetris@^1.29.0, @felvin-search-apps/tetris@workspace:apps/tetris":
+"@felvin-search-apps/tetris@^1.46.0, @felvin-search-apps/tetris@workspace:apps/tetris":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/tetris@workspace:apps/tetris"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2182,12 +2331,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/tic-tac-toe@^1.29.0, @felvin-search-apps/tic-tac-toe@workspace:apps/tic-tac-toe":
+"@felvin-search-apps/tic-tac-toe@^1.46.0, @felvin-search-apps/tic-tac-toe@workspace:apps/tic-tac-toe":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/tic-tac-toe@workspace:apps/tic-tac-toe"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2200,12 +2349,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/time-at-place@^1.29.0, @felvin-search-apps/time-at-place@workspace:apps/time-at-place":
+"@felvin-search-apps/time-at-place@^1.46.0, @felvin-search-apps/time-at-place@workspace:apps/time-at-place":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/time-at-place@workspace:apps/time-at-place"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     country-timezone: ^1.0.8
@@ -2220,12 +2369,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/timer@^1.29.0, @felvin-search-apps/timer@workspace:apps/timer":
+"@felvin-search-apps/timer@^1.46.0, @felvin-search-apps/timer@workspace:apps/timer":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/timer@workspace:apps/timer"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2238,12 +2387,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/trending-on-github@^1.17.0, @felvin-search-apps/trending-on-github@workspace:apps/trending-on-github":
+"@felvin-search-apps/trending-on-github@^1.34.0, @felvin-search-apps/trending-on-github@workspace:apps/trending-on-github":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/trending-on-github@workspace:apps/trending-on-github"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2256,12 +2405,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/tv-shows@^1.17.0, @felvin-search-apps/tv-shows@workspace:apps/tv-shows":
+"@felvin-search-apps/tv-shows@^1.34.0, @felvin-search-apps/tv-shows@workspace:apps/tv-shows":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/tv-shows@workspace:apps/tv-shows"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     axios: ^0.21.1
@@ -2275,12 +2424,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/unit-convertor@^1.3.0, @felvin-search-apps/unit-convertor@workspace:apps/unit-convertor":
+"@felvin-search-apps/unit-convertor@^1.20.0, @felvin-search-apps/unit-convertor@workspace:apps/unit-convertor":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/unit-convertor@workspace:apps/unit-convertor"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@material-ui/core": ^4.12.3
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
@@ -2295,12 +2444,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/unix-timestamp@^1.5.0, @felvin-search-apps/unix-timestamp@workspace:apps/unix-timestamp":
+"@felvin-search-apps/unit-system@^1.15.0, @felvin-search-apps/unit-system@workspace:apps/unit-system":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search-apps/unit-system@workspace:apps/unit-system"
+  dependencies:
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-search-apps/unix-timestamp@^1.22.0, @felvin-search-apps/unix-timestamp@workspace:apps/unix-timestamp":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/unix-timestamp@workspace:apps/unix-timestamp"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2313,12 +2480,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/url-encoder-decoder@^1.2.0, @felvin-search-apps/url-encoder-decoder@workspace:apps/url-encoder-decoder":
+"@felvin-search-apps/url-encoder-decoder@^1.19.0, @felvin-search-apps/url-encoder-decoder@workspace:apps/url-encoder-decoder":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/url-encoder-decoder@workspace:apps/url-encoder-decoder"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2331,12 +2498,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/url-shortener@^1.17.0, @felvin-search-apps/url-shortener@workspace:apps/url-shortener":
+"@felvin-search-apps/url-shortener@^1.34.0, @felvin-search-apps/url-shortener@workspace:apps/url-shortener":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/url-shortener@workspace:apps/url-shortener"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     axios: ^0.21.1
@@ -2350,12 +2517,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/uuid@^1.29.0, @felvin-search-apps/uuid@workspace:apps/uuid":
+"@felvin-search-apps/uuid@^1.46.0, @felvin-search-apps/uuid@workspace:apps/uuid":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/uuid@workspace:apps/uuid"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2369,12 +2536,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/website-icons@^1.11.0, @felvin-search-apps/website-icons@workspace:apps/website-icons":
+"@felvin-search-apps/website-icons@^1.28.0, @felvin-search-apps/website-icons@workspace:apps/website-icons":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/website-icons@workspace:apps/website-icons"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2387,12 +2554,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/weight-converter@^1.26.0, @felvin-search-apps/weight-converter@workspace:apps/weight-converter":
+"@felvin-search-apps/weight-converter@^1.43.0, @felvin-search-apps/weight-converter@workspace:apps/weight-converter":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/weight-converter@workspace:apps/weight-converter"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2405,12 +2572,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/what-day@^1.1.0, @felvin-search-apps/what-day@workspace:apps/what-day":
+"@felvin-search-apps/what-day@^1.18.0, @felvin-search-apps/what-day@workspace:apps/what-day":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/what-day@workspace:apps/what-day"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2423,12 +2590,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search-apps/word-counter@^1.29.0, @felvin-search-apps/word-counter@workspace:apps/word-counter":
+"@felvin-search-apps/word-counter@^1.46.0, @felvin-search-apps/word-counter@workspace:apps/word-counter":
   version: 0.0.0-use.local
   resolution: "@felvin-search-apps/word-counter@workspace:apps/word-counter"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2441,63 +2608,72 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/apps@^1.30.0, @felvin-search/apps@workspace:packages/apps":
+"@felvin-search/apps@^1.47.0, @felvin-search/apps@workspace:packages/apps":
   version: 0.0.0-use.local
   resolution: "@felvin-search/apps@workspace:packages/apps"
   dependencies:
-    "@felvin-search-apps/async-api-validator": ^1.27.0
-    "@felvin-search-apps/bouncy-ball": ^1.29.0
-    "@felvin-search-apps/capitals": ^1.29.0
-    "@felvin-search-apps/color-picker": ^1.22.0
-    "@felvin-search-apps/compressify": ^1.20.0
-    "@felvin-search-apps/courier-tracker": ^1.29.0
-    "@felvin-search-apps/crop-image": ^1.11.0
-    "@felvin-search-apps/crypto": ^1.11.0
-    "@felvin-search-apps/csv-to-json": ^1.29.0
-    "@felvin-search-apps/currency-convertor": ^1.29.0
-    "@felvin-search-apps/dice-roller": ^1.29.0
-    "@felvin-search-apps/dictionary": ^1.29.0
-    "@felvin-search-apps/flappy-bird": ^1.29.0
-    "@felvin-search-apps/flip-a-coin": ^1.22.0
-    "@felvin-search-apps/graph-plotter": ^1.29.0
-    "@felvin-search-apps/hello-world-in-different-languages": ^1.20.0
-    "@felvin-search-apps/image-uploader": ^1.10.0
-    "@felvin-search-apps/instant-app-details": ^1.4.0
-    "@felvin-search-apps/ip-address": ^1.27.0
-    "@felvin-search-apps/joke-generator": ^1.29.0
-    "@felvin-search-apps/json-formatter": ^1.29.0
-    "@felvin-search-apps/jwt-decoder": ^1.24.0
-    "@felvin-search-apps/latex-render": ^1.29.0
-    "@felvin-search-apps/live-markdown": ^1.24.0
-    "@felvin-search-apps/lorem-ipsum-generator": ^1.29.0
-    "@felvin-search-apps/markdown-to-html": ^1.24.0
-    "@felvin-search-apps/math": ^1.29.0
-    "@felvin-search-apps/merge-pdfs": ^1.21.0
-    "@felvin-search-apps/morse-code-generator": ^1.27.0
-    "@felvin-search-apps/pokedex": ^1.17.0
-    "@felvin-search-apps/qr-code-generator": ^1.17.0
-    "@felvin-search-apps/random-string-generator": ^1.10.0
-    "@felvin-search-apps/regex": ^1.27.0
-    "@felvin-search-apps/screen-size": ^1.29.0
-    "@felvin-search-apps/snake-game": ^1.29.0
-    "@felvin-search-apps/sudoku": ^1.11.0
-    "@felvin-search-apps/tetris": ^1.29.0
-    "@felvin-search-apps/tic-tac-toe": ^1.29.0
-    "@felvin-search-apps/time-at-place": ^1.29.0
-    "@felvin-search-apps/timer": ^1.29.0
-    "@felvin-search-apps/trending-on-github": ^1.17.0
-    "@felvin-search-apps/tv-shows": ^1.17.0
-    "@felvin-search-apps/unit-convertor": ^1.3.0
-    "@felvin-search-apps/unix-timestamp": ^1.5.0
-    "@felvin-search-apps/url-encoder-decoder": ^1.2.0
-    "@felvin-search-apps/url-shortener": ^1.17.0
-    "@felvin-search-apps/uuid": ^1.29.0
-    "@felvin-search-apps/website-icons": ^1.11.0
-    "@felvin-search-apps/weight-converter": ^1.26.0
-    "@felvin-search-apps/what-day": ^1.1.0
-    "@felvin-search-apps/word-counter": ^1.29.0
-    "@felvin-search/cli": ^1.29.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search-apps/address-pincodes": ^1.5.0
+    "@felvin-search-apps/async-api-validator": ^1.44.0
+    "@felvin-search-apps/bouncy-ball": ^1.46.0
+    "@felvin-search-apps/capitals": ^1.46.0
+    "@felvin-search-apps/code-reference": ^1.15.0
+    "@felvin-search-apps/color-picker": ^1.39.0
+    "@felvin-search-apps/compressify": ^1.37.0
+    "@felvin-search-apps/convert-to-roman": ^1.0.0
+    "@felvin-search-apps/courier-tracker": ^1.46.0
+    "@felvin-search-apps/cron-parser": ^1.9.0
+    "@felvin-search-apps/crop-image": ^1.28.0
+    "@felvin-search-apps/crypto": ^1.28.0
+    "@felvin-search-apps/csv-to-json": ^1.46.0
+    "@felvin-search-apps/currency-convertor": ^1.46.0
+    "@felvin-search-apps/dice-roller": ^1.46.0
+    "@felvin-search-apps/dictionary": ^1.46.0
+    "@felvin-search-apps/flappy-bird": ^1.46.0
+    "@felvin-search-apps/flip-a-coin": ^1.39.0
+    "@felvin-search-apps/graph-plotter": ^1.46.0
+    "@felvin-search-apps/hello-world-in-different-languages": ^1.37.0
+    "@felvin-search-apps/http-status-codes": ^1.2.0
+    "@felvin-search-apps/image-uploader": ^1.27.0
+    "@felvin-search-apps/instant-app-details": ^1.21.0
+    "@felvin-search-apps/ip-address": ^1.44.0
+    "@felvin-search-apps/is-prime": ^1.3.0
+    "@felvin-search-apps/joke-generator": ^1.46.0
+    "@felvin-search-apps/json-formatter": ^1.46.0
+    "@felvin-search-apps/jwt-decoder": ^1.41.0
+    "@felvin-search-apps/latex-render": ^1.46.0
+    "@felvin-search-apps/live-markdown": ^1.41.0
+    "@felvin-search-apps/lorem-ipsum-generator": ^1.46.0
+    "@felvin-search-apps/markdown-to-html": ^1.41.0
+    "@felvin-search-apps/math": ^1.46.0
+    "@felvin-search-apps/merge-pdfs": ^1.38.0
+    "@felvin-search-apps/metronome": ^1.6.0
+    "@felvin-search-apps/morse-code-generator": ^1.44.0
+    "@felvin-search-apps/pokedex": ^1.34.0
+    "@felvin-search-apps/qr-code-generator": ^1.34.0
+    "@felvin-search-apps/random-string-generator": ^1.27.0
+    "@felvin-search-apps/regex": ^1.44.0
+    "@felvin-search-apps/screen-size": ^1.46.0
+    "@felvin-search-apps/snake-game": ^1.46.0
+    "@felvin-search-apps/stopwatch": ^1.16.0
+    "@felvin-search-apps/sudoku": ^1.28.0
+    "@felvin-search-apps/tetris": ^1.46.0
+    "@felvin-search-apps/tic-tac-toe": ^1.46.0
+    "@felvin-search-apps/time-at-place": ^1.46.0
+    "@felvin-search-apps/timer": ^1.46.0
+    "@felvin-search-apps/trending-on-github": ^1.34.0
+    "@felvin-search-apps/tv-shows": ^1.34.0
+    "@felvin-search-apps/unit-convertor": ^1.20.0
+    "@felvin-search-apps/unit-system": ^1.15.0
+    "@felvin-search-apps/unix-timestamp": ^1.22.0
+    "@felvin-search-apps/url-encoder-decoder": ^1.19.0
+    "@felvin-search-apps/url-shortener": ^1.34.0
+    "@felvin-search-apps/uuid": ^1.46.0
+    "@felvin-search-apps/website-icons": ^1.28.0
+    "@felvin-search-apps/weight-converter": ^1.43.0
+    "@felvin-search-apps/what-day": ^1.18.0
+    "@felvin-search-apps/word-counter": ^1.46.0
+    "@felvin-search/cli": ^1.46.0
+    "@felvin-search/core": ^1.46.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2508,7 +2684,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@^1.29.0, @felvin-search/cli@workspace:packages/cli":
+"@felvin-search/cli@^1.0.0, @felvin-search/cli@^1.46.0, @felvin-search/cli@workspace:packages/cli":
   version: 0.0.0-use.local
   resolution: "@felvin-search/cli@workspace:packages/cli"
   dependencies:
@@ -2528,11 +2704,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/core@^1.29.0, @felvin-search/core@workspace:packages/core":
+"@felvin-search/core@^1.0.0, @felvin-search/core@^1.46.0, @felvin-search/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@felvin-search/core@workspace:packages/core"
   dependencies:
-    "@felvin-search/cli": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
     "@types/jest": ^27.0.2
     "@types/react": ^17.0.21
     depcheck: ^1.4.2
@@ -2546,6 +2722,43 @@ __metadata:
   dependencies:
     yaml-ast-parser: 0.0.43
   checksum: 94b825dcfe4295d3b3b275cccf756f4012f4c5260d2f8469f9004073635f9aefec204bb0c0dfa9f066a5f6998d32226cace293a6a4e78c2b3a1ba05457608647
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-common-types@npm:^0.2.36":
+  version: 0.2.36
+  resolution: "@fortawesome/fontawesome-common-types@npm:0.2.36"
+  checksum: d604ac51da0b1597127fde70c64157b70ead6af7f2643ab7dfca268ef99d4ed0b4cc823afba206362422a622e389828408bec573df802bf4f02b118d0fa18dc8
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-svg-core@npm:^1.2.25":
+  version: 1.2.36
+  resolution: "@fortawesome/fontawesome-svg-core@npm:1.2.36"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": ^0.2.36
+  checksum: 3011d8c1452b5df52a62eaee8b1ec925b9fdfabcc170fd6da5eaac7cfdef56258b9292ddd06c30f03a6a8ed6faa886565211f2e469fee3c9831c32f93e9383d8
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:^5.11.2":
+  version: 5.15.4
+  resolution: "@fortawesome/free-solid-svg-icons@npm:5.15.4"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": ^0.2.36
+  checksum: eb037b703827ee37af3387a964afc7a190ff42a674ef46f4a6c295b634a38e849741eca78306b6423eaf3062d6ab1e7372aac5be2aec06f0fd9e8bd8110efcf9
+  languageName: node
+  linkType: hard
+
+"@fortawesome/react-fontawesome@npm:^0.1.7":
+  version: 0.1.16
+  resolution: "@fortawesome/react-fontawesome@npm:0.1.16"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    "@fortawesome/fontawesome-svg-core": ~1 || >=1.3.0-beta1
+    react: ">=16.x"
+  checksum: 22e7f624ab29ef47ccd21ebc57c1b92d01596472f73fdeee860236ad4976353436d0780bdccf927f9d7b6713081e2cef7a93c88305dd330244c54408c35a6dc4
   languageName: node
   linkType: hard
 
@@ -2790,6 +3003,19 @@ __metadata:
   version: 7.1.3
   resolution: "@jsdevtools/ono@npm:7.1.3"
   checksum: 2297fcd472ba810bffe8519d2249171132844c7174f3a16634f9260761c8c78bc0428a4190b5b6d72d45673c13918ab9844d706c3ed4ef8f62ab11a2627a08ad
+  languageName: node
+  linkType: hard
+
+"@kevinorriss/react-metronome@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@kevinorriss/react-metronome@npm:2.0.1"
+  dependencies:
+    "@fortawesome/fontawesome-svg-core": ^1.2.25
+    "@fortawesome/free-solid-svg-icons": ^5.11.2
+    "@fortawesome/react-fontawesome": ^0.1.7
+    rc-slider: ^8.7.1
+    react: ^16.14.0
+  checksum: 36ec0004586775b6beeecf2d04f15e6a7878afd436752eb732ca321c5eed8b20109c4916841bb12640d4ed3726e5642ad0df6a430f111883d792a8bc94218058
   languageName: node
   linkType: hard
 
@@ -3909,6 +4135,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"add-dom-event-listener@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "add-dom-event-listener@npm:1.1.0"
+  dependencies:
+    object-assign: 4.x
+  checksum: 7685d32c4a9d78ad7a36641774168d80e195ef0710ae801e7211d849100c0e4499657cf3838bdae5ee9134b5aa9d7f50d68dec73b03e7d0082302804efff6ea6
+  languageName: node
+  linkType: hard
+
 "agent-base@npm:6, agent-base@npm:^6.0.2":
   version: 6.0.2
   resolution: "agent-base@npm:6.0.2"
@@ -4279,6 +4514,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^0.24.0":
+  version: 0.24.0
+  resolution: "axios@npm:0.24.0"
+  dependencies:
+    follow-redirects: ^1.14.4
+  checksum: 468cf496c08a6aadfb7e699bebdac02851e3043d4e7d282350804ea8900e30d368daa6e3cd4ab83b8ddb5a3b1e17a5a21ada13fc9cebd27b74828f47a4236316
+  languageName: node
+  linkType: hard
+
 "babel-code-frame@npm:^6.26.0":
   version: 6.26.0
   resolution: "babel-code-frame@npm:6.26.0"
@@ -4445,6 +4689,16 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: c484e6e7c61616f4e2b2aeef54a2a48a1c64949cfb1c21884c7595d422997407049a3185f1536a419c344399df1e04f67d5e335f05c720c3b14859db079a674d
+  languageName: node
+  linkType: hard
+
+"babel-runtime@npm:6.x, babel-runtime@npm:^6.26.0":
+  version: 6.26.0
+  resolution: "babel-runtime@npm:6.26.0"
+  dependencies:
+    core-js: ^2.4.0
+    regenerator-runtime: ^0.11.0
+  checksum: 8aeade94665e67a73c1ccc10f6fd42ba0c689b980032b70929de7a6d9a12eb87ef51902733f8fefede35afea7a5c3ef7e916a64d503446c1eedc9e3284bd3d50
   languageName: node
   linkType: hard
 
@@ -5174,7 +5428,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.5":
+"classnames@npm:^2.2.5, classnames@npm:^2.2.6":
   version: 2.3.1
   resolution: "classnames@npm:2.3.1"
   checksum: 14db8889d56c267a591f08b0834989fe542d47fac659af5a539e110cc4266694e8de86e4e3bbd271157dbd831361310a8293e0167141e80b0f03a0f175c80960
@@ -5458,6 +5712,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"component-classes@npm:^1.2.5":
+  version: 1.2.6
+  resolution: "component-classes@npm:1.2.6"
+  dependencies:
+    component-indexof: 0.0.3
+  checksum: e488bbd0f67bd1b97934ce4f15c8b1f7294cfb232fac5f61c379ddef559b409340a0c51a438ec6105d9b5c1fa50ce0dfc37064fabf3ad12d92849e84b59ceaaf
+  languageName: node
+  linkType: hard
+
+"component-indexof@npm:0.0.3":
+  version: 0.0.3
+  resolution: "component-indexof@npm:0.0.3"
+  checksum: 1fcf1954c7b39a064181ac013fed7f38bccb585e89075a0b5d83e7c371c2ac55d067c5dd04e62df05b04ca1b59b4fde3470f5be74287c94f6dc6142aa4f9c5fd
+  languageName: node
+  linkType: hard
+
 "compressible@npm:~2.0.16":
   version: 2.0.18
   resolution: "compressible@npm:2.0.18"
@@ -5660,7 +5930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^2.6.5":
+"core-js@npm:^2.4.0, core-js@npm:^2.6.5":
   version: 2.6.12
   resolution: "core-js@npm:2.6.12"
   checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
@@ -5764,6 +6034,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cronstrue@npm:^1.122.0":
+  version: 1.122.0
+  resolution: "cronstrue@npm:1.122.0"
+  checksum: fb542fd7a32a134292a74c47f9ccc8abb39abc271d23d7799acb06ebebfc085f198059cc8351f998790447d6172680ef4ea4bbee346847acd8dabf0e335a2fcb
+  languageName: node
+  linkType: hard
+
 "cross-fetch@npm:^3.1.4":
   version: 3.1.4
   resolution: "cross-fetch@npm:3.1.4"
@@ -5825,6 +6102,16 @@ __metadata:
   version: 2.0.0
   resolution: "crypto-random-string@npm:2.0.0"
   checksum: 0283879f55e7c16fdceacc181f87a0a65c53bc16ffe1d58b9d19a6277adcd71900d02bb2c4843dd55e78c51e30e89b0fec618a7f170ebcc95b33182c28f05fd6
+  languageName: node
+  linkType: hard
+
+"css-animation@npm:^1.3.2":
+  version: 1.6.1
+  resolution: "css-animation@npm:1.6.1"
+  dependencies:
+    babel-runtime: 6.x
+    component-classes: ^1.2.5
+  checksum: 5aea8fd333300c6b15f523ac741dd2ed367489485c7a9a43647f7779fef9e5f338c405e3ad9ed8db338503b4aefea86108112a01bf78651b623f8bd2e146e0e0
   languageName: node
   linkType: hard
 
@@ -6489,6 +6776,13 @@ __metadata:
   version: 0.5.8
   resolution: "dom-accessibility-api@npm:0.5.8"
   checksum: 6ede8578a7e6123f2eb27c04ff4c7947cb1362f73105c2cf75b700d94ff82740f9566025357f46ced4ae9fa2a6f6f101f4b910bb308ab516e247ed77951f46e5
+  languageName: node
+  linkType: hard
+
+"dom-align@npm:^1.7.0":
+  version: 1.12.2
+  resolution: "dom-align@npm:1.12.2"
+  checksum: 0523f4d7c84c7a4e92b0f1d088e7e110f6bd109fc8b6f1f89e14d33bba63d7b54de26d311652e1527ead2c0700f671593af55f216cb8a67a80d9fc5ed7a23b95
   languageName: node
   linkType: hard
 
@@ -7203,6 +7497,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fault@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "fault@npm:1.0.4"
+  dependencies:
+    format: ^0.2.0
+  checksum: 5ac610d8b09424e0f2fa8cf913064372f2ee7140a203a79957f73ed557c0e79b1a3d096064d7f40bde8132a69204c1fe25ec23634c05c6da2da2039cff26c4e7
+  languageName: node
+  linkType: hard
+
 "faye-websocket@npm:^0.11.3":
   version: 0.11.4
   resolution: "faye-websocket@npm:0.11.4"
@@ -7356,6 +7659,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.14.4":
+  version: 1.14.6
+  resolution: "follow-redirects@npm:1.14.6"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 7fcdb089a733d2aa39041880790e9f772df009fcd0b243fee7e10acf0e14a8dab5208cf79eb1de35b9cc6033d4dde7f95becadfaa360c50d460b4c730b375e80
+  languageName: node
+  linkType: hard
+
 "foreach@npm:^2.0.5":
   version: 2.0.5
   resolution: "foreach@npm:2.0.5"
@@ -7389,6 +7702,13 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 10c1780fa13dbe1ff3100114c2ce1f9307f8be10b14bf16e103815356ff567b6be39d70fc4a40f8990b9660012dc24b0f5e1dde1b6426166eb23a445ba068ca3
+  languageName: node
+  linkType: hard
+
+"format@npm:^0.2.0":
+  version: 0.2.2
+  resolution: "format@npm:0.2.2"
+  checksum: 646a60e1336250d802509cf24fb801e43bd4a70a07510c816fa133aa42cdbc9c21e66e9cc0801bb183c5b031c9d68be62e7fbb6877756e52357850f92aa28799
   languageName: node
   linkType: hard
 
@@ -8111,6 +8431,13 @@ __metadata:
   version: 3.0.2
   resolution: "headers-utils@npm:3.0.2"
   checksum: 210fe65756d6de8a96afe68617463fb6faf675a24d864e849b17bddf051c4a24d621a510a1bb80fd9d4763b932eb44b5d8fd6fc4f14fa62fb211603456a57b4f
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:^10.4.1, highlight.js@npm:~10.7.0":
+  version: 10.7.3
+  resolution: "highlight.js@npm:10.7.3"
+  checksum: defeafcd546b535d710d8efb8e650af9e3b369ef53e28c3dc7893eacfe263200bba4c5fcf43524ae66d5c0c296b1af0870523ceae3e3104d24b7abf6374a4fea
   languageName: node
   linkType: hard
 
@@ -10544,6 +10871,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lowlight@npm:^1.17.0":
+  version: 1.20.0
+  resolution: "lowlight@npm:1.20.0"
+  dependencies:
+    fault: ^1.0.0
+    highlight.js: ~10.7.0
+  checksum: 14a1815d6bae202ddee313fc60f06d46e5235c02fa483a77950b401d85b4c1e12290145ccd17a716b07f9328bd5864aa2d402b6a819ff3be7c833d9748ff8ba7
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^4.0.1, lru-cache@npm:^4.1.5":
   version: 4.1.5
   resolution: "lru-cache@npm:4.1.5"
@@ -11895,7 +12232,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4, object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
+"object-assign@npm:4.x, object-assign@npm:^4, object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: fcc6e4ea8c7fe48abfbb552578b1c53e0d194086e2e6bbbf59e0a536381a292f39943c6e9628af05b5528aa5e3318bb30d6b2e53cadaf5b8fe9e12c4b69af23f
@@ -12630,6 +12967,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prismjs@npm:^1.25.0":
+  version: 1.26.0
+  resolution: "prismjs@npm:1.26.0"
+  checksum: 6de058930ce767d44d60322e625bbc255f5107c7bf82c441ade19a289358e01e35040cea0c17adf8f7b829f17aa48e2d84b40866b5b3f8c75a12c6b3f0ead231
+  languageName: node
+  linkType: hard
+
 "prismjs@npm:~1.25.0":
   version: 1.25.0
   resolution: "prismjs@npm:1.25.0"
@@ -12641,7 +12985,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "private-mono-repo@workspace:."
   dependencies:
-    "@felvin-search/cli": ^1.29.0
+    "@felvin-search/cli": ^1.46.0
     "@testing-library/react": ^12.1.2
     "@types/jest": ^27.0.2
     cross-fetch: ^3.1.4
@@ -12716,7 +13060,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.7.2, prop-types@npm:^15.0.0, prop-types@npm:^15.5.10, prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:15.7.2, prop-types@npm:15.x, prop-types@npm:^15.0.0, prop-types@npm:^15.5.10, prop-types@npm:^15.5.4, prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -12858,6 +13202,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"raf@npm:^3.4.0":
+  version: 3.4.1
+  resolution: "raf@npm:3.4.1"
+  dependencies:
+    performance-now: ^2.1.0
+  checksum: 50ba284e481c8185dbcf45fc4618ba3aec580bb50c9121385d5698cb6012fe516d2015b1df6dd407a7b7c58d44be8086108236affbce1861edd6b44637c8cd52
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:2.0.3":
   version: 2.0.3
   resolution: "randombytes@npm:2.0.3"
@@ -12912,6 +13265,88 @@ __metadata:
     iconv-lite: 0.4.24
     unpipe: 1.0.0
   checksum: 6343906939e018c6e633a34a938a5d6d1e93ffcfa48646e00207d53b418e941953b521473950c079347220944dc75ba10e7b3c08bf97e3ac72c7624882db09bb
+  languageName: node
+  linkType: hard
+
+"rc-align@npm:^2.4.0":
+  version: 2.4.5
+  resolution: "rc-align@npm:2.4.5"
+  dependencies:
+    babel-runtime: ^6.26.0
+    dom-align: ^1.7.0
+    prop-types: ^15.5.8
+    rc-util: ^4.0.4
+  checksum: ae11babbdd6e2d964ad588db0b34077bb1c2b837096161ccd2f5b3a6338234117639d5354e2d66d1dd6e1dbc78eea87b0b248ee7024b1f6fdc08a7d0c69f390a
+  languageName: node
+  linkType: hard
+
+"rc-animate@npm:2.x":
+  version: 2.11.1
+  resolution: "rc-animate@npm:2.11.1"
+  dependencies:
+    babel-runtime: 6.x
+    classnames: ^2.2.6
+    css-animation: ^1.3.2
+    prop-types: 15.x
+    raf: ^3.4.0
+    rc-util: ^4.15.3
+    react-lifecycles-compat: ^3.0.4
+  checksum: e8148483d9e87046b3f047a345de6ef3c93e5ec425413a7c5055d41430bf036276c032894381afa2eadee5eb2cd8c48bb5132f35e0974da957d5a2aa12978aaa
+  languageName: node
+  linkType: hard
+
+"rc-slider@npm:^8.7.1":
+  version: 8.7.1
+  resolution: "rc-slider@npm:8.7.1"
+  dependencies:
+    babel-runtime: 6.x
+    classnames: ^2.2.5
+    prop-types: ^15.5.4
+    rc-tooltip: ^3.7.0
+    rc-util: ^4.0.4
+    react-lifecycles-compat: ^3.0.4
+    shallowequal: ^1.1.0
+    warning: ^4.0.3
+  checksum: 8648023a8b3f81a161a6e4f355af215265d2682976eab140ec5142ef46699e781bd63642e0cace0bfb9076612721df0e3fbfef8f382cf63ec917df1b4b1841ac
+  languageName: node
+  linkType: hard
+
+"rc-tooltip@npm:^3.7.0":
+  version: 3.7.3
+  resolution: "rc-tooltip@npm:3.7.3"
+  dependencies:
+    babel-runtime: 6.x
+    prop-types: ^15.5.8
+    rc-trigger: ^2.2.2
+  checksum: 50020d079ebee4212451d0f82c82286d75cab6fd0ba28c9f6b818dc1f1445f256a87fd850b0f17075355a920b887539d4b89a044f02a85e66d8557848cd28e8a
+  languageName: node
+  linkType: hard
+
+"rc-trigger@npm:^2.2.2":
+  version: 2.6.5
+  resolution: "rc-trigger@npm:2.6.5"
+  dependencies:
+    babel-runtime: 6.x
+    classnames: ^2.2.6
+    prop-types: 15.x
+    rc-align: ^2.4.0
+    rc-animate: 2.x
+    rc-util: ^4.4.0
+    react-lifecycles-compat: ^3.0.4
+  checksum: 749145ae9246c0ca208d9d46f5e215e3832ea54f1e51ad2f55a16b8130f0f057fda387d923f582d8630bc1cb96b17415b74a4dd9b4b502ae9bf06daf07df0434
+  languageName: node
+  linkType: hard
+
+"rc-util@npm:^4.0.4, rc-util@npm:^4.15.3, rc-util@npm:^4.4.0":
+  version: 4.21.1
+  resolution: "rc-util@npm:4.21.1"
+  dependencies:
+    add-dom-event-listener: ^1.1.0
+    prop-types: ^15.5.10
+    react-is: ^16.12.0
+    react-lifecycles-compat: ^3.0.4
+    shallowequal: ^1.1.0
+  checksum: f87d321ad2088171eef990f179fe8b34db648cd5ad37439de381093891189e429ad8c791077205c56de9e26e37749fb3f4ecfceba8c35f983f540650c7ed4fb0
   languageName: node
   linkType: hard
 
@@ -13010,7 +13445,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.6.0, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
+"react-is@npm:^16.12.0, react-is@npm:^16.6.0, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
@@ -13045,6 +13480,13 @@ __metadata:
     prop-types: ^15.5.10
     react: ^15.3.2 || ^16.0.0
   checksum: adb28dba77f4304b3d9a9b5c53d53949b97694df79e0aa095a614cf412eceffc91d79ec69558fb1918af2bccac06a3344e364d9816fa6ed33619386f6e7b5623
+  languageName: node
+  linkType: hard
+
+"react-lifecycles-compat@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "react-lifecycles-compat@npm:3.0.4"
+  checksum: a904b0fc0a8eeb15a148c9feb7bc17cec7ef96e71188280061fc340043fd6d8ee3ff233381f0e8f95c1cf926210b2c4a31f38182c8f35ac55057e453d6df204f
   languageName: node
   linkType: hard
 
@@ -13120,6 +13562,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-syntax-highlighter@npm:^15.4.5":
+  version: 15.4.5
+  resolution: "react-syntax-highlighter@npm:15.4.5"
+  dependencies:
+    "@babel/runtime": ^7.3.1
+    highlight.js: ^10.4.1
+    lowlight: ^1.17.0
+    prismjs: ^1.25.0
+    refractor: ^3.2.0
+  peerDependencies:
+    react: ">= 0.14.0"
+  checksum: 120bac5cfbd65eb47e513b8057e3cb71843ce15241bbf933c1818c294965b87d8e074c7929a8fc2ced66c3e3f38c4cc6bf04365a8345e3a382cd524d0093949f
+  languageName: node
+  linkType: hard
+
 "react-tetris@npm:^0.1.2":
   version: 0.1.2
   resolution: "react-tetris@npm:0.1.2"
@@ -13147,6 +13604,17 @@ __metadata:
     react: ">=16.6.0"
     react-dom: ">=16.6.0"
   checksum: b67bf5b3e86dbab72d658b9a52a3589e5960583ab28c7c66272427d8fe30d4c7de422d5046ae96bd2683cdf80cc3264b2516f5ce80cae1dbe6cf3ca6dda392c5
+  languageName: node
+  linkType: hard
+
+"react@npm:^16.14.0":
+  version: 16.14.0
+  resolution: "react@npm:16.14.0"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+    prop-types: ^15.6.2
+  checksum: 8484f3ecb13414526f2a7412190575fc134da785c02695eb92bb6028c930bfe1c238d7be2a125088fec663cc7cda0a3623373c46807cf2c281f49c34b79881ac
   languageName: node
   linkType: hard
 
@@ -13231,7 +13699,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"refractor@npm:^3.4.0":
+"refractor@npm:^3.2.0, refractor@npm:^3.4.0":
   version: 3.5.0
   resolution: "refractor@npm:3.5.0"
   dependencies:
@@ -13255,6 +13723,13 @@ __metadata:
   version: 1.4.2
   resolution: "regenerate@npm:1.4.2"
   checksum: 3317a09b2f802da8db09aa276e469b57a6c0dd818347e05b8862959c6193408242f150db5de83c12c3fa99091ad95fb42a6db2c3329bfaa12a0ea4cbbeb30cb0
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.11.0":
+  version: 0.11.1
+  resolution: "regenerator-runtime@npm:0.11.1"
+  checksum: 3c97bd2c7b2b3247e6f8e2147a002eb78c995323732dad5dc70fac8d8d0b758d0295e7015b90d3d444446ae77cbd24b9f9123ec3a77018e81d8999818301b4f4
   languageName: node
   linkType: hard
 
@@ -13746,8 +14221,8 @@ __metadata:
     "@babel/preset-typescript": ^7.15.0
     "@babel/runtime": ^7.15.4
     "@babel/runtime-corejs2": ^7.15.4
-    "@felvin-search/apps": ^1.30.0
-    "@felvin-search/core": ^1.29.0
+    "@felvin-search/apps": ^1.47.0
+    "@felvin-search/core": ^1.46.0
     babel-loader: ^8.2.2
     babel-plugin-styled-components: ^1.13.2
     concurrently: ^6.2.1
@@ -15760,6 +16235,15 @@ typescript@^4.4.3:
   dependencies:
     makeerror: 1.0.x
   checksum: 4038fcf92f6ab0288267ad05008aec9e089a759f1bd32e1ea45cc2eb498eb12095ec43cf8ca2bf23a465f4580a0d33b25b89f450ba521dd27083cbc695ee6bf5
+  languageName: node
+  linkType: hard
+
+"warning@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "warning@npm:4.0.3"
+  dependencies:
+    loose-envify: ^1.0.0
+  checksum: 4f2cb6a9575e4faf71ddad9ad1ae7a00d0a75d24521c193fa464f30e6b04027bd97aa5d9546b0e13d3a150ab402eda216d59c1d0f2d6ca60124d96cd40dfa35c
   languageName: node
   linkType: hard
 

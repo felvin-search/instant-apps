@@ -1,5 +1,5 @@
-import apps from "@felvin-search/apps";
-import React, { useState, useRef } from "react";
+import { appDetails } from "@felvin-search/apps";
+import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -72,12 +72,12 @@ function Component({ data }) {
               <a
                 href={
                   "https://felvin.com/search?q=" +
-                  currentApp.exampleSearchQueries[0]
+                  currentApp.exampleSearchQueries?.[0]
                 }
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                {currentApp.exampleSearchQueries[0]}
+                {currentApp.exampleSearchQueries?.[0]}
               </a>
             </p>
 
@@ -104,19 +104,7 @@ const queryToData = async ({ query }) => {
   // to convert the search query into some meaningful data.
   // The data gets passed to the UI Component defined above.
 
-  const data = apps.map(
-    ({ id, name, description, screenshotPath, exampleSearchQueries }) => {
-      const details = { id, name, description, exampleSearchQueries };
-      details.screenshotPath =
-        "https://raw.githubusercontent.com/felvin-search/instant-apps/master/apps/" +
-        id.split("/")[1] +
-        "/src" +
-        screenshotPath.substring(1);
-      return details;
-    }
-  );
-
-  return data;
+  return appDetails;
 };
 
 export { queryToData, Component };

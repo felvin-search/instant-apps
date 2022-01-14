@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: stretch;
-  background-color: #E5DCC3;
+  background-color: #e5dcc3;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@ const TitleText = styled.div`
   width: 30rem;
   text-align: center;
   padding: 1rem 1.5rem;
-  background-color: #AAA492;
+  background-color: #aaa492;
   max-width: 80vw;
 `;
 
@@ -81,14 +81,10 @@ const Summary = styled.div`
 function Component({ data }) {
   return (
     <Container>
-
       <ImageBox src={data.imgURL}></ImageBox>
 
       <DetailBox>
-
-        <TitleText>
-          {data.name}
-        </TitleText>
+        <TitleText>{data.name}</TitleText>
 
         <TopBar>
           <div>{`Rated: ${data.rating}`}</div>
@@ -99,10 +95,9 @@ function Component({ data }) {
         <ImageBoxMobile src={data.imgURL}></ImageBoxMobile>
 
         <Summary>
-          <div dangerouslySetInnerHTML={{__html: data.summary}}></div>
+          <div dangerouslySetInnerHTML={{ __html: data.summary }}></div>
         </Summary>
       </DetailBox>
-
     </Container>
   );
 }
@@ -115,24 +110,27 @@ const queryToData = async ({ query }) => {
   //   return;
   // }
 
-  var filteredQuery = query.split(' ');
-  filteredQuery = filteredQuery.filter((word) => (word !== 'tv' && word !== 'show' && word !== 'series'));
-  filteredQuery = filteredQuery.join(' ');
+  var filteredQuery = query.split(" ");
+  filteredQuery = filteredQuery.filter(
+    (word) => word !== "tv" && word !== "show" && word !== "series"
+  );
+  filteredQuery = filteredQuery.join(" ");
 
   // You can do any external API call or use any library here
   // to convert the search query into some meaningful data.
   // The data gets passed to the UI Component defined above.
   var response = "";
   try {
-    response = await axios.get(`https://api.tvmaze.com/search/shows?q=${filteredQuery}`);
+    response = await axios.get(
+      `https://api.tvmaze.com/search/shows?q=${filteredQuery}`
+    );
 
     // To only render app when query is close to acutal names
     // TODO: something to determine the score empirically rather than hardcode
-    if(response.data[0].score <= 0.8) {
+    if (response.data[0].score <= 0.8) {
       return;
     }
-  }
-  catch(err) {
+  } catch (err) {
     console.log(err);
     return;
   }
@@ -143,10 +141,10 @@ const queryToData = async ({ query }) => {
     summary: response.data[0].show.summary,
     imgURL: response.data[0].show.image.medium,
     rating: response.data[0].show.rating.average,
-    genres: response.data[0].show.genres.join(' | ')
-  }
+    genres: response.data[0].show.genres.join(" | "),
+  };
 
   return showData;
-}
+};
 
 export { queryToData, Component };
