@@ -15,7 +15,7 @@
     "@felvin-search/core": "^1.46.0",
     "chart.js": "^3.6.2",
     "faker": "^5.5.3",
-    "react-chartjs-2": "^4.0.0"
+    "react-chartjs-2": "^4.0.0",
     "@felvin-search/core": "^1.46.0"
   },
   "devDependencies": {
