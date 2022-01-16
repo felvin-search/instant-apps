@@ -116,7 +116,7 @@ const Loader = styled.div`
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
-  const [inputUrl, setInputUrl] = useState("");
+  const [inputUrl, setInputUrl] = useState(data);
   const [outputUrl, setOutputUrl] = useState("");
   const [hasError, setHasError] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
@@ -193,8 +193,8 @@ const queryToData = ({ query }) => {
   // to convert the search query into some meaningful data.
   // The data gets passed to the UI Component defined above.
 
-  const data = query.toUpperCase();
-
+  // this automatically take the url from the query or empty string if not found
+  const data = query.split(" ")[2] || " ";
   return data;
 };
 
