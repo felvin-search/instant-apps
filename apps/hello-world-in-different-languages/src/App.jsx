@@ -19,7 +19,7 @@ const Container = styled.div`
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
-  const [lang, setLang] = useState("Javascript");
+  const [lang, setLang] = useState(data.language);
   const inputRef = useRef();
   return (
     <Container>
@@ -30,7 +30,9 @@ function Component({ data }) {
         value={lang}
       >
         {Object.keys(data).map((language) => (
-          <option value={language}>{language}</option>
+          <option key={language} value={language}>
+            {language}
+          </option>
         ))}
       </select>
       <code>
@@ -52,10 +54,20 @@ const queryToData = async ({ query }) => {
     return Promise.resolve(false);
   }
   const data = {};
+  let language = query.split(" ")[3]; // get the first letter of the language
+
+  if (language) { // if language is not empty convert the first letter to uppercase and set it as the language
+    const firstLetter = language.charAt(0).toUpperCase();
+    language = language.replace(language.charAt(0), firstLetter);
+  }
+
   codes.forEach((code) => {
     data[code.language_name] = code.program;
   });
-  console.log(data);
+
+  // if language is not empty, return the code for the language
+  data.language = language;
+
   return Promise.resolve(data);
 };
 
