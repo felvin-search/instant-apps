@@ -54,7 +54,7 @@ const queryToData = async ({ query }) => {
     return Promise.resolve(false);
   }
   const data = {};
-  let language = query.split(" ")[3]; // get the first letter of the language
+  let language = query.split(" ")[3].toLowerCase(); // get the language from the query
 
   if (language) { // if language is not empty convert the first letter to uppercase and set it as the language
     const firstLetter = language.charAt(0).toUpperCase();
