@@ -26,7 +26,7 @@ const Column = styled.div`
   flex-flow: column;
   flex: 1;
   min-height: 14rem;
-  min-width: 25vw;
+  min-width: 20vw;
 
   &:first-child {
     margin-bottom: 20px;
