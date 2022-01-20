@@ -12,13 +12,11 @@ const Container = styled.div`
   flex-direction: column;
 
   font-size: 1rem;
-
+  width: 100%;
   border-radius: 0.25rem;
-  width: 55ch;
 
   // using bootstrap's breakpoint as Breakpoints only has property 'medium'
   @media (min-width: ${Breakpoints.large || "992px"}) {
-    width: 100ch;
     flex-direction: row;
   }
 `;
@@ -28,6 +26,7 @@ const Column = styled.div`
   flex-flow: column;
   flex: 1;
   min-height: 14rem;
+  min-width: 25vw;
 
   &:first-child {
     margin-bottom: 20px;
