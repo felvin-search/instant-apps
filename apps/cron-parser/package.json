@@ -1,6 +1,6 @@
 {
   "name": "@felvin-search-apps/cron-parser",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
@@ -12,11 +12,11 @@
     "build": "felvin-cli build:app"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.50.0",
+    "@felvin-search/core": "^1.51.0",
     "cronstrue": "^1.122.0"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.50.0",
+    "@felvin-search/cli": "^1.51.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
     "react": "^17.0.2",
