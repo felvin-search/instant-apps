@@ -71,9 +71,14 @@ const queryToData = async ({ query }) => {
   //  Query would have two different parts
   //  -> Algorithm - may be multi word
   //  -> Language - Mostly Single Word
-
+  const languageMap = {
+    js: "javascript",
+    cpp: "c++"
+  }
   query = query.toLowerCase();
-
+  Object.keys(languageMap).forEach(shortForm => {
+    query = query.replace(shortForm, languageMap[shortForm]);
+  })
   const searchQuery = query;
   const value = await axios.get(
     "https://felvin-service.herokuapp.com/api/code",
