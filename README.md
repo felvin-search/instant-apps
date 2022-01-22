@@ -52,6 +52,7 @@ cd something
 Anyone can create an instant app! Felvin Search is a platform - create apps for yourself, as well as others.
 
 - Fork the repository.
+- Install the dependencies `yarn install`
 - Run `yarn create-app`.
 - Update your new app, commit and send a pull request!
 
