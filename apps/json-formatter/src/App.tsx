@@ -117,5 +117,5 @@ function Component() {
   );
 }
 
-const queryToData = matchTriggerQueries(["json format", "format json"]);
+const queryToData = matchTriggerQueries(["json format", "format json", "json formatter"]);
 export { queryToData, Component };
