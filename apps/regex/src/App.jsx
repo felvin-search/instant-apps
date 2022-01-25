@@ -75,9 +75,7 @@ function Component({ data }) {
       }
       check ? setValue(true) : setValue(false);
     } catch (err) {
-      setValue("Sorry, An error occured!Please try again");
-      setRegex("");
-      setText("");
+      setValue("The regular expression could not be parsed. Ensure the syntax is correct!");
     }
   }
   return (
@@ -106,13 +104,13 @@ function Component({ data }) {
       {typeof value === "boolean" ? (
         value ? (
           <Result>
-            <StrongAccept>The Test String matches the Regex</StrongAccept>
+            <StrongAccept>The test string matches the regex</StrongAccept>
             <h3>
               <p dangerouslySetInnerHTML={{ __html: result }}></p>
             </h3>
           </Result>
         ) : (
-          <StrongReject>The Test String Does not match the Regex</StrongReject>
+          <StrongReject>The test string does not match the regex</StrongReject>
         )
       ) : (
         <StrongReject>{value}</StrongReject>
