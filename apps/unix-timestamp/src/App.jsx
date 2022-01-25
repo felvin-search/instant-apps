@@ -71,7 +71,7 @@ function Component({ data }) {
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
   if (
-    !isTriggered(query, ["unix time", "unix timestamp"], {
+    !isTriggered(query, ["unix time", "unix timestamp", "epoch"], {
       substringMatch: true,
     })
   ) {
