@@ -1,7 +1,7 @@
 {
   "name": "@felvin-search/cli",
   "description": "CLI for developing instant apps for Felvin",
-  "version": "1.52.0",
+  "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
