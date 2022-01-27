@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/unix-timestamp",
+  "name": "@felvin-community/unix-timestamp",
   "version": "1.29.0",
   "license": "MIT",
   "main": "./src/index.ts",

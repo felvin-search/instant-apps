@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/markdown-to-html",
+  "name": "@felvin-community/markdown-to-html",
   "version": "1.48.0",
   "license": "MIT",
   "main": "./src/index.ts",

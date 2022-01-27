@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/bouncy-ball",
+  "name": "@felvin-community/bouncy-ball",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

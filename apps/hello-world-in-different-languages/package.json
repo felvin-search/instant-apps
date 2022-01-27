@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/hello-world-in-different-languages",
+  "name": "@felvin-community/hello-world-in-different-languages",
   "version": "1.44.0",
   "license": "MIT",
   "main": "./src/index.ts",

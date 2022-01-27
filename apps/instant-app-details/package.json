@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/instant-app-details",
+  "name": "@felvin-community/instant-app-details",
   "version": "1.28.0",
   "license": "MIT",
   "main": "./src/index.ts",

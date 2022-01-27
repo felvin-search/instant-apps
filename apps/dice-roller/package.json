@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/dice-roller",
+  "name": "@felvin-community/dice-roller",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/cron-parser",
+  "name": "@felvin-community/cron-parser",
   "version": "1.16.0",
   "license": "MIT",
   "main": "./src/index.ts",

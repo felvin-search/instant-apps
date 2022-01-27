@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/crop-image",
+  "name": "@felvin-community/crop-image",
   "version": "1.35.0",
   "license": "MIT",
   "main": "./src/index.ts",

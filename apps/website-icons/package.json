@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/website-icons",
+  "name": "@felvin-community/website-icons",
   "version": "1.35.0",
   "license": "MIT",
   "main": "./src/index.ts",

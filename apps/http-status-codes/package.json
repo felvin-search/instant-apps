@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/http-status-codes",
+  "name": "@felvin-community/http-status-codes",
   "version": "1.9.0",
   "license": "MIT",
   "main": "./src/index.ts",

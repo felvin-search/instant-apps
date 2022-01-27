@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/courier-tracker",
+  "name": "@felvin-community/courier-tracker",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

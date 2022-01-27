@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/jwt-decoder",
+  "name": "@felvin-community/jwt-decoder",
   "version": "1.48.0",
   "license": "MIT",
   "main": "./src/index.ts",

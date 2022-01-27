@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/trending-on-github",
+  id: "@felvin-community/trending-on-github",
   name: "Trending On Github",
   description: "shows trending repositories on github from that day",
   queryToData,

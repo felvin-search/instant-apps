@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/what-day",
+  "name": "@felvin-community/what-day",
   "version": "1.25.0",
   "license": "MIT",
   "main": "./src/index.ts",

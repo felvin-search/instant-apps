@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/timer",
+  id: "@felvin-community/timer",
   name: "Timer App",
   description: "Set an instant timer using searhc. e.g. 15 minutes timer",
   queryToData,

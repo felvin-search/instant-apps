@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/unit-convertor",
+  id: "@felvin-community/unit-convertor",
   name: "Unit Converter",
   description:
     "an app for conversion between different units of measurement for the same quantity",

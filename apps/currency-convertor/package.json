@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/currency-convertor",
+  "name": "@felvin-community/currency-convertor",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

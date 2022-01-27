@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/address-pincodes",
+  "name": "@felvin-community/address-pincodes",
   "version": "1.12.0",
   "license": "MIT",
   "main": "./src/index.ts",

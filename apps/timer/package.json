@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/timer",
+  "name": "@felvin-community/timer",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

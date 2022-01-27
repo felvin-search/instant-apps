@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/is-prime",
+  id: "@felvin-community/is-prime",
   name: "is-prime",
   description: "Check if a number is prime or not",
   queryToData,

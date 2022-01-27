@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/lorem-ipsum-generator",
+  "name": "@felvin-community/lorem-ipsum-generator",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

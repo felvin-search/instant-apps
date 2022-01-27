@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/qr-code-generator",
+  "name": "@felvin-community/qr-code-generator",
   "version": "1.41.0",
   "license": "MIT",
   "main": "./src/index.ts",

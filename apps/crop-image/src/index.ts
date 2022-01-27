@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/crop-image",
+  id: "@felvin-community/crop-image",
   name: "Image Cropper",
   description: "Instant app for cropping images.",
   queryToData,

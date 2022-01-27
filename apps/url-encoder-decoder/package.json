@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/url-encoder-decoder",
+  "name": "@felvin-community/url-encoder-decoder",
   "version": "1.26.0",
   "license": "MIT",
   "main": "./src/index.ts",

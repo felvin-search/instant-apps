@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/joke-generator",
+  "name": "@felvin-community/joke-generator",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

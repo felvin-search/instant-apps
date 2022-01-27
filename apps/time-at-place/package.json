@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/time-at-place",
+  "name": "@felvin-community/time-at-place",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

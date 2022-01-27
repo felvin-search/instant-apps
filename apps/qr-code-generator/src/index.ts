@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/qr-code-generator",
+  id: "@felvin-community/qr-code-generator",
   name: "QR Code Generator",
   description: "Generates a temporary QR tag for any url (valid for a day)",
   queryToData,

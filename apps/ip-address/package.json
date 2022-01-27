@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/ip-address",
+  "name": "@felvin-community/ip-address",
   "version": "1.51.0",
   "license": "MIT",
   "main": "./src/index.ts",

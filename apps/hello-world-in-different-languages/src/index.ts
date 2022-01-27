@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/hello-world-in-different-languages",
+  id: "@felvin-community/hello-world-in-different-languages",
   name: "Hello World In Different Languages",
   description:
     "Shows the introductory hello world code in many programming languages",

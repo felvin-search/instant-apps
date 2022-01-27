@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/url-shortener",
+  id: "@felvin-community/url-shortener",
   name: "URL Shortener",
   description: "An instant app which shortens urls",
   queryToData,

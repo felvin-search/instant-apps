@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/snake-game",
+  "name": "@felvin-community/snake-game",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

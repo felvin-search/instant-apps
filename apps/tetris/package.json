@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/tetris",
+  "name": "@felvin-community/tetris",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/async-api-validator",
+  "name": "@felvin-community/async-api-validator",
   "version": "1.51.0",
   "license": "MIT",
   "main": "./src/index.ts",

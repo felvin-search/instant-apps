@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/crypto",
+  id: "@felvin-community/crypto",
   name: "cryptocurrency",
   description: "Provides crypto currency prices",
   queryToData,

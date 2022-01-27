@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/random-string-generator",
+  id: "@felvin-community/random-string-generator",
   name: "Random String Generator",
   description: "App to generate a random string",
   queryToData,

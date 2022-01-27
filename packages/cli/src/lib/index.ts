@@ -7,7 +7,7 @@ const appsPackageJsonPath = join(felvinSearchAppsPath, "package.json");
 const appsIndexTsPath = join(felvinSearchAppsPath, "src/index.ts");
 
 const npmPackageForAppId = (appId: string) => {
-  return `@felvin-search-apps/${appId}`;
+  return `@felvin-community/${appId}`;
 };
 
 // Adds newly created app as a dependency in packages/apps/package.json

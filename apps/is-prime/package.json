@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/is-prime",
+  "name": "@felvin-community/is-prime",
   "version": "1.10.0",
   "license": "MIT",
   "main": "./src/index.ts",

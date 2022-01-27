@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/capitals",
+  "name": "@felvin-community/capitals",
   "version": "1.53.0",
   "license": "MIT",
   "main": "./src/index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/stopwatch",
+  "name": "@felvin-community/stopwatch",
   "version": "1.23.0",
   "license": "MIT",
   "main": "./src/index.ts",

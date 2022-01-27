@@ -1,5 +1,5 @@
 {
-  "name": "@felvin-search-apps/unit-convertor",
+  "name": "@felvin-community/unit-convertor",
   "version": "1.27.0",
   "license": "MIT",
   "main": "./src/index.ts",
