@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/live-markdown",
+  id: "@felvin-community/live-markdown",
   name: "live markdown",
   description: "Renders mardown text in md.",
   queryToData,

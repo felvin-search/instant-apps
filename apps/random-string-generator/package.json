@@ -1,6 +1,6 @@
 {
-  "name": "@felvin-search-apps/random-string-generator",
-  "version": "1.34.0",
+  "name": "@felvin-community/random-string-generator",
+  "version": "1.35.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
@@ -12,11 +12,11 @@
     "build": "felvin-cli build:app"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.53.0",
+    "@felvin-search/core": "^1.54.0",
     "randomstring": "^1.2.1"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.53.0",
+    "@felvin-search/cli": "^1.54.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
     "react": "^17.0.2",

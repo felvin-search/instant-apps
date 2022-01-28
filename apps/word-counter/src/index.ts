@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/word-counter",
+  id: "@felvin-community/word-counter",
   name: "Word Counter",
   description: "This counts words, letter/characters",
   queryToData,

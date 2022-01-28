@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/merge-pdfs",
+  id: "@felvin-community/merge-pdfs",
   name: "Merge PDFs",
   description: "Merges multiple PDF files into 1 PDF file",
   queryToData,

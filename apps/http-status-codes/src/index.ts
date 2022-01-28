@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/http-status-codes",
+  id: "@felvin-community/http-status-codes",
   name: "HTTP status codes",
   description: "Returns a description of http status codes",
   queryToData,

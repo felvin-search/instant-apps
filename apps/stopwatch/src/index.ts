@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/stopwatch",
+  id: "@felvin-community/stopwatch",
   name: "stopwatch",
   description: "it is a simple stopwatch",
   queryToData,

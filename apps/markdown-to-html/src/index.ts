@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/markdown-to-html",
+  id: "@felvin-community/markdown-to-html",
   name: "Markdown To HTML",
   description: "Converts markdown text to html which has the same output",
   queryToData,

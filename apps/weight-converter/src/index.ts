@@ -2,7 +2,7 @@ import { InstantApp } from "@felvin-search/core";
 import { Component, queryToData } from "./App";
 
 const App: InstantApp = {
-  id: "@felvin-search-apps/weight-converter",
+  id: "@felvin-community/weight-converter",
   name: "Weight Converter",
   description: "Converts weight from one unit to another",
   queryToData,
