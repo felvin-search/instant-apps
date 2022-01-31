@@ -19,7 +19,6 @@ const Container = styled.div`
 const TextArea = styled.textarea`
   outline: none;
   padding: 0.6rem;
-  background: #ffffff;
   border: 1px solid #d0d0d0;
   box-sizing: border-box;
   box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.05);
@@ -40,8 +39,6 @@ const JSONContainer = styled.div`
   outline: none;
   padding: 0.6rem;
   margin: 1rem 0 0 0;
-
-  background: #ffffff;
   border: 1px solid #d0d0d0;
   box-sizing: border-box;
   box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.05);
