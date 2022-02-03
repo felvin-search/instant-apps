@@ -88,3 +88,44 @@ export function matchTriggerQueries(
     return isTriggered(query, triggerQueries, options);
   };
 }
+
+// stub functions for better query parsing:
+
+type rootWordOptions = {
+  fuzzyMatch?: false, 
+  allowSynonyms?: false
+}
+
+export function hasAllRootWords(
+  query: string, 
+  words: Array<string>, 
+  options?: rootWordOptions
+): boolean {
+  return true;
+}
+
+export function hasAnyRootWords(
+  query: string, 
+  words: Array<string>, 
+  options?: rootWordOptions
+): boolean {
+  return true;
+}
+
+export function hasNumbers(
+  query: string
+): boolean {
+  return true;
+}
+
+export function getNumbers(
+  query: string
+): Array<number> {
+  return [1,2];
+}
+
+export function getUrls(
+  query: string
+): Array<string> {
+  return ["google.com", "https://felvin.com"];
+}
