@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/pokedex",
-  "version": "1.44.0",
+  "version": "1.45.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

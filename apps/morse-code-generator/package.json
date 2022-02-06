@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/morse-code-generator",
-  "version": "1.54.0",
+  "version": "1.55.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
