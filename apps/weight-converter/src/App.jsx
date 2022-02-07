@@ -61,38 +61,30 @@ const isValidWeightUnit = (str) => {
   if (weightUnits.includes(str)) return true;
 };
 
-const mapUnits = (str) => {
-  if (str == "kg" || str == "kilograms" || str == "kgs") {
-    return "kilogram";
-  } else if (str == "grams" || str == "gm" || str == "gms" || str == "g") {
-    return "gram";
-  } else if (str == "milligrams" || str == "mg" || str == "mgs") {
-    return "milligram";
-  } else if (str == "ton" || str == "tons" || str == "tonnes") {
-    return "tonne";
-  } else if (str == "pounds" || str == "lbs") {
-    return "pound";
-  } else if (str == "stones" || str == "st") {
-    return "stone";
-  } else if (str == "ounces" || str == "oz") {
-    return "ounce";
-  } else {
-    return str;
-  }
+const replaceSynonyms = (query, dictionary) => {
+  Object.keys(dictionary).forEach((to) => {
+    dictionary[to].forEach((from) => {
+      query = query.replace(from, to);
+    });
+  });
+  return query;
 };
 
 const parseConversionString = (query) => {
   const normalizedQuery = query.toLowerCase();
-  if (normalizedQuery.includes("convert") && normalizedQuery.includes("to")) {
+  if (normalizedQuery.includes(" to ") || normalizedQuery.includes(" in ")) {
+    // The regex passed to the 1st split (/([0-9.]+)/) splits a string around a number (like "word12.3word" -> ["word", "12.3", "word"])
     const tokens = normalizedQuery
       .split(/([0-9.]+)/)
       .join(" ")
       .split(" ")
       .filter((s) => s !== "");
-    if (tokens.length === 5) {
+    if (tokens.length === 3) {
+      return { amount: 1, from: tokens[0], to: tokens[2] };
+    } else if (tokens.length === 4) {
       try {
-        const amount = parseFloat(tokens[1]);
-        return { amount, from: tokens[2], to: tokens[4] };
+        const amount = parseFloat(tokens[0]);
+        return { amount, from: tokens[1], to: tokens[3] };
       } catch {
         return null;
       }
@@ -106,9 +98,16 @@ const parseConversionString = (query) => {
 // This where you can process the query and try to convert it into some meaningful data.
 async function queryToData({ query }) {
   try {
-    let { amount, from, to } = parseConversionString(query);
-    from = mapUnits(from);
-    to = mapUnits(to);
+    let { amount, from, to } = parseConversionString(
+      replaceSynonyms(query, {
+        kilogram: ["kilograms", "kgs", "kg"],
+        milligram: ["milligrams", "mg", "mgs"],
+        tonne: ["tonnes", "tn", "ton"],
+        pound: ["pounds", "lbs", "lb"],
+        ounce: ["ounces", "oz"],
+        stone: ["stones", "st"],
+      })
+    );
     if (isValidWeightUnit(from) && isValidWeightUnit(to)) {
       return {
         amount,
