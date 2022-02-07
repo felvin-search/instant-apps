@@ -39,6 +39,7 @@ import Regex from "@felvin-community/regex";
 import ScreenSize from "@felvin-community/screen-size";
 import bouncyBall from "@felvin-community/bouncy-ball";
 import csvToJson from "@felvin-community/csv-to-json";
+import jsonToCsv from "@felvin-community/json-to-csv";
 import loremIpsumGenerator from "@felvin-community/lorem-ipsum-generator";
 import graphPlotter from "@felvin-community/graph-plotter";
 import currencyConvertor from "@felvin-community/currency-convertor";
@@ -100,6 +101,7 @@ const allApps = [
   ScreenSize,
   bouncyBall,
   csvToJson,
+  jsonToCsv,
   loremIpsumGenerator,
   graphPlotter,
   currencyConvertor,

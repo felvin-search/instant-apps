@@ -48,6 +48,7 @@
     "@felvin-community/is-prime": "^1.14.0",
     "@felvin-community/joke-generator": "^1.57.0",
     "@felvin-community/json-formatter": "^1.57.0",
+    "@felvin-community/json-to-csv": "^1.57.0",
     "@felvin-community/jwt-decoder": "^1.52.0",
     "@felvin-community/latex-render": "^1.57.0",
     "@felvin-community/live-markdown": "^1.52.0",
