@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as Icon from "react-feather";
 import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
-import { matchTriggerQueries } from "@felvin-search/core";
+import { hasAllRootWords } from "@felvin-search/core";
 
 //-----------Styled Components-----------------
 
@@ -114,5 +114,10 @@ function Component() {
   );
 }
 
-const queryToData = matchTriggerQueries(["json format", "format json", "json formatter"]);
+// const queryToData = matchTriggerQueries(["json format", "format json", "json formatter"]);
+
+const queryToData = async ({ query }) => {
+  return hasAllRootWords(query, ["json", "format"], { allowSynonyms: true })
+}
+
 export { queryToData, Component };

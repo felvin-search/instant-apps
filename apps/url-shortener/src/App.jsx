@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Breakpoints, isTriggered } from "@felvin-search/core";
+import { Breakpoints, hasAllRootWords, getUrls } from "@felvin-search/core";
 import axios from "axios";
 
 //------------Styled Components-------------
@@ -181,21 +181,24 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = ({ query }) => {
-  if (
-    !isTriggered(query, ["shorten url", "url shortener"], {
-      substringMatch: true,
-    })
-  ) {
-    return;
+  // if (
+  //   !isTriggered(query, ["shorten url", "url shortener"], {
+  //     substringMatch: true,
+  //   })
+  // ) {
+  //   return;
+  // }
+
+  // // You can do any external API call or use any library here
+  // // to convert the search query into some meaningful data.
+  // // The data gets passed to the UI Component defined above.
+
+  // // this automatically take the url from the query or empty string if not found
+  // const data = query.split(" ")[2] || " ";
+  // return data;
+  if(hasAllRootWords(query, ["url", "shorten"], { allowSynonyms: true })) {
+    return getUrls(query)?.[0] || "";
   }
-
-  // You can do any external API call or use any library here
-  // to convert the search query into some meaningful data.
-  // The data gets passed to the UI Component defined above.
-
-  // this automatically take the url from the query or empty string if not found
-  const data = query.split(" ")[2] || " ";
-  return data;
 };
 
 export { queryToData, Component };

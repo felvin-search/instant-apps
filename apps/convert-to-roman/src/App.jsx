@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import { hasAnyRootWords } from "@felvin-search/core";
+import { hasNumbers } from "@felvin-search/core";
+import { getNumbers } from "@felvin-search/core";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -57,24 +60,28 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  var matches = query.match(/(\d+)/);
-  if (matches == null) return;
-  var num = matches[0];
-  if (
-    !isTriggered(query, [`convert ${num} to Roman`]) &&
-    !query.includes("Roman") &&
-    !query.includes("roman")
-  ) {
-    return;
-  }
+  // var matches = query.match(/(\d+)/);
+  // if (matches == null) return;
+  // var num = matches[0];
+  // if (
+  //   !isTriggered(query, [`convert ${num} to Roman`]) &&
+  //   !query.includes("Roman") &&
+  //   !query.includes("roman")
+  // ) {
+  //   return;
+  // }
+
+  if(hasAnyRootWords(query, ["roman"]) && hasNumbers(query)) 
+    return getNumbers(query)[0];
+  return;
 
   // You can do any external API call or use any library here
   // to convert the search query into some meaningful data.
   // The data gets passed to the UI Component defined above.
 
-  const data = num;
+  // const data = num;
 
-  return data;
+  // return data;
 }
 
 export { queryToData, Component };

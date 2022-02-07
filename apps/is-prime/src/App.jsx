@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import { hasNumbers } from "@felvin-search/core";
+import { hasAnyRootWords } from "@felvin-search/core";
+import { getNumbers } from "@felvin-search/core";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -17,8 +20,9 @@ const Container = styled.div`
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
-  var matches = data.match(/(\d+)/);
-  var number = matches[0];
+  // var matches = data.match(/(\d+)/);
+  // var number = matches[0];
+  const number = data;
   const isPrime = (num) => {
     if (num % 2 == 0) return false;
     for (let i = 3; i * i <= num; i += 2) {
@@ -48,26 +52,28 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  var matches = query.match(/(\d+)/);
-  if (matches == null) return;
-  var num = matches[0];
-  if (
-    !isTriggered(query, [`is ${num} a prime number`]) &&
-    !query.includes("prime") &&
-    !query.includes("composite") &&
-    !query.includes("Prime") &&
-    !query.includes("Composite")
-  ) {
-    return;
-  }
+  // var matches = query.match(/(\d+)/);
+  // if (matches == null) return;
+  // var num = matches[0];
+  // if (
+  //   !isTriggered(query, [`is ${num} a prime number`]) &&
+  //   !query.includes("prime") &&
+  //   !query.includes("composite") &&
+  //   !query.includes("Prime") &&
+  //   !query.includes("Composite")
+  // ) {
+  //   return;
+  // }
+  if(hasAnyRootWords(query, ["prime", "composite"], { fuzzyMatch: true }) && hasNumbers(query))
+    return getNumbers(query)[0];
 
   // You can do any external API call or use any library here
   // to convert the search query into some meaningful data.
   // The data gets passed to the UI Component defined above.
 
-  const data = query;
+  // const data = query;
 
-  return data;
+  // return data;
 };
 
 export { queryToData, Component };

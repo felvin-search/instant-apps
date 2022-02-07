@@ -92,8 +92,8 @@ export function matchTriggerQueries(
 // stub functions for better query parsing:
 
 type rootWordOptions = {
-  fuzzyMatch?: false, 
-  allowSynonyms?: false
+  fuzzyMatch?: boolean, 
+  allowSynonyms?: boolean
 }
 
 export function hasAllRootWords(

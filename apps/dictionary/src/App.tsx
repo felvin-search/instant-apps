@@ -6,6 +6,7 @@ import {
   InstantAppProps,
   queryToDataInput,
   queryToDataOutput,
+  hasAnyRootWords,
 } from "@felvin-search/core";
 
 const RowContainer = styled.div`
@@ -96,7 +97,9 @@ async function queryToData({
 }: queryToDataInput): Promise<queryToDataOutput> {
   // If the query does not contain the following words, do not trigger the app
   // `define`, `meaning`
-  if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
+  // if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
+  if(!hasAnyRootWords(query, ["definition", "meaning", "pronunciation"], { allowSynonyms: true, fuzzyMatch: true }))
+    return;
   const cleanedQuery = cleanQuery(query);
 
   const response = await fetch(
