@@ -12,7 +12,8 @@
     "build": "felvin-cli build:app"
   },
   "dependencies": {
-    "@felvin-search/core": "^1.56.0"
+    "@felvin-search/core": "^1.56.0",
+    "@glideapps/glide-data-grid": "^3.2.1"
   },
   "devDependencies": {
     "@felvin-search/cli": "^1.56.0",

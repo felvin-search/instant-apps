@@ -1774,6 +1774,7 @@ __metadata:
   dependencies:
     "@felvin-search/cli": ^1.56.0
     "@felvin-search/core": ^1.56.0
+    "@glideapps/glide-data-grid": ^3.2.1
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     react: ^17.0.2
@@ -2783,6 +2784,23 @@ __metadata:
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
   checksum: d05081e0887a49c178b75ee3067bd6ee086f73c154d121b854fb2e044e8a89cb1cbb6de3a0dd93a519b80f0531fda68b099dd7256205f7fbb3490324342f2217
+  languageName: node
+  linkType: hard
+
+"@glideapps/glide-data-grid@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "@glideapps/glide-data-grid@npm:3.2.1"
+  dependencies:
+    react-number-format: ^4.4.1
+    react-virtualized-auto-sizer: ^1.0.2
+  peerDependencies:
+    lodash: ^4.17.19
+    marked: ^0.7.0
+    react: ^16.12.0 || 17.x
+    react-dom: ^16.12.0 || 17.x
+    react-responsive-carousel: ^3.2.7
+    styled-components: ^5.2.0
+  checksum: e67ed32a04e9d7c10fc78a016abf397b94f56a29876cce8f5d03c7ff02445662f40a20af8c209c524f3bbf694768600bb141706cc044fd47a0195b4e191db9fb
   languageName: node
   linkType: hard
 
@@ -12999,6 +13017,7 @@ __metadata:
     lint-staged: ^11.1.2
     msw: ^0.35.0
     prettier: 2.4.0
+    react: latest
     ts-jest: ^27.0.5
     typescript: ^4.4.3
   languageName: unknown
@@ -13507,6 +13526,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-number-format@npm:^4.4.1":
+  version: 4.9.1
+  resolution: "react-number-format@npm:4.9.1"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0
+    react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: f057e7c9b1ce7f551610fff1298413c6d1ea5a0abb0c98825da32c60ef061105d2d320300068640d1c72a4364d16485d0222765c23e436ef02fc7f56daf81e33
+  languageName: node
+  linkType: hard
+
 "react-responsive-carousel@npm:^3.2.22":
   version: 3.2.22
   resolution: "react-responsive-carousel@npm:3.2.22"
@@ -13600,6 +13631,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-virtualized-auto-sizer@npm:^1.0.2":
+  version: 1.0.6
+  resolution: "react-virtualized-auto-sizer@npm:1.0.6"
+  peerDependencies:
+    react: ^15.3.0 || ^16.0.0-alpha || ^17.0.0
+    react-dom: ^15.3.0 || ^16.0.0-alpha || ^17.0.0
+  checksum: 81270e9d328e9b779515f42b6aa8dea2f21097f69fc776906d6b7d31ada03706d34408a6318baf59531f180402fbf74fdb9928ab65d53442a134b7ee5ba01265
+  languageName: node
+  linkType: hard
+
 "react@npm:^16.14.0":
   version: 16.14.0
   resolution: "react@npm:16.14.0"
@@ -13611,7 +13652,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.2":
+"react@npm:^17.0.2, react@npm:latest":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:

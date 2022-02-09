@@ -7,6 +7,7 @@ import {
   queryToDataInput,
   queryToDataOutput,
 } from "@felvin-search/core";
+import _ from "lodash";
 
 const RowContainer = styled.div`
   display: flex;
@@ -55,40 +56,60 @@ function Definition(props) {
 /**
  * The UI logic of the app.
  */
+ const columns = [
+  { key: 'id', name: 'ID' },
+  { key: 'title', name: 'Title' }
+];
+
+const rows = [
+  { id: 0, title: 'Example' },
+  { id: 1, title: 'Demo' }
+];
 function Component(props: InstantAppProps) {
   const data = props.data;
 
   return (
     <DictionaryContainer>
-      <h1>{data.word}</h1>
-      <RowContainer>
-        <div id="phonetics-text">{data.phonetics[0]?.text}</div>
-        <audio controls src={data.phonetics[0]?.audio}>
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio>
-      </RowContainer>
-      {data.meanings &&
-        data.meanings.map((m, index) => {
-          return (
-            <ColContainer key={index}>
-              <em>{m.partOfSpeech}</em>
-              {m.definitions.map((d) => (
-                <Definition data={d} key={d} />
-              ))}
-            </ColContainer>
-          );
+      <table>
+
+      <tr>
+        <th>User</th>
+        <th>Score</th>
+      </tr>
+      {data && 
+        data.map((row, index) => {
+          return <tr>
+            <td>{row.user}</td>
+            <td>{row.score}</td>
+            </tr>
         })}
+
+        </table>
     </DictionaryContainer>
   );
 }
 
-const triggerWords = ["define", "meaning","pronounce","pronunciation"];
-function cleanQuery(query: string): string {
-  let newQuery = query;
-  triggerWords.forEach((word) => (newQuery = newQuery.replace(word, "")));
-  newQuery = newQuery.trim();
-  return newQuery;
+const ossEvents = [{"ts": 1659420011, "type": "new-instant-app", "score": 5, "user": "hargup"},
+{"ts": 1659420011, "type": "bug-report", "score": 1, "user": "hargup"},
+    {"ts": 1659420011, "type": "bug-report", "score": 1, "user": "sahil-shubham"},
+    {"ts": 1659420011, "type": "improve-instant-app", "score": 1, "user": "orkohunter"}]
+
+const eventLogToLeaderboard = (events) => {
+  const groupedByUser = _.groupBy(events, "user"); // => Returns an object {'user-id': [grouped events]}
+  console.log(groupedByUser)
+  // const users = Object.keys(groupedByUser)
+  // const data = users.map(user => {return {user, score: _.reduce(groupedByUser[user],(acc, x)=>{return acc+x.score})}})
+  var data = []
+  for(let user in groupedByUser){
+    // TODO: This isn't working, fuck it
+    const totalScore = groupedByUser[user].reduce((prevEvent, currentEvent) => prevEvent?.score || 0 + currentEvent?.score || 0, {score:0})
+    const leaderboardRow = {user, score: totalScore}
+    // @ts-ignore
+    data.push(leaderboardRow);
+  }
+  
+  console.log(data)
+  return data;
 }
 
 async function queryToData({
@@ -96,24 +117,9 @@ async function queryToData({
 }: queryToDataInput): Promise<queryToDataOutput> {
   // If the query does not contain the following words, do not trigger the app
   // `define`, `meaning`
-  if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
-  const cleanedQuery = cleanQuery(query);
+  if (!isTriggered(query, ["felvin leaderboard", "felvin contributors"], { substringMatch: true })) return;
 
-  const response = await fetch(
-    `https://api.dictionaryapi.dev/api/v2/entries/en_US/${cleanedQuery}`
-  );
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(
-      `Something went wrong with API request. Status ${response.status} ${response.statusText} ${data}`
-    );
-  }
-
-  if (data && Array.isArray(data) && data.length > 0) {
-    return data[0];
-  }
+  return eventLogToLeaderboard(ossEvents);
 }
 
 export { queryToData, Component };
