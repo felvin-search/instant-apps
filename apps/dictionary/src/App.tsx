@@ -94,16 +94,17 @@ const ossEvents = [{"ts": 1659420011, "type": "new-instant-app", "score": 5, "us
     {"ts": 1659420011, "type": "bug-report", "score": 1, "user": "sahil-shubham"},
     {"ts": 1659420011, "type": "improve-instant-app", "score": 1, "user": "orkohunter"}]
 
+const calcTotalScore = (events) => {
+  const sum = events.map(e => e.score).reduce((a,b)=>a+b)
+  return sum;
+}
+
 const eventLogToLeaderboard = (events) => {
   const groupedByUser = _.groupBy(events, "user"); // => Returns an object {'user-id': [grouped events]}
   console.log(groupedByUser)
-  // const users = Object.keys(groupedByUser)
-  // const data = users.map(user => {return {user, score: _.reduce(groupedByUser[user],(acc, x)=>{return acc+x.score})}})
   var data = []
   for(let user in groupedByUser){
-    // TODO: This isn't working, fuck it
-    const totalScore = groupedByUser[user].reduce((prevEvent, currentEvent) => prevEvent?.score || 0 + currentEvent?.score || 0, {score:0})
-    const leaderboardRow = {user, score: totalScore}
+    const leaderboardRow = {user, score: calcTotalScore(groupedByUser[user])}
     // @ts-ignore
     data.push(leaderboardRow);
   }
