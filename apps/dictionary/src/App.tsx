@@ -52,6 +52,49 @@ function Definition(props) {
   );
 }
 
+// ============ Excel Cheatsheet app ================
+const sheetApiKey = "AIzaSyC-AfHslgkSCaq7OkbD7sLiyv8RKhzUBNU"
+
+function sheetToSheetAPIUrl(sheetId, sheetName, apiKey) {
+  return `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A1:Z1000?key=${apiKey}`;
+}
+
+async function sheetToJson(sheetId, sheetName) {
+  const request = await fetch(sheetToSheetAPIUrl(sheetId, sheetName, sheetApiKey))
+  const data = await request.json()
+  const keys = data["values"][0];
+  // console.log(keys)
+  const rows = data["values"].slice(1);
+  console.log(rows)
+  var transformedData = []
+  for(let i=0; i<5; i++) { // TODO fix this
+    var item = {};
+    for(let j=0; j< 4; j++) { // TODO fix this
+      console.log(`i: ${i}, j: ${j}`)
+      const key = keys[j]
+      item[key] = rows[i][j];
+      console.log(item)
+    }
+    // @ts-ignore
+    transformedData.push(item)
+  }
+
+
+  // return data;
+  // console.log(transformedData)
+  return transformedData;
+}
+
+const driveLinkToDriveId = (link) => {
+  const re = new RegExp('\d[^/]+')
+}
+
+const driveIdToEmbeddable = (id) => {
+  return `https://drive.google.com/uc?export=view&id=${id}`
+}
+
+// ==================== End =========================
+Pin a row
 /**
  * The UI logic of the app.
  */
@@ -60,25 +103,11 @@ function Component(props: InstantAppProps) {
 
   return (
     <DictionaryContainer>
-      <h1>{data.word}</h1>
-      <RowContainer>
-        <div id="phonetics-text">{data.phonetics[0]?.text}</div>
-        <audio controls src={data.phonetics[0]?.audio}>
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio>
-      </RowContainer>
-      {data.meanings &&
-        data.meanings.map((m, index) => {
-          return (
-            <ColContainer key={index}>
-              <em>{m.partOfSpeech}</em>
-              {m.definitions.map((d) => (
-                <Definition data={d} key={d} />
-              ))}
-            </ColContainer>
-          );
-        })}
+      {/* <h1>{JSON.stringify(data)}</h1> */}
+      <p>{data["Formula"]}</p>
+      <p>{data["Explaination"]}</p>
+      <img src={data["Gif"]} width="600" height="400"></img>
+
     </DictionaryContainer>
   );
 }
@@ -96,24 +125,18 @@ async function queryToData({
 }: queryToDataInput): Promise<queryToDataOutput> {
   // If the query does not contain the following words, do not trigger the app
   // `define`, `meaning`
-  if (!isTriggered(query, triggerWords, { substringMatch: true })) return;
-  const cleanedQuery = cleanQuery(query);
-
-  const response = await fetch(
-    `https://api.dictionaryapi.dev/api/v2/entries/en_US/${cleanedQuery}`
-  );
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(
-      `Something went wrong with API request. Status ${response.status} ${response.statusText} ${data}`
-    );
+  const data = await sheetToJson("1QadcLXlmxj_L5IbJkA0YN51vyZUpDx8AO6RfBjoMPlY", "Sheet1")
+  console.log("Got the data")
+  for(const item of data){
+    if(item["Search queries"] === query) {
+      return item;
+    }
   }
-
-  if (data && Array.isArray(data) && data.length > 0) {
-    return data[0];
-  }
+  return data;
 }
 
 export { queryToData, Component };
+
+// TODO: Match with multiple queries in the sheet?
+// TODO: Automatically transform the google drive link to embeddable link
+// TODO: Fix the drive link thing
