@@ -101,7 +101,8 @@ const CopyButton = styled.button`
 //=========================================
 
 function Component() {
-  const [csvData, setCSVData] = useState();
+  const defaultData = "FirstName;LastName\nJohn;Doe"
+  const [csvData, setCSVData] = useState(defaultData);
   const [copy, setCopy] = useState(false);
   const [jsonData, setJSONData] = useState();
   useEffect(() => {
@@ -130,7 +131,7 @@ function Component() {
           <FormLabel htmlFor="csv-textarea">CSV Data</FormLabel>
           <CSVArea
             id="csv-textarea"
-            placeholder="Paste CSV here"
+            defaultValue={defaultData}
             onChange={(e) => setCSVData(e.target.value)}
           />
         </Column>
