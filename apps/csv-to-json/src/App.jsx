@@ -101,7 +101,7 @@ const CopyButton = styled.button`
 //=========================================
 
 function Component() {
-  const defaultData = "FirstName;LastName\nJohn;Doe"
+  const defaultData = "FirstName,LastName\nJohn,Doe"
   const [csvData, setCSVData] = useState(defaultData);
   const [copy, setCopy] = useState(false);
   const [jsonData, setJSONData] = useState();
