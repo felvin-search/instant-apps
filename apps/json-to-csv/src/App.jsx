@@ -100,7 +100,8 @@ const CopyButton = styled.button`
 //=========================================
 
 function Component() {
-  const [jsonData, setJSONData] = useState();
+  const defaultData = '[\n\t{\n\t\t"FirstName": "John",\n\t\t"LastName": "Doe"\n\t}\n]'
+  const [jsonData, setJSONData] = useState(defaultData);
   const [copy, setCopy] = useState(false);
   const [csvData, setCsvData] = useState();
   useEffect(() => {
@@ -141,7 +142,7 @@ function Component() {
           <FormLabel htmlFor="json-textarea">JSON Data</FormLabel>
           <JSONArea
             id="json-textarea"
-            placeholder="Paste JSON here"
+            defaultValue={defaultData}
             onChange={(e) => setJSONData(e.target.value)}
           />
         </Column>
