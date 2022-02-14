@@ -143,9 +143,7 @@ function Component() {
           <JSONArea
             id="json-textarea"
             defaultValue={defaultData}
-            onChange={(e) => {
-              setJSONData(e.target.value)
-            }}
+            onChange={(e) => setJSONData(e.target.value)}
           />
         </Column>
         <Column>
