@@ -1479,6 +1479,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@felvin-community/a@workspace:apps/a":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/a@workspace:apps/a"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/address-pincodes@^1.16.0, @felvin-community/address-pincodes@workspace:apps/address-pincodes":
   version: 0.0.0-use.local
   resolution: "@felvin-community/address-pincodes@workspace:apps/address-pincodes"
@@ -1997,6 +2015,24 @@ __metadata:
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     jwt-decode: ^3.1.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-community/l@workspace:apps/l":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/l@workspace:apps/l"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
@@ -2681,6 +2717,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-search/cli@npm:^1.0.0":
+  version: 1.57.0
+  resolution: "@felvin-search/cli@npm:1.57.0"
+  dependencies:
+    "@types/fs-extra": ^9.0.13
+    "@types/inquirer": ^8.1.3
+    "@types/lodash": ^4.14.175
+    "@types/recursive-readdir": ^2.2.0
+    chalk: ^4.1.2
+    commander: ^8.2.0
+    fs-extra: ^10.0.0
+    handlebars: ^4.7.7
+    inquirer: ^8.2.0
+    lodash: ^4.17.21
+    node-polyfill-webpack-plugin: ^1.1.4
+    recursive-readdir: ^2.2.2
+    ts-node: ^10.2.1
+    webpack: ^5.68.0
+  bin:
+    felvin-cli: bin/felvin-cli
+  checksum: be7c78a2b2b654ef2493dcbab5e4044d69f4ca72632c219a100adf20d0fede5b70ab1e10a085682c9cb292f82af031c7fa3a8a0186e164a08bf032a416b6508f
+  languageName: node
+  linkType: hard
+
 "@felvin-search/cli@npm:^1.56.0":
   version: 1.56.0
   resolution: "@felvin-search/cli@npm:1.56.0"
@@ -2702,7 +2762,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@felvin-search/core@npm:^1.56.0":
+"@felvin-search/core@npm:^1.0.0, @felvin-search/core@npm:^1.56.0":
   version: 1.56.0
   resolution: "@felvin-search/core@npm:1.56.0"
   dependencies:
@@ -3404,6 +3464,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/eslint-scope@npm:^3.7.3":
+  version: 3.7.3
+  resolution: "@types/eslint-scope@npm:3.7.3"
+  dependencies:
+    "@types/eslint": "*"
+    "@types/estree": "*"
+  checksum: 6772b05e1b92003d1f295e81bc847a61f4fbe8ddab77ffa49e84ed3f9552513bdde677eb53ef167753901282857dd1d604d9f82eddb34a233495932b2dc3dc17
+  languageName: node
+  linkType: hard
+
 "@types/eslint@npm:*":
   version: 7.28.1
   resolution: "@types/eslint@npm:7.28.1"
@@ -3418,6 +3488,13 @@ __metadata:
   version: 0.0.50
   resolution: "@types/estree@npm:0.0.50"
   checksum: 9a2b6a4a8c117f34d08fbda5e8f69b1dfb109f7d149b60b00fd7a9fb6ac545c078bc590aa4ec2f0a256d680cf72c88b3b28b60c326ee38a7bc8ee1ee95624922
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:^0.0.51":
+  version: 0.0.51
+  resolution: "@types/estree@npm:0.0.51"
+  checksum: e56a3bcf759fd9185e992e7fdb3c6a5f81e8ff120e871641607581fb3728d16c811702a7d40fa5f869b7f7b4437ab6a87eb8d98ffafeee51e85bbe955932a189
   languageName: node
   linkType: hard
 
@@ -7012,6 +7089,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"enhanced-resolve@npm:^5.9.0":
+  version: 5.9.0
+  resolution: "enhanced-resolve@npm:5.9.0"
+  dependencies:
+    graceful-fs: ^4.2.4
+    tapable: ^2.2.0
+  checksum: 06435f52670229eb7fd8d92ea2d988a275f9a1b8c08b9023ba45767c6ed844bc87aa9c9c7e6d044eef99ad73fc3b066b78101163696e5c53121909e5bf8efe8b
+  languageName: node
+  linkType: hard
+
 "enquirer@npm:^2.3.6":
   version: 2.3.6
   resolution: "enquirer@npm:2.3.6"
@@ -8064,6 +8151,13 @@ __metadata:
   version: 4.2.8
   resolution: "graceful-fs@npm:4.2.8"
   checksum: 5d224c8969ad0581d551dfabdb06882706b31af2561bd5e2034b4097e67cc27d05232849b8643866585fd0a41c7af152950f8776f4dd5579e9853733f31461c6
+  languageName: node
+  linkType: hard
+
+"graceful-fs@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "graceful-fs@npm:4.2.9"
+  checksum: 68ea4e07ff2c041ada184f9278b830375f8e0b75154e3f080af6b70f66172fabb4108d19b3863a96b53fc068a310b9b6493d86d1291acc5f3861eb4b79d26ad6
   languageName: node
   linkType: hard
 
@@ -16228,6 +16322,16 @@ typescript@^4.4.3:
   languageName: node
   linkType: hard
 
+"watchpack@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "watchpack@npm:2.3.1"
+  dependencies:
+    glob-to-regexp: ^0.4.1
+    graceful-fs: ^4.1.2
+  checksum: 70a34f92842d94b5d842980f866d568d7a467de667c96ae5759c759f46587e49265863171f4650bdbafc5f3870a28f2b4453e9e847098ec4b718b38926d47d22
+  languageName: node
+  linkType: hard
+
 "wbuf@npm:^1.1.0, wbuf@npm:^1.7.3":
   version: 1.7.3
   resolution: "wbuf@npm:1.7.3"
@@ -16396,6 +16500,13 @@ typescript@^4.4.3:
   languageName: node
   linkType: hard
 
+"webpack-sources@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "webpack-sources@npm:3.2.3"
+  checksum: 989e401b9fe3536529e2a99dac8c1bdc50e3a0a2c8669cbafad31271eadd994bc9405f88a3039cd2e29db5e6d9d0926ceb7a1a4e7409ece021fe79c37d9c4607
+  languageName: node
+  linkType: hard
+
 "webpack@npm:^5.56.0":
   version: 5.58.1
   resolution: "webpack@npm:5.58.1"
@@ -16430,6 +16541,43 @@ typescript@^4.4.3:
   bin:
     webpack: bin/webpack.js
   checksum: e05576c5c7410c9ef25dc3595a870f93b34e3b44778e7df5ccbc1d40a51edb755223959f938b6e8b9b4e2285eb938da2464a08c9103597ff3131cb98c19a1d86
+  languageName: node
+  linkType: hard
+
+"webpack@npm:^5.68.0":
+  version: 5.69.0
+  resolution: "webpack@npm:5.69.0"
+  dependencies:
+    "@types/eslint-scope": ^3.7.3
+    "@types/estree": ^0.0.51
+    "@webassemblyjs/ast": 1.11.1
+    "@webassemblyjs/wasm-edit": 1.11.1
+    "@webassemblyjs/wasm-parser": 1.11.1
+    acorn: ^8.4.1
+    acorn-import-assertions: ^1.7.6
+    browserslist: ^4.14.5
+    chrome-trace-event: ^1.0.2
+    enhanced-resolve: ^5.9.0
+    es-module-lexer: ^0.9.0
+    eslint-scope: 5.1.1
+    events: ^3.2.0
+    glob-to-regexp: ^0.4.1
+    graceful-fs: ^4.2.9
+    json-parse-better-errors: ^1.0.2
+    loader-runner: ^4.2.0
+    mime-types: ^2.1.27
+    neo-async: ^2.6.2
+    schema-utils: ^3.1.0
+    tapable: ^2.1.1
+    terser-webpack-plugin: ^5.1.3
+    watchpack: ^2.3.1
+    webpack-sources: ^3.2.3
+  peerDependenciesMeta:
+    webpack-cli:
+      optional: true
+  bin:
+    webpack: bin/webpack.js
+  checksum: 0b0fc2ffcb926fc7506ec56901ae9a69f1ae969a6afc63395a3ed56f938d385c1d16d1dea39fd56dbb9362189c05da49174219904e5a337040aed5a46080e926
   languageName: node
   linkType: hard
 

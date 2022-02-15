@@ -62,12 +62,26 @@ const isValidWeightUnit = (str) => {
 };
 
 const replaceSynonyms = (query, dictionary) => {
-  Object.keys(dictionary).forEach((to) => {
-    dictionary[to].forEach((from) => {
-      query = query.replace(from, to);
-    });
-  });
-  return query;
+  const tokens = query.split(' ')
+  var newTokens = [];
+  for(let token of tokens){
+    var replaced = false;
+    for(let to of Object.keys(dictionary)){
+      for(let from of dictionary[to]){
+        if(from === token){
+          newTokens.push(to);
+          replaced = true;
+          break;
+        }
+      }
+    }
+    if(replaced === false) {
+      newTokens.push(token)
+    }
+    console.log(newTokens)
+  } 
+
+  return newTokens.join(" ");
 };
 
 const parseConversionString = (query) => {
@@ -97,16 +111,19 @@ const parseConversionString = (query) => {
 
 // This where you can process the query and try to convert it into some meaningful data.
 async function queryToData({ query }) {
+  console.log("Weight convertor queryToData was called")
   try {
-    let { amount, from, to } = parseConversionString(
-      replaceSynonyms(query, {
-        kilogram: ["kilograms", "kgs", "kg"],
-        milligram: ["milligrams", "mg", "mgs"],
-        tonne: ["tonnes", "tn", "ton"],
-        pound: ["pounds", "lbs", "lb"],
-        ounce: ["ounces", "oz"],
-        stone: ["stones", "st"],
-      })
+    const normalizedQuery =       replaceSynonyms(query, {
+      gram: ["grams", "g", "gs"],
+      kilogram: ["kilograms", "kgs", "kg"],
+      milligram: ["milligrams", "mg", "mgs"],
+      tonne: ["tonnes", "tn", "ton"],
+      pound: ["pounds", "lbs", "lb"],
+      ounce: ["ounces", "oz"],
+      stone: ["stones", "st"],
+    })
+    console.log(`after conversion: ${normalizedQuery}`)
+    let { amount, from, to } = parseConversionString(normalizedQuery
     );
     if (isValidWeightUnit(from) && isValidWeightUnit(to)) {
       return {
