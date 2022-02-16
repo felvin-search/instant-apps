@@ -101,15 +101,13 @@ const CopyButton = styled.button`
 
 function Component() {
   const defaultData = `
-- martin:
-  name: Martin D'vloper
+- name: Martin D'vloper
   job: Developer
   skills:
     - python
     - perl
     - pascal
-- tabitha:
-  name: Tabitha Bitumen
+- name: Tabitha Bitumen
   job: Developer
   skills:
     - lisp
