@@ -60,9 +60,11 @@ import Dictionary from "@felvin-community/dictionary";
 import WordCounter from "@felvin-community/word-counter";
 import Tetris from "@felvin-community/tetris";
 import CourierTracker from "@felvin-community/courier-tracker";
+import YamlToJson from "@felvin-community/yaml-to-json"
 
 const allApps = [
   Tldr,
+  YamlToJson,
   ConvertToRoman,
   HttpStatusCodes,
   AddressPincodes,
