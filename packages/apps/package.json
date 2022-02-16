@@ -70,6 +70,7 @@
     "@felvin-community/tic-tac-toe": "^1.59.0",
     "@felvin-community/time-at-place": "^1.59.0",
     "@felvin-community/timer": "^1.59.0",
+    "@felvin-community/tldr": "^1.0.0",
     "@felvin-community/trending-on-github": "^1.47.0",
     "@felvin-community/tv-shows": "^1.47.0",
     "@felvin-community/unit-convertor": "^1.33.0",
