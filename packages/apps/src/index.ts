@@ -1,3 +1,4 @@
+import Tldr from "@felvin-community/tldr";
 import ConvertToRoman from "@felvin-community/convert-to-roman";
 import HttpStatusCodes from "@felvin-community/http-status-codes";
 import AddressPincodes from "@felvin-community/address-pincodes";
@@ -61,6 +62,7 @@ import Tetris from "@felvin-community/tetris";
 import CourierTracker from "@felvin-community/courier-tracker";
 
 const allApps = [
+  Tldr,
   ConvertToRoman,
   HttpStatusCodes,
   AddressPincodes,
