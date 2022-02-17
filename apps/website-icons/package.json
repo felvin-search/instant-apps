@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/website-icons",
-  "version": "1.41.0",
+  "version": "1.42.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
