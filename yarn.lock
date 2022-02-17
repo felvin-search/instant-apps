@@ -2687,6 +2687,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/yaml-to-json@workspace:apps/yaml-to-json":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/yaml-to-json@workspace:apps/yaml-to-json"
+  dependencies:
+    "@felvin-search/cli": ^1.56.0
+    "@felvin-search/core": ^1.56.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    js-yaml: ^4.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search/apps@^1.61.0, @felvin-search/apps@workspace:packages/apps":
   version: 0.0.0-use.local
   resolution: "@felvin-search/apps@workspace:packages/apps"
