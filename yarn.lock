@@ -1522,24 +1522,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@felvin-community/a@workspace:apps/a":
-  version: 0.0.0-use.local
-  resolution: "@felvin-community/a@workspace:apps/a"
-  dependencies:
-    "@felvin-search/cli": ^1.0.0
-    "@felvin-search/core": ^1.0.0
-    "@types/react": ^17.0.0
-    "@types/styled-components": ^5.1.11
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ^5.3.0
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ">= 5"
-  languageName: unknown
-  linkType: soft
-
 "@felvin-community/address-pincodes@^1.19.0, @felvin-community/address-pincodes@workspace:apps/address-pincodes":
   version: 0.0.0-use.local
   resolution: "@felvin-community/address-pincodes@workspace:apps/address-pincodes"
@@ -2079,24 +2061,6 @@ __metadata:
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
     jwt-decode: ^3.1.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ^5.3.0
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ">= 5"
-  languageName: unknown
-  linkType: soft
-
-"@felvin-community/l@workspace:apps/l":
-  version: 0.0.0-use.local
-  resolution: "@felvin-community/l@workspace:apps/l"
-  dependencies:
-    "@felvin-search/cli": ^1.0.0
-    "@felvin-search/core": ^1.0.0
-    "@types/react": ^17.0.0
-    "@types/styled-components": ^5.1.11
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
