@@ -1540,7 +1540,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/address-pincodes@^1.18.0, @felvin-community/address-pincodes@workspace:apps/address-pincodes":
+"@felvin-community/address-pincodes@^1.19.0, @felvin-community/address-pincodes@workspace:apps/address-pincodes":
   version: 0.0.0-use.local
   resolution: "@felvin-community/address-pincodes@workspace:apps/address-pincodes"
   dependencies:
@@ -2107,7 +2107,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/latex-render@^1.59.0, @felvin-community/latex-render@workspace:apps/latex-render":
+"@felvin-community/latex-render@^1.60.0, @felvin-community/latex-render@workspace:apps/latex-render":
   version: 0.0.0-use.local
   resolution: "@felvin-community/latex-render@workspace:apps/latex-render"
   dependencies:
@@ -2484,7 +2484,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/tldr@^1.0.0, @felvin-community/tldr@workspace:apps/tldr":
+"@felvin-community/tldr@workspace:apps/tldr":
   version: 0.0.0-use.local
   resolution: "@felvin-community/tldr@workspace:apps/tldr"
   dependencies:
@@ -2502,7 +2502,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/trending-on-github@^1.47.0, @felvin-community/trending-on-github@workspace:apps/trending-on-github":
+"@felvin-community/trending-on-github@^1.48.0, @felvin-community/trending-on-github@workspace:apps/trending-on-github":
   version: 0.0.0-use.local
   resolution: "@felvin-community/trending-on-github@workspace:apps/trending-on-github"
   dependencies:
