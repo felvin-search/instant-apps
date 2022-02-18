@@ -64,7 +64,6 @@ import CourierTracker from "@felvin-community/courier-tracker";
 import YamlToJson from "@felvin-community/yaml-to-json"
 
 const allApps = [
-  CheatSh,
   Tldr,
   YamlToJson,
   ConvertToRoman,
@@ -128,6 +127,7 @@ const allApps = [
   Tetris,
   CourierTracker,
   TvShows,
+  CheatSh,
 ];
 
 export default allApps;
