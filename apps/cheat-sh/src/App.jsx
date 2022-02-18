@@ -81,7 +81,7 @@ const getSnippet = async (query) => {
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
   console.log("Inside Cheat.sh app")
-  const data = await getSnippet("css+center+div")
+  const data = await getSnippet(query)
   return {data};
 }
 
