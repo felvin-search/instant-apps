@@ -40,6 +40,7 @@ const Container = styled.div`
   color: #bbbbbb;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
   .pre {
     font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
     font-size: 70%
