@@ -53,7 +53,7 @@ const Container = styled.div`
 function Component({ data }) {
   // console.log(data.keys())
   console.log(data)
-  const markup = {"__html": data["data"]}
+  const markup = {"__html": data["html"]}
   return (
     <Container dangerouslySetInnerHTML={markup}>
 
@@ -81,8 +81,12 @@ const getSnippet = async (query) => {
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
   console.log("Inside Cheat.sh app")
-  const data = await getSnippet(query)
-  return {data};
+  const html = await getSnippet(query)
+  if(!html.includes("Unknown topic")){
+    return {html};
+  } else {
+    return;
+  }
 }
 
 export { queryToData, Component };
