@@ -25,6 +25,7 @@
     "@felvin-community/async-api-validator": "^1.59.0",
     "@felvin-community/bouncy-ball": "^1.61.0",
     "@felvin-community/capitals": "^1.61.0",
+    "@felvin-community/cheat-sh": "^1.0.0",
     "@felvin-community/code-reference": "^1.30.0",
     "@felvin-community/color-picker": "^1.54.0",
     "@felvin-community/compressify": "^1.52.0",

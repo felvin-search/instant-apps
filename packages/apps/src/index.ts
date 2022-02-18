@@ -1,3 +1,4 @@
+import CheatSh from "@felvin-community/cheat-sh";
 import Tldr from "@felvin-community/tldr";
 import ConvertToRoman from "@felvin-community/convert-to-roman";
 import HttpStatusCodes from "@felvin-community/http-status-codes";
@@ -63,6 +64,7 @@ import CourierTracker from "@felvin-community/courier-tracker";
 import YamlToJson from "@felvin-community/yaml-to-json"
 
 const allApps = [
+  CheatSh,
   Tldr,
   YamlToJson,
   ConvertToRoman,
