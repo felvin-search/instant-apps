@@ -1,3 +1,4 @@
+import CheatSh from "@felvin-community/cheat-sh";
 import Tldr from "@felvin-community/tldr";
 import ConvertToRoman from "@felvin-community/convert-to-roman";
 import HttpStatusCodes from "@felvin-community/http-status-codes";
@@ -126,6 +127,7 @@ const allApps = [
   Tetris,
   CourierTracker,
   TvShows,
+  CheatSh,
 ];
 
 export default allApps;

@@ -1599,6 +1599,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/cheat-sh@^1.0.0, @felvin-community/cheat-sh@workspace:apps/cheat-sh":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/cheat-sh@workspace:apps/cheat-sh"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/code-reference@^1.30.0, @felvin-community/code-reference@workspace:apps/code-reference":
   version: 0.0.0-use.local
   resolution: "@felvin-community/code-reference@workspace:apps/code-reference"
@@ -2714,6 +2732,7 @@ __metadata:
     "@felvin-community/async-api-validator": ^1.59.0
     "@felvin-community/bouncy-ball": ^1.61.0
     "@felvin-community/capitals": ^1.61.0
+    "@felvin-community/cheat-sh": ^1.0.0
     "@felvin-community/code-reference": ^1.30.0
     "@felvin-community/color-picker": ^1.54.0
     "@felvin-community/compressify": ^1.52.0
