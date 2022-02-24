@@ -12,7 +12,8 @@ Your search box is now an app store! 🎉 - [Felvin](https://felvin.com)
 
 </div>
 
-<!-- Concern: Does this convey that these apps are running on a website? Gif is  -->
+<!-- Concern: Does this convey that these apps are running on a website? Gif is https://youtu.be/1eGCEi1PDMg -->
+
 
 |                                                                                                                                                                                                         |                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,6 +23,11 @@ Your search box is now an app store! 🎉 - [Felvin](https://felvin.com)
 ## How to use?
 
 [felvin.com](https://felvin.com)
+
+**Demo**:
+
+[![Demo](https://img.youtube.com/vi/1eGCEi1PDMg/0.jpg)](https://www.youtube.com/watch?v=1eGCEi1PDMg)
+
 
 ## What are instant apps?
 
