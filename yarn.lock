@@ -1599,9 +1599,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/cheat-sh@^1.3.0, @felvin-community/cheat-sh@workspace:apps/cheat-sh":
+"@felvin-community/cht-sh@^1.3.0, @felvin-community/cht-sh@workspace:apps/cht-sh":
   version: 0.0.0-use.local
-  resolution: "@felvin-community/cheat-sh@workspace:apps/cheat-sh"
+  resolution: "@felvin-community/cht-sh@workspace:apps/cht-sh"
   dependencies:
     "@felvin-search/cli": ^1.58.0
     "@felvin-search/core": ^1.0.0
@@ -2732,7 +2732,7 @@ __metadata:
     "@felvin-community/async-api-validator": ^1.62.0
     "@felvin-community/bouncy-ball": ^1.64.0
     "@felvin-community/capitals": ^1.64.0
-    "@felvin-community/cheat-sh": ^1.3.0
+    "@felvin-community/cht-sh": ^1.3.0
     "@felvin-community/code-reference": ^1.33.0
     "@felvin-community/color-picker": ^1.57.0
     "@felvin-community/compressify": ^1.55.0
