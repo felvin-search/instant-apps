@@ -1,4 +1,4 @@
-import CheatSh from "@felvin-community/cheat-sh";
+import CheatSh from "@felvin-community/cht-sh";
 import Tldr from "@felvin-community/tldr";
 import ConvertToRoman from "@felvin-community/convert-to-roman";
 import HttpStatusCodes from "@felvin-community/http-status-codes";
