@@ -2070,25 +2070,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/json-to-markdowntable@workspace:apps/json-to-markdowntable":
-  version: 0.0.0-use.local
-  resolution: "@felvin-community/json-to-markdowntable@workspace:apps/json-to-markdowntable"
-  dependencies:
-    "@felvin-search/cli": ^1.0.0
-    "@felvin-search/core": ^1.0.0
-    "@types/react": ^17.0.0
-    "@types/styled-components": ^5.1.11
-    markdown-table: ^3.0.2
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ^5.3.0
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ">= 5"
-  languageName: unknown
-  linkType: soft
-
 "@felvin-community/jwt-decoder@^1.59.0, @felvin-community/jwt-decoder@workspace:apps/jwt-decoder":
   version: 0.0.0-use.local
   resolution: "@felvin-community/jwt-decoder@workspace:apps/jwt-decoder"
@@ -2821,7 +2802,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@npm:^1.0.0, @felvin-search/cli@npm:^1.58.0":
+"@felvin-search/cli@npm:^1.58.0":
   version: 1.58.0
   resolution: "@felvin-search/cli@npm:1.58.0"
   dependencies:
@@ -11201,7 +11182,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-table@npm:^3.0.0, markdown-table@npm:^3.0.2":
+"markdown-table@npm:^3.0.0":
   version: 3.0.2
   resolution: "markdown-table@npm:3.0.2"
   checksum: 7bd9eb54e7ac15165f79730ac6357b8194294552f727bcb34e29f3f1b72823c1220cb61153ebf0962c8faac4d25e49c62e8e9471cd6352a67cdca99928ecade1
