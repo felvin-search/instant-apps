@@ -1,7 +1,7 @@
 import { Breakpoints, matchTriggerQueries } from "@felvin-search/core";
 import React, { useEffect, useState } from "react";
 import * as Icon from "react-feather";
-import JSONPretty from "react-json-pretty";
+import Papa from "papaparse";
 import styled from "styled-components";
 
 //------------Styled Components-------------
@@ -64,7 +64,7 @@ const JSONArea = styled.textarea`
   padding: 0.5rem;
 `;
 
-const CSVContainer = styled.div`
+const CSVContainer = styled.pre`
   overflow-x: scroll;
   outline: none;
 
@@ -107,16 +107,7 @@ function Component() {
   useEffect(() => {
     if (jsonData) {
       try {
-        const parsedJson = JSON.parse(jsonData);
-        if (!Array.isArray(parsedJson) ||
-          !parsedJson.every((p) => typeof p === "object" && p !== null)
-        ) {
-          setCsvData("Incorrect JSON Data")
-          return;
-        }
-        const heading = Object.keys(parsedJson[0]).join(",");
-        const body = parsedJson.map((j) => Object.values(j).join(",")).join("\n");
-        setCsvData(`${heading}\n${body}`);
+        setCsvData(Papa.unparse(jsonData));
       } catch {
         setCsvData("Incorrect JSON Data")
       }
@@ -124,9 +115,7 @@ function Component() {
   }, [jsonData]);
 
   const handleCopy = (clipboard) => {
-    var copyText = document.getElementById("csv");
-
-    clipboard.writeText(copyText.innerText).then(() => {
+    clipboard.writeText(csvData).then(() => {
       setCopy(true);
 
       setTimeout(() => {
@@ -148,7 +137,7 @@ function Component() {
         </Column>
         <Column>
           <FormLabel htmlFor="csv-result">Generated CSV</FormLabel>
-          <CSVContainer as={JSONPretty} id="csv-result" data={csvData} />
+          <CSVContainer id="csv-result">{csvData}</CSVContainer>
         </Column>
       </Container>
 
