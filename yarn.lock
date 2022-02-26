@@ -2243,6 +2243,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/pacman@^1.0.0, @felvin-community/pacman@workspace:apps/pacman":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/pacman@workspace:apps/pacman"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    pacman-react: ^0.0.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/pokedex@^1.53.0, @felvin-community/pokedex@workspace:apps/pokedex":
   version: 0.0.0-use.local
   resolution: "@felvin-community/pokedex@workspace:apps/pokedex"
@@ -2766,6 +2785,7 @@ __metadata:
     "@felvin-community/merge-pdfs": ^1.57.0
     "@felvin-community/metronome": ^1.25.0
     "@felvin-community/morse-code-generator": ^1.63.0
+    "@felvin-community/pacman": ^1.0.0
     "@felvin-community/pokedex": ^1.53.0
     "@felvin-community/qr-code-generator": ^1.53.0
     "@felvin-community/random-string-generator": ^1.46.0
@@ -2802,7 +2822,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@npm:^1.58.0":
+"@felvin-search/cli@npm:^1.0.0, @felvin-search/cli@npm:^1.58.0":
   version: 1.58.0
   resolution: "@felvin-search/cli@npm:1.58.0"
   dependencies:
@@ -10796,6 +10816,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"klona@npm:^2.0.4":
+  version: 2.0.5
+  resolution: "klona@npm:2.0.5"
+  checksum: 8c976126ea252b766e648a4866e1bccff9d3b08432474ad80c559f6c7265cf7caede2498d463754d8c88c4759895edd8210c85c0d3155e6aae4968362889466f
+  languageName: node
+  linkType: hard
+
 "latest-version@npm:^3.0.0":
   version: 3.1.0
   resolution: "latest-version@npm:3.1.0"
@@ -12686,6 +12713,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pacman-react@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "pacman-react@npm:0.0.2"
+  dependencies:
+    classnames: ^2.2.5
+    react: ^16.3.2
+    react-dom: ^16.3.2
+  checksum: 2576c0ee393bec48fc78050cbdf75e7fb1b66c4c6de67a7bd54acae9e60cfa4d77160220cb47985df8f2c9ed4aae950b57ee8fabcf3b4dc56e876077d724b7b2
+  languageName: node
+  linkType: hard
+
 "pako@npm:^1.0.10, pako@npm:^1.0.11, pako@npm:^1.0.6, pako@npm:~1.0.5":
   version: 1.0.11
   resolution: "pako@npm:1.0.11"
@@ -13144,6 +13182,7 @@ __metadata:
     lint-staged: ^11.1.2
     msw: ^0.35.0
     prettier: 2.4.0
+    sass-loader: ^12.6.0
     ts-jest: ^27.0.5
     typescript: ^4.4.3
   languageName: unknown
@@ -13550,6 +13589,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dom@npm:^16.3.2":
+  version: 16.14.0
+  resolution: "react-dom@npm:16.14.0"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+    prop-types: ^15.6.2
+    scheduler: ^0.19.1
+  peerDependencies:
+    react: ^16.14.0
+  checksum: 5a5c49da0f106b2655a69f96c622c347febcd10532db391c262b26aec225b235357d9da1834103457683482ab1b229af7a50f6927a6b70e53150275e31785544
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
@@ -13757,7 +13810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^16.14.0":
+"react@npm:^16.14.0, react@npm:^16.3.2":
   version: 16.14.0
   resolution: "react@npm:16.14.0"
   dependencies:
@@ -14426,6 +14479,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"sass-loader@npm:^12.6.0":
+  version: 12.6.0
+  resolution: "sass-loader@npm:12.6.0"
+  dependencies:
+    klona: ^2.0.4
+    neo-async: ^2.6.2
+  peerDependencies:
+    fibers: ">= 3.1.0"
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+    sass: ^1.3.0
+    sass-embedded: "*"
+    webpack: ^5.0.0
+  peerDependenciesMeta:
+    fibers:
+      optional: true
+    node-sass:
+      optional: true
+    sass:
+      optional: true
+    sass-embedded:
+      optional: true
+  checksum: 5d73a428588150f704016aa27397941bb9246cecd2ee083b573e95d969fc080ac6a16f2fe1cc64aca08f6e70da6f3c586ee68f0efc9f527fecc360e5f1c299ec
+  languageName: node
+  linkType: hard
+
 "sass@npm:^1.29.0":
   version: 1.49.7
   resolution: "sass@npm:1.49.7"
@@ -14452,6 +14530,16 @@ __metadata:
   dependencies:
     xmlchars: ^2.2.0
   checksum: 5636b55cf15f7cf0baa73f2797bf992bdcf75d1b39d82c0aa4608555c774368f6ac321cb641fd5f3d3ceb87805122cd47540da6a7b5960fe0dbdb8f8c263f000
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.19.1":
+  version: 0.19.1
+  resolution: "scheduler@npm:0.19.1"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+  checksum: 73e185a59e2ff5aa3609f5b9cb97ddd376f89e1610579d29939d952411ca6eb7a24907a4ea4556569dacb931467a1a4a56d94fe809ef713aa76748642cd96a6c
   languageName: node
   linkType: hard
 
