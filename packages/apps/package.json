@@ -21,6 +21,7 @@
     "styled-components": ">= 5"
   },
   "dependencies": {
+    "@felvin-community/excel-cheatsheet-app": "^1.0.0",
     "@felvin-community/address-pincodes": "^1.25.0",
     "@felvin-community/async-api-validator": "^1.64.0",
     "@felvin-community/bouncy-ball": "^1.66.0",
