@@ -2819,7 +2819,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@npm:^1.58.0":
+"@felvin-search/cli@npm:^1.0.0, @felvin-search/cli@npm:^1.58.0":
   version: 1.58.0
   resolution: "@felvin-search/cli@npm:1.58.0"
   dependencies:
