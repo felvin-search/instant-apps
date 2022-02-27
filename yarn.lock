@@ -1865,7 +1865,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/flappy-bird@^1.65.0, @felvin-community/flappy-bird@workspace:apps/flappy-bird":
+"@felvin-community/flappy-bird@^1.66.0, @felvin-community/flappy-bird@workspace:apps/flappy-bird":
   version: 0.0.0-use.local
   resolution: "@felvin-community/flappy-bird@workspace:apps/flappy-bird"
   dependencies:
@@ -2744,7 +2744,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@felvin-search/apps@workspace:packages/apps"
   dependencies:
-    "@felvin-community/excel-cheatsheet-app": ^1.0.0
     "@felvin-community/address-pincodes": ^1.25.0
     "@felvin-community/async-api-validator": ^1.64.0
     "@felvin-community/bouncy-ball": ^1.66.0
@@ -2762,6 +2761,7 @@ __metadata:
     "@felvin-community/currency-convertor": ^1.66.0
     "@felvin-community/dice-roller": ^1.66.0
     "@felvin-community/dictionary": ^1.66.0
+    "@felvin-community/excel-cheatsheet-app": ^1.0.0
     "@felvin-community/flappy-bird": ^1.66.0
     "@felvin-community/flip-a-coin": ^1.59.0
     "@felvin-community/graph-plotter": ^1.66.0
