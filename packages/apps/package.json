@@ -38,6 +38,7 @@
     "@felvin-community/currency-convertor": "^1.66.0",
     "@felvin-community/dice-roller": "^1.66.0",
     "@felvin-community/dictionary": "^1.66.0",
+    "@felvin-community/excel-cheatsheet-app": "^1.0.0",
     "@felvin-community/flappy-bird": "^1.66.0",
     "@felvin-community/flip-a-coin": "^1.59.0",
     "@felvin-community/graph-plotter": "^1.66.0",

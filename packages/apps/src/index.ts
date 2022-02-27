@@ -1,3 +1,4 @@
+import ExcelCheatsheetApp from "@felvin-community/excel-cheatsheet-app";
 import CheatSh from "@felvin-community/cht-sh";
 import Tldr from "@felvin-community/tldr";
 import ConvertToRoman from "@felvin-community/convert-to-roman";
@@ -64,6 +65,7 @@ import CourierTracker from "@felvin-community/courier-tracker";
 import YamlToJson from "@felvin-community/yaml-to-json";
 
 const allApps = [
+  ExcelCheatsheetApp,
   Tldr,
   YamlToJson,
   ConvertToRoman,
