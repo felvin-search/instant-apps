@@ -8,7 +8,7 @@ import { isTriggered } from "@felvin-search/core";
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -21,7 +21,6 @@ function Component({ data }) {
 
   return (
     <Container>
-      {/* <h1>{JSON.stringify(data)}</h1> */}
       <p>{data["Formula"]}</p>
       <p>{data["Explaination"]}</p>
       <img src={data["Gif"]} width="600" height="400"></img>
@@ -37,7 +36,7 @@ async function queryToData({
   query,
 }) {
   const sheetID = "1QadcLXlmxj_L5IbJkA0YN51vyZUpDx8AO6RfBjoMPlY";
-  const response = await fetch(`https://low-code-service.felvin.com/api/${sheetID}`)
+  const response = await fetch(`https://low-code-service.felvin.com/api/?sheetID=${sheetID}`)
   const data = await response.json()
   for(const item of data){
     if(item["Search queries"] === query) {
