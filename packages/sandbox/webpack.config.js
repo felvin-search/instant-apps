@@ -2,6 +2,7 @@ const path = require("path");
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const P
 
 module.exports = {
   entry: "./src/App.tsx",
