@@ -59,6 +59,7 @@
     "@felvin-community/merge-pdfs": "^1.59.0",
     "@felvin-community/metronome": "^1.27.0",
     "@felvin-community/morse-code-generator": "^1.65.0",
+    "@felvin-community/pacman": "^1.0.0",
     "@felvin-community/pokedex": "^1.55.0",
     "@felvin-community/qr-code-generator": "^1.55.0",
     "@felvin-community/random-string-generator": "^1.48.0",
