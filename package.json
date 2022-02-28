@@ -39,10 +39,5 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
-  },
-  "dependencies": {
-    "pac-man-game": "^1.0.6",
-    "pacman-react": "^0.0.2",
-    "react-pacman": "^0.0.2"
   }
 }
