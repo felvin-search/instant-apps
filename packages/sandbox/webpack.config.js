@@ -3,6 +3,7 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
+
 module.exports = {
   entry: "./src/App.tsx",
   target: "web",
@@ -50,6 +51,17 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"], // load project styles via style-loader
         // exclude: /node_modules/,
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
       },
     ],
   },

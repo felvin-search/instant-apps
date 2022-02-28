@@ -2241,6 +2241,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/pacman@^1.0.0, @felvin-community/pacman@workspace:apps/pacman":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/pacman@workspace:apps/pacman"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-pacman: ^0.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/pokedex@^1.55.0, @felvin-community/pokedex@workspace:apps/pokedex":
   version: 0.0.0-use.local
   resolution: "@felvin-community/pokedex@workspace:apps/pokedex"
@@ -2764,6 +2783,7 @@ __metadata:
     "@felvin-community/merge-pdfs": ^1.59.0
     "@felvin-community/metronome": ^1.27.0
     "@felvin-community/morse-code-generator": ^1.65.0
+    "@felvin-community/pacman": ^1.0.0
     "@felvin-community/pokedex": ^1.55.0
     "@felvin-community/qr-code-generator": ^1.55.0
     "@felvin-community/random-string-generator": ^1.48.0
@@ -2800,7 +2820,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/cli@npm:^1.58.0":
+"@felvin-search/cli@npm:^1.0.0, @felvin-search/cli@npm:^1.58.0":
   version: 1.58.0
   resolution: "@felvin-search/cli@npm:1.58.0"
   dependencies:
@@ -7313,6 +7333,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"enhanced-resolve@npm:^5.8.3":
+  version: 5.9.1
+  resolution: "enhanced-resolve@npm:5.9.1"
+  dependencies:
+    graceful-fs: ^4.2.4
+    tapable: ^2.2.0
+  checksum: d5adf8fa8bce8ddaf663b020d26db7efb4cc46b0a35fad750cb9149b0ae8ef70c8ee8d85b1a85c0c6490613afddba1c9401590dd37b0426eaa483d48003a5f49
+  languageName: node
+  linkType: hard
+
 "enquirer@npm:^2.3.6":
   version: 2.3.6
   resolution: "enquirer@npm:2.3.6"
@@ -10794,6 +10824,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"klona@npm:^2.0.4":
+  version: 2.0.5
+  resolution: "klona@npm:2.0.5"
+  checksum: 8c976126ea252b766e648a4866e1bccff9d3b08432474ad80c559f6c7265cf7caede2498d463754d8c88c4759895edd8210c85c0d3155e6aae4968362889466f
+  languageName: node
+  linkType: hard
+
 "latest-version@npm:^3.0.0":
   version: 3.1.0
   resolution: "latest-version@npm:3.1.0"
@@ -13142,8 +13179,11 @@ __metadata:
     lint-staged: ^11.1.2
     msw: ^0.35.0
     prettier: 2.4.0
+    sass: ^1.49.9
+    sass-loader: ^12.6.0
     ts-jest: ^27.0.5
     typescript: ^4.4.3
+    webpack: ^5.69.1
   languageName: unknown
   linkType: soft
 
@@ -13659,6 +13699,18 @@ __metadata:
     "@types/react": ">=16"
     react: ">=16"
   checksum: 6f6cd6cfee64e936edb31e3aca49dd284fc5f55c018cb4430f9b3f2f1b3df343a6507c8f33714f1bb2f620a5a05650166bc1add951fd6f8623731b689afedcfd
+  languageName: node
+  linkType: hard
+
+"react-pacman@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "react-pacman@npm:0.0.2"
+  dependencies:
+    classnames: ^2.2.5
+  peerDependencies:
+    react: ^16.9.0
+    react-dom: ^16.9.0
+  checksum: f113a19d349702397d0fd7630172864dc2c181444acdd5b425c64b6d48633c620ffad6487cda8407ad48d5ae6ba2bbad36bbff8e78b20432ebb1cd053c35a436
   languageName: node
   linkType: hard
 
@@ -14424,6 +14476,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"sass-loader@npm:^12.6.0":
+  version: 12.6.0
+  resolution: "sass-loader@npm:12.6.0"
+  dependencies:
+    klona: ^2.0.4
+    neo-async: ^2.6.2
+  peerDependencies:
+    fibers: ">= 3.1.0"
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+    sass: ^1.3.0
+    sass-embedded: "*"
+    webpack: ^5.0.0
+  peerDependenciesMeta:
+    fibers:
+      optional: true
+    node-sass:
+      optional: true
+    sass:
+      optional: true
+    sass-embedded:
+      optional: true
+  checksum: 5d73a428588150f704016aa27397941bb9246cecd2ee083b573e95d969fc080ac6a16f2fe1cc64aca08f6e70da6f3c586ee68f0efc9f527fecc360e5f1c299ec
+  languageName: node
+  linkType: hard
+
 "sass@npm:^1.29.0":
   version: 1.49.7
   resolution: "sass@npm:1.49.7"
@@ -14434,6 +14511,19 @@ __metadata:
   bin:
     sass: sass.js
   checksum: 514d1abff594aa56afdc9eb7e40d1cbd9cf1ed6954c4e0ef494266d18965151c6f936e137cd118a138f7677a7bb98f2bbf2d1a485a3f5f66c78be0007506cc9b
+  languageName: node
+  linkType: hard
+
+"sass@npm:^1.49.9":
+  version: 1.49.9
+  resolution: "sass@npm:1.49.9"
+  dependencies:
+    chokidar: ">=3.0.0 <4.0.0"
+    immutable: ^4.0.0
+    source-map-js: ">=0.6.2 <2.0.0"
+  bin:
+    sass: sass.js
+  checksum: e5653e3499274c5127dcb5c9e7c5f6930378fc61764d999a5d8965782e027181ed09714f94836dec74ef55e3a858107fe6c571954c0cab0ad0be5ab8e586829c
   languageName: node
   linkType: hard
 
@@ -16650,6 +16740,43 @@ __metadata:
   bin:
     webpack: bin/webpack.js
   checksum: 0b0fc2ffcb926fc7506ec56901ae9a69f1ae969a6afc63395a3ed56f938d385c1d16d1dea39fd56dbb9362189c05da49174219904e5a337040aed5a46080e926
+  languageName: node
+  linkType: hard
+
+"webpack@npm:^5.69.1":
+  version: 5.69.1
+  resolution: "webpack@npm:5.69.1"
+  dependencies:
+    "@types/eslint-scope": ^3.7.3
+    "@types/estree": ^0.0.51
+    "@webassemblyjs/ast": 1.11.1
+    "@webassemblyjs/wasm-edit": 1.11.1
+    "@webassemblyjs/wasm-parser": 1.11.1
+    acorn: ^8.4.1
+    acorn-import-assertions: ^1.7.6
+    browserslist: ^4.14.5
+    chrome-trace-event: ^1.0.2
+    enhanced-resolve: ^5.8.3
+    es-module-lexer: ^0.9.0
+    eslint-scope: 5.1.1
+    events: ^3.2.0
+    glob-to-regexp: ^0.4.1
+    graceful-fs: ^4.2.9
+    json-parse-better-errors: ^1.0.2
+    loader-runner: ^4.2.0
+    mime-types: ^2.1.27
+    neo-async: ^2.6.2
+    schema-utils: ^3.1.0
+    tapable: ^2.1.1
+    terser-webpack-plugin: ^5.1.3
+    watchpack: ^2.3.1
+    webpack-sources: ^3.2.3
+  peerDependenciesMeta:
+    webpack-cli:
+      optional: true
+  bin:
+    webpack: bin/webpack.js
+  checksum: 490a6e9e4cd9d0ed3b6c7ca08015da2628919fda8fcf9c36f0f6c0e3ad71eaaaf4b0d12753109f22a4faf79fe9a9063552d9708e0ee2352cf8568433b8e296a7
   languageName: node
   linkType: hard
 
