@@ -22,7 +22,7 @@ Your search box is now an app store! 🎉 - [Felvin](https://felvin.com)
 
 ## How to use?
 
-[felvin.com](https://felvin.com)
+[felvin.com](https://felvin.com) as your default search engine, or [install our chrome extension to use Felvin Instant apps with Google Search](https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en)
 
 **Demo**:
 
