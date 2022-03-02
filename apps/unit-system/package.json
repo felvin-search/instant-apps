@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/unit-system",
-  "version": "1.34.0",
+  "version": "1.38.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
