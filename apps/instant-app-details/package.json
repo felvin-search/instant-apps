@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/instant-app-details",
-  "version": "1.43.0",
+  "version": "1.44.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
