@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/address-pincodes",
-  "version": "1.28.0",
+  "version": "1.29.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/graph-plotter",
-  "version": "1.69.0",
+  "version": "1.70.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
