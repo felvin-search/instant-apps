@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "@felvin-search/core": "^1.56.0",
-    "react-feather": "^2.0.9"
+    "papaparse": "^5.3.1",
+    "react-feather": "^2.0.9",
+    "react-json-pretty": "^2.2.0"
   },
   "devDependencies": {
     "@felvin-search/cli": "^1.58.0",

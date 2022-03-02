@@ -1,6 +1,7 @@
 import { Breakpoints, matchTriggerQueries } from "@felvin-search/core";
 import React, { useEffect, useState } from "react";
 import * as Icon from "react-feather";
+import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
 
 //------------Styled Components-------------
@@ -63,7 +64,7 @@ const JSONArea = styled.textarea`
   padding: 0.5rem;
 `;
 
-const CSVContainer = styled.pre`
+const CSVContainer = styled.div`
   overflow-x: scroll;
   outline: none;
 
@@ -123,7 +124,9 @@ function Component() {
   }, [jsonData]);
 
   const handleCopy = (clipboard) => {
-    clipboard.writeText(csvData).then(() => {
+    var copyText = document.getElementById("csv");
+
+    clipboard.writeText(copyText.innerText).then(() => {
       setCopy(true);
 
       setTimeout(() => {
@@ -145,7 +148,7 @@ function Component() {
         </Column>
         <Column>
           <FormLabel htmlFor="csv-result">Generated CSV</FormLabel>
-          <CSVContainer id="csv-result">{csvData}</CSVContainer>
+          <CSVContainer as={JSONPretty} id="csv-result" data={csvData} />
         </Column>
       </Container>
 
