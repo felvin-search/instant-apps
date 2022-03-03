@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Simplified and community-driven man pages",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["tldr tar", "tldr zip"],
 };
 
 export default App;
