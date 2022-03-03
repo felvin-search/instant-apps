@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Shows answers to common Felvin FAQ questions",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["Felvin legal name"],
 };
 
 export default App;
