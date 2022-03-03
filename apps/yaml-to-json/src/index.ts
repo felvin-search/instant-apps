@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Yaml to JSON",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["yaml to json"],
 };
 
 export default App;
