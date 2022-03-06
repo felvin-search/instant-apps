@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import fingerprint from 'talisman/keyers/fingerprint';
-
+// import sift4 from 'talisman/metrics/sift4';
 
 // ------------- Preprocessors ---------------------
 // Move to @felvin-search/core
@@ -10,11 +10,18 @@ import fingerprint from 'talisman/keyers/fingerprint';
 // fingerprint
 
 // ------------- String Matchers -------------------
+const identityMatcher = (string1, string2) => {
+  return string1 === string2;
+}
 
+// const siftMatcher = (string1, string2) => {
+//   const N = Math.max(string1.length, string2.length)
+//   return sift4(string1, string2)/(N*1.0)
+// }
 
 // Default matcher
-const matchStrings = (string1, string2) => {
-  return fingerprint(string1) === fingerprint(string2);
+const matchStrings = (string1, string2, threshold=0.8, matcher=identityMatcher,preprocessor=fingerprint) => {
+  return matcher(preprocessor(string1), preprocessor(string2)) > threshold;
 }
 
 //------------Styled Components-------------
