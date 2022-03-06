@@ -14,13 +14,13 @@ const identityMatcher = (string1, string2) => {
   return string1 === string2;
 }
 
-// const siftMatcher = (string1, string2) => {
-//   const N = Math.max(string1.length, string2.length)
-//   return sift4(string1, string2)/(N*1.0)
-// }
+const siftMatcher = (string1, string2) => {
+  const N = Math.max(string1.length, string2.length)
+  return sift4(string1, string2)/(N*1.0)
+}
 
 // Default matcher
-const matchStrings = (string1, string2, threshold=0.8, matcher=identityMatcher,preprocessor=fingerprint) => {
+const matchStrings = (string1, string2, threshold=0.8, preprocessor=fingerprint, matcher=identityMatcher) => {
   return matcher(preprocessor(string1), preprocessor(string2)) > threshold;
 }
 
