@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import fingerprint from 'talisman/keyers/fingerprint';
-// import sift4 from 'talisman/metrics/sift4';
+import sift4 from 'talisman/metrics/sift4';
 
 // ------------- Preprocessors ---------------------
 // Move to @felvin-search/core
