@@ -20,7 +20,9 @@ const siftMatcher = (string1, string2) => {
 }
 
 // Default matcher
-const matchStrings = (string1, string2, threshold=0.8, preprocessor=fingerprint, matcher=identityMatcher) => {
+const defaultConfig = {threshold: 0.8, preprocessor: fingerprint, matcher: identityMatcher}
+const matchStrings = (string1, string2, config=defaultConfig) => {
+  const {threshold, preprocessor, matcher} = config;
   return matcher(preprocessor(string1), preprocessor(string2)) > threshold;
 }
 
