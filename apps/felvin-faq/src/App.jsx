@@ -1,6 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import fingerprint from 'talisman/keyers/fingerprint';
+
+
+// ------------- Preprocessors ---------------------
+// Move to @felvin-search/core
+
+// fingerprint
+
+// ------------- String Matchers -------------------
+
+
+// Default matcher
+const matchStrings = (string1, string2) => {
+  return fingerprint(string1) === fingerprint(string2);
+}
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -52,7 +67,7 @@ async function queryToData({
   const data = await response.json()
   for(const item of data){
     console.log(item)
-    if(item["Question"] === query) {
+    if(matchStrings(item["Question"], query)) {
       return item;
     }
   }

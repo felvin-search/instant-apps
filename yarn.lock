@@ -1858,6 +1858,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-components: ^5.3.0
+    talisman: ^1.1.4
   peerDependencies:
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -8802,6 +8803,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-entities@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "html-entities@npm:1.4.0"
+  checksum: 4b73ffb9eead200f99146e4fbe70acb0af2fea136901a131fc3a782e9ef876a7cbb07dec303ca1f8804232b812249dbf3643a270c9c524852065d9224a8dcdd0
+  languageName: node
+  linkType: hard
+
 "html-entities@npm:^2.3.2":
   version: 2.3.2
   resolution: "html-entities@npm:2.3.2"
@@ -11035,6 +11043,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"long@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "long@npm:4.0.0"
+  checksum: 16afbe8f749c7c849db1f4de4e2e6a31ac6e617cead3bdc4f9605cb703cd20e1e9fc1a7baba674ffcca57d660a6e5b53a9e236d7b25a295d3855cca79cc06744
+  languageName: node
+  linkType: hard
+
 "longest-streak@npm:^3.0.0":
   version: 3.0.1
   resolution: "longest-streak@npm:3.0.1"
@@ -12016,6 +12031,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mnemonist@npm:^0.38.1":
+  version: 0.38.5
+  resolution: "mnemonist@npm:0.38.5"
+  dependencies:
+    obliterator: ^2.0.0
+  checksum: 66080afc1616866beb164e230c432964d6eed467cf37ad00e9c10161b8267928124ca8f1d0ecfea86c85568acfa62d54faaf646a86968d1135189a0fdfdd6b78
+  languageName: node
+  linkType: hard
+
+"mnemonist@npm:^0.39.0":
+  version: 0.39.0
+  resolution: "mnemonist@npm:0.39.0"
+  dependencies:
+    obliterator: ^2.0.1
+  checksum: 1762703b6ba6e2c1202a5b02e7286d9ae139d408b6c97095db09907fdbf4812375189ae1188a4c3205434f3ee473a9d9edc8498d37c2a8a85586004f0e0492cc
+  languageName: node
+  linkType: hard
+
 "money@npm:^0.2.0":
   version: 0.2.0
   resolution: "money@npm:0.2.0"
@@ -12484,6 +12517,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"obliterator@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "obliterator@npm:1.6.1"
+  checksum: 12412ce97bc9680a50ec1e865c9f106f924497f0b73c01947031079da7c9a0f5212f3a1aeea3227f7771ed4a273e42b2a2e6ff93578301c8117dbb3135770133
+  languageName: node
+  linkType: hard
+
+"obliterator@npm:^2.0.0, obliterator@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "obliterator@npm:2.0.2"
+  checksum: 0aea7665bb200c17f782845d55e2a0cb10865f5c4d1a5808e778349147c025b811505ca317947b9dc4cace54a716ef74e988a91ffd05fea850c8ddcdd7b6a143
+  languageName: node
+  linkType: hard
+
 "obuf@npm:^1.0.0, obuf@npm:^1.1.2":
   version: 1.1.2
   resolution: "obuf@npm:1.1.2"
@@ -12707,6 +12754,15 @@ __metadata:
   version: 1.0.11
   resolution: "pako@npm:1.0.11"
   checksum: 1be2bfa1f807608c7538afa15d6f25baa523c30ec870a3228a89579e474a4d992f4293859524e46d5d87fd30fa17c5edf34dbef0671251d9749820b488660b16
+  languageName: node
+  linkType: hard
+
+"pandemonium@npm:^2.0.0":
+  version: 2.3.0
+  resolution: "pandemonium@npm:2.3.0"
+  dependencies:
+    mnemonist: ^0.39.0
+  checksum: 0353f9e03ea1981189291f103ad11d886b347cdafc09631010df4e8616966b6d4854c8f658b5a4a72eae7857b31351a1cf88034ed1f948ba63905eaba5a0ad01
   languageName: node
   linkType: hard
 
@@ -15375,6 +15431,20 @@ __metadata:
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
   checksum: 6e8fc7e1486b8b54bea91199d9535bb72f10842e40c79e882fc94fb7b14b89866adf2fd79efa5ebb5b658bc07fb459ccce5ac0e99ef3d72f474e74aaf284029d
+  languageName: node
+  linkType: hard
+
+"talisman@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "talisman@npm:1.1.4"
+  dependencies:
+    html-entities: ^1.4.0
+    lodash: ^4.17.20
+    long: ^4.0.0
+    mnemonist: ^0.38.1
+    obliterator: ^1.6.1
+    pandemonium: ^2.0.0
+  checksum: aa94150df065f16e9cf6d153413e48317f4fd64332b6f5c17f43c49af86b141ebdb2b111c8f1b0bb04e6dd7acab9b451d8822c26739f69afba562c73a010444c
   languageName: node
   linkType: hard
 
