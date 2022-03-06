@@ -1,6 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import fingerprint from 'talisman/keyers/fingerprint';
+import sift4 from 'talisman/metrics/sift4';
+
+// ------------- Preprocessors ---------------------
+// Move to @felvin-search/core
+
+// fingerprint
+
+// ------------- String Matchers -------------------
+const identityMatcher = (string1, string2) => {
+  return string1 === string2;
+}
+
+const siftMatcher = (string1, string2) => {
+  const N = Math.max(string1.length, string2.length)
+  return sift4(string1, string2)/(N*1.0)
+}
+
+// Default matcher
+const matchStrings = (string1, string2, threshold=0.8, preprocessor=fingerprint, matcher=identityMatcher) => {
+  return matcher(preprocessor(string1), preprocessor(string2)) > threshold;
+}
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -52,7 +74,7 @@ async function queryToData({
   const data = await response.json()
   for(const item of data){
     console.log(item)
-    if(item["Question"] === query) {
+    if(matchStrings(item["Question"], query)) {
       return item;
     }
   }
