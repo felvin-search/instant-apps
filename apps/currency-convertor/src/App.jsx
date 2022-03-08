@@ -231,7 +231,11 @@ const parseConversionString = (query) => {
     } else if (tokens.length === 4) {
       try {
         const amount = parseFloat(tokens[0]);
-        return { amount, from: tokens[1], to: tokens[3] };
+        return {
+          amount,
+          from: !!amount ? tokens[1] : tokens.slice(0, 2).join(" "),
+          to: tokens[3],
+        };
       } catch {
         return null;
       }
