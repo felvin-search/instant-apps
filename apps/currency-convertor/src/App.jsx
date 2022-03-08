@@ -222,25 +222,18 @@ const parseConversionString = (query) => {
   if (normalizedQuery.includes(" TO ") || normalizedQuery.includes(" IN ")) {
     // The regex passed to the 1st split (/([0-9.]+)/) splits a string around a number (like "word12.3word" -> ["word", "12.3", "word"])
     const tokens = normalizedQuery
-      .split(/([0-9.]+)/)
-      .join(" ")
-      .split(" ")
+      .split(/ ?([0-9.]+) ?/)
       .filter((s) => s !== "");
-    if (tokens.length === 3) {
-      return { amount: 1, from: tokens[0], to: tokens[2] };
-    } else if (tokens.length === 4) {
-      try {
-        const amount = parseFloat(tokens[0]);
-        return {
-          amount,
-          from: !!amount ? tokens[1] : tokens.slice(0, 2).join(" "),
-          to: tokens[3],
-        };
-      } catch {
-        return null;
-      }
+    if (tokens.length === 1) {
+      let [from, to] = tokens[0].split(" TO " || " IN ");
+      return { amount: 1, from: from, to: to };
+    } else {
+      const amount = parseFloat(tokens[0]);
+      let [from, to] = tokens[1]
+        .split(" TO " || " IN ")
+        .filter((s) => s !== "");
+      return { amount, from: from, to: to };
     }
-    return null;
   }
 };
 
