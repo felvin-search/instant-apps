@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/merge-pdfs",
-  "version": "1.63.0",
+  "version": "1.64.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

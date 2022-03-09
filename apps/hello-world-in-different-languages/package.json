@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/hello-world-in-different-languages",
-  "version": "1.62.0",
+  "version": "1.63.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

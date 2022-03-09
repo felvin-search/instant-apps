@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/crop-image",
-  "version": "1.53.0",
+  "version": "1.54.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
