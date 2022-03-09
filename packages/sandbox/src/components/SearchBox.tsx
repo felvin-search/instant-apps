@@ -26,7 +26,7 @@ const SearchBoxContainer = styled.div`
   max-width: 600px;
 `;
 
-const SearchIcon = styled.svg`
+const Icon = styled.svg`
   position: absolute;
   right: 1.5rem;
 
@@ -59,6 +59,14 @@ const SearchButton = styled(Button)`
   @media (min-width: ${Breakpoints.medium}) {
     display: block;
   }
+`;
+
+const SearchIcon = styled.span`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `;
 //==================================
 
@@ -101,7 +109,9 @@ function SearchBox({ resultsView }: Props) {
             }
           }}
         />
-        <SearchIcon as={Logo.Icon} />
+        <SearchIcon onClick={onSubmit}>
+          <Icon as={Logo.Icon} />
+        </SearchIcon>
       </SearchBoxContainer>
 
       {/* Doubt: Should the button be removed on results page using css or conditional rendering? */}
