@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/currency-convertor",
-  "version": "1.72.0",
+  "version": "1.73.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

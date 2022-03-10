@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/markdown-to-html",
-  "version": "1.67.0",
+  "version": "1.68.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
