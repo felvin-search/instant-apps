@@ -2069,6 +2069,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/json-to-yaml@^1.0.0, @felvin-community/json-to-yaml@workspace:apps/json-to-yaml":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/json-to-yaml@workspace:apps/json-to-yaml"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/jwt-decoder@^1.68.0, @felvin-community/jwt-decoder@workspace:apps/jwt-decoder":
   version: 0.0.0-use.local
   resolution: "@felvin-community/jwt-decoder@workspace:apps/jwt-decoder"
@@ -2775,6 +2793,7 @@ __metadata:
     "@felvin-community/joke-generator": ^1.73.0
     "@felvin-community/json-formatter": ^1.73.0
     "@felvin-community/json-to-csv": ^1.73.0
+    "@felvin-community/json-to-yaml": ^1.0.0
     "@felvin-community/jwt-decoder": ^1.68.0
     "@felvin-community/latex-render": ^1.73.0
     "@felvin-community/live-markdown": ^1.68.0
