@@ -50,6 +50,7 @@
     "@felvin-community/joke-generator": "^1.73.0",
     "@felvin-community/json-formatter": "^1.73.0",
     "@felvin-community/json-to-csv": "^1.73.0",
+    "@felvin-community/json-to-yaml": "^1.0.0",
     "@felvin-community/jwt-decoder": "^1.68.0",
     "@felvin-community/latex-render": "^1.73.0",
     "@felvin-community/live-markdown": "^1.68.0",
