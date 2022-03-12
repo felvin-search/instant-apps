@@ -96,6 +96,25 @@ const CopyButton = styled.button`
   border-radius: 4px;
 `;
 
+const InvalidAlert = styled.span`
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  display: ${(props) => (props.hidden ? "none" : "")};
+
+  background: #ed5249;
+  cursor: pointer;
+  line-height: inherit;
+  font-family: inherit;
+  color: white;
+
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+`;
+
 //=========================================
 
 // Your UI logic goes here.
@@ -125,14 +144,16 @@ function Component() {
   const [jsonData, setJSONData] = useState(defaultData);
   const [copy, setCopy] = useState(false);
   const [yamlData, setYAMLData] = useState();
+  const [isValid, setIsValid] = useState(true);
 
   useEffect(() => {
     if (jsonData) {
       try {
         const yamlDoc = yaml.dump(JSON.parse(jsonData));
+        setIsValid(true);
         setYAMLData(yamlDoc);
       } catch (e) {
-        console.log("Invalid JSON");
+        setIsValid(false);
       }
     }
   }, [jsonData]);
@@ -166,6 +187,10 @@ function Component() {
         </Column>
       </Container>
 
+      <InvalidAlert hidden={isValid}>
+        <Icon.XCircle />
+        &nbsp;Invalid JSON
+      </InvalidAlert>
       <CopyButton type="button" onClick={() => handleCopy(navigator.clipboard)}>
         Copy YAML&nbsp;{copy ? <Icon.Check /> : <Icon.Clipboard />}
       </CopyButton>
