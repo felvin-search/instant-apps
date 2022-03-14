@@ -64,7 +64,7 @@ function Component({ data }) {
 
 const getSnippet = async (query) => {
   // return "Yolo"
-  const response = await fetch(`http://167.172.16.188:8002/${query}`);
+  const response = await fetch(`https://cheat-sh.felvin.com/${query}`);
   if(response.ok){
     console.log("Got output from cht.sh")
 
