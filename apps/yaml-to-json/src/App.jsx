@@ -4,7 +4,7 @@ import JSONPretty from "react-json-pretty";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
-import yaml from "js-yaml"
+import yaml from "js-yaml";
 
 //------------Styled Components-------------
 
@@ -97,6 +97,25 @@ const CopyButton = styled.button`
   border-radius: 4px;
 `;
 
+const InvalidAlert = styled.span`
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  display: ${(props) => (props.hidden ? "none" : "")};
+
+  background: #ed5249;
+  cursor: pointer;
+  line-height: inherit;
+  font-family: inherit;
+  color: white;
+
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+`;
+
 // =========================================
 
 function Component() {
@@ -112,14 +131,20 @@ function Component() {
   skills:
     - lisp
     - fortran
-    - erlang`
+    - erlang`;
   const [yamlData, setYAMLData] = useState(defaultData);
   const [copy, setCopy] = useState(false);
   const [jsonData, setJSONData] = useState();
+  const [isValid, setIsValid] = useState(true);
   useEffect(() => {
     if (yamlData) {
-      const jsonDoc = yaml.load(yamlData)
-      setJSONData(jsonDoc);
+      try {
+        const jsonDoc = yaml.load(yamlData);
+        setJSONData(jsonDoc);
+        setIsValid(true);
+      } catch (e) {
+        setIsValid(false);
+      }
     }
   }, [yamlData]);
 
@@ -152,6 +177,10 @@ function Component() {
         </Column>
       </Container>
 
+      <InvalidAlert hidden={isValid}>
+        <Icon.XCircle />
+        &nbsp;Invalid YAML
+      </InvalidAlert>
       <CopyButton type="button" onClick={() => handleCopy(navigator.clipboard)}>
         Copy JSON &nbsp;{copy ? <Icon.Check /> : <Icon.Clipboard />}
       </CopyButton>
@@ -166,12 +195,12 @@ function Component() {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  console.log("Inside queryToData")
-  if (!isTriggered(query, [ "yaml to json" ])) {
+  console.log("Inside queryToData");
+  if (!isTriggered(query, ["yaml to json"])) {
     return;
   }
 
-  console.log("yaml to json triggered")
+  console.log("yaml to json triggered");
   // You can do any external API call or use any library here
   // to convert the search query into some meaningful data.
   // The data gets passed to the UI Component defined above.
@@ -179,6 +208,6 @@ const queryToData = async ({ query }) => {
   const data = query.toUpperCase();
 
   return data;
-}
+};
 
 export { queryToData, Component };
