@@ -15,7 +15,7 @@
     "@felvin-search/core": "^1.0.0"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.58.0",
+    "@felvin-search/cli": "^1.59.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
     "react": "^17.0.2",
