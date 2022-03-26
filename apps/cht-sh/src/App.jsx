@@ -63,7 +63,6 @@ function Component({ data }) {
 }
 
 const getSnippet = async (query) => {
-  // return "Yolo"
   const response = await fetch(`https://cheat-sh.felvin.com/${query}`);
   if(response.ok){
     console.log("Got output from cht.sh")
@@ -83,7 +82,9 @@ const getSnippet = async (query) => {
 const queryToData = async ({ query }) => {
   console.log("Inside Cheat.sh app")
   const html = await getSnippet(query)
-  if(!html.includes("Unknown topic")){
+  console.log(html)
+  // return {html}
+  if(!html.includes("Unknown topic") && !html.includes("404 NOT FOUND")){
     return {html};
   } else {
     return;
