@@ -23,6 +23,7 @@
   "dependencies": {
     "@felvin-community/address-pincodes": "^1.37.0",
     "@felvin-community/async-api-validator": "^1.76.0",
+    "@felvin-community/bmiconverter": "^1.0.0",
     "@felvin-community/bouncy-ball": "^1.78.0",
     "@felvin-community/capitals": "^1.78.0",
     "@felvin-community/cht-sh": "^1.17.0",

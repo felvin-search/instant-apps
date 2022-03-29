@@ -1563,6 +1563,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/bmiconverter@^1.0.0, @felvin-community/bmiconverter@workspace:apps/bmiconverter":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/bmiconverter@workspace:apps/bmiconverter"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/bouncy-ball@^1.78.0, @felvin-community/bouncy-ball@workspace:apps/bouncy-ball":
   version: 0.0.0-use.local
   resolution: "@felvin-community/bouncy-ball@workspace:apps/bouncy-ball"
@@ -2766,6 +2784,7 @@ __metadata:
   dependencies:
     "@felvin-community/address-pincodes": ^1.37.0
     "@felvin-community/async-api-validator": ^1.76.0
+    "@felvin-community/bmiconverter": ^1.0.0
     "@felvin-community/bouncy-ball": ^1.78.0
     "@felvin-community/capitals": ^1.78.0
     "@felvin-community/cht-sh": ^1.17.0
@@ -2839,6 +2858,34 @@ __metadata:
     styled-components: ">= 5"
   languageName: unknown
   linkType: soft
+
+"@felvin-search/cli@npm:^1.0.0":
+  version: 1.62.0
+  resolution: "@felvin-search/cli@npm:1.62.0"
+  dependencies:
+    "@types/fs-extra": ^9.0.13
+    "@types/inquirer": ^8.1.3
+    "@types/lodash": ^4.14.175
+    "@types/recursive-readdir": ^2.2.0
+    chalk: ^4.1.2
+    commander: ^8.2.0
+    fs-extra: ^10.0.0
+    handlebars: ^4.7.7
+    inquirer: ^8.2.0
+    lodash: ^4.17.21
+    node-polyfill-webpack-plugin: ^1.1.4
+    recursive-readdir: ^2.2.2
+    sass: ^1.49.9
+    sass-loader: ^12.6.0
+    ts-loader: ^9.2.6
+    ts-node: ^10.2.1
+    typescript: ^4.5.5
+    webpack: ^5.68.0
+  bin:
+    felvin-cli: bin/felvin-cli
+  checksum: 4ec795a976a15bbc960bad1db3ad5ef9a7ab57ffca5f63c050903936442224600f65b98918da99049b3fbbb67529fdf034c1855b994f34baa12cc81194d776f0
+  languageName: node
+  linkType: hard
 
 "@felvin-search/cli@npm:^1.59.0":
   version: 1.59.0
