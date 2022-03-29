@@ -98,7 +98,8 @@ const Wrapper = styled.div`
 function Component({ data }) {
   const [deg, setDeg] = useState(-90);
   const [result, setResult] = useState(null);
-
+  const [height, setHeight] = useState(null);
+  const [weight, setWeight] = useState(null);
   const rotatePointer = (value) => {
     let id = setInterval(() => {
       setDeg((oldValue) => {
@@ -113,12 +114,14 @@ function Component({ data }) {
       });
     }, 60);
   };
-  let height, weight;
+  // let height, weight;
   const handleCalculate = () => {
-    height /= 100;
-    let divider = Math.pow(height, 2);
+    //height /= 100;
+    // setHeight((prev) => prev / 100);
+    // let divider = Math.pow(height, 2);
     console.log(height, weight);
-    let result = weight / divider;
+    //let result = weight / divider;
+    let result = [Number(weight) / Number(height) / Number(height)] * 10000;
     result = Math.round(result);
     setResult(result);
     setDeg(-90);
@@ -131,18 +134,20 @@ function Component({ data }) {
         <InputBox>
           <label htmlFor="height">Height(cm)</label>
           <input
-            onChange={(e) => (height = e.target.value)}
+            //onChange={(e) => (height = e.target.value)}
+            onChange={(e) => setHeight(e.target.value)}
             type="number"
             id="height"
-            value={height}
+            //value={height}
           />
           <br />
           <label htmlFor="weight">Weight(kg)</label>
           <input
-            onChange={(e) => (weight = e.target.value)}
+            //onChange={(e) => (weight = e.target.value)}
+            onChange={(e) => setWeight(e.target.value)}
             type="number"
             id="weight"
-            value={weight}
+            // value={weight}
           />
           <Button onClick={handleCalculate}>Calculate</Button>
         </InputBox>
