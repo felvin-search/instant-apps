@@ -15,7 +15,7 @@ jobs:
         run: |
           git config user.name hargup
           git config user.email work@hargup.in
-          yarn up @felvin-search/core@latest @felvin-search/cli@latest
+          yarn up @felvin-search/core @felvin-search/cli
           git add .
           git commit -m "core and cli package version updated"
           git push
