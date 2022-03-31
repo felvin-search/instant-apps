@@ -1,0 +1,21 @@
+name: core and cli package version update and release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull repo, upgrade package
+        uses: actions/checkout@v2
+        with:
+          token: ${{secrets.PAT}}
+      - name: Stage, commit and push changes
+        run: |
+          git config user.name hargup
+          git config user.email work@hargup.in
+          yarn up @felvin-search/core@latest @felvin-search/cli@latest
+          git add .
+          git commit -m "core and cli package version updated"
+          git push
