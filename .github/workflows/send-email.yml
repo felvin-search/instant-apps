@@ -1,0 +1,34 @@
+name: Send email to contributor 
+
+on: 
+  pull_request:
+    types: [opened]
+  workflow_dispatch:
+
+jobs:
+  print-github-context:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_CONTEXT: ${{ toJson(github) }}
+    steps: 
+      - run: echo "$GITHUB_CONTEXT"
+
+  sending-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Thank you for contributing to Felvin instant apps
+          # TODO: get email of PR creator
+          to: sahil.shubham2000@gmail.com
+          from: Harsh Gupta
+          secure: true
+          # TODO: add a file to a body or write a good body here itself, markdown, html supported
+          body: Thank you for contributing to Felvin instant apps!
