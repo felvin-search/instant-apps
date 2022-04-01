@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git config user.name sahil-shubham
-git config user.email sahil.shubham2000@gmail.com
+git config user.name hargup
+git config user.email work@hargup.in
 
 # This checks if the latest commit message is of a release or not
 if [ "Minor version bump;" != "$(git log -1 --pretty='%s')" ]; then
