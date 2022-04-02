@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/convert-to-roman",
-  "version": "1.32.0",
+  "version": "1.33.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
