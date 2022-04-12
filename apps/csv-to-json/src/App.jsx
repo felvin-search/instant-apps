@@ -2,7 +2,6 @@ import { Breakpoints, matchTriggerQueries } from "@felvin-search/core";
 import Papa from "papaparse";
 import React, { useEffect, useState } from "react";
 import * as Icon from "react-feather";
-import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
 
 //------------Styled Components-------------
@@ -65,7 +64,7 @@ const CSVArea = styled.textarea`
   padding: 0.5rem;
 `;
 
-const JSONContainer = styled.div`
+const JSONContainer = styled.pre`
   overflow-x: scroll;
   outline: none;
 
@@ -101,7 +100,7 @@ const CopyButton = styled.button`
 //=========================================
 
 function Component() {
-  const defaultData = "FirstName,LastName\nJohn,Doe"
+  const defaultData = "FirstName,LastName\nJohn,Doe";
   const [csvData, setCSVData] = useState(defaultData);
   const [copy, setCopy] = useState(false);
   const [jsonData, setJSONData] = useState();
@@ -137,7 +136,9 @@ function Component() {
         </Column>
         <Column>
           <FormLabel htmlFor="json-pretty">Generated JSON</FormLabel>
-          <JSONContainer as={JSONPretty} id="json-pretty" data={jsonData} />
+          <JSONContainer id="json-pretty">
+            {JSON.stringify(jsonData, null, 2)}
+          </JSONContainer>
         </Column>
       </Container>
 

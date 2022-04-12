@@ -1799,7 +1799,6 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-feather: ^2.0.9
-    react-json-pretty: ^2.2.0
     styled-components: ^5.3.0
   peerDependencies:
     react: ^17.0.2
@@ -2058,7 +2057,6 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-feather: ^2.0.9
-    react-json-pretty: ^2.2.0
     styled-components: ^5.3.0
   peerDependencies:
     react: ^17.0.2
@@ -13699,18 +13697,6 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
-  languageName: node
-  linkType: hard
-
-"react-json-pretty@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "react-json-pretty@npm:2.2.0"
-  dependencies:
-    prop-types: ^15.6.2
-  peerDependencies:
-    react: ">=15.0"
-    react-dom: ">=15.0"
-  checksum: 9a3a316d46c7333f650cb37b0e71b121405c863ff5007d1bd0f4af0254d89560c49b153ffeedf7c2ffd5ad7d0adcccb7180b7ce23486d2df51bb1f98e543214c
   languageName: node
   linkType: hard
 

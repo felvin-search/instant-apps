@@ -1,6 +1,5 @@
 import { Breakpoints, matchTriggerQueries } from "@felvin-search/core";
 import * as Icon from "react-feather";
-import JSONPretty from "react-json-pretty";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
@@ -64,7 +63,7 @@ const YAMLArea = styled.textarea`
   padding: 0.5rem;
 `;
 
-const JSONContainer = styled.div`
+const JSONContainer = styled.pre`
   overflow-x: scroll;
   outline: none;
 
@@ -173,7 +172,9 @@ function Component() {
         </Column>
         <Column>
           <FormLabel htmlFor="json-pretty">Generated JSON</FormLabel>
-          <JSONContainer as={JSONPretty} id="json-pretty" data={jsonData} />
+          <JSONContainer id="json-pretty">
+            {JSON.stringify(jsonData, null, 2)}
+          </JSONContainer>
         </Column>
       </Container>
 
