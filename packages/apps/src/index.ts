@@ -1,3 +1,4 @@
+import MathematicalConstants from "@felvin-community/mathematical-constants";
 import Bmiconverter from "@felvin-community/bmiconverter";
 import JsonToYaml from "@felvin-community/json-to-yaml";
 import Pacman from "@felvin-community/pacman";
@@ -67,6 +68,7 @@ import CourierTracker from "@felvin-community/courier-tracker";
 import YamlToJson from "@felvin-community/yaml-to-json";
 
 const allApps = [
+  MathematicalConstants,
   Bmiconverter,
   JsonToYaml,
   Pacman,

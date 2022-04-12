@@ -58,6 +58,7 @@
     "@felvin-community/lorem-ipsum-generator": "^1.79.0",
     "@felvin-community/markdown-to-html": "^1.74.0",
     "@felvin-community/math": "^1.79.0",
+    "@felvin-community/mathematical-constants": "^1.0.0",
     "@felvin-community/merge-pdfs": "^1.71.0",
     "@felvin-community/metronome": "^1.39.0",
     "@felvin-community/morse-code-generator": "^1.77.0",

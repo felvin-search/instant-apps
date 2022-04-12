@@ -25,5 +25,5 @@
     "noImplicitAny": false,
     "types": ["jest"]
   },
-  "include": ["apps/*/src", "packages/*/src"]
+  "include": ["apps/*/src", "packages/*/src", "apps/mathematical-constants/utils"]
 }

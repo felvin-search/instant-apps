@@ -2222,6 +2222,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/mathematical-constants@^1.0.0, @felvin-community/mathematical-constants@workspace:apps/mathematical-constants":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/mathematical-constants@workspace:apps/mathematical-constants"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/merge-pdfs@^1.71.0, @felvin-community/merge-pdfs@workspace:apps/merge-pdfs":
   version: 0.0.0-use.local
   resolution: "@felvin-community/merge-pdfs@workspace:apps/merge-pdfs"
@@ -2819,6 +2837,7 @@ __metadata:
     "@felvin-community/lorem-ipsum-generator": ^1.79.0
     "@felvin-community/markdown-to-html": ^1.74.0
     "@felvin-community/math": ^1.79.0
+    "@felvin-community/mathematical-constants": ^1.0.0
     "@felvin-community/merge-pdfs": ^1.71.0
     "@felvin-community/metronome": ^1.39.0
     "@felvin-community/morse-code-generator": ^1.77.0
