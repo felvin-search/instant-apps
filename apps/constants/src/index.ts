@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Provides Value of Mathematical Constants",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ['proton mass','pi','rydberg constant'],
 };
 
 export default App;

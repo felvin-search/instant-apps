@@ -21,7 +21,7 @@ const Gap=styled.div`
 `
 
 function Component({ data }) {
-  console.log(data);
+  
 
   return (
     <Container>
@@ -42,12 +42,14 @@ function Component({ data }) {
 const queryToData = async ({ query }) => {
   query = query.toLowerCase();
   //use to extract keywords from the strings
-  let R = /(\w|\s)*\w(?=")|\w+/g;
-  let filteredQuery = query.match(R);
+  //let R = /(\w|\s)*\w(?=")|\w+/g;
+  let filteredQuery = query.split(' ').filter(subStr=>subStr.length!==0);
   const data = constants.filter((key) => {
     return key.name.toLowerCase().includes(filteredQuery[0]);
   });
- 
+  if (data.length === 0) {
+    return;
+  }
 
   return data;
 };
