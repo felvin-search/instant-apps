@@ -25,6 +25,7 @@
     "@felvin-community/async-api-validator": "^1.78.0",
     "@felvin-community/bmiconverter": "^1.2.0",
     "@felvin-community/bouncy-ball": "^1.80.0",
+    "@felvin-community/calculator": "^1.0.0",
     "@felvin-community/capitals": "^1.80.0",
     "@felvin-community/cht-sh": "^1.19.0",
     "@felvin-community/code-reference": "^1.49.0",
