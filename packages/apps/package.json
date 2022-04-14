@@ -30,6 +30,7 @@
     "@felvin-community/code-reference": "^1.49.0",
     "@felvin-community/color-picker": "^1.73.0",
     "@felvin-community/compressify": "^1.71.0",
+    "@felvin-community/constants": "^1.0.0",
     "@felvin-community/convert-to-roman": "^1.34.0",
     "@felvin-community/courier-tracker": "^1.80.0",
     "@felvin-community/cron-parser": "^1.43.0",
