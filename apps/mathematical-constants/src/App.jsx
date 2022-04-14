@@ -18,10 +18,9 @@ const Container = styled.div`
 const Symbols = styled.div`
   font-size: 2rem;
 `;
-const Gap=styled.div`
+const Gap = styled.div`
   height: 1rem;
-
-`
+`;
 //=========================================
 
 // Your UI logic goes here.
@@ -34,12 +33,12 @@ function Component({ data }) {
       <Symbols>
         Symbol : <b dangerouslySetInnerHTML={{ __html: data[0].symbol }}></b>
       </Symbols>
-      <Gap/>
+      <Gap />
       <div>Name: {data[0].name}</div>
-      <Gap/>
+      <Gap />
       <div>Value : {data[0].value}</div>
-      <Gap/>
-      <div>Unit : {data[0].unit}</div>
+      <Gap />
+      {data[0].unit && <div>Unit : {data[0].unit}</div>}
     </Container>
   );
 }
