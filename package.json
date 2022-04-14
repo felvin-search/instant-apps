@@ -36,5 +36,9 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "chart.js": "^3.7.1",
+    "react-chartjs-2": "^4.1.0"
   }
 }

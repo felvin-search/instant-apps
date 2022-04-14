@@ -1694,6 +1694,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/constants@^1.0.0, @felvin-community/constants@workspace:apps/constants":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/constants@workspace:apps/constants"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/convert-to-roman@^1.34.0, @felvin-community/convert-to-roman@workspace:apps/convert-to-roman":
   version: 0.0.0-use.local
   resolution: "@felvin-community/convert-to-roman@workspace:apps/convert-to-roman"
@@ -2789,6 +2807,7 @@ __metadata:
     "@felvin-community/code-reference": ^1.49.0
     "@felvin-community/color-picker": ^1.73.0
     "@felvin-community/compressify": ^1.71.0
+    "@felvin-community/constants": ^1.0.0
     "@felvin-community/convert-to-roman": ^1.34.0
     "@felvin-community/courier-tracker": ^1.80.0
     "@felvin-community/cron-parser": ^1.43.0
@@ -5741,6 +5760,13 @@ __metadata:
   version: 0.7.0
   resolution: "chardet@npm:0.7.0"
   checksum: 6fd5da1f5d18ff5712c1e0aed41da200d7c51c28f11b36ee3c7b483f3696dabc08927fc6b227735eb8f0e1215c9a8abd8154637f3eff8cada5959df7f58b024d
+  languageName: node
+  linkType: hard
+
+"chart.js@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "chart.js@npm:3.7.1"
+  checksum: f9d118d3b7dd3c36b6da7a8d71ac9e5d9673b81095cc66c3f61ff91674e20020c6700f8c9c6f93713fa8474eb471ded106114346ccc6afa88b4a7d0eb73dcea4
   languageName: node
   linkType: hard
 
@@ -13228,6 +13254,7 @@ __metadata:
     "@felvin-search/cli": ^1.59.0
     "@testing-library/react": ^12.1.2
     "@types/jest": ^27.0.2
+    chart.js: ^3.7.1
     cross-fetch: ^3.1.4
     depcheck: ^1.4.2
     fs-extra: ^10.0.0
@@ -13236,6 +13263,7 @@ __metadata:
     lint-staged: ^11.1.2
     msw: ^0.35.0
     prettier: 2.4.0
+    react-chartjs-2: ^4.1.0
     ts-jest: ^27.0.5
     typescript: ^4.4.3
   languageName: unknown
@@ -13612,6 +13640,16 @@ __metadata:
   bin:
     rc: ./cli.js
   checksum: 2e26e052f8be2abd64e6d1dabfbd7be03f80ec18ccbc49562d31f617d0015fbdbcf0f9eed30346ea6ab789e0fdfe4337f033f8016efdbee0df5354751842080e
+  languageName: node
+  linkType: hard
+
+"react-chartjs-2@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "react-chartjs-2@npm:4.1.0"
+  peerDependencies:
+    chart.js: ^3.5.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: fe01bdaf80c8a806af36e772719f420862e15e393a32c4c15b0e5fb8167143648e3f465b1b3ee8c4889f9531fff6ad6d34832606029ebf7d2751729198eb6121
   languageName: node
   linkType: hard
 
