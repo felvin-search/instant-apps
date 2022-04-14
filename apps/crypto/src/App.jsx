@@ -131,7 +131,7 @@ const queryToData = async ({ query }) => {
   }
 
   const responseJson = await response.json();
-
+ // console.log(responseJson)
   return responseJson;
   // You can do any external API call or use any library here
   // to convert the search query into some meaningful data.

@@ -15,29 +15,25 @@ const Container = styled.div`
 const Symbols = styled.div`
   font-size: 2rem;
 `;
-const Gap=styled.div`
+const Gap = styled.div`
   height: 1rem;
-
-`
+`;
 
 function Component({ data }) {
-  console.log(data);
-
   return (
     <Container>
       <Symbols>
         Symbol : <b dangerouslySetInnerHTML={{ __html: data[0].symbol }}></b>
       </Symbols>
-      <Gap/>
+      <Gap />
       <div>Name: {data[0].name}</div>
-      <Gap/>
+      <Gap />
       <div>Value : {data[0].value}</div>
-      <Gap/>
-    { data[0].unit && <div>Unit : {data[0].unit}</div>}
+      <Gap />
+      {data[0].unit && <div>Unit : {data[0].unit}</div>}
     </Container>
   );
 }
-
 
 const queryToData = async ({ query }) => {
   query = query.toLowerCase();
@@ -47,7 +43,9 @@ const queryToData = async ({ query }) => {
   const data = constants.filter((key) => {
     return key.name.toLowerCase().includes(filteredQuery[0]);
   });
- 
+  if (data.length === 0) {
+    return;
+  }
 
   return data;
 };
