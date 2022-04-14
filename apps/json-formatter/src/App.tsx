@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import * as Icon from "react-feather";
-import JSONPretty from "react-json-pretty";
 import styled from "styled-components";
 import { matchTriggerQueries } from "@felvin-search/core";
 
@@ -35,7 +34,7 @@ const TextArea = styled.textarea`
   }
 `;
 
-const JSONContainer = styled.div`
+const JSONContainer = styled.pre`
   outline: none;
   padding: 0.6rem;
   margin: 1rem 0 0 0;
@@ -101,18 +100,25 @@ function Component() {
     <Container>
       <TextArea
         rows={5}
+        cols={50}
         placeholder="Paste JSON here"
-        onChange={(e) => setJsonData(e.target.value)}
+        onChange={(e) => setJsonData(JSON.parse(e.target.value))}
       />
       <FormattedJSONContainer>
         <CopyButton onClick={() => handleCopy(navigator.clipboard)}>
           {copy ? <Icon.Check /> : <Icon.Clipboard />}
         </CopyButton>
-        <JSONContainer as={JSONPretty} id="json-pretty" data={jsonData} />
+        <JSONContainer id="json-pretty">
+          {JSON.stringify(jsonData, null, 2)}
+        </JSONContainer>
       </FormattedJSONContainer>
     </Container>
   );
 }
 
-const queryToData = matchTriggerQueries(["json format", "format json", "json formatter"]);
+const queryToData = matchTriggerQueries([
+  "json format",
+  "format json",
+  "json formatter",
+]);
 export { queryToData, Component };

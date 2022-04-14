@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import yaml from "js-yaml";
-import JSONPretty from "react-json-pretty";
 
 //------------Styled Components-------------
 const Container = styled.div`
@@ -63,7 +62,7 @@ const JSONArea = styled.textarea`
   padding: 0.5rem;
 `;
 
-const YAMLContainer = styled.div`
+const YAMLContainer = styled.pre`
   overflow-x: scroll;
   outline: none;
 
@@ -183,7 +182,7 @@ function Component() {
         </Column>
         <Column>
           <FormLabel htmlFor="yaml-text">Generated YAML</FormLabel>
-          <YAMLContainer as={JSONPretty} id="yaml-text" data={yamlData} />
+          <YAMLContainer id="yaml-text">{yamlData}</YAMLContainer>
         </Column>
       </Container>
 
