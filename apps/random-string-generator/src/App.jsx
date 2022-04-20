@@ -10,7 +10,7 @@ import * as Icon from "react-feather";
 const primaryColor = "#5829f5";
 
 const Container = styled.div`
-  width: 50vw;
+  width: max(50vw,13rem);
   min-height: 8rem;
   display: flex;
   padding: 2rem;
