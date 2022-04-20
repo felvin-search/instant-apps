@@ -18,7 +18,6 @@ const Container = styled.div`
   background-color: #fafafa;
   flex-direction: column;
 `;
-
 const OutputContainer = styled.div`
   margin-bottom: 2rem;
   line-height: 3rem;
@@ -28,10 +27,17 @@ const OutputContainer = styled.div`
   width: 100%;
 `;
 const OutPutString = styled.b`
-  //line-break: auto;
   width: 75%;
+  height: auto;
+  font-family: "SF Pro";
+  font-style: normal;
+  font-weight: 510;
+  color: #2f2f2f;
   overflow-x: scroll;
   margin-right: 10px;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  white-space: nowrap;
 `;
 const Gap = styled.div`
   width: 10px;
@@ -48,6 +54,8 @@ const Label = styled.label`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  color: #2f2f2f;
+  cursor: pointer;
 `;
 
 const Submit = styled.button.attrs({ type: "submit" })`
@@ -67,11 +75,18 @@ const CheckBoxes = styled.div`
   margin-top: 1rem;
   flex-wrap: wrap;
 `;
-const DisplayLength = styled.div`
+const DisplayLength = styled.input.attrs({ type: "number" })`
   height: 15px;
-  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
   border: 1px solid #c3c1c196;
   padding: 0.2em 0.4em;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  -moz-appearance: textfield;
   text-align: center;
 `;
 const CopyBtn = styled.button`
@@ -87,7 +102,7 @@ const RangeInput = styled.input.attrs({ type: "range" })`
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-progress-appearance: none;
-  
+  margin-left: 0;
   appearance: none;
   width: 100px;
   height: 5px;
@@ -121,13 +136,19 @@ const RangeInput = styled.input.attrs({ type: "range" })`
     background: ${primaryColor};
     cursor: ew-resize;
   }
-  @media (max-width: 380px) {
-    margin-top: 1.3rem;
-  }
 `;
+const GapH=styled.div`
+  height: 1.4rem;
+  width: 100%;
+  display: none;
+  @media (max-width:390px){
+    display: block;
+  }
+`
 const CheckBox = styled.input.attrs({ type: "checkbox" })`
   accent-color: ${primaryColor};
-  margin-left:0;
+  cursor: pointer;
+  margin-left: 0;
 `;
 //=========================================
 
@@ -200,23 +221,21 @@ function Component({ data }) {
         <Label>
           Length
           <Gap />
-          <DisplayLength>{length}</DisplayLength>
+          <DisplayLength
+            value={length}
+            min={8}
+            max={36}
+            onChange={(e) => setLength(e.target.value)}
+          />
           <Gap />
+          <GapH/>
           <RangeInput
-            min={5}
-            max={50}
+            min={8}
+            max={36}
             step={1}
             value={length}
             onChange={(e) => setLength(e.target.value)}
           />
-          {/* <input
-            type={"range"}
-            min={5}
-            max={50}
-            step={1}
-            value={length}
-            onChange={(e) => setLength(e.target.value)}
-          /> */}
         </Label>
         <CheckBoxes>
           <Label>
@@ -249,33 +268,9 @@ function Component({ data }) {
               checked={isSymbol}
               onChange={() => setSymbol(!isSymbol)}
             />
-            ASCII symbols
+            ASCII Symbols
           </Label>
         </CheckBoxes>
-        {/* 
-        <Label>
-          Length of string (in characters)
-          <br />
-          <input
-            type="number"
-            value={length}
-            onChange={(e) => setLength(e.target.value)}
-          />
-        </Label> */}
-        {/* <Label>
-          <input
-            type="checkbox"
-            checked={isCustomCharset}
-            onChange={() => setCustomCharset(!isCustomCharset)}
-          />
-          {`Use custom character set (abc >> "accbaabbbbcccb")`}
-          <br />
-          <input
-            type="text"
-            value={userCharset}
-            onChange={(e) => setUserCharset(e.target.value)}
-          />
-        </Label> */}
       </Form>
     </Container>
   );
