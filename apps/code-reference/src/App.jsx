@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-
+import { atomOneLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import axios from "axios";
 import styled from "styled-components";
 import _ from "lodash";
+import * as Icon from "react-feather";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -27,7 +28,11 @@ const CodeBlock = styled.div`
   width: clamp(300px, 60vw, 900px);
   overflow-y: auto;
   font-size: 1rem;
-  
+`;
+const CodeBlockWrapper = styled.div`
+  height: 68vh;
+  background: #fafafa;
+  width: clamp(300px, 60vw, 900px);
 `;
 
 const Container = styled.div`
@@ -38,41 +43,60 @@ const Container = styled.div`
 `;
 
 const Clipboard = styled.button`
-  margin: 0;
- 
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 1.1rem;
+  outline: 0;
+  cursor: pointer;
+  float: right;
 `;
 
 //=========================================
 
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
+
 function Component(props) {
-  console.log(props.data.language, props.data.code);
+  console.log(props.data);
+  const [isCopied, setIsCopied] = useState(false);
+  const handleCopy = (clip) => {
+    clip.writeText(props.data.algorithm).then(() => {
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    });
+  };
   return (
     <div>
-      <p>{_.startCase(props.data.algorithm)}</p>
-      <CodeBlock>
-        <SyntaxHighlighter
-          language={props.data.language}
-          // style={oneLight}
-          wrapLongLines={true}
-        >
-          {JSON.parse(props.data.code)}
-        </SyntaxHighlighter>
-        
-      </CodeBlock>
+      <b>{_.startCase(`${props.data.algorithm} in ${props.data.language}`)}</b>
+      <CodeBlockWrapper>
+        <CodeBlock>
+          <SyntaxHighlighter
+            language={props.data.language}
+            style={atomOneLight}
+            wrapLongLines={true}
+            customStyle={{
+              background: "#FAFAFA",
+            }}
+          >
+            {JSON.parse(props.data.code)}
+          </SyntaxHighlighter>
+        </CodeBlock>
+        <Clipboard onClick={() => handleCopy(navigator.clipboard)}>
+          {!isCopied ? (
+            <Icon.Copy size={26} color="#AFAFAF" />
+          ) : (
+            <Icon.Check size={26} color="#AFAFAF" />
+          )}
+        </Clipboard>
+      </CodeBlockWrapper>
       <Container>
         <Source>
           Source :
           <SourceLink href={props.data.source}>{props.data.name}</SourceLink>
         </Source>
-        <Clipboard
-          onClick={() => {
-            navigator.clipboard.writeText(JSON.parse(props.data.code));
-          }}
-        >
-          Copy to Clipboard
-        </Clipboard>
       </Container>
     </div>
   );
