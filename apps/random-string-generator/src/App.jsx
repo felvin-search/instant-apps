@@ -79,6 +79,7 @@ const CheckBoxes = styled.div`
 `;
 const DisplayLength = styled.input.attrs({ type: "number" })`
   height: 15px;
+  width: 1.5rem;
   display: flex;
   justify-content: center;
   border: 1px solid #c3c1c196;
