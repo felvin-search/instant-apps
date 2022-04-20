@@ -10,7 +10,7 @@ import * as Icon from "react-feather";
 const primaryColor = "#5829f5";
 
 const Container = styled.div`
-  width: max(50vw,13rem);
+  width: max(50vw, 13rem);
   min-height: 8rem;
   display: flex;
   padding: 2rem;
@@ -51,6 +51,7 @@ const Form = styled.form`
 const Label = styled.label`
   margin: 0.25rem 0;
   font-size: 0.8rem;
+  width: ${(props) => (props.check ? "105px" : "auto")};
   line-height: ${(props) => (props.primary ? "3rem" : "normal")};
   display: flex;
   align-items: center;
@@ -72,7 +73,7 @@ const Submit = styled.button.attrs({ type: "submit" })`
 const CheckBoxes = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 65%;
+  width: 85%;
   margin-top: 1rem;
   flex-wrap: wrap;
 `;
@@ -231,7 +232,7 @@ function Component({ data }) {
           />
         </Label>
         <CheckBoxes>
-          <Label>
+          <Label check>
             <CheckBox
               type="checkbox"
               checked={isCapitalLetter}
@@ -239,7 +240,7 @@ function Component({ data }) {
             />
             Capital Letters
           </Label>
-          <Label>
+          <Label check>
             <CheckBox
               type="checkbox"
               checked={isSmallLetter}
@@ -247,7 +248,7 @@ function Component({ data }) {
             />
             Small Letters
           </Label>
-          <Label>
+          <Label check>
             <CheckBox
               type="checkbox"
               checked={isNumber}
@@ -255,7 +256,7 @@ function Component({ data }) {
             />
             Numbers
           </Label>
-          <Label>
+          <Label check>
             <CheckBox
               type="checkbox"
               checked={isSymbol}
