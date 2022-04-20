@@ -19,8 +19,8 @@ const Container = styled.div`
   flex-direction: column;
 `;
 const OutputContainer = styled.div`
-  margin-bottom: 2rem;
-  line-height: 3rem;
+  margin-bottom: 1rem;
+  line-height: 2rem;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -51,6 +51,7 @@ const Form = styled.form`
 const Label = styled.label`
   margin: 0.25rem 0;
   font-size: 0.8rem;
+  line-height: ${(props) => (props.primary ? "3rem" : "normal")};
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -137,14 +138,7 @@ const RangeInput = styled.input.attrs({ type: "range" })`
     cursor: ew-resize;
   }
 `;
-const GapH=styled.div`
-  height: 1.4rem;
-  width: 100%;
-  display: none;
-  @media (max-width:390px){
-    display: block;
-  }
-`
+
 const CheckBox = styled.input.attrs({ type: "checkbox" })`
   accent-color: ${primaryColor};
   cursor: pointer;
@@ -218,7 +212,7 @@ function Component({ data }) {
             )}
           </CopyBtn>
         </OutputContainer>
-        <Label>
+        <Label primary>
           Length
           <Gap />
           <DisplayLength
@@ -228,7 +222,6 @@ function Component({ data }) {
             onChange={(e) => setLength(e.target.value)}
           />
           <Gap />
-          <GapH/>
           <RangeInput
             min={8}
             max={36}
