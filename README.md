@@ -66,6 +66,17 @@ Anyone can create an instant app! Felvin Search is a platform - create apps for 
 
 Checkout our [CONTRIBUTING](./CONTRIBUTING.md) guide for more details.
 
+<!-- Fix for the issue with latest yarn version -->
+## Issue With Latest Yarn Version
+If you got error like  **Internal Error: Cannot redefine settings "changesetBaseRefs"**
+Follow the below steps to get your app rolling :
+
+ - Run `yarn --version`.
+ - If it is the latest one ,try to downgrade it to **Version @3.0.2**.
+ - Run `yarn set version 3.0.2`.
+ - Run `yarn start`.
+ - Bingo🤙🏻, Your local developement environment will start spinning.
+
 ## Anatomy of Instant App
 
 A instant app is a Javascript object with following schema:
