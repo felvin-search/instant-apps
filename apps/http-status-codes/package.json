@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/http-status-codes",
-  "version": "1.38.0",
+  "version": "1.39.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
