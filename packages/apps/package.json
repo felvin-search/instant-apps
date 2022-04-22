@@ -64,6 +64,7 @@
     "@felvin-community/morse-code-generator": "^1.81.0",
     "@felvin-community/pacman": "^1.16.0",
     "@felvin-community/pokedex": "^1.71.0",
+    "@felvin-community/pomodoro": "^1.0.0",
     "@felvin-community/qr-code-generator": "^1.71.0",
     "@felvin-community/random-string-generator": "^1.64.0",
     "@felvin-community/regex": "^1.81.0",
