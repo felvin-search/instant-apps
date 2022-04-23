@@ -2775,6 +2775,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/wordle-solver@^1.0.0, @felvin-community/wordle-solver@workspace:apps/wordle-solver":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/wordle-solver@workspace:apps/wordle-solver"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/yaml-to-json@workspace:apps/yaml-to-json":
   version: 0.0.0-use.local
   resolution: "@felvin-community/yaml-to-json@workspace:apps/yaml-to-json"
@@ -2864,6 +2882,7 @@ __metadata:
     "@felvin-community/weight-converter": ^1.80.0
     "@felvin-community/what-day": ^1.55.0
     "@felvin-community/word-counter": ^1.83.0
+    "@felvin-community/wordle-solver": ^1.0.0
     "@felvin-search/cli": ^1.59.0
     "@felvin-search/core": ^1.56.0
     "@types/react": ^17.0.0

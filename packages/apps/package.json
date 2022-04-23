@@ -87,6 +87,7 @@
     "@felvin-community/weight-converter": "^1.80.0",
     "@felvin-community/what-day": "^1.55.0",
     "@felvin-community/word-counter": "^1.83.0",
+    "@felvin-community/wordle-solver": "^1.0.0",
     "@felvin-search/core": "^1.56.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
