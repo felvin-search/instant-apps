@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import beep from "./assets/beep-01a.mp3";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -85,31 +86,82 @@ const Button = styled.button`
     }
   }
 `;
-
+const BtnGroup = styled.div`
+  display: flex;
+`;
 //=========================================
 
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
+const useAudio = (url) => {
+  const [audio] = useState(new Audio(url));
+  const [playing, setPlaying] = useState(false);
+
+  const toggleAudio = () => setPlaying(!playing);
+
+  useEffect(() => {
+    playing ? audio.play() : audio.pause();
+  }, [playing]);
+
+  useEffect(() => {
+    audio.addEventListener("ended", () => setPlaying(false));
+    return () => {
+      audio.removeEventListener("ended", () => setPlaying(false));
+    };
+  }, []);
+
+  return [playing, toggle];
+};
+
 function Component({ data }) {
   const [select, setSelect] = useState("pomodoro");
   const [pomodoro, setPomodoro] = useState(1500);
-  const [long, setLong] = useState(900);
-  const [short, setShort] = useState(300);
-  const [isStarted, setIsStarted] = useState(true);
+  const [isActive, setIsActive] = useState(false);
+  //const [playing, toggleAudio] = useAudio();
+
+  function toggle() {
+    setIsActive(!isActive);
+  }
+
+  function reset() {
+    if (select === "pomodoro") {
+      setPomodoro(1500);
+    } else if (select === "long") {
+      setPomodoro(900);
+    } else {
+      setPomodoro(300);
+    }
+    setIsActive(false);
+  }
   const format = (time) => {
     return `${new Date(time * 1000).toISOString().substr(14, 5)}`;
   };
-  
+
   const handleTimer = () => {
-    setIsStarted(!isStarted)
-    const id= setInterval(()=>{
-      if(setPomodoro===0 || isStarted===true){
-        clearInterval(id)
-      }
-        setPomodoro(prev=>prev-1)
-     },1000)
-     
+    toggle();
   };
+  useEffect(() => {
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setPomodoro((seconds) => seconds - 1);
+      }, 1000);
+    } else if (!isActive && pomodoro === 0) {
+      toggleAudio();
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [isActive, pomodoro]);
+  useEffect(() => {
+    if (select === "pomodoro") {
+      setPomodoro(1500);
+    } else if (select === "long") {
+      setPomodoro(900);
+    } else {
+      setPomodoro(300);
+    }
+    setIsActive(false);
+  }, [select]);
 
   return (
     <Container>
@@ -120,26 +172,28 @@ function Component({ data }) {
         >
           Pomodoro
         </NavItem>
-        <NavItem
-          select={select === "long" ? true : false}
-          onClick={() => setSelect("long")}
-        >
-          Long Break
-        </NavItem>
+
         <NavItem
           select={select === "short" ? true : false}
           onClick={() => setSelect("short")}
         >
           Short Break
         </NavItem>
+        <NavItem
+          select={select === "long" ? true : false}
+          onClick={() => setSelect("long")}
+        >
+          Long Break
+        </NavItem>
       </Navbar>
       <Display>
         {/* {select === "pomodoro" ? pomodoro : select === "long" ? long : short} */}
-        {format(
-          select === "pomodoro" ? pomodoro : select === "long" ? long : short
-        )}
+        {pomodoro ? format(pomodoro) : "Times Up!"}
       </Display>
-      <Button onClick={handleTimer}>{isStarted?'Start':'Pause'}</Button>
+      <BtnGroup>
+        <Button onClick={handleTimer}>{!isActive ? "Start" : "Pause"}</Button>
+        <Button onClick={reset}>Reset</Button>
+      </BtnGroup>
     </Container>
   );
 }

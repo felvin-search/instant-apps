@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "It a simple pomodoro timer to make you more productive",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+   exampleSearchQueries: ["pomodoro timer", "start pomodoro"],
 };
 
 export default App;
