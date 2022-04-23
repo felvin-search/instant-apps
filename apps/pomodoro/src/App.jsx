@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
-import beep from "./assets/beep-01a.mp3";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -110,15 +109,13 @@ const useAudio = (url) => {
     };
   }, []);
 
-  return [playing, toggle];
+  return [playing, toggleAudio];
 };
 
 function Component({ data }) {
   const [select, setSelect] = useState("pomodoro");
   const [pomodoro, setPomodoro] = useState(1500);
   const [isActive, setIsActive] = useState(false);
-  //const [playing, toggleAudio] = useAudio();
-
   function toggle() {
     setIsActive(!isActive);
   }
@@ -146,8 +143,10 @@ function Component({ data }) {
       interval = setInterval(() => {
         setPomodoro((seconds) => seconds - 1);
       }, 1000);
+      if (pomodoro === 0) {
+        clearInterval(interval);
+      }
     } else if (!isActive && pomodoro === 0) {
-      toggleAudio();
       clearInterval(interval);
     }
     return () => clearInterval(interval);
