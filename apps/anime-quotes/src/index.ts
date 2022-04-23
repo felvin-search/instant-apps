@@ -7,7 +7,7 @@ const App: InstantApp = {
   description: "generate quotes from notable anime titles",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
+  screenshotPath: "./files/screenshot.png",
   // exampleSearchQueries: [],
 };
 
