@@ -2294,6 +2294,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/nasa-astro-pic@^1.0.0, @felvin-community/nasa-astro-pic@workspace:apps/nasa-astro-pic":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/nasa-astro-pic@workspace:apps/nasa-astro-pic"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/pacman@^1.16.0, @felvin-community/pacman@workspace:apps/pacman":
   version: 0.0.0-use.local
   resolution: "@felvin-community/pacman@workspace:apps/pacman"
@@ -2839,6 +2857,7 @@ __metadata:
     "@felvin-community/merge-pdfs": ^1.75.0
     "@felvin-community/metronome": ^1.43.0
     "@felvin-community/morse-code-generator": ^1.81.0
+    "@felvin-community/nasa-astro-pic": ^1.0.0
     "@felvin-community/pacman": ^1.16.0
     "@felvin-community/pokedex": ^1.71.0
     "@felvin-community/qr-code-generator": ^1.71.0

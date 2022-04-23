@@ -62,6 +62,7 @@
     "@felvin-community/merge-pdfs": "^1.75.0",
     "@felvin-community/metronome": "^1.43.0",
     "@felvin-community/morse-code-generator": "^1.81.0",
+    "@felvin-community/nasa-astro-pic": "^1.0.0",
     "@felvin-community/pacman": "^1.16.0",
     "@felvin-community/pokedex": "^1.71.0",
     "@felvin-community/qr-code-generator": "^1.71.0",
