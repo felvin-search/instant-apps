@@ -7,7 +7,7 @@ const App: InstantApp = {
   description: "uses nasa api to get the astronomy picture of the day ",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
+  screenshotPath: "./files/screenshot.png",
   // exampleSearchQueries: [],
 };
 
