@@ -7,7 +7,7 @@ const App: InstantApp = {
   description: "Corrupts PDF files",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
+  screenshotPath: "./files/screenshot.png",
   // exampleSearchQueries: [],
 };
 
