@@ -61,6 +61,7 @@
     "@felvin-community/math": "^1.83.0",
     "@felvin-community/merge-pdfs": "^1.75.0",
     "@felvin-community/metronome": "^1.43.0",
+    "@felvin-community/minesweeper": "^1.0.0",
     "@felvin-community/morse-code-generator": "^1.81.0",
     "@felvin-community/pacman": "^1.16.0",
     "@felvin-community/pokedex": "^1.71.0",

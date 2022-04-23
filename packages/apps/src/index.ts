@@ -1,3 +1,4 @@
+import Minesweeper from "@felvin-community/minesweeper";
 import Constants from "@felvin-community/constants";
 import Bmiconverter from "@felvin-community/bmiconverter";
 import JsonToYaml from "@felvin-community/json-to-yaml";
@@ -68,6 +69,7 @@ import CourierTracker from "@felvin-community/courier-tracker";
 import YamlToJson from "@felvin-community/yaml-to-json";
 
 const allApps = [
+  Minesweeper,
   Constants,
   Bmiconverter,
   JsonToYaml,
