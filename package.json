@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
-    "react-simply-carousel": "^5.1.5"
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   }
 }

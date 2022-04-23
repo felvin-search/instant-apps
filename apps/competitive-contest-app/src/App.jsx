@@ -2,19 +2,18 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import axios from "axios";
-import Carousel from "react-simply-carousel";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import * as Icon from "react-feather";
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
 
 const Container = styled.div`
   width: clamp(300px, 60vw, 700px);
-  display: flex;
-  flex-direction: column;
   min-height: 10rem;
   align-items: center;
-
   padding: 1rem;
 `;
 const Navbar = styled.div`
@@ -24,14 +23,13 @@ const Navbar = styled.div`
   margin-bottom: 1rem;
 `;
 const NavbarItem = styled.span`
-  text-decoration: ${(props) => props.check ? "underline" : "none"};
+  text-decoration: ${(props) => (props.check ? "underline" : "none")};
   cursor: pointer;
 `;
 const Card = styled.div`
-  background-color: #d1d1d1;
+  background-color: #fafafa;
   margin-right: 3rem;
-  width: 300px;
-  margin-top: 1rem;
+  width: 350px;
   padding: 2rem;
 `;
 const Title = styled.div`
@@ -61,7 +59,6 @@ function Component({ data }) {
   const [codeforeces, setCodeforeces] = useState([]);
   const [leetCode, setLeetCode] = useState([]);
   const [stage, setStage] = useState("codechef");
-  const [activeSlide, setActiveSlide] = useState(0);
   const fetchdata = async () => {
     try {
       const res = await axios.get(`https://kontests.net/api/v1/code_chef`);
@@ -71,7 +68,6 @@ function Component({ data }) {
       setCodeChef(res.data);
       setCodeforeces(res1.data);
       setLeetCode(res2.data);
-      console.log(res.data, res1.data, res2.data);
     } catch (error) {
       console.error(error);
     }
@@ -81,6 +77,7 @@ function Component({ data }) {
   }, []);
   useEffect(() => {
     if (contest) {
+      console.log(contest);
       if (stage === "codechef") {
         setContest(codeChef);
       } else if (stage === "codeforces") {
@@ -90,6 +87,15 @@ function Component({ data }) {
       }
     }
   }, [stage]);
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <Icon.ArrowRightCircle color="black" />,
+    prevArrow: <Icon.ArrowLeftCircle color="black" />,
+  };
 
   return (
     <Container>
@@ -113,55 +119,19 @@ function Component({ data }) {
           Leet Code
         </NavbarItem>
       </Navbar>
-      {contest && contest.length != 0 && (
-        <Carousel
-          updateOnItemClick
-          containerProps={{
-            style: {
-              width: "100%",
-              justifyContent: "space-between",
-            },
-          }}
-          activeSlideIndex={activeSlide}
-          activeSlideProps={{
-            style: {
-              background: "#fafafa",
-            },
-          }}
-          onRequestChange={setActiveSlide}
-          forwardBtnProps={{
-            children: ">",
-            style: {
-              width: 30,
-              height: 30,
-              minWidth: 30,
-              alignSelf: "center",
-            },
-          }}
-          backwardBtnProps={{
-            children: "<",
-            style: {
-              width: 30,
-              height: 30,
-              minWidth: 30,
-              alignSelf: "center",
-            },
-          }}
-          itemsToShow={1}
-          speed={500}
-        >
-          {contest &&
-            contest.map((item, index) => (
-              <Card key={index}>
-                <Title>{item.name}</Title>
-                <BodyText>Start Date: {item.start_time}</BodyText>
-                <BodyText>End Date : {item.end_time}</BodyText>
-                <BodyText>Duration :{item.duration / 3600}Hr</BodyText>
-                <Link href={item.url}>Participate</Link>
-              </Card>
-            ))}
-        </Carousel>
-      )}
+      <Slider {...settings}>
+        {contest &&
+          contest.length != 0 &&
+          contest.map((item, index) => (
+            <Card key={index}>
+              <Title>{item.name}</Title>
+              <BodyText>Start Date: {item.start_time}</BodyText>
+              <BodyText>End Date : {item.end_time}</BodyText>
+              <BodyText>Duration :{item.duration / 3600}Hr</BodyText>
+              <Link href={item.url}>Participate</Link>
+            </Card>
+          ))}
+      </Slider>
     </Container>
   );
 }
@@ -170,7 +140,7 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query, ["cp contest"])) {
+  if (!isTriggered(query, ["cp contest", "coding practice", "coding"])) {
     return;
   }
 
