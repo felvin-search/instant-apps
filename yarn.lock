@@ -6351,6 +6351,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:^3.8.1":
+  version: 3.22.2
+  resolution: "core-js@npm:3.22.2"
+  checksum: 23efd6148d2f564852f23de426401c86f1d8af410eacccf22ae5dd82b1e9de558f05692cacd4b7e709d47993c670d7bca6f601d0b2ab32cf397a113fc5b7d80c
+  languageName: node
+  linkType: hard
+
 "core-util-is@npm:1.0.2":
   version: 1.0.2
   resolution: "core-util-is@npm:1.0.2"
@@ -13294,6 +13301,7 @@ __metadata:
     lint-staged: ^11.1.2
     msw: ^0.35.0
     prettier: 2.4.0
+    react-simply-carousel: ^5.1.5
     ts-jest: ^27.0.5
     typescript: ^4.4.3
   languageName: unknown
@@ -13859,6 +13867,19 @@ __metadata:
   peerDependencies:
     react: ">=15"
   checksum: 7daae084bf64531eb619cc5f4cc40ce5ae0a541b64f71d74ec71a38cbf6130ebdbb7cf38f157303fad5846deec259401f96c4d6c7386466dcc989719e01f9aaa
+  languageName: node
+  linkType: hard
+
+"react-simply-carousel@npm:^5.1.5":
+  version: 5.1.5
+  resolution: "react-simply-carousel@npm:5.1.5"
+  dependencies:
+    core-js: ^3.8.1
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^16.8 || ^17
+    react-dom: ^16.8 || ^17
+  checksum: a86afc83fe8b422a95bdab8d14c599016b57636b15f7b3d3a27607923ca355f77f3fdc6667d47e493ed6d699d2bde514e99f139e0a47bc62581397b8573c865c
   languageName: node
   linkType: hard
 

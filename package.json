@@ -38,6 +38,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "axios": "^0.26.1"
+    "axios": "^0.26.1",
+    "react-simply-carousel": "^5.1.5"
   }
 }
