@@ -2046,6 +2046,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/isbn-book-info@^1.0.0, @felvin-community/isbn-book-info@workspace:apps/isbn-book-info":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/isbn-book-info@workspace:apps/isbn-book-info"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/joke-generator@^1.83.0, @felvin-community/joke-generator@workspace:apps/joke-generator":
   version: 0.0.0-use.local
   resolution: "@felvin-community/joke-generator@workspace:apps/joke-generator"
@@ -2826,6 +2844,7 @@ __metadata:
     "@felvin-community/instant-app-details": ^1.58.0
     "@felvin-community/ip-address": ^1.81.0
     "@felvin-community/is-prime": ^1.40.0
+    "@felvin-community/isbn-book-info": ^1.0.0
     "@felvin-community/joke-generator": ^1.83.0
     "@felvin-community/json-formatter": ^1.83.0
     "@felvin-community/json-to-csv": ^1.83.0

@@ -49,6 +49,7 @@
     "@felvin-community/instant-app-details": "^1.58.0",
     "@felvin-community/ip-address": "^1.81.0",
     "@felvin-community/is-prime": "^1.40.0",
+    "@felvin-community/isbn-book-info": "^1.0.0",
     "@felvin-community/joke-generator": "^1.83.0",
     "@felvin-community/json-formatter": "^1.83.0",
     "@felvin-community/json-to-csv": "^1.83.0",
