@@ -42,6 +42,7 @@
     "@felvin-community/dictionary": "^1.83.0",
     "@felvin-community/flappy-bird": "^1.83.0",
     "@felvin-community/flip-a-coin": "^1.76.0",
+    "@felvin-community/github-user": "^1.0.0",
     "@felvin-community/graph-plotter": "^1.83.0",
     "@felvin-community/hello-world-in-different-languages": "^1.74.0",
     "@felvin-community/http-status-codes": "^1.39.0",
