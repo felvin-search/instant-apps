@@ -67,7 +67,7 @@ function Component({ data }) {
       data: `{"language":"english","text":"${content}"}`,
     };
     try {
-      setAnalysis(`Analysing content...`);``
+      setAnalysis(`Analysing content...`);
       const res = await axios.request(options);
       const { data } = res;
 
