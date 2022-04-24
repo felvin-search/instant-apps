@@ -72,6 +72,7 @@
     "@felvin-community/stopwatch": "^1.53.0",
     "@felvin-community/sudoku": "^1.65.0",
     "@felvin-community/tetris": "^1.83.0",
+    "@felvin-community/text-sentiment-analyser": "^1.0.0",
     "@felvin-community/tic-tac-toe": "^1.83.0",
     "@felvin-community/time-at-place": "^1.83.0",
     "@felvin-community/timer": "^1.83.0",

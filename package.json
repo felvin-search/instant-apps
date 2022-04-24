@@ -36,5 +36,8 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
   }
 }
