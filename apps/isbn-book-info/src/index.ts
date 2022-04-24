@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Gives information about book from isbn code",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["book 9781718500457", "isbn 9781847941831"],
 };
 
 export default App;
