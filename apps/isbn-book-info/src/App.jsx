@@ -10,10 +10,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F7E9D7;
+  background-color: #fcfcfc;
+  border: 1.2px solid #eaeaea;
   max-width: 55rem;
   border-radius: 10px;
-  filter: drop-shadow(0.2rem 0.3rem 0.8rem #ccc);
+  cursor: pointer;
 `;
 
 const Metadata = styled.div`
@@ -65,7 +66,9 @@ const Attribution = styled.div`
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
   return (
-    <Container>
+    <Container
+      onClick={() => window.open(data.volumeInfo.previewLink, "_blank")}
+    >
       <Metadata>
         <Title>{data.volumeInfo.title}</Title>
         <Author>Book by {data.volumeInfo.authors.join(", ")}</Author>
@@ -73,7 +76,10 @@ function Component({ data }) {
         <Desc>"{data.searchInfo.textSnippet}"</Desc>
         <Attribution>Powered by: Google Books</Attribution>
       </Metadata>
-      <Image src={data.volumeInfo.imageLinks.thumbnail} alt={data.volumeInfo.title} />
+      <Image
+        src={data.volumeInfo.imageLinks.thumbnail}
+        alt={data.volumeInfo.title}
+      />
     </Container>
   );
 }
@@ -82,7 +88,10 @@ function Component({ data }) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  if (!isTriggered(query.split(" ")[0], [ "isbn","book" ]) || query.split(" ").length < 2) {
+  if (
+    !isTriggered(query.split(" ")[0], ["isbn", "book"]) ||
+    query.split(" ").length < 2
+  ) {
     return;
   }
 
@@ -92,13 +101,16 @@ const queryToData = async ({ query }) => {
 
   try {
     const isbn = parseInt(query.split(" ")[1]);
-    
-    const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`, {
-      headers: {
-        Accept: "application/json",
-        "User-Agent": "Felvin Search (felvin.com)",
-      },
-    });
+
+    const response = await fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`,
+      {
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "Felvin Search (felvin.com)",
+        },
+      }
+    );
 
     if (!response.ok) {
       return;
@@ -106,16 +118,15 @@ const queryToData = async ({ query }) => {
 
     const responseJson = await response.json();
 
-    if(responseJson?.totalItems == 0) {
+    if (responseJson?.totalItems == 0) {
       return;
     }
 
     const data = responseJson.items[0];
     return data;
-  }
-  catch {
+  } catch {
     return;
   }
-}
+};
 
 export { queryToData, Component };
