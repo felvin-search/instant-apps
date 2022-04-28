@@ -110,21 +110,25 @@ const Info = styled.div`
   color: #fff;
 `;
 
-const Suggestion = styled.div`
+const SuggestionPill = styled.div`
   background-color: white;
   border-radius: 50px;
   padding: 0.9rem 1.6rem;
   font-size: 1rem;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
 `;
 
 const PillArea = styled.div`
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
+  flex-flow: row wrap;
   gap: 1rem;
   margin: 10px;
-  width: 100px;
+  width: 500px;
 `;
 //=========================================
 
@@ -331,7 +335,15 @@ function Component() {
         {keyBoard}
         <PillArea>
           {predictions.map((word) => (
-            <Suggestion>{word}</Suggestion>
+            <SuggestionPill
+              onClick={() => {
+                setWordColor([]);
+                setWordChecked(false);
+                setWord([...word.toUpperCase()]);
+              }}
+            >
+              {word}
+            </SuggestionPill>
           ))}
         </PillArea>
       </Container>
