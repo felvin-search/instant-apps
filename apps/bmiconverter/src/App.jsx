@@ -114,13 +114,8 @@ function Component({ data }) {
       });
     }, 60);
   };
-  // let height, weight;
+
   const handleCalculate = () => {
-    //height /= 100;
-    // setHeight((prev) => prev / 100);
-    // let divider = Math.pow(height, 2);
-    console.log(height, weight);
-    //let result = weight / divider;
     let result = [Number(weight) / Number(height) / Number(height)] * 10000;
     result = Math.round(result);
     setResult(result);
@@ -134,20 +129,16 @@ function Component({ data }) {
         <InputBox>
           <label htmlFor="height">Height(cm)</label>
           <input
-            //onChange={(e) => (height = e.target.value)}
             onChange={(e) => setHeight(e.target.value)}
             type="number"
             id="height"
-            //value={height}
           />
           <br />
           <label htmlFor="weight">Weight(kg)</label>
           <input
-            //onChange={(e) => (weight = e.target.value)}
             onChange={(e) => setWeight(e.target.value)}
             type="number"
             id="weight"
-            // value={weight}
           />
           <Button onClick={handleCalculate}>Calculate</Button>
         </InputBox>
