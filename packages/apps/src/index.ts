@@ -1,3 +1,4 @@
+import CompetitiveContestApp from "@felvin-community/competitive-contest-app";
 import AsciiArt from "@felvin-community/ascii-art";
 import Constants from "@felvin-community/constants";
 import Bmiconverter from "@felvin-community/bmiconverter";
@@ -69,6 +70,7 @@ import CourierTracker from "@felvin-community/courier-tracker";
 import YamlToJson from "@felvin-community/yaml-to-json";
 
 const allApps = [
+  CompetitiveContestApp,
   AsciiArt,
   Constants,
   Bmiconverter,
