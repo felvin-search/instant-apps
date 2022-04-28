@@ -1540,6 +1540,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/ascii-art@^1.0.0, @felvin-community/ascii-art@workspace:apps/ascii-art":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/ascii-art@workspace:apps/ascii-art"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    figlet: ^1.5.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/async-api-validator@^1.81.0, @felvin-community/async-api-validator@workspace:apps/async-api-validator":
   version: 0.0.0-use.local
   resolution: "@felvin-community/async-api-validator@workspace:apps/async-api-validator"
@@ -2817,6 +2836,7 @@ __metadata:
   resolution: "@felvin-search/apps@workspace:packages/apps"
   dependencies:
     "@felvin-community/address-pincodes": ^1.42.0
+    "@felvin-community/ascii-art": ^1.0.0
     "@felvin-community/async-api-validator": ^1.81.0
     "@felvin-community/bmiconverter": ^1.5.0
     "@felvin-community/bouncy-ball": ^1.83.0
@@ -7966,6 +7986,13 @@ __metadata:
     setimmediate: ^1.0.5
     ua-parser-js: ^0.7.30
   checksum: 668731b946a765908c9cbe51d5160f973abb78004b3d122587c3e930e3e1ddcc0ce2b17f2a8637dc9d733e149aa580f8d3035a35cc2d3bc78b78f1b19aab90e2
+  languageName: node
+  linkType: hard
+
+"figlet@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "figlet@npm:1.5.2"
+  checksum: cc860391669b44e119871d589e09a2814aa86351726a5791e0d3e2d098e4fc37171c85fcfed13f4e9000995bd004dc6dbf848da5fe458cf1477e776b7318986f
   languageName: node
   linkType: hard
 
