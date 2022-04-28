@@ -332,6 +332,7 @@ function Component() {
           Type in the word, and mark the colors by clicking on the tiles to see
           suggestions
         </Info>
+        <br />
         <Row>
           {wordTiles}
           <RefreshCw
