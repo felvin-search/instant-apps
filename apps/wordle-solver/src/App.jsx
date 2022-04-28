@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
-import { alphabetDict, wordleListByDay } from "./wordleLists";
+import { alphabetDict, wordleListByDay, wordleSorted } from "./wordleLists";
 import { useState, useEffect } from "react";
 import getListOfWords from "./logic";
 
@@ -15,6 +15,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #121213;
+  padding: 0 15px;
 `;
 
 const KeyboardKey = styled.button`
@@ -98,6 +99,33 @@ const Tile = styled.div`
   cursor: pointer;
 `;
 
+const Title = styled.h1`
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+`;
+
+const Info = styled.div`
+  margin: 5px;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+`;
+
+const Suggestion = styled.div`
+  background-color: white;
+  border-radius: 50px;
+  padding: 0.9rem 1.6rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+const PillArea = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 10px;
+  width: 100px;
+`;
 //=========================================
 
 // Your UI logic goes here.
@@ -150,7 +178,10 @@ function Component() {
   };
   const checkWord = () => {
     let actualWord = word.join("").toLowerCase();
-    if (wordleListByDay.includes(actualWord)) {
+    if (
+      wordleListByDay.includes(actualWord) ||
+      wordleSorted.includes(actualWord)
+    ) {
       setWordChecked(true);
       setWordColor(["#3a3a3c", "#3a3a3c", "#3a3a3c", "#3a3a3c", "#3a3a3c"]);
       let newAlphabet = {};
@@ -240,8 +271,6 @@ function Component() {
             setWord([...word.slice(0, -1)]);
             setWordColor([]);
             setWordChecked(false);
-            setAlphabet(alphabetDict);
-            setPredictions([]);
           }}
         >
           Del
@@ -293,11 +322,18 @@ function Component() {
   return (
     <>
       <Container>
+        <Title>Wordle Solver</Title>
+        <Info>
+          Type in the word, and mark the colors by clicking on the tiles to see
+          suggestions
+        </Info>
         <Row>{wordTiles}</Row>
         {keyBoard}
-        {predictions.map((word) => (
-          <p style={{ color: "white" }}>{word.toUpperCase()}</p>
-        ))}
+        <PillArea>
+          {predictions.map((word) => (
+            <Suggestion>{word}</Suggestion>
+          ))}
+        </PillArea>
       </Container>
     </>
   );
@@ -309,10 +345,11 @@ function Component() {
 const queryToData = async ({ query }) => {
   if (
     !isTriggered(query, [
-      "wordle solve",
+      "solve wordle",
+      "wordle solver",
       "5 letter word",
       "five letter word",
-      "wordle",
+      "wordle solve",
     ])
   ) {
     return;
