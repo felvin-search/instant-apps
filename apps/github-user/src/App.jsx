@@ -10,10 +10,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f7e9d7;
+  background-color: #fcfcfc;
+  border: 1.2px solid #eaeaea;
   max-width: 55rem;
   border-radius: 10px;
-  filter: drop-shadow(0.2rem 0.3rem 0.8rem #ccc);
+  cursor: pointer;
 `;
 
 const Metadata = styled.div`
@@ -25,9 +26,14 @@ const Metadata = styled.div`
 const Title = styled.div`
   font-size: 1.7rem;
   font-weight: 600;
-  text-transform: uppercase;
   text-align: center;
   margin-down: 0.5rem;
+`;
+
+const Subtitle = styled.div`
+  font-size: 1.4rem;
+  text-align: center;
+  color: #333;
 `;
 
 const Company = styled.div`
@@ -43,7 +49,7 @@ const Desc = styled.div`
 `;
 
 const Image = styled.img`
-  width: 10rem;
+  width: 12rem;
   border-radius: 0 10px 10px 0;
 `;
 
@@ -53,9 +59,10 @@ const Image = styled.img`
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
   return (
-    <Container>
+    <Container onClick={() => window.open(data.html_url, "_blank")}>
       <Metadata>
         <Title>{data.name}</Title>
+        <Subtitle>{data.login}</Subtitle>
         <Company>{data.company}</Company>
         <Desc>{data.bio}</Desc>
       </Metadata>
