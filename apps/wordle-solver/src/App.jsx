@@ -131,6 +131,13 @@ const PillArea = styled.div`
   margin: 10px;
   width: 500px;
 `;
+
+const Credits = styled.a`
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+`;
 //=========================================
 
 // Your UI logic goes here.
@@ -361,6 +368,7 @@ function Component() {
             </SuggestionPill>
           ))}
         </PillArea>
+        <Credits href="https://github.com/Sync271">by Sync271</Credits>
       </Container>
     </>
   );
