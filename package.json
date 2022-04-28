@@ -36,5 +36,10 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   }
 }
