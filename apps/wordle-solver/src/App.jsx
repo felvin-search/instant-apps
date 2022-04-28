@@ -4,6 +4,7 @@ import { isTriggered } from "@felvin-search/core";
 import { alphabetDict, wordleListByDay, wordleSorted } from "./wordleLists";
 import { useState, useEffect } from "react";
 import getListOfWords from "./logic";
+import { RefreshCw } from "react-feather";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -331,7 +332,20 @@ function Component() {
           Type in the word, and mark the colors by clicking on the tiles to see
           suggestions
         </Info>
-        <Row>{wordTiles}</Row>
+        <Row>
+          {wordTiles}
+          <RefreshCw
+            onClick={() => {
+              setWord([]);
+              setWordColor([]);
+              setWordChecked(false);
+              setAlphabet(alphabetDict);
+            }}
+            color="white"
+            height={58}
+            style={{ padding: "0 10px" }}
+          />
+        </Row>
         {keyBoard}
         <PillArea>
           {predictions.map((word) => (
