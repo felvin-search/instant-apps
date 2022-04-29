@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/csv-to-json",
-  "version": "1.83.0",
+  "version": "1.84.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
