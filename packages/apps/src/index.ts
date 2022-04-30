@@ -4,7 +4,6 @@ import Constants from "@felvin-community/constants";
 import Bmiconverter from "@felvin-community/bmiconverter";
 import JsonToYaml from "@felvin-community/json-to-yaml";
 import Pacman from "@felvin-community/pacman";
-import CheatSh from "@felvin-community/cht-sh";
 import Tldr from "@felvin-community/tldr";
 import ConvertToRoman from "@felvin-community/convert-to-roman";
 import HttpStatusCodes from "@felvin-community/http-status-codes";
@@ -139,7 +138,6 @@ const allApps = [
   Tetris,
   CourierTracker,
   TvShows,
-  CheatSh,
 ];
 
 export default allApps;
