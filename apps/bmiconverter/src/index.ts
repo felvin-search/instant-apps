@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "calculate bmi ",
   queryToData,
   Component,
-   screenshotPath: "./files/screenshot.png",
-   exampleSearchQueries: [["BMI", "BMI CALCULATOR"]],
+  // screenshotPath: "./files/screenshot.png",
+  // exampleSearchQueries: [],
 };
 
 export default App;

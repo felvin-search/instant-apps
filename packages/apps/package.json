@@ -1,7 +1,7 @@
 {
   "name": "@felvin-search/apps",
   "description": "Wrapper package which re-exports all available Instant Apps",
-  "version": "1.86.0",
+  "version": "1.84.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
