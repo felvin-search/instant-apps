@@ -1974,6 +1974,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/gyana@workspace:apps/gyana":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/gyana@workspace:apps/gyana"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/hello-world-in-different-languages@^1.76.0, @felvin-community/hello-world-in-different-languages@workspace:apps/hello-world-in-different-languages":
   version: 0.0.0-use.local
   resolution: "@felvin-community/hello-world-in-different-languages@workspace:apps/hello-world-in-different-languages"
@@ -2831,9 +2849,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-search/apps@^1.86.0, @felvin-search/apps@workspace:packages/apps":
-  version: 0.0.0-use.local
-  resolution: "@felvin-search/apps@workspace:packages/apps"
+"@felvin-search/apps@npm:^1.86.0":
+  version: 1.86.0
+  resolution: "@felvin-search/apps@npm:1.86.0"
   dependencies:
     "@felvin-community/address-pincodes": ^1.44.0
     "@felvin-community/ascii-art": ^1.2.0
@@ -2903,6 +2921,31 @@ __metadata:
     "@felvin-community/weight-converter": ^1.82.0
     "@felvin-community/what-day": ^1.57.0
     "@felvin-community/word-counter": ^1.85.0
+    "@felvin-search/core": ^1.56.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    styled-components: ">= 5"
+  checksum: f8585380479b5a18465dbd9309a0b90bb97196a4278cac58c2b5305232aae137b7b3fb1d2696e041da3e445c9a4187f88dd4cad62545a4d72b4ccbbddab44567
+  languageName: node
+  linkType: hard
+
+"@felvin-search/apps@workspace:packages/apps":
+  version: 0.0.0-use.local
+  resolution: "@felvin-search/apps@workspace:packages/apps"
+  dependencies:
+    "@felvin-community/address-pincodes": ^1.44.0
+    "@felvin-community/ascii-art": ^1.2.0
+    "@felvin-community/async-api-validator": ^1.83.0
+    "@felvin-community/bmiconverter": ^1.7.0
+    "@felvin-community/bouncy-ball": ^1.85.0
+    "@felvin-community/capitals": ^1.85.0
+    "@felvin-community/cht-sh": ^1.24.0
+    "@felvin-community/code-reference": ^1.54.0
+    "@felvin-community/color-picker": ^1.78.0
+    "@felvin-community/competitive-contest-app": ^1.2.0
+    "@felvin-community/compressify": ^1.76.0
+    "@felvin-community/constants": ^1.5.0
     "@felvin-search/cli": ^1.59.0
     "@felvin-search/core": ^1.56.0
     "@types/react": ^17.0.0
