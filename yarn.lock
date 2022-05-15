@@ -1636,24 +1636,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/cht-sh@^1.24.0, @felvin-community/cht-sh@workspace:apps/cht-sh":
-  version: 0.0.0-use.local
-  resolution: "@felvin-community/cht-sh@workspace:apps/cht-sh"
-  dependencies:
-    "@felvin-search/cli": ^1.59.0
-    "@felvin-search/core": ^1.0.0
-    "@types/react": ^17.0.0
-    "@types/styled-components": ^5.1.11
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ^5.3.0
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ">= 5"
-  languageName: unknown
-  linkType: soft
-
 "@felvin-community/code-reference@^1.54.0, @felvin-community/code-reference@workspace:apps/code-reference":
   version: 0.0.0-use.local
   resolution: "@felvin-community/code-reference@workspace:apps/code-reference"
@@ -2573,7 +2555,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/tldr@workspace:apps/tldr":
+"@felvin-community/tldr@^1.25.0, @felvin-community/tldr@workspace:apps/tldr":
   version: 0.0.0-use.local
   resolution: "@felvin-community/tldr@workspace:apps/tldr"
   dependencies:
@@ -2812,7 +2794,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/yaml-to-json@workspace:apps/yaml-to-json":
+"@felvin-community/yaml-to-json@^1.25.0, @felvin-community/yaml-to-json@workspace:apps/yaml-to-json":
   version: 0.0.0-use.local
   resolution: "@felvin-community/yaml-to-json@workspace:apps/yaml-to-json"
   dependencies:
@@ -2841,7 +2823,6 @@ __metadata:
     "@felvin-community/bmiconverter": ^1.7.0
     "@felvin-community/bouncy-ball": ^1.85.0
     "@felvin-community/capitals": ^1.85.0
-    "@felvin-community/cht-sh": ^1.24.0
     "@felvin-community/code-reference": ^1.54.0
     "@felvin-community/color-picker": ^1.78.0
     "@felvin-community/competitive-contest-app": ^1.2.0
@@ -2891,6 +2872,7 @@ __metadata:
     "@felvin-community/tic-tac-toe": ^1.85.0
     "@felvin-community/time-at-place": ^1.85.0
     "@felvin-community/timer": ^1.85.0
+    "@felvin-community/tldr": ^1.25.0
     "@felvin-community/trending-on-github": ^1.73.0
     "@felvin-community/tv-shows": ^1.73.0
     "@felvin-community/unit-convertor": ^1.59.0
@@ -2903,6 +2885,7 @@ __metadata:
     "@felvin-community/weight-converter": ^1.82.0
     "@felvin-community/what-day": ^1.57.0
     "@felvin-community/word-counter": ^1.85.0
+    "@felvin-community/yaml-to-json": ^1.25.0
     "@felvin-search/cli": ^1.59.0
     "@felvin-search/core": ^1.56.0
     "@types/react": ^17.0.0
