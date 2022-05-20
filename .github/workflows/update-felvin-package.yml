@@ -5,6 +5,7 @@ on:
 
 jobs:
   main:
+    if: github.repository_owner == 'felvin-search'
     runs-on: ubuntu-latest
     steps:
       - name: Pull repo, upgrade package
