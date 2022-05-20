@@ -8,7 +8,7 @@ const App: InstantApp = {
   queryToData,
   Component,
   screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  exampleSearchQueries: ["corrupt pdf file", "corrupt pdf", "pdf corrupt"],
 };
 
 export default App;
