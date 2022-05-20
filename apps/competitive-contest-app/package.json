@@ -1,6 +1,6 @@
 {
-  "name": "@felvin-community/cht-sh",
-  "version": "1.22.0",
+  "name": "@felvin-community/competitive-contest-app",
+  "version": "1.2.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
@@ -15,7 +15,7 @@
     "@felvin-search/core": "^1.0.0"
   },
   "devDependencies": {
-    "@felvin-search/cli": "^1.59.0",
+    "@felvin-search/cli": "^1.0.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.11",
     "react": "^17.0.2",
