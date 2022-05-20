@@ -1937,6 +1937,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/github-user@^1.0.0, @felvin-community/github-user@workspace:apps/github-user":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/github-user@workspace:apps/github-user"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/graph-plotter@^1.85.0, @felvin-community/graph-plotter@workspace:apps/graph-plotter":
   version: 0.0.0-use.local
   resolution: "@felvin-community/graph-plotter@workspace:apps/graph-plotter"
@@ -2875,6 +2893,7 @@ __metadata:
     "@felvin-community/dictionary": ^1.85.0
     "@felvin-community/flappy-bird": ^1.85.0
     "@felvin-community/flip-a-coin": ^1.78.0
+    "@felvin-community/github-user": ^1.0.0
     "@felvin-community/graph-plotter": ^1.85.0
     "@felvin-community/hello-world-in-different-languages": ^1.76.0
     "@felvin-community/http-status-codes": ^1.41.0

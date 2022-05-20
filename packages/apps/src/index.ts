@@ -20,6 +20,7 @@ import DiceRoller from "@felvin-community/dice-roller";
 import Dictionary from "@felvin-community/dictionary";
 import FlappyBird from "@felvin-community/flappy-bird";
 import FlipACoin from "@felvin-community/flip-a-coin";
+import GithubUser from "@felvin-community/github-user";
 import GraphPlotter from "@felvin-community/graph-plotter";
 import HelloWorldInDifferentLanguages from "@felvin-community/hello-world-in-different-languages";
 import HttpStatusCodes from "@felvin-community/http-status-codes";
@@ -93,6 +94,7 @@ const allApps = [
   Dictionary,
   FlappyBird,
   FlipACoin,
+  GithubUser,
   GraphPlotter,
   HelloWorldInDifferentLanguages,
   HttpStatusCodes,
