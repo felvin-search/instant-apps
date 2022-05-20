@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@felvin-community/address-pincodes": "^1.44.0",
+    "@felvin-community/anime-quotes": "^1.0.0",
     "@felvin-community/ascii-art": "^1.2.0",
     "@felvin-community/async-api-validator": "^1.83.0",
     "@felvin-community/bmiconverter": "^1.7.0",

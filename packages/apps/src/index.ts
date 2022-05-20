@@ -1,4 +1,5 @@
 import AddressPincodes from "@felvin-community/address-pincodes";
+import AnimeQuotes from "@felvin-community/anime-quotes";
 import AsciiArt from "@felvin-community/ascii-art";
 import AsyncApiValidator from "@felvin-community/async-api-validator";
 import Bmiconverter from "@felvin-community/bmiconverter";
@@ -78,6 +79,7 @@ import YamlToJson from "@felvin-community/yaml-to-json";
 
 const allApps = [
   AddressPincodes,
+  AnimeQuotes,
   AsciiArt,
   AsyncApiValidator,
   Bmiconverter,
