@@ -1994,24 +1994,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/gyana@workspace:apps/gyana":
-  version: 0.0.0-use.local
-  resolution: "@felvin-community/gyana@workspace:apps/gyana"
-  dependencies:
-    "@felvin-search/cli": ^1.0.0
-    "@felvin-search/core": ^1.0.0
-    "@types/react": ^17.0.0
-    "@types/styled-components": ^5.1.11
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ^5.3.0
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ">= 5"
-  languageName: unknown
-  linkType: soft
-
 "@felvin-community/hello-world-in-different-languages@^1.76.0, @felvin-community/hello-world-in-different-languages@workspace:apps/hello-world-in-different-languages":
   version: 0.0.0-use.local
   resolution: "@felvin-community/hello-world-in-different-languages@workspace:apps/hello-world-in-different-languages"
@@ -2608,24 +2590,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@felvin-community/test-new-app@workspace:apps/test-new-app":
-  version: 0.0.0-use.local
-  resolution: "@felvin-community/test-new-app@workspace:apps/test-new-app"
-  dependencies:
-    "@felvin-search/cli": ^1.0.0
-    "@felvin-search/core": ^1.0.0
-    "@types/react": ^17.0.0
-    "@types/styled-components": ^5.1.11
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ^5.3.0
-  peerDependencies:
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-components: ">= 5"
-  languageName: unknown
-  linkType: soft
-
 "@felvin-community/tetris@^1.85.0, @felvin-community/tetris@workspace:apps/tetris":
   version: 0.0.0-use.local
   resolution: "@felvin-community/tetris@workspace:apps/tetris"
@@ -2637,6 +2601,24 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-tetris: ^0.1.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
+"@felvin-community/text-sentiment-analyser@^1.0.0, @felvin-community/text-sentiment-analyser@workspace:apps/text-sentiment-analyser":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/text-sentiment-analyser@workspace:apps/text-sentiment-analyser"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
     styled-components: ^5.3.0
   peerDependencies:
     react: ^17.0.2
@@ -3039,6 +3021,7 @@ __metadata:
     "@felvin-community/stopwatch": ^1.55.0
     "@felvin-community/sudoku": ^1.67.0
     "@felvin-community/tetris": ^1.85.0
+    "@felvin-community/text-sentiment-analyser": ^1.0.0
     "@felvin-community/tic-tac-toe": ^1.85.0
     "@felvin-community/time-at-place": ^1.85.0
     "@felvin-community/timer": ^1.85.0

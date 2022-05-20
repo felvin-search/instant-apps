@@ -56,6 +56,7 @@ import SnakeGame from "@felvin-community/snake-game";
 import Stopwatch from "@felvin-community/stopwatch";
 import Sudoku from "@felvin-community/sudoku";
 import Tetris from "@felvin-community/tetris";
+import TextSentimentAnalyser from "@felvin-community/text-sentiment-analyser";
 import TicTacToe from "@felvin-community/tic-tac-toe";
 import TimeAtPlace from "@felvin-community/time-at-place";
 import Timer from "@felvin-community/timer";
@@ -134,6 +135,7 @@ const allApps = [
   Stopwatch,
   Sudoku,
   Tetris,
+  TextSentimentAnalyser,
   TicTacToe,
   TimeAtPlace,
   Timer,
