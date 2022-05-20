@@ -42,6 +42,7 @@ import Metronome from "@felvin-community/metronome";
 import MorseCodeGenerator from "@felvin-community/morse-code-generator";
 import Pacman from "@felvin-community/pacman";
 import Pokedex from "@felvin-community/pokedex";
+import Pomodoro from "@felvin-community/pomodoro";
 import QrCodeGenerator from "@felvin-community/qr-code-generator";
 import RandomStringGenerator from "@felvin-community/random-string-generator";
 import Regex from "@felvin-community/regex";
@@ -113,6 +114,7 @@ const allApps = [
   MorseCodeGenerator,
   Pacman,
   Pokedex,
+  Pomodoro,
   QrCodeGenerator,
   RandomStringGenerator,
   Regex,
