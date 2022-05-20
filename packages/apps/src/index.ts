@@ -28,6 +28,7 @@ import ImageUploader from "@felvin-community/image-uploader";
 import InstantAppDetails from "@felvin-community/instant-app-details";
 import IpAddress from "@felvin-community/ip-address";
 import IsPrime from "@felvin-community/is-prime";
+import IsbnBookInfo from "@felvin-community/isbn-book-info";
 import JokeGenerator from "@felvin-community/joke-generator";
 import JsonFormatter from "@felvin-community/json-formatter";
 import JsonToCsv from "@felvin-community/json-to-csv";
@@ -103,6 +104,7 @@ const allApps = [
   InstantAppDetails,
   IpAddress,
   IsPrime,
+  IsbnBookInfo,
   JokeGenerator,
   JsonFormatter,
   JsonToCsv,

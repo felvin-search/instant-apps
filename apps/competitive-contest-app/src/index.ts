@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "List of contest for Cp",
   queryToData,
   Component,
-   screenshotPath: "./files/screenshot.png",
-   exampleSearchQueries: ["cp contest","coding practice","coding"],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["cp contest", "coding practice", "coding"],
 };
 
 export default App;
