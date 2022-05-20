@@ -27,7 +27,6 @@
     "@felvin-community/bmiconverter": "^1.7.0",
     "@felvin-community/bouncy-ball": "^1.85.0",
     "@felvin-community/capitals": "^1.85.0",
-    "@felvin-community/cht-sh": "^1.24.0",
     "@felvin-community/code-reference": "^1.54.0",
     "@felvin-community/color-picker": "^1.78.0",
     "@felvin-community/competitive-contest-app": "^1.2.0",
@@ -77,6 +76,7 @@
     "@felvin-community/tic-tac-toe": "^1.85.0",
     "@felvin-community/time-at-place": "^1.85.0",
     "@felvin-community/timer": "^1.85.0",
+    "@felvin-community/tldr": "^1.25.0",
     "@felvin-community/trending-on-github": "^1.73.0",
     "@felvin-community/tv-shows": "^1.73.0",
     "@felvin-community/unit-convertor": "^1.59.0",
@@ -89,6 +89,7 @@
     "@felvin-community/weight-converter": "^1.82.0",
     "@felvin-community/what-day": "^1.57.0",
     "@felvin-community/word-counter": "^1.85.0",
+    "@felvin-community/yaml-to-json": "^1.25.0",
     "@felvin-search/core": "^1.56.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
