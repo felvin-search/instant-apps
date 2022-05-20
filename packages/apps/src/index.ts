@@ -44,6 +44,7 @@ import MergePdfs from "@felvin-community/merge-pdfs";
 import Metronome from "@felvin-community/metronome";
 import Minesweeper from "@felvin-community/minesweeper";
 import MorseCodeGenerator from "@felvin-community/morse-code-generator";
+import NasaAstroPic from "@felvin-community/nasa-astro-pic";
 import Pacman from "@felvin-community/pacman";
 import Pokedex from "@felvin-community/pokedex";
 import Pomodoro from "@felvin-community/pomodoro";
@@ -121,6 +122,7 @@ const allApps = [
   Metronome,
   Minesweeper,
   MorseCodeGenerator,
+  NasaAstroPic,
   Pacman,
   Pokedex,
   Pomodoro,
