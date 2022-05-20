@@ -39,6 +39,7 @@ import MarkdownToHtml from "@felvin-community/markdown-to-html";
 import Math from "@felvin-community/math";
 import MergePdfs from "@felvin-community/merge-pdfs";
 import Metronome from "@felvin-community/metronome";
+import Minesweeper from "@felvin-community/minesweeper";
 import MorseCodeGenerator from "@felvin-community/morse-code-generator";
 import Pacman from "@felvin-community/pacman";
 import Pokedex from "@felvin-community/pokedex";
@@ -111,6 +112,7 @@ const allApps = [
   Math,
   MergePdfs,
   Metronome,
+  Minesweeper,
   MorseCodeGenerator,
   Pacman,
   Pokedex,

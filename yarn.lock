@@ -2295,6 +2295,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/minesweeper@^1.0.0, @felvin-community/minesweeper@workspace:apps/minesweeper":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/minesweeper@workspace:apps/minesweeper"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/morse-code-generator@^1.83.0, @felvin-community/morse-code-generator@workspace:apps/morse-code-generator":
   version: 0.0.0-use.local
   resolution: "@felvin-community/morse-code-generator@workspace:apps/morse-code-generator"
@@ -2876,6 +2894,7 @@ __metadata:
     "@felvin-community/math": ^1.85.0
     "@felvin-community/merge-pdfs": ^1.77.0
     "@felvin-community/metronome": ^1.45.0
+    "@felvin-community/minesweeper": ^1.0.0
     "@felvin-community/morse-code-generator": ^1.83.0
     "@felvin-community/pacman": ^1.18.0
     "@felvin-community/pokedex": ^1.73.0
