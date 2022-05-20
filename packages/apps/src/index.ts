@@ -1,147 +1,145 @@
-import Minesweeper from "@felvin-community/minesweeper";
-import CompetitiveContestApp from "@felvin-community/competitive-contest-app";
-import AsciiArt from "@felvin-community/ascii-art";
-import Constants from "@felvin-community/constants";
-import Bmiconverter from "@felvin-community/bmiconverter";
-import JsonToYaml from "@felvin-community/json-to-yaml";
-import Pacman from "@felvin-community/pacman";
-import CheatSh from "@felvin-community/cht-sh";
-import Tldr from "@felvin-community/tldr";
-import ConvertToRoman from "@felvin-community/convert-to-roman";
-import HttpStatusCodes from "@felvin-community/http-status-codes";
 import AddressPincodes from "@felvin-community/address-pincodes";
-import IsPrime from "@felvin-community/is-prime";
-import CronParser from "@felvin-community/cron-parser";
-import Metronome from "@felvin-community/metronome";
-import Stopwatch from "@felvin-community/stopwatch";
-import WhatDay from "@felvin-community/what-day";
-import UrlEncoderDecoder from "@felvin-community/url-encoder-decoder";
-import InstantAppDetails from "@felvin-community/instant-app-details";
-import CodeReference from "@felvin-community/code-reference";
-import UnixTimestamp from "@felvin-community/unix-timestamp";
-import UnitSystem from "@felvin-community/unit-system";
-import RandomStringGenerator from "@felvin-community/random-string-generator";
-import Sudoku from "@felvin-community/sudoku";
-import ColorPicker from "@felvin-community/color-picker";
-import MergePdfs from "@felvin-community/merge-pdfs";
-import HelloWorldInDifferentLanguages from "@felvin-community/hello-world-in-different-languages";
-import Compressify from "@felvin-community/compressify";
-import TrendingOnGithub from "@felvin-community/trending-on-github";
-import UrlShortener from "@felvin-community/url-shortener";
-import TvShows from "@felvin-community/tv-shows";
-import Pokedex from "@felvin-community/pokedex";
-import CropImage from "@felvin-community/crop-image";
-import ImageUploader from "@felvin-community/image-uploader";
-import UnitConvertor from "@felvin-community/unit-convertor";
-import LiveMarkdown from "@felvin-community/live-markdown";
-import JwtDecoder from "@felvin-community/jwt-decoder";
-import MarkdownToHtml from "@felvin-community/markdown-to-html";
-import FlipACoin from "@felvin-community/flip-a-coin";
-import QrCodeGenerator from "@felvin-community/qr-code-generator";
-import Crypto from "@felvin-community/crypto";
-import WebsiteIcons from "@felvin-community/website-icons";
-import WeightConverter from "@felvin-community/weight-converter";
+import AsciiArt from "@felvin-community/ascii-art";
 import AsyncApiValidator from "@felvin-community/async-api-validator";
-import MorseCodeGenerator from "@felvin-community/morse-code-generator";
+import Bmiconverter from "@felvin-community/bmiconverter";
+import BouncyBall from "@felvin-community/bouncy-ball";
+import Capitals from "@felvin-community/capitals";
+import CodeReference from "@felvin-community/code-reference";
+import ColorPicker from "@felvin-community/color-picker";
+import CompetitiveContestApp from "@felvin-community/competitive-contest-app";
+import Compressify from "@felvin-community/compressify";
+import Constants from "@felvin-community/constants";
+import ConvertToRoman from "@felvin-community/convert-to-roman";
+import CourierTracker from "@felvin-community/courier-tracker";
+import CronParser from "@felvin-community/cron-parser";
+import CropImage from "@felvin-community/crop-image";
+import Crypto from "@felvin-community/crypto";
+import CsvToJson from "@felvin-community/csv-to-json";
+import CurrencyConvertor from "@felvin-community/currency-convertor";
+import DiceRoller from "@felvin-community/dice-roller";
+import Dictionary from "@felvin-community/dictionary";
+import FlappyBird from "@felvin-community/flappy-bird";
+import FlipACoin from "@felvin-community/flip-a-coin";
+import GraphPlotter from "@felvin-community/graph-plotter";
+import HelloWorldInDifferentLanguages from "@felvin-community/hello-world-in-different-languages";
+import HttpStatusCodes from "@felvin-community/http-status-codes";
+import ImageUploader from "@felvin-community/image-uploader";
+import InstantAppDetails from "@felvin-community/instant-app-details";
 import IpAddress from "@felvin-community/ip-address";
+import IsPrime from "@felvin-community/is-prime";
+import JokeGenerator from "@felvin-community/joke-generator";
+import JsonFormatter from "@felvin-community/json-formatter";
+import JsonToCsv from "@felvin-community/json-to-csv";
+import JsonToYaml from "@felvin-community/json-to-yaml";
+import JwtDecoder from "@felvin-community/jwt-decoder";
+import LatexRender from "@felvin-community/latex-render";
+import LiveMarkdown from "@felvin-community/live-markdown";
+import LoremIpsumGenerator from "@felvin-community/lorem-ipsum-generator";
+import MarkdownToHtml from "@felvin-community/markdown-to-html";
+import Math from "@felvin-community/math";
+import MergePdfs from "@felvin-community/merge-pdfs";
+import Metronome from "@felvin-community/metronome";
+import Minesweeper from "@felvin-community/minesweeper";
+import MorseCodeGenerator from "@felvin-community/morse-code-generator";
+import Pacman from "@felvin-community/pacman";
+import Pokedex from "@felvin-community/pokedex";
+import QrCodeGenerator from "@felvin-community/qr-code-generator";
+import RandomStringGenerator from "@felvin-community/random-string-generator";
 import Regex from "@felvin-community/regex";
 import ScreenSize from "@felvin-community/screen-size";
-import bouncyBall from "@felvin-community/bouncy-ball";
-import csvToJson from "@felvin-community/csv-to-json";
-import jsonToCsv from "@felvin-community/json-to-csv";
-import loremIpsumGenerator from "@felvin-community/lorem-ipsum-generator";
-import graphPlotter from "@felvin-community/graph-plotter";
-import currencyConvertor from "@felvin-community/currency-convertor";
-import latexRender from "@felvin-community/latex-render";
-import uuid from "@felvin-community/uuid";
-import capitals from "@felvin-community/capitals";
-import jsonFormatter from "@felvin-community/json-formatter";
-import math from "@felvin-community/math";
-import flappyBird from "@felvin-community/flappy-bird";
-import timeAtPlace from "@felvin-community/time-at-place";
-import TicTacToe from "@felvin-community/tic-tac-toe";
-import JokeGenerator from "@felvin-community/joke-generator";
-import DiceRoller from "@felvin-community/dice-roller";
-import Timer from "@felvin-community/timer";
 import SnakeGame from "@felvin-community/snake-game";
-import Dictionary from "@felvin-community/dictionary";
-import WordCounter from "@felvin-community/word-counter";
+import Stopwatch from "@felvin-community/stopwatch";
+import Sudoku from "@felvin-community/sudoku";
 import Tetris from "@felvin-community/tetris";
-import CourierTracker from "@felvin-community/courier-tracker";
+import TicTacToe from "@felvin-community/tic-tac-toe";
+import TimeAtPlace from "@felvin-community/time-at-place";
+import Timer from "@felvin-community/timer";
+import Tldr from "@felvin-community/tldr";
+import TrendingOnGithub from "@felvin-community/trending-on-github";
+import TvShows from "@felvin-community/tv-shows";
+import UnitConvertor from "@felvin-community/unit-convertor";
+import UnitSystem from "@felvin-community/unit-system";
+import UnixTimestamp from "@felvin-community/unix-timestamp";
+import UrlEncoderDecoder from "@felvin-community/url-encoder-decoder";
+import UrlShortener from "@felvin-community/url-shortener";
+import Uuid from "@felvin-community/uuid";
+import WebsiteIcons from "@felvin-community/website-icons";
+import WeightConverter from "@felvin-community/weight-converter";
+import WhatDay from "@felvin-community/what-day";
+import WordCounter from "@felvin-community/word-counter";
 import YamlToJson from "@felvin-community/yaml-to-json";
 
 const allApps = [
-  Minesweeper,
-  CompetitiveContestApp,
-  AsciiArt,
-  Constants,
-  Bmiconverter,
-  JsonToYaml,
-  Pacman,
-  Tldr,
-  YamlToJson,
-  ConvertToRoman,
-  HttpStatusCodes,
   AddressPincodes,
-  IsPrime,
-  CronParser,
-  Metronome,
-  Stopwatch,
-  WhatDay,
-  UrlEncoderDecoder,
-  InstantAppDetails,
-  CodeReference,
-  UnixTimestamp,
-  UnitSystem,
-  RandomStringGenerator,
-  Sudoku,
-  ColorPicker,
-  MergePdfs,
-  HelloWorldInDifferentLanguages,
-  Compressify,
-  TrendingOnGithub,
-  UrlShortener,
-  Pokedex,
-  CropImage,
-  ImageUploader,
-  UnitConvertor,
-  LiveMarkdown,
-  JwtDecoder,
-  MarkdownToHtml,
-  FlipACoin,
-  QrCodeGenerator,
-  Crypto,
-  WebsiteIcons,
-  WeightConverter,
+  AsciiArt,
   AsyncApiValidator,
-  MorseCodeGenerator,
+  Bmiconverter,
+  BouncyBall,
+  Capitals,
+  CodeReference,
+  ColorPicker,
+  CompetitiveContestApp,
+  Compressify,
+  Constants,
+  ConvertToRoman,
+  CourierTracker,
+  CronParser,
+  CropImage,
+  Crypto,
+  CsvToJson,
+  CurrencyConvertor,
+  DiceRoller,
+  Dictionary,
+  FlappyBird,
+  FlipACoin,
+  GraphPlotter,
+  HelloWorldInDifferentLanguages,
+  HttpStatusCodes,
+  ImageUploader,
+  InstantAppDetails,
   IpAddress,
+  IsPrime,
+  JokeGenerator,
+  JsonFormatter,
+  JsonToCsv,
+  JsonToYaml,
+  JwtDecoder,
+  LatexRender,
+  LiveMarkdown,
+  LoremIpsumGenerator,
+  MarkdownToHtml,
+  Math,
+  MergePdfs,
+  Metronome,
+  Minesweeper,
+  MorseCodeGenerator,
+  Pacman,
+  Pokedex,
+  QrCodeGenerator,
+  RandomStringGenerator,
   Regex,
   ScreenSize,
-  bouncyBall,
-  csvToJson,
-  jsonToCsv,
-  loremIpsumGenerator,
-  graphPlotter,
-  currencyConvertor,
-  latexRender,
-  uuid,
-  capitals,
-  jsonFormatter,
-  math,
-  flappyBird,
-  timeAtPlace,
-  TicTacToe,
-  JokeGenerator,
-  DiceRoller,
-  Timer,
   SnakeGame,
-  Dictionary,
-  WordCounter,
+  Stopwatch,
+  Sudoku,
   Tetris,
-  CourierTracker,
+  TicTacToe,
+  TimeAtPlace,
+  Timer,
+  Tldr,
+  TrendingOnGithub,
   TvShows,
-  CheatSh,
+  UnitConvertor,
+  UnitSystem,
+  UnixTimestamp,
+  UrlEncoderDecoder,
+  UrlShortener,
+  Uuid,
+  WebsiteIcons,
+  WeightConverter,
+  WhatDay,
+  WordCounter,
+  YamlToJson,
 ];
 
 export default allApps;
