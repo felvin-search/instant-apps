@@ -92,6 +92,7 @@
     "@felvin-community/weight-converter": "^1.82.0",
     "@felvin-community/what-day": "^1.57.0",
     "@felvin-community/word-counter": "^1.85.0",
+    "@felvin-community/wordle-solver": "^1.0.0",
     "@felvin-community/yaml-to-json": "^1.25.0",
     "@felvin-search/core": "^1.56.0",
     "react": "^17.0.2",

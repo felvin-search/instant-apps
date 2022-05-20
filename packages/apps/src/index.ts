@@ -69,6 +69,7 @@ import WebsiteIcons from "@felvin-community/website-icons";
 import WeightConverter from "@felvin-community/weight-converter";
 import WhatDay from "@felvin-community/what-day";
 import WordCounter from "@felvin-community/word-counter";
+import WordleSolver from "@felvin-community/wordle-solver";
 import YamlToJson from "@felvin-community/yaml-to-json";
 
 const allApps = [
@@ -143,6 +144,7 @@ const allApps = [
   WeightConverter,
   WhatDay,
   WordCounter,
+  WordleSolver,
   YamlToJson,
 ];
 
