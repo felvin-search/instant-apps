@@ -10,6 +10,7 @@ import CompetitiveContestApp from "@felvin-community/competitive-contest-app";
 import Compressify from "@felvin-community/compressify";
 import Constants from "@felvin-community/constants";
 import ConvertToRoman from "@felvin-community/convert-to-roman";
+import CorruptPdf from "@felvin-community/corrupt-pdf";
 import CourierTracker from "@felvin-community/courier-tracker";
 import CronParser from "@felvin-community/cron-parser";
 import CropImage from "@felvin-community/crop-image";
@@ -86,6 +87,7 @@ const allApps = [
   Compressify,
   Constants,
   ConvertToRoman,
+  CorruptPdf,
   CourierTracker,
   CronParser,
   CropImage,

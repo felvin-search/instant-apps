@@ -33,6 +33,7 @@
     "@felvin-community/compressify": "^1.76.0",
     "@felvin-community/constants": "^1.5.0",
     "@felvin-community/convert-to-roman": "^1.39.0",
+    "@felvin-community/corrupt-pdf": "^1.0.0",
     "@felvin-community/courier-tracker": "^1.85.0",
     "@felvin-community/cron-parser": "^1.48.0",
     "@felvin-community/crop-image": "^1.67.0",
