@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import axios from "axios";
 import styled from "styled-components";
 import _ from "lodash";
+import * as Icon from "react-feather";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
 const Source = styled.span`
   font-size: 1rem;
+  color: #878787;
 `;
 
 const CodeBlock = styled.div`
@@ -25,9 +27,23 @@ const Container = styled.div`
   justify-content: space-between;
   margin: 0.5rem;
 `;
-
+const Link = styled.a`
+  
+  text-decoration: none;
+  color: #878787;
+  font-weight: bold;
+   
+`
 const Clipboard = styled.button`
   margin: 0;
+`;
+const CopyBtn = styled.button`
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  cursor: pointer;
 `;
 
 //=========================================
@@ -36,13 +52,23 @@ const Clipboard = styled.button`
 // `data` prop is exactly what is returned by queryToData.
 function Component(props) {
   console.log(props.data.language, props.data.code);
+  const [isCopied, setIsCopied] = useState(false);
+  const handleCopy = (clip) => {
+    clip.writeText(JSON.parse(props.data.code)).then(() => {
+      setIsCopied(true);
+
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    });
+  };
   return (
     <div>
-      <p>{_.startCase(props.data.algorithm)}</p>
+      <p>{`${_.startCase(props.data.algorithm)} In ${_.startCase(props.data.language)}`}</p>
       <CodeBlock>
-        <SyntaxHighlighter 
-          language={props.data.language} 
-          style={a11yDark}
+        <SyntaxHighlighter
+          language={props.data.language}
+          style={a11yLight}
           wrapLongLines={true}
         >
           {JSON.parse(props.data.code)}
@@ -50,15 +76,18 @@ function Component(props) {
       </CodeBlock>
       <Container>
         <Source>
-          Source : <a href={props.data.source}>{props.data.name}</a>
+          Source : <Link href={props.data.source}>{props.data.name}</Link>
         </Source>
-        <Clipboard
-          onClick={() => {
-            navigator.clipboard.writeText(JSON.parse(props.data.code));
-          }}
+        <CopyBtn
+          type="button"
+          onClick={() => handleCopy(navigator.clipboard)}
         >
-          Copy to Clipboard
-        </Clipboard>
+          {!isCopied ? (
+            <Icon.Copy color="#AFAFAF" />
+          ) : (
+            <Icon.Check color="#AFAFAF" />
+          )}
+        </CopyBtn>
       </Container>
     </div>
   );
@@ -81,7 +110,7 @@ const queryToData = async ({ query }) => {
   })
   const searchQuery = query;
   const value = await axios.get(
-    "https://felvin-service.herokuapp.com/api/code",
+    "https://code-snippets.fly.dev/api/code",
     { params: { searchQuery } }
   );
   if (value.status == 200) {
