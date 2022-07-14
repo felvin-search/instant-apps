@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
+import { useDropzone } from 'react-dropzone'
 
 import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
@@ -8,6 +9,34 @@ import "react-image-crop/dist/ReactCrop.css";
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
+const getColor = (props) => {
+  if (props.isDragAccept) {
+    return '#00e676';
+  }
+  if (props.isDragReject) {
+    return '#ff1744';
+  }
+  if (props.isFocused) {
+    return '#2196f3';
+  }
+  return '#eeeeee';
+}
+
+const InputFile = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: ${props => getColor(props)};
+  border-style: dashed;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border .24s ease-in-out;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -57,6 +86,20 @@ function Component({ data }) {
   const [crop, setCrop] = useState({ unit: "%" });
   const [completedCrop, setCompletedCrop] = useState(null);
 
+  const onDrop = useCallback(acceptedFiles => {
+    // Do something with the files
+    const reader = new FileReader();
+    reader.addEventListener("load", () => setUpImg(reader.result));
+    reader.readAsDataURL(acceptedFiles[0]);
+  }, [])
+  const {
+    getRootProps,
+    getInputProps,
+    isFocused,
+    isDragAccept,
+    isDragReject
+  } = useDropzone({ onDrop });
+
   const onSelectFile = (e) => {
     if (e.target.files && e.target.files.length > 0) {
       const reader = new FileReader();
@@ -68,6 +111,7 @@ function Component({ data }) {
   const onLoad = useCallback((img) => {
     imgRef.current = img;
   }, []);
+
 
   useEffect(() => {
     if (!completedCrop || !previewCanvasRef.current || !imgRef.current) {
@@ -104,8 +148,11 @@ function Component({ data }) {
 
   return (
     <Container>
-      <Input type="file" accept="image/*" onChange={onSelectFile} />
-
+      {/* <Input type="file" accept="image/*" onChange={onSelectFile} /> */}
+      <InputFile {...getRootProps({ isFocused, isDragAccept, isDragReject })}>
+        <input {...getInputProps()} />
+        <p>Drag 'n' drop some files here, or click to select files</p>
+      </InputFile>
       <ReactCrop
         src={upImg}
         onImageLoaded={onLoad}
