@@ -8,21 +8,25 @@ import { isTriggered } from "@felvin-search/core";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 42rem;
 `;
+const Pill = styled.div`
+width: 20rem;
+height: 42px;
+padding-left: 1rem;
+display: flex;
+align-items: center;
+background: #FAFAFA;
+border-radius: 21px;
+margin-bottom: 0.5rem;
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-`;
+`
+
+
 const Div = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: left;
-  margin: 0.2rem;
+  flex-direction: column;
 `;
 const Label = styled.label`
   padding: 0.2rem;
@@ -31,7 +35,9 @@ const StrongAccept = styled.strong`
   color: green;
 `;
 const Input = styled.input`
-  size: 20;
+ 
+  min-height: 15rem;
+  width: 20rem;
 `;
 const StrongReject = styled.strong`
   color: red;
@@ -80,27 +86,30 @@ function Component({ data }) {
   }
   return (
     <Container>
-      <Form onSubmit={handleSubmit}>
-        <Div>
-          <Label>Enter Regex:</Label>
-          <Input
-            type="text"
-            placeholder="Regex"
-            value={regex}
-            onChange={(e) => setRegex(e.target.value)}
-          ></Input>
-        </Div>
-        <Div>
-          <Label>Enter String:</Label>
-          <input
-            type="text"
-            placeholder="Test String"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          ></input>
-        </Div>
-        <input type="submit" value="Check"></input>
-      </Form>
+
+      <Div>
+        <Pill>Regular Expression</Pill>
+
+        <Input
+          type="text"
+          placeholder="Regex"
+          value={regex}
+          onChange={(e) => setRegex(e.target.value)}
+        ></Input>
+      </Div>
+      <Div>
+
+        <Pill>Test String</Pill>
+        <Input
+          type="text"
+          placeholder="Test String"
+          value={text}
+          
+          onChange={(e) => setText(e.target.value)}
+        ></Input>
+      </Div>
+
+
       {typeof value === "boolean" ? (
         value ? (
           <Result>
