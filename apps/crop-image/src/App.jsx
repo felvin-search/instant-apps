@@ -59,6 +59,11 @@ const Button = styled.button`
   font-size: 1rem;
   padding: 0.25em 1em;
 `
+
+const Tagline=styled.p`
+  color: #bdbdbd;
+
+`
 //=========================================
 
 // Your UI logic goes here.
@@ -185,6 +190,7 @@ function Component({ data }) {
       >
         Download cropped image
       </Button>
+      <Tagline>Image cropper</Tagline>
     </Container>
   );
 }
