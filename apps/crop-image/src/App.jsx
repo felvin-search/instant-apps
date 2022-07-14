@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import { useDropzone } from 'react-dropzone'
-
+import { Upload } from 'react-feather'
 import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 
@@ -49,10 +49,16 @@ const Container = styled.div`
   }
 `;
 
-const Input = styled.input`
-  padding-bottom: 10px;
-`;
-
+const Button = styled.button`
+  background: black;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin: 1rem 1em;
+  font-size: 1rem;
+  padding: 0.25em 1em;
+`
 //=========================================
 
 // Your UI logic goes here.
@@ -80,7 +86,7 @@ function generateDownload(canvas, crop) {
 }
 
 function Component({ data }) {
-  const [upImg, setUpImg] = useState();
+  const [upImg, setUpImg] = useState(null);
   const imgRef = useRef(null);
   const previewCanvasRef = useRef(null);
   const [crop, setCrop] = useState({ unit: "%" });
@@ -88,9 +94,11 @@ function Component({ data }) {
 
   const onDrop = useCallback(acceptedFiles => {
     // Do something with the files
-    const reader = new FileReader();
-    reader.addEventListener("load", () => setUpImg(reader.result));
-    reader.readAsDataURL(acceptedFiles[0]);
+    if (acceptedFiles && acceptedFiles.length > 0) {
+      const reader = new FileReader();
+      reader.addEventListener("load", () => setUpImg(reader.result));
+      reader.readAsDataURL(acceptedFiles[0]);
+    }
   }, [])
   const {
     getRootProps,
@@ -100,13 +108,7 @@ function Component({ data }) {
     isDragReject
   } = useDropzone({ onDrop });
 
-  const onSelectFile = (e) => {
-    if (e.target.files && e.target.files.length > 0) {
-      const reader = new FileReader();
-      reader.addEventListener("load", () => setUpImg(reader.result));
-      reader.readAsDataURL(e.target.files[0]);
-    }
-  };
+
 
   const onLoad = useCallback((img) => {
     imgRef.current = img;
@@ -149,10 +151,12 @@ function Component({ data }) {
   return (
     <Container>
       {/* <Input type="file" accept="image/*" onChange={onSelectFile} /> */}
-      <InputFile {...getRootProps({ isFocused, isDragAccept, isDragReject })}>
+      {!upImg && <InputFile {...getRootProps({ isFocused, isDragAccept, isDragReject })}>
         <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
+        <Upload size={100} />
+        <p>Drag n Drop or click to browse</p>
       </InputFile>
+      }
       <ReactCrop
         src={upImg}
         onImageLoaded={onLoad}
@@ -168,7 +172,7 @@ function Component({ data }) {
         }}
       />
 
-      <button
+      <Button
         type="button"
         onClick={() =>
           generateDownload(previewCanvasRef.current, completedCrop)
@@ -180,7 +184,7 @@ function Component({ data }) {
         }
       >
         Download cropped image
-      </button>
+      </Button>
     </Container>
   );
 }
