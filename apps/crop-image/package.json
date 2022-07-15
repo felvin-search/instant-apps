@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@felvin-search/core": "^1.56.0",
+    "react-dropzone": "^14.2.2",
     "react-image-crop": "^9.0.4"
   },
   "devDependencies": {
