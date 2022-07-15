@@ -40,37 +40,31 @@ display: flex;
 align-items: center;
 `
 
-
 const Div = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
 `;
-const Label = styled.label`
-  padding: 0.2rem;
-`;
-const StrongAccept = styled.strong`
-  color: green;
-`;
+
 const Input = styled.textarea`
   min-height: 15rem;
   font-size: 1.1rem;
   padding: 0.4em;
   width: 20rem;
-  border: 1.2px solid #EAEAEA;
-border-radius: 4px;
+  border:${props => props.borderColor ? `1.2px solid ${props.borderColor}` : '1.2px solid #EAEAEA'};
+  border-radius: 4px;
 `;
-const StrongReject = styled.strong`
-  color: red;
-`;
-
-const Result = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-`;
+const Button = styled.button`
+  background: black;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: white;
+ 
+  font-size: 1rem;
+  padding: 0.25em 2em;
+`
 //color gen
 const Color = (prop) => {
   if (prop === 'success') {
@@ -79,7 +73,7 @@ const Color = (prop) => {
   else if (prop === 'failure') {
     return '#E17979'
   }
-  else {
+  else if (prop === 'error') {
     return '#ECB26F'
   }
 }
@@ -123,17 +117,13 @@ function Component({ data }) {
       let result = text;
       result = result.replace(reg, (match) => `<mark>${match}</mark>`);
       setresult(result);
-      if (regex == "") {
-        setValue("Enter the regular expression");
+      if (regex === '' && text === '') {
+        setValue(true)
         return;
       }
-      if (text == "") {
-        setValue("Enter the test String");
-        return;
-      }
-      check ? setValue(true) : setValue(false);
+      check ? setValue("success") : setValue("failure");
     } catch (err) {
-      setValue("The regular expression could not be parsed. Ensure the syntax is correct!");
+      setValue("error");
     }
   }
   return (
@@ -147,9 +137,14 @@ function Component({ data }) {
           placeholder="Insert your regular expression here..."
           value={regex}
           onChange={(e) => setRegex(e.target.value)}
-
+          data-gramm="false"
+          data-gramm_editor="false"
+          data-enable-grammarly="false"
+          borderColor={value === 'error' && Color(value)}
+          required
         ></Input>
-        <AlertGen type='error' />
+        {!regex.length && value ? <Alert color={Color('error')} >{IconGen('error')}Enter Regex</Alert> : null}
+        {value === 'error' && <AlertGen type={value} />}
       </Div>
       <Div>
 
@@ -158,26 +153,19 @@ function Component({ data }) {
           type="text"
           placeholder="Insert your test string here..."
           value={text}
+          data-gramm="false"
+          data-gramm_editor="false"
+          data-enable-grammarly="false"
+          borderColor={Color(value)}
+          required
           onChange={(e) => setText(e.target.value)}
         ></Input>
-        <AlertGen type='success' />
+        {!text.length && value ? <Alert color={Color('error')} >{IconGen('error')}Enter String</Alert> : null}
+        {value === 'success' || value === 'failure' ? <AlertGen type={value} /> : null}
       </Div>
+      <Button onClick={handleSubmit}>Check</Button>
 
 
-      {typeof value === "boolean" ? (
-        value ? (
-          <Result>
-            <StrongAccept>The test string matches the regex</StrongAccept>
-            <h3>
-              <p dangerouslySetInnerHTML={{ __html: result }}></p>
-            </h3>
-          </Result>
-        ) : (
-          <StrongReject>The test string does not match the regex</StrongReject>
-        )
-      ) : (
-        <StrongReject>{value}</StrongReject>
-      )}
     </Container>
   );
 }
