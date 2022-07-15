@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/tldr",
-  "version": "1.25.0",
+  "version": "1.26.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

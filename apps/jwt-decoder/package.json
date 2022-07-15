@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/jwt-decoder",
-  "version": "1.80.0",
+  "version": "1.81.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
