@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import * as Icons from 'react-feather'
 import { isTriggered } from "@felvin-search/core";
 
 //------------Styled Components-------------
@@ -9,7 +10,7 @@ import { isTriggered } from "@felvin-search/core";
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  max-width: 42rem;
+  max-width: 45rem;
 `;
 const Pill = styled.div`
 width: 20rem;
@@ -19,14 +20,32 @@ display: flex;
 align-items: center;
 background: #FAFAFA;
 border-radius: 21px;
-margin-bottom: 0.5rem;
-
+margin-bottom: 0.8rem;
+text-transform: uppercase;
+font-weight: 600;
+color: #2F2F2F;
+`
+const Alert = styled.span`
+background: ${props => props.color};
+border-radius: 0px 0px 3px 3px;
+color: #FFFFFF;
+position: absolute;
+bottom: 0;
+width: 100%;
+font-weight: 510;
+font-size: 12.985px;
+line-height: 15px;
+padding: 4px;
+display: flex;
+align-items: center;
 `
 
 
 const Div = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 `;
 const Label = styled.label`
   padding: 0.2rem;
@@ -34,10 +53,13 @@ const Label = styled.label`
 const StrongAccept = styled.strong`
   color: green;
 `;
-const Input = styled.input`
- 
+const Input = styled.textarea`
   min-height: 15rem;
+  font-size: 1.1rem;
+  padding: 0.4em;
   width: 20rem;
+  border: 1.2px solid #EAEAEA;
+border-radius: 4px;
 `;
 const StrongReject = styled.strong`
   color: red;
@@ -49,6 +71,36 @@ const Result = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+//color gen
+const Color = (prop) => {
+  if (prop === 'success') {
+    return '#60AA4D'
+  }
+  else if (prop === 'failure') {
+    return '#E17979'
+  }
+  else {
+    return '#ECB26F'
+  }
+}
+//Icons Gen
+const IconGen = (prop) => {
+  if (prop === 'success') {
+    return <Icons.CheckCircle size='12' style={{ marginRight: 4 }} />
+  }
+  else if (prop === 'failure') {
+    return <Icons.XCircle size='12' style={{ marginRight: 4 }} />
+  }
+  else {
+    return <Icons.AlertCircle size='12' style={{ marginRight: 4 }} />
+  }
+}
+//Alert Gen
+const AlertGen = ({ type }) => {
+  return (
+    <Alert color={Color(type)} >{IconGen(type)}{type === 'success' ? 'String matches expression' : type === 'failure' ? 'String does not match the expression' : 'Invalid Regular Expression'}</Alert>
+  )
+}
 
 //=========================================
 
@@ -92,21 +144,23 @@ function Component({ data }) {
 
         <Input
           type="text"
-          placeholder="Regex"
+          placeholder="Insert your regular expression here..."
           value={regex}
           onChange={(e) => setRegex(e.target.value)}
+
         ></Input>
+        <AlertGen type='error' />
       </Div>
       <Div>
 
         <Pill>Test String</Pill>
         <Input
           type="text"
-          placeholder="Test String"
+          placeholder="Insert your test string here..."
           value={text}
-          
           onChange={(e) => setText(e.target.value)}
         ></Input>
+        <AlertGen type='success' />
       </Div>
 
 
