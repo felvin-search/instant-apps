@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import * as Icons from 'react-feather'
 import { isTriggered } from "@felvin-search/core";
 
 //------------Styled Components-------------
@@ -8,41 +9,92 @@ import { isTriggered } from "@felvin-search/core";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 45rem;
 `;
+const Pill = styled.div`
+width: 20rem;
+height: 42px;
+padding-left: 1rem;
+display: flex;
+align-items: center;
+background: #FAFAFA;
+border-radius: 21px;
+margin-bottom: 0.8rem;
+text-transform: uppercase;
+font-weight: 600;
+color: #2F2F2F;
+`
+const Alert = styled.span`
+background: ${props => props.color};
+border-radius: 0px 0px 3px 3px;
+color: #FFFFFF;
+position: absolute;
+bottom: 0;
+width: 100%;
+font-weight: 510;
+font-size: 12.985px;
+line-height: 15px;
+padding: 4px;
+display: flex;
+align-items: center;
+`
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-`;
 const Div = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: left;
-  margin: 0.2rem;
-`;
-const Label = styled.label`
-  padding: 0.2rem;
-`;
-const StrongAccept = styled.strong`
-  color: green;
-`;
-const Input = styled.input`
-  size: 20;
-`;
-const StrongReject = styled.strong`
-  color: red;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 `;
 
-const Result = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+const Input = styled.textarea`
+  min-height: 15rem;
+  font-size: 1.1rem;
+  padding: 0.4em;
+  width: 20rem;
+  border:${props => props.borderColor ? `1.2px solid ${props.borderColor}` : '1.2px solid #EAEAEA'};
+  border-radius: 4px;
 `;
+const Button = styled.button`
+  background: black;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  color: white;
+ 
+  font-size: 1rem;
+  padding: 0.25em 2em;
+`
+//color gen
+const Color = (prop) => {
+  if (prop === 'success') {
+    return '#60AA4D'
+  }
+  else if (prop === 'failure') {
+    return '#E17979'
+  }
+  else if (prop === 'error') {
+    return '#ECB26F'
+  }
+}
+//Icons Gen
+const IconGen = (prop) => {
+  if (prop === 'success') {
+    return <Icons.CheckCircle size='12' style={{ marginRight: 4 }} />
+  }
+  else if (prop === 'failure') {
+    return <Icons.XCircle size='12' style={{ marginRight: 4 }} />
+  }
+  else {
+    return <Icons.AlertCircle size='12' style={{ marginRight: 4 }} />
+  }
+}
+//Alert Gen
+const AlertGen = ({ type }) => {
+  return (
+    <Alert color={Color(type)} >{IconGen(type)}{type === 'success' ? 'String matches expression' : type === 'failure' ? 'String does not match the expression' : 'Invalid Regular Expression'}</Alert>
+  )
+}
 
 //=========================================
 
@@ -65,56 +117,55 @@ function Component({ data }) {
       let result = text;
       result = result.replace(reg, (match) => `<mark>${match}</mark>`);
       setresult(result);
-      if (regex == "") {
-        setValue("Enter the regular expression");
+      if (regex === '' && text === '') {
+        setValue(true)
         return;
       }
-      if (text == "") {
-        setValue("Enter the test String");
-        return;
-      }
-      check ? setValue(true) : setValue(false);
+      check ? setValue("success") : setValue("failure");
     } catch (err) {
-      setValue("The regular expression could not be parsed. Ensure the syntax is correct!");
+      setValue("error");
     }
   }
   return (
     <Container>
-      <Form onSubmit={handleSubmit}>
-        <Div>
-          <Label>Enter Regex:</Label>
-          <Input
-            type="text"
-            placeholder="Regex"
-            value={regex}
-            onChange={(e) => setRegex(e.target.value)}
-          ></Input>
-        </Div>
-        <Div>
-          <Label>Enter String:</Label>
-          <input
-            type="text"
-            placeholder="Test String"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          ></input>
-        </Div>
-        <input type="submit" value="Check"></input>
-      </Form>
-      {typeof value === "boolean" ? (
-        value ? (
-          <Result>
-            <StrongAccept>The test string matches the regex</StrongAccept>
-            <h3>
-              <p dangerouslySetInnerHTML={{ __html: result }}></p>
-            </h3>
-          </Result>
-        ) : (
-          <StrongReject>The test string does not match the regex</StrongReject>
-        )
-      ) : (
-        <StrongReject>{value}</StrongReject>
-      )}
+
+      <Div>
+        <Pill>Regular Expression</Pill>
+
+        <Input
+          type="text"
+          placeholder="Insert your regular expression here..."
+          value={regex}
+          onChange={(e) => setRegex(e.target.value)}
+          data-gramm="false"
+          data-gramm_editor="false"
+          data-enable-grammarly="false"
+          borderColor={value === 'error' && Color(value)}
+          required
+        ></Input>
+        {!regex.length && value ? <Alert color={Color('error')} >{IconGen('error')}Enter Regex</Alert> : null}
+        {value === 'error' && <AlertGen type={value} />}
+      </Div>
+      <Div>
+
+        <Pill>Test String</Pill>
+        <Input
+          type="text"
+          placeholder="Insert your test string here..."
+          value={text}
+          data-gramm="false"
+          data-gramm_editor="false"
+          data-enable-grammarly="false"
+          borderColor={Color(value)}
+          required
+          onChange={(e) => setText(e.target.value)}
+        ></Input>
+        {!text.length && value ? <Alert color={Color('error')} >{IconGen('error')}Enter String</Alert> : null}
+        {value === 'success' || value === 'failure' ? <AlertGen type={value} /> : null}
+      </Div>
+      <Button onClick={handleSubmit}>Check</Button>
+
+
     </Container>
   );
 }
