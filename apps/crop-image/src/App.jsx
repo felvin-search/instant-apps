@@ -27,7 +27,7 @@ const InputFile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 20px; */
+  padding: 20px;
   border-width: 2px;
   border-radius: 2px;
   border-color: ${props => getColor(props)};
