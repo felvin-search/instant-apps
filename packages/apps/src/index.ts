@@ -8,7 +8,6 @@ import CodeReference from "@felvin-community/code-reference";
 import ColorPicker from "@felvin-community/color-picker";
 import CompetitiveContestApp from "@felvin-community/competitive-contest-app";
 import Compressify from "@felvin-community/compressify";
-
 import ConvertToRoman from "@felvin-community/convert-to-roman";
 import CorruptPdf from "@felvin-community/corrupt-pdf";
 import CourierTracker from "@felvin-community/courier-tracker";
@@ -153,7 +152,7 @@ const allApps = [
   WhatDay,
   WordCounter,
   WordleSolver,
-  
+
 ];
 
 export default allApps;
