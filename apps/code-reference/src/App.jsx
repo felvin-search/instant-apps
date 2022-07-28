@@ -5,6 +5,7 @@ import axios from "axios";
 import styled from "styled-components";
 import _ from "lodash";
 import * as Icon from "react-feather";
+import { isTriggered } from "@felvin-search/core";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -16,7 +17,7 @@ const Source = styled.span`
   color: #878787;
 `;
 
-const SourceLink = styled.a`
+const SourceLink = styled.span`
   text-decoration: none;
   color: #878787;
   margin-left: 4px;
@@ -28,6 +29,8 @@ const CodeBlock = styled.div`
   width: clamp(300px, 60vw, 900px);
   overflow-y: auto;
   font-size: 1rem;
+  border: 0.5px #929292 solid;
+  padding: 0;
 `;
 const CodeBlockWrapper = styled.div`
   height: 68vh;
@@ -52,6 +55,11 @@ const Clipboard = styled.button`
   cursor: pointer;
   float: right;
 `;
+const CodeSnippet = styled(SyntaxHighlighter)`
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+`
 
 //=========================================
 
@@ -59,32 +67,35 @@ const Clipboard = styled.button`
 // `data` prop is exactly what is returned by queryToData.
 
 function Component(props) {
-  console.log(props.data);
+  console.log(props);
+
   const [isCopied, setIsCopied] = useState(false);
   const handleCopy = (clip) => {
-    clip.writeText(JSON.parse(props.data.code)).then(() => {
+    clip.writeText(props.data.code).then(() => {
       setIsCopied(true);
       setTimeout(() => {
         setIsCopied(false);
       }, 2000);
     });
   };
+
   return (
     <div>
-      <b>{_.startCase(`${props.data.algorithm} in ${props.data.language}`)}</b>
-      <CodeBlockWrapper>
-        <CodeBlock>
-          <SyntaxHighlighter
-            language={props.data.language}
-            style={atomOneLight}
-            wrapLongLines={true}
-            customStyle={{
-              background: "#FAFAFA",
-            }}
-          >
-            {JSON.parse(props.data.code)}
-          </SyntaxHighlighter>
-        </CodeBlock>
+      <CodeBlock>
+        <CodeSnippet
+          language={props.data.lan}
+          style={atomOneLight}
+          wrapLongLines={true}
+
+        >
+          {props.data.code}
+        </CodeSnippet>
+      </CodeBlock>
+      <Container>
+        <Source>
+          Source :
+          <SourceLink >www.geekforgeeks.com</SourceLink>
+        </Source>
         <Clipboard onClick={() => handleCopy(navigator.clipboard)}>
           {!isCopied ? (
             <Icon.Copy size={26} color="#AFAFAF" />
@@ -92,12 +103,6 @@ function Component(props) {
             <Icon.Check size={26} color="#AFAFAF" />
           )}
         </Clipboard>
-      </CodeBlockWrapper>
-      <Container>
-        <Source>
-          Source :
-          <SourceLink href={props.data.source}>{props.data.name}</SourceLink>
-        </Source>
       </Container>
     </div>
   );
@@ -107,26 +112,41 @@ function Component(props) {
 
 // This where you can process the query and try to convert it into some meaningful data.
 const queryToData = async ({ query }) => {
-  //  Query would have two different parts
-  //  -> Algorithm - may be multi word
-  //  -> Language - Mostly Single Word
-  const languageMap = {
-    js: "javascript",
-    cpp: "c++",
-  };
-  query = query.toLowerCase();
-  Object.keys(languageMap).forEach((shortForm) => {
-    query = query.replace(shortForm, languageMap[shortForm]);
-  });
-  const searchQuery = query;
-  const value = await axios.get(
-    "https://code-snippets.fly.dev/api/code",
-    { params: { searchQuery } }
-  );
-  if (value.status == 200) {
-    return value.data;
+  if (
+    !isTriggered(
+      query,
+      [
+        "find",
+        "how",
+      ],
+      { substringMatch: true }
+    )
+  ) {
+    return;
   }
-  return;
+  const lan = ['javascript', 'c++', 'c', 'python'];
+  query = query.toLowerCase();
+  let lanFound = lan.map((item) => {
+    if (query.includes(item)) {
+      return item
+    }
+  })
+  lanFound = lanFound.filter(function (element) {
+    return element !== undefined;
+  });
+  const res = await axios.get(`https://felvin-crawler.fly.dev/?q=${query}`)
+  let code = res.data.filter((ele) => ele.lan.toLowerCase().includes(lanFound[0]))
+  if(code.length===0){
+    code =res.data;
+  }
+  if (res.status === 200) {
+    return code[0];
+  }
+  else {
+    return;
+  }
+
+
 };
 
 export { queryToData, Component };
