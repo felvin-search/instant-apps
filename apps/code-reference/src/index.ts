@@ -9,9 +9,9 @@ const App: InstantApp = {
   Component,
   screenshotPath: "./files/screenshot.png",
   exampleSearchQueries: [
-    "merge sort in javascript",
-    "word wrap in c",
-    "bubble sort in python",
+    "find <code>",
+    "how <code>",
+    
   ],
 };
 
