@@ -39,6 +39,8 @@ const InputFile = styled.div`
 `;
 
 const Container = styled.div`
+  background-color: #fafafa;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
