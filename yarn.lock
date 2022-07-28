@@ -1657,6 +1657,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/code-snippets@^1.0.0, @felvin-community/code-snippets@workspace:apps/code-snippets":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/code-snippets@workspace:apps/code-snippets"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    axios: ^0.27.2
+    lodash: ^4.17.21
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-syntax-highlighter: ^15.5.0
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/color-picker@^1.80.0, @felvin-community/color-picker@workspace:apps/color-picker":
   version: 0.0.0-use.local
   resolution: "@felvin-community/color-picker@workspace:apps/color-picker"
@@ -2971,6 +2992,7 @@ __metadata:
     "@felvin-community/bouncy-ball": ^1.87.0
     "@felvin-community/capitals": ^1.87.0
     "@felvin-community/code-reference": ^1.56.0
+    "@felvin-community/code-snippets": ^1.0.0
     "@felvin-community/color-picker": ^1.80.0
     "@felvin-community/competitive-contest-app": ^1.4.0
     "@felvin-community/compressify": ^1.78.0
@@ -5140,6 +5162,16 @@ __metadata:
   dependencies:
     follow-redirects: ^1.14.8
   checksum: d9eb58ff4bc0b36a04783fc9ff760e9245c829a5a1052ee7ca6013410d427036b1d10d04e7380c02f3508c5eaf3485b1ae67bd2adbfec3683704745c8d7a6e1a
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.27.2":
+  version: 0.27.2
+  resolution: "axios@npm:0.27.2"
+  dependencies:
+    follow-redirects: ^1.14.9
+    form-data: ^4.0.0
+  checksum: 38cb7540465fe8c4102850c4368053c21683af85c5fdf0ea619f9628abbcb59415d1e22ebc8a6390d2bbc9b58a9806c874f139767389c862ec9b772235f06854
   languageName: node
   linkType: hard
 
@@ -8271,6 +8303,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.14.9":
+  version: 1.15.1
+  resolution: "follow-redirects@npm:1.15.1"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 6aa4e3e3cdfa3b9314801a1cd192ba756a53479d9d8cca65bf4db3a3e8834e62139245cd2f9566147c8dfe2efff1700d3e6aefd103de4004a7b99985e71dd533
+  languageName: node
+  linkType: hard
+
 "foreach@npm:^2.0.5":
   version: 2.0.5
   resolution: "foreach@npm:2.0.5"
@@ -8293,6 +8335,17 @@ __metadata:
     combined-stream: ^1.0.8
     mime-types: ^2.1.12
   checksum: b019e8d35c8afc14a2bd8a7a92fa4f525a4726b6d5a9740e8d2623c30e308fbb58dc8469f90415a856698933c8479b01646a9dff33c87cc4e76d72aedbbf860d
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "form-data@npm:4.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
   languageName: node
   linkType: hard
 
@@ -13468,10 +13521,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prismjs@npm:^1.27.0":
+  version: 1.28.0
+  resolution: "prismjs@npm:1.28.0"
+  checksum: bde93fb2beb45b7243219fc53855f59ee54b3fa179f315e8f9d66244d756ef984462e10561bbdc6713d3d7e051852472d7c284f5794a8791eeaefea2fb910b16
+  languageName: node
+  linkType: hard
+
 "prismjs@npm:~1.25.0":
   version: 1.25.0
   resolution: "prismjs@npm:1.25.0"
   checksum: 04d8eae9d1b26b76c350bc65621584c8f8cab80ace7da3953f8aef2f9a8dd4b4f71c1d15bc5c67f126ddc90cd5af613919dc1340589a6c57355bed86fa3ac010
+  languageName: node
+  linkType: hard
+
+"prismjs@npm:~1.27.0":
+  version: 1.27.0
+  resolution: "prismjs@npm:1.27.0"
+  checksum: 85c7f4a3e999073502cc9e1882af01e3709706369ec254b60bff1149eda701f40d02512acab956012dc7e61cfd61743a3a34c1bd0737e8dbacd79141e5698bbc
   languageName: node
   linkType: hard
 
@@ -14103,6 +14170,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-syntax-highlighter@npm:^15.5.0":
+  version: 15.5.0
+  resolution: "react-syntax-highlighter@npm:15.5.0"
+  dependencies:
+    "@babel/runtime": ^7.3.1
+    highlight.js: ^10.4.1
+    lowlight: ^1.17.0
+    prismjs: ^1.27.0
+    refractor: ^3.6.0
+  peerDependencies:
+    react: ">= 0.14.0"
+  checksum: c082b48f30f8ba8d0c55ed1d761910630860077c7ff5793c4c912adcb5760df06436ed0ad62be0de28113aac9ad2af55eccd995f8eee98df53382e4ced2072fb
+  languageName: node
+  linkType: hard
+
 "react-tetris@npm:^0.1.2":
   version: 0.1.2
   resolution: "react-tetris@npm:0.1.2"
@@ -14233,6 +14315,17 @@ __metadata:
     parse-entities: ^2.0.0
     prismjs: ~1.25.0
   checksum: e8e8bfe8fc035fb6b0a9427ba19abbd2ec1ad78197dcb0027fca95c94fa046ed14f253682b2dcee42e87591300c9237924714ccddf18173a21a18622521a20b7
+  languageName: node
+  linkType: hard
+
+"refractor@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "refractor@npm:3.6.0"
+  dependencies:
+    hastscript: ^6.0.0
+    parse-entities: ^2.0.0
+    prismjs: ~1.27.0
+  checksum: 39b01c4168c77c5c8486f9bf8907bbb05f257f15026057ba5728535815a2d90eed620468a4bfbb2b8ceefbb3ce3931a1be8b17152dbdbc8b0eef92450ff750a2
   languageName: node
   linkType: hard
 

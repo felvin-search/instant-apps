@@ -1,3 +1,4 @@
+import CodeSnippets from "@felvin-community/code-snippets";
 import AddressPincodes from "@felvin-community/address-pincodes";
 import AsciiArt from "@felvin-community/ascii-art";
 import Bmiconverter from "@felvin-community/bmiconverter";
@@ -73,6 +74,7 @@ import WordleSolver from "@felvin-community/wordle-solver";
 
 
 const allApps = [
+  CodeSnippets,
   AddressPincodes,
   AsciiArt,
   Bmiconverter,
