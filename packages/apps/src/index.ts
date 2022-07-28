@@ -1,6 +1,5 @@
 import AddressPincodes from "@felvin-community/address-pincodes";
 import AsciiArt from "@felvin-community/ascii-art";
-import AsyncApiValidator from "@felvin-community/async-api-validator";
 import Bmiconverter from "@felvin-community/bmiconverter";
 import BouncyBall from "@felvin-community/bouncy-ball";
 import Capitals from "@felvin-community/capitals";
@@ -8,7 +7,6 @@ import CodeReference from "@felvin-community/code-reference";
 import ColorPicker from "@felvin-community/color-picker";
 import CompetitiveContestApp from "@felvin-community/competitive-contest-app";
 import Compressify from "@felvin-community/compressify";
-import Constants from "@felvin-community/constants";
 import ConvertToRoman from "@felvin-community/convert-to-roman";
 import CorruptPdf from "@felvin-community/corrupt-pdf";
 import CourierTracker from "@felvin-community/courier-tracker";
@@ -26,7 +24,6 @@ import GraphPlotter from "@felvin-community/graph-plotter";
 import HelloWorldInDifferentLanguages from "@felvin-community/hello-world-in-different-languages";
 import HttpStatusCodes from "@felvin-community/http-status-codes";
 import ImageUploader from "@felvin-community/image-uploader";
-import InstantAppDetails from "@felvin-community/instant-app-details";
 import IpAddress from "@felvin-community/ip-address";
 import IsPrime from "@felvin-community/is-prime";
 import IsbnBookInfo from "@felvin-community/isbn-book-info";
@@ -60,7 +57,6 @@ import TextSentimentAnalyser from "@felvin-community/text-sentiment-analyser";
 import TicTacToe from "@felvin-community/tic-tac-toe";
 import TimeAtPlace from "@felvin-community/time-at-place";
 import Timer from "@felvin-community/timer";
-import Tldr from "@felvin-community/tldr";
 import TrendingOnGithub from "@felvin-community/trending-on-github";
 import TvShows from "@felvin-community/tv-shows";
 import UnitConvertor from "@felvin-community/unit-convertor";
@@ -74,12 +70,11 @@ import WeightConverter from "@felvin-community/weight-converter";
 import WhatDay from "@felvin-community/what-day";
 import WordCounter from "@felvin-community/word-counter";
 import WordleSolver from "@felvin-community/wordle-solver";
-import YamlToJson from "@felvin-community/yaml-to-json";
+
 
 const allApps = [
   AddressPincodes,
   AsciiArt,
-  AsyncApiValidator,
   Bmiconverter,
   BouncyBall,
   Capitals,
@@ -87,7 +82,6 @@ const allApps = [
   ColorPicker,
   CompetitiveContestApp,
   Compressify,
-  Constants,
   ConvertToRoman,
   CorruptPdf,
   CourierTracker,
@@ -105,7 +99,6 @@ const allApps = [
   HelloWorldInDifferentLanguages,
   HttpStatusCodes,
   ImageUploader,
-  InstantAppDetails,
   IpAddress,
   IsPrime,
   IsbnBookInfo,
@@ -139,7 +132,6 @@ const allApps = [
   TicTacToe,
   TimeAtPlace,
   Timer,
-  Tldr,
   TrendingOnGithub,
   TvShows,
   UnitConvertor,
@@ -153,7 +145,6 @@ const allApps = [
   WhatDay,
   WordCounter,
   WordleSolver,
-  YamlToJson,
 ];
 
 export default allApps;
