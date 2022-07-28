@@ -26,7 +26,7 @@ const SourceLink = styled.span`
 
 const CodeBlock = styled.div`
   height: 60vh;
-  width: clamp(300px, 60vw, 900px);
+  width: 100%;
   overflow-y: auto;
   font-size: 1rem;
   border: 0.5px #929292 solid;
