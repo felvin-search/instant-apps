@@ -86,7 +86,6 @@ function Component(props) {
           language={props.data.lan}
           style={atomOneLight}
           wrapLongLines={true}
-
         >
           {props.data.code}
         </CodeSnippet>
