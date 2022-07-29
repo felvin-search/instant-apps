@@ -25,14 +25,15 @@ const SourceLink = styled.a`
 
 const CodeBlock = styled.div`
   height: 60vh;
-  width: clamp(300px, 60vw, 900px);
+  width: 100%;
   overflow-y: auto;
   font-size: 1rem;
+  border: 0.5px #929292 solid;
 `;
 const CodeBlockWrapper = styled.div`
   height: 68vh;
   background: #fafafac7;
-  width: clamp(300px, 60vw, 900px);
+  width: 100%;
   border: 0.5px #929292 solid;
 `;
 
@@ -72,7 +73,7 @@ function Component(props) {
   return (
     <div>
       <b>{_.startCase(`${props.data.algorithm} in ${props.data.language}`)}</b>
-      <CodeBlockWrapper>
+    
         <CodeBlock>
           <SyntaxHighlighter
             language={props.data.language}
@@ -80,11 +81,18 @@ function Component(props) {
             wrapLongLines={true}
             customStyle={{
               background: "#FAFAFA",
+              padding:"15px",
+              margin:"0"
             }}
           >
             {JSON.parse(props.data.code)}
           </SyntaxHighlighter>
         </CodeBlock>
+      <Container>
+        <Source>
+          Source :
+          <SourceLink href={props.data.source}>{props.data.name}</SourceLink>
+        </Source>
         <Clipboard onClick={() => handleCopy(navigator.clipboard)}>
           {!isCopied ? (
             <Icon.Copy size={26} color="#AFAFAF" />
@@ -92,12 +100,6 @@ function Component(props) {
             <Icon.Check size={26} color="#AFAFAF" />
           )}
         </Clipboard>
-      </CodeBlockWrapper>
-      <Container>
-        <Source>
-          Source :
-          <SourceLink href={props.data.source}>{props.data.name}</SourceLink>
-        </Source>
       </Container>
     </div>
   );
@@ -120,7 +122,7 @@ const queryToData = async ({ query }) => {
   });
   const searchQuery = query;
   const value = await axios.get(
-    "https://code-snippets.fly.dev/api/code",
+    "https://felvin-snippets.fly.dev/api/code",
     { params: { searchQuery } }
   );
   if (value.status == 200) {
