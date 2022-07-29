@@ -28,6 +28,7 @@
     "@felvin-community/bouncy-ball": "^1.87.0",
     "@felvin-community/capitals": "^1.87.0",
     "@felvin-community/code-reference": "^1.56.0",
+    "@felvin-community/code-snippets": "^1.0.0",
     "@felvin-community/color-picker": "^1.80.0",
     "@felvin-community/competitive-contest-app": "^1.4.0",
     "@felvin-community/compressify": "^1.78.0",
