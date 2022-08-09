@@ -160,15 +160,14 @@ function Component({ data: db }) {
     pageCount,
     setPageSize,
     page,
-    pageIndex,
-    pageSize,
+    
 
     prepareRow,
   } = useTable({ columns, data, }, usePagination)
   useEffect(() => {
     setPageSize(5)
   }, [])
-
+  const { pageIndex, pageSize } = state
   return (
     <Container>
       <div style={{ width: '100%', marginBottom: '1rem' }}>
@@ -243,7 +242,7 @@ function Component({ data: db }) {
         <span>
           Page{' '}
           <strong>
-            {pageIndex} of {pageOptions.length}
+            {pageIndex+1} of {pageOptions.length}
           </strong>{' '}
         </span>
 
