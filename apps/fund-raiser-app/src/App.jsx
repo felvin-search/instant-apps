@@ -19,14 +19,8 @@ const Td = styled.td`
   color: #757575;
   text-align: center;
   font-size: 0.85rem;
-  padding: 20px;                     
-  /* background: #F9F9F9; */
+  padding: 10px 5px;                     
   width: 5rem;
-    // textOverflow: "ellipsis",
-    // overflow:"hidden",
-   // whiteSpace:"nowrap",
-  /* border-bottom: 2px #19191D solid; */
-
 `
 const Select = styled.select`
   width: 40%;
@@ -62,7 +56,7 @@ const Tr = styled.tr`
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data: db }) {
-  console.log(db)
+
   const [states, setStates] = useState(null);
   const [category, setCategory] = useState(db[0] == 'funds' ? '' : db[0]);
   const [cities, setCities] = useState(null);
@@ -80,11 +74,12 @@ function Component({ data: db }) {
   }
   const fetchData = async (state, city, category) => {
     let res;
-    console.log(city)
+
     if (city) {
       res = await axios.get(`https://felvin-fund-raiser.fly.dev/?category=${category}&city=${city}&state=${state}`)
     }
     else {
+
       res = await axios.get(`https://felvin-fund-raiser.fly.dev/?category=${category}&state=${state}`)
     }
     setDatas(res.data)
@@ -97,6 +92,7 @@ function Component({ data: db }) {
   }, [selectedState, selectedCity])
   useEffect(() => {
     fetchCities(selectedState)
+    setSelectedCity('')
   }, [selectedState])
 
   const data = useMemo(
@@ -160,8 +156,6 @@ function Component({ data: db }) {
     pageCount,
     setPageSize,
     page,
-    
-
     prepareRow,
   } = useTable({ columns, data, }, usePagination)
   useEffect(() => {
@@ -172,15 +166,17 @@ function Component({ data: db }) {
     <Container>
       <div style={{ width: '100%', marginBottom: '1rem' }}>
         <Select value={selectedState} onChange={(e) => setSelectedState(e.target.value)}>
-          {states && states.map((el) => <option value={el} >
+          {states && states.map((el, id) => <option key={id} value={el} >
             {el}
           </option>)}
 
         </Select>
         <Select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)}>
-          {cities && cities.map((el) => <option value={el} >
+          <option value='' hidden>select city</option>
+          {cities && cities.map((el, id) => <option key={id} value={el} >
             {el}
           </option>)}
+
         </Select>
       </div>
       <table {...getTableProps()} cellSpacing='0' style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -195,7 +191,7 @@ function Component({ data: db }) {
 
                     color: 'white',
                     background: '#74d6f4',
-                    padding: '15px 20px',
+                    padding: '10px 15px',
                     fontSize: '0.8rem'
 
                   }}
@@ -242,7 +238,7 @@ function Component({ data: db }) {
         <span>
           Page{' '}
           <strong>
-            {pageIndex+1} of {pageOptions.length}
+            {pageIndex + 1} of {pageOptions.length}
           </strong>{' '}
         </span>
 
