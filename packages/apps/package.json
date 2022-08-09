@@ -33,6 +33,7 @@
     "@felvin-community/competitive-contest-app": "^1.6.0",
     "@felvin-community/compressify": "^1.80.0",
     "@felvin-community/constants": "^1.9.0",
+    "@felvin-community/contact-mailer": "^1.0.0",
     "@felvin-community/convert-to-roman": "^1.43.0",
     "@felvin-community/corrupt-pdf": "^1.4.0",
     "@felvin-community/courier-tracker": "^1.89.0",
