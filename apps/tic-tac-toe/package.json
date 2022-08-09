@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/tic-tac-toe",
-  "version": "1.89.0",
+  "version": "1.90.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

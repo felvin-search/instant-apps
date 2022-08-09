@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/trending-on-github",
-  "version": "1.77.0",
+  "version": "1.78.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

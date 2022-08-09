@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/image-uploader",
-  "version": "1.70.0",
+  "version": "1.71.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

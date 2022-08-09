@@ -12,6 +12,7 @@ undecided:
   - "@felvin-community/competitive-contest-app"
   - "@felvin-community/compressify"
   - "@felvin-community/constants"
+  - "@felvin-community/contact-mailer"
   - "@felvin-community/convert-to-roman"
   - "@felvin-community/corrupt-pdf"
   - "@felvin-community/courier-tracker"
