@@ -1,3 +1,4 @@
+import ContactMailer from "@felvin-community/contact-mailer";
 import FundRaiserApp from "@felvin-community/fund-raiser-app";
 import CodeSnippets from "@felvin-community/code-snippets";
 import AddressPincodes from "@felvin-community/address-pincodes";
@@ -75,6 +76,7 @@ import WordleSolver from "@felvin-community/wordle-solver";
 
 
 const allApps = [
+  ContactMailer,
   FundRaiserApp,
   CodeSnippets,
   AddressPincodes,
