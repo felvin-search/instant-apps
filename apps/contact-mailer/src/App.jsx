@@ -145,6 +145,10 @@ function Component({ data: db }) {
   const handleSave = (e) => {
     e.preventDefault()
     setContact(pre => [...pre, detail]);
+    setDetail({
+      name: "",
+      mailto: ""
+    })
   }
   return (
     <>
@@ -155,8 +159,8 @@ function Component({ data: db }) {
           </Heading>
           <Form onSubmit={handleSave}>
             <Div>
-              <Input type="text"   name="name" placeholder="Name" onChange={handleChange} />
-              <Input type="email"  name="mailto" placeholder="Email address" onChange={handleChange} />
+              <Input type="text" value={detail.name}   name="name" placeholder="Name" onChange={handleChange} />
+              <Input type="email" value={detail.mailto} name="mailto" placeholder="Email address" onChange={handleChange} />
             </Div>
             <Input type="submit" value="Save" style={{
               color: 'white',

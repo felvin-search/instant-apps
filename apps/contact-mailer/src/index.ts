@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "Mail your favourite contacts without leaving the search bar",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ['send','email'],
 };
 
 export default App;
