@@ -1979,6 +1979,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/fund-raiser-app@^1.0.0, @felvin-community/fund-raiser-app@workspace:apps/fund-raiser-app":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/fund-raiser-app@workspace:apps/fund-raiser-app"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    axios: ^0.27.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-table: ^7.8.0
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/github-user@^1.3.0, @felvin-community/github-user@workspace:apps/github-user":
   version: 0.0.0-use.local
   resolution: "@felvin-community/github-user@workspace:apps/github-user"
@@ -3009,6 +3029,7 @@ __metadata:
     "@felvin-community/dictionary": ^1.88.0
     "@felvin-community/flappy-bird": ^1.88.0
     "@felvin-community/flip-a-coin": ^1.81.0
+    "@felvin-community/fund-raiser-app": ^1.0.0
     "@felvin-community/github-user": ^1.3.0
     "@felvin-community/graph-plotter": ^1.88.0
     "@felvin-community/hello-world-in-different-languages": ^1.79.0
@@ -14182,6 +14203,15 @@ __metadata:
   peerDependencies:
     react: ">= 0.14.0"
   checksum: c082b48f30f8ba8d0c55ed1d761910630860077c7ff5793c4c912adcb5760df06436ed0ad62be0de28113aac9ad2af55eccd995f8eee98df53382e4ced2072fb
+  languageName: node
+  linkType: hard
+
+"react-table@npm:^7.8.0":
+  version: 7.8.0
+  resolution: "react-table@npm:7.8.0"
+  peerDependencies:
+    react: ^16.8.3 || ^17.0.0-0 || ^18.0.0
+  checksum: 44ca0fb848c6869cd793cede8dc33072b38ebb8f8d2833565afe7cf3eac5d1fa455ac5fb9d06838b16fab0523d5d03e3e82f7645032f71245096e67b892313b9
   languageName: node
   linkType: hard
 

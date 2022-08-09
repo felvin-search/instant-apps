@@ -1,3 +1,4 @@
+import FundRaiserApp from "@felvin-community/fund-raiser-app";
 import CodeSnippets from "@felvin-community/code-snippets";
 import AddressPincodes from "@felvin-community/address-pincodes";
 import AsciiArt from "@felvin-community/ascii-art";
@@ -74,6 +75,7 @@ import WordleSolver from "@felvin-community/wordle-solver";
 
 
 const allApps = [
+  FundRaiserApp,
   CodeSnippets,
   AddressPincodes,
   AsciiArt,
