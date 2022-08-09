@@ -7,8 +7,8 @@ const App: InstantApp = {
   description: "get all the leading funds firm in your search engine",
   queryToData,
   Component,
-  // screenshotPath: "./files/screenshot.png",
-  // exampleSearchQueries: [],
+  screenshotPath: "./files/screenshot.png",
+  exampleSearchQueries: ["funds","based"],
 };
 
 export default App;
