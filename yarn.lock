@@ -3001,6 +3001,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/yc-company-details@^1.0.0, @felvin-community/yc-company-details@workspace:apps/yc-company-details":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/yc-company-details@workspace:apps/yc-company-details"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-paginate: ^8.1.3
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-search/apps@^1.90.0, @felvin-search/apps@workspace:packages/apps":
   version: 0.0.0-use.local
   resolution: "@felvin-search/apps@workspace:packages/apps"
@@ -3084,6 +3103,7 @@ __metadata:
     "@felvin-community/word-counter": ^1.89.0
     "@felvin-community/wordle-solver": ^1.4.0
     "@felvin-community/yaml-to-json": ^1.29.0
+    "@felvin-community/yc-company-details": ^1.0.0
     "@felvin-search/cli": ^1.59.0
     "@felvin-search/core": ^1.56.0
     "@types/react": ^17.0.0
@@ -13654,7 +13674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.x, prop-types@npm:^15.0.0, prop-types@npm:^15.5.10, prop-types@npm:^15.5.4, prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:15.x, prop-types@npm:^15.0.0, prop-types@npm:^15.5.10, prop-types@npm:^15.5.4, prop-types@npm:^15.5.8, prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -14109,6 +14129,17 @@ __metadata:
     react: ^16.9.0
     react-dom: ^16.9.0
   checksum: f113a19d349702397d0fd7630172864dc2c181444acdd5b425c64b6d48633c620ffad6487cda8407ad48d5ae6ba2bbad36bbff8e78b20432ebb1cd053c35a436
+  languageName: node
+  linkType: hard
+
+"react-paginate@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "react-paginate@npm:8.1.3"
+  dependencies:
+    prop-types: ^15.6.1
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+  checksum: c947127f972f42ae2e8717d84fd6bd698d4b657231b75263cbcedab7aa10d9c77ca16969383804490c771eed8313d43123f08a541e9bc567868ab189e2de6cfb
   languageName: node
   linkType: hard
 

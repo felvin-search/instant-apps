@@ -1,3 +1,4 @@
+import YcCompanyDetails from "@felvin-community/yc-company-details";
 import FundRaiserApp from "@felvin-community/fund-raiser-app";
 import CodeSnippets from "@felvin-community/code-snippets";
 import AddressPincodes from "@felvin-community/address-pincodes";
@@ -73,8 +74,8 @@ import WhatDay from "@felvin-community/what-day";
 import WordCounter from "@felvin-community/word-counter";
 import WordleSolver from "@felvin-community/wordle-solver";
 
-
 const allApps = [
+  YcCompanyDetails,
   FundRaiserApp,
   CodeSnippets,
   AddressPincodes,

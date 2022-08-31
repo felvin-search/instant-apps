@@ -100,6 +100,7 @@
     "@felvin-community/word-counter": "^1.89.0",
     "@felvin-community/wordle-solver": "^1.4.0",
     "@felvin-community/yaml-to-json": "^1.29.0",
+    "@felvin-community/yc-company-details": "^1.0.0",
     "@felvin-search/core": "^1.56.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
