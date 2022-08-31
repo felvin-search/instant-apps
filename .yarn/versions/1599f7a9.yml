@@ -80,4 +80,5 @@ undecided:
   - "@felvin-community/word-counter"
   - "@felvin-community/wordle-solver"
   - "@felvin-community/yaml-to-json"
+  - "@felvin-community/yc-company"
   - "@felvin-search/apps"

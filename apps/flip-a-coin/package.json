@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/flip-a-coin",
-  "version": "1.83.0",
+  "version": "1.84.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
