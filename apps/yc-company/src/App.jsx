@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
-import "./app.css";
 import Fuse from "fuse.js";
 
 //------------Styled Components-------------
@@ -259,6 +258,45 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
+const StyledPaginateContainer = styled.div`
+  .pagination {
+    margin: 15px auto;
+    display: flex;
+    list-style: none;
+    outline: none;
+  }
+  .pagination > .active > a {
+    background-color: #47ccde;
+    border-color: #47ccde;
+    color: #fff;
+  }
+  .pagination > li > a {
+    border: 1px solid #47ccde;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+  }
+  .pagination > .active > a,
+  .pagination > .active > span,
+  .pagination > .active > a:hover,
+  .pagination > .active > span:hover,
+  .pagination > .active > a:focus,
+  .pagination > .active > span:focus {
+    background-color: #47ccde;
+    border-color: #47ccde;
+    outline: none;
+  }
+  .pagination > li > a,
+  .pagination > li > span {
+    color: #47ccde;
+  }
+  .pagination > li:first-child > a,
+  .pagination > li:first-child > span,
+  .pagination > li:last-child > a,
+  .pagination > li:last-child > span {
+    border-radius: unset;
+  }
+`;
 
 const Cards = styled.div`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -501,19 +539,21 @@ function Component({ data: db }) {
 
       <>
         {data}
-        <ReactPaginate
-          previousLabel={"prev"}
-          nextLabel={"next"}
-          breakLabel={"..."}
-          breakClassName={"break-me"}
-          pageCount={pageCount}
-          marginPagesDisplayed={1}
-          pageRangeDisplayed={3}
-          onPageChange={handlePageClick}
-          containerClassName={"pagination"}
-          subContainerClassName={"pages pagination"}
-          activeClassName={"active"}
-        />
+        <StyledPaginateContainer>
+          <ReactPaginate
+            previousLabel={"prev"}
+            nextLabel={"next"}
+            breakLabel={"..."}
+            breakClassName={"break-me"}
+            pageCount={pageCount}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={3}
+            onPageChange={handlePageClick}
+            containerClassName={"pagination"}
+            subContainerClassName={"pages pagination"}
+            activeClassName={"active"}
+          />
+        </StyledPaginateContainer>
       </>
     </Container>
   );
