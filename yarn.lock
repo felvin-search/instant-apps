@@ -3027,6 +3027,7 @@ __metadata:
     "@felvin-search/core": ^1.0.0
     "@types/react": ^17.0.0
     "@types/styled-components": ^5.1.11
+    fuse.js: ^6.6.2
     react: ^17.0.2
     react-dom: ^17.0.2
     react-paginate: ^8.1.3
@@ -8541,6 +8542,13 @@ __metadata:
     d3-zoom: ^2.0.0
     interval-arithmetic-eval: ^0.4.7
   checksum: 6160872a1c1b0572586a88d9d93ad38a552cae68f511e26b692c68cab7c611e5d018586f186ea2d38fdde5e6fcdb7ec3d7991fd89c7f192a9fe86810e00ac97f
+  languageName: node
+  linkType: hard
+
+"fuse.js@npm:^6.6.2":
+  version: 6.6.2
+  resolution: "fuse.js@npm:6.6.2"
+  checksum: 17ae758ce205276ebd88bd9c9f088a100be0b4896abac9f6b09847151269d1690f41d7f98ff5813d4a58973162dbd99d0072ce807020fee6f9de60170f6b08eb
   languageName: node
   linkType: hard
 

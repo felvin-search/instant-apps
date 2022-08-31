@@ -4,6 +4,7 @@ import { isTriggered } from "@felvin-search/core";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import "./app.css";
+import Fuse from "fuse.js";
 
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
@@ -49,6 +50,211 @@ const Batches = {
   W23: 1,
 };
 
+const Tag = [
+  "SaaS",
+  "B2B",
+  "Fintech",
+  "Developer Tools",
+  "Marketplace",
+  "Artifical Intelligence",
+  "Machine Learning",
+  "E-commerce",
+  "Education",
+  "Crypto / Web3",
+  "Consumer",
+  "Climate",
+  "Consumer Health Services",
+  "Healthcare",
+  "Data Engineering",
+  "Hardware",
+  "Community",
+  "Productivity",
+  "Hard Tech",
+  "Proptech",
+  "Analytics",
+  "API",
+  "Biotech",
+  "Payments",
+  "Logistics",
+  "Digital Health",
+  "Medical Devices",
+  "Gaming",
+  "Robotics",
+  "Computer Vision",
+  "Enterprise",
+  "Neobank",
+  "Health Tech",
+  "Security",
+  "Delivery",
+  "Mental Health Tech",
+  "Recruiting",
+  "Telemedicine",
+  "Design Tools",
+  "Food Tech",
+  "eLearning",
+  "Banking as a Service",
+  "Construction",
+  "Entertainment",
+  "Social",
+  "Subscriptions",
+  "Insurance",
+  "HR Tech",
+  "DeFi",
+  "Deep Learning",
+  "DevSecOps",
+  "IoT",
+  "Video",
+  "Real Estate",
+  "Supply Chain",
+  "GovTech",
+  "Grocery",
+  "Open Source",
+  "Sales",
+  "Documents",
+  "AI-powered Drug Discovery",
+  "Travel",
+  "Creator Economy",
+  "Investing",
+  "Therapeutics",
+  "No-code",
+  "Collaboration",
+  "AIOps",
+  "FinOps",
+  "Human Resources",
+  "Nonprofit",
+  "Carbon Capture and Removal",
+  "Electric Vehicles",
+  "Retail",
+  "Robotic Process Automation",
+  "Virtual Reality",
+  "Diagnostics",
+  "Identity",
+  "NFT",
+  "Telehealth",
+  "Augmented Reality",
+  "Ghost Kitchens",
+  "Health Insurance",
+  "Housing",
+  "NLP",
+  "Remote Work",
+  "AI-Enhanced Learning",
+  "Drug discovery",
+  "Transportation",
+  "Warehouse Management Tech",
+  "Media",
+  "Sports Tech",
+  "Assistive Tech",
+  "ClimateTech",
+  "Drones",
+  "Generative AI",
+  "Messaging",
+  "Satellites",
+  "Space Exploration",
+  "Compliance",
+  "Fitness",
+  "Gene Therapy",
+  "Genomics",
+  "Kubernetes",
+  "LegalTech",
+  "Manufacturing",
+  "Sustainable Fashion",
+  "Airplanes",
+  "COVID-19",
+  "Customer Success",
+  "Digital Freight Brokerage",
+  "Energy Storage",
+  "Food Service Robots & Machines",
+  "Social Media",
+  "Social Network",
+  "Synthetic Biology",
+  "Autonomous Trucking",
+  "Energy",
+  "Payroll",
+  "Primary Care",
+  "Privacy",
+  "Sleep Tech",
+  "Solar Power",
+  "Agriculture",
+  "Commercial Space Launch",
+  "Fertility Tech",
+  "Income Share Agreements",
+  "Nanotechnology",
+  "Neurotechnology",
+  "Oncology",
+  "Regtech",
+  "3D Printing",
+  "Air Taxis",
+  "Anti-Aging",
+  "Autonomous Delivery",
+  "Cellular Agriculture",
+  "Civic Tech",
+  "Cloud Gaming",
+  "Crowdfunding",
+  "DAO",
+  "Geographic Information System",
+  "Legal",
+  "Legal Tech",
+  "Next-gen Network Security",
+  "Renewable Energy",
+  "Cannabis",
+  "Cloud Workload Protection",
+  "Femtech",
+  "Medical Robotics",
+  "Microfluidics",
+  "Nanosensors",
+  "Podcasts",
+  "Smart Clothing",
+  "Auto Commerce",
+  "Biometrics",
+  "Bioplastic",
+  "Cashierless Checkout",
+  "Cultivated Meat",
+  "Cultured Meat",
+  "Industrial Workplace Safety",
+  "Nanomedicine",
+  "Pediatrics",
+  "Speech Recognition",
+  "Alternative Battery Tech",
+  "Beauty",
+  "CRISPR",
+  "Conversational Banking",
+  "Election Tech",
+  "Hydrogen Energy",
+  "Indoor Mapping",
+  "IoT Security",
+  "Microinsurance",
+  "Quantum Computing",
+  "Reinforcement Learning",
+  "Small Modular Reactors",
+  "Smart Home Assistants",
+  "Sustainable Tourism",
+  "Unmanned Vehicle",
+  "VR Health",
+  "Vertical Farming",
+  "3D Printed Foods",
+  "Alternative Fuels",
+  "Art Trading Platforms",
+  "Autonomous Shipping",
+  "Batteryless IoT Sensors",
+  "Clean Meat",
+  "Computational Storage",
+  "Cryogenics",
+  "Deepfake Detection",
+  "Edge Computing Semiconductors",
+  "Fusion Energy",
+  "Lab-on-a-chip",
+  "Nanomedicines",
+  "Neuroinformatics",
+  "Robotic Surgery",
+  "Rocketry",
+  "Security Orchestration, Automation and Response (SOAR)",
+  "Smart Locks",
+];
+const options = {
+  minMatchCharLength: 3,
+};
+
+const fuse = new Fuse(Tag, options);
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -185,6 +391,7 @@ const CompanyDetails = ({
 // Your UI logic goes here.
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data: db }) {
+  //console.log(db)
   const [batch, setBatch] = useState([]);
   const [category, setCategory] = useState([]);
   const [selectedBatch, setSelectedBatch] = useState(db.batch);
@@ -281,7 +488,7 @@ function Component({ data: db }) {
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
           <option value="">Select Industries</option>
-          <option value={selectedCategory}>{selectedCategory}</option>
+          {/* <option value={selectedCategory}>{selectedCategory}</option> */}
           {category.map((el) => {
             return (
               <option key={el} value={el}>
@@ -323,15 +530,16 @@ const queryToData = async ({ query }) => {
   // You can do any external API call or use any library here
   // to convert the search query into some meaningful data.
   // The data gets passed to the UI Component defined above.
-  let batch;
+  let batch, category;
+  category = fuse.search(query.split(" ")[0])[0].item;
   for (const key in Batches) {
     if (query.includes(key)) {
       batch = key;
     }
   }
   let data = {
-    batch: batch,
-    category: query.split(" ")[0],
+    batch,
+    category,
   };
 
   return data;
