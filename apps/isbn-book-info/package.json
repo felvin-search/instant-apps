@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/isbn-book-info",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {
