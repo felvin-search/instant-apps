@@ -72,6 +72,7 @@
     "@felvin-community/morse-code-generator": "^1.91.0",
     "@felvin-community/nasa-astro-pic": "^1.8.0",
     "@felvin-community/pacman": "^1.26.0",
+    "@felvin-community/pizza-app": "^1.0.0",
     "@felvin-community/pokedex": "^1.81.0",
     "@felvin-community/pomodoro": "^1.8.0",
     "@felvin-community/qr-code-generator": "^1.81.0",

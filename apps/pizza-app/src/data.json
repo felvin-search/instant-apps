@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "pizza": "Pepperoni",
+    "price": 10.99,
+    "desc": "Pepperoni, cheese, sauce",
+    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.webp"
+  },
+  {
+    "id": 2,
+    "pizza": "Chicken Tikka",
+    "price": 13.99,
+    "desc": "Chicken tikka, cheese, sauce",
+    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.webp"
+  },
+  {
+    "id": 3,
+    "pizza": "Chicken Supreme",
+    "price": 12.99,
+    "desc": "Chicken supreme, cheese, sauce",
+    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.webp"
+  },
+  {
+    "id": 4,
+    "pizza": "Chicken Fajita",
+    "price": 15.99,
+    "desc": "Chicken fajita, cheese, sauce",
+    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.webp"
+  }
+]
