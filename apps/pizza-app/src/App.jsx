@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import db from "./data.json";
+import axios from "axios";
+
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
@@ -63,7 +65,7 @@ const Tags = styled.span`
   height: 20px;
   width: 20px;
   margin-left: 30px;
-  background-color: ${(prop) => (prop.veg ? "green" : "red")};
+  //background-color: ${(prop) => (prop.veg ? "green" : "red")};
   padding: 3px;
   border-radius: 50%;
   margin-right: auto;
@@ -123,7 +125,7 @@ const Button = styled.button`
 
 const Div = styled.div``;
 
-const Pizza = ({ value, id, pizza, price, desc, image, setValue }) => {
+const Pizza = ({ value, id, pizza, price, desc, image, setValue, isVeg }) => {
   const [add, setAdd] = useState(false);
   const [sizeValue, setSizeValue] = useState(0);
   console.log(sizeValue);
@@ -167,7 +169,7 @@ const Pizza = ({ value, id, pizza, price, desc, image, setValue }) => {
             <option value={5}>Medium</option>
             <option value={10}>Large</option>
           </Select>
-          <Tags veg>veg</Tags>
+          <Tags veg={isVeg}>{isVeg ? "🟢" : "🔴"}</Tags>
           <Add onClick={handleClick}>{!add ? "add" : "remove"}</Add>
         </TagContainer>
       </Div>
@@ -206,9 +208,24 @@ const PageTwo = ({ setStep, setValue, value }) => {
     </Container>
   );
 };
-const PageOne = ({ setStep }) => {
+const PageOne = ({ setStep, onChangeHandler, details }) => {
   const HandleSubmit = (e) => {
     e.preventDefault();
+    axios
+      .post("https://dominos.fly.dev/nearby", {
+        firstname: details.firstname,
+        lastname: details.lastname,
+        email: details.email,
+        phone: details.phone,
+        address: `${details.street},${details.city},${details.state},${details.zip}`,
+      })
+      .then((res) => {
+        console.log(res.data);
+        localStorage.setItem("storeID", res.data.storeID);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     setStep(1);
   };
 
@@ -217,14 +234,62 @@ const PageOne = ({ setStep }) => {
       <Header src="https://1000logos.net/wp-content/uploads/2021/01/Dominos-logo.jpg" />
       <p style={{ zIndex: "3" }}>Enter Your Details</p>
       <Div style={{ display: "flex", gap: "0.5rem" }}>
-        <Input type="text" placeholder="First Name" />
-        <Input type="text" placeholder="Last Name" />
+        <Input
+          type="text"
+          onChange={onChangeHandler}
+          name="firstname"
+          placeholder="First Name"
+        />
+        <Input
+          type="text"
+          onChange={onChangeHandler}
+          name="lastname"
+          placeholder="Last Name"
+        />
       </Div>
       <Div style={{ display: "flex", gap: "0.5rem" }}>
-        <Input type="email" placeholder="Email" />
-        <Input type="number" placeholder="Phone" />
+        <Input
+          type="email"
+          onChange={onChangeHandler}
+          name="email"
+          placeholder="Email"
+        />
+        <Input
+          type="number"
+          onChange={onChangeHandler}
+          name="phone"
+          placeholder="Phone"
+        />
       </Div>
-      <TextField placeholder="Address" />
+      <Div style={{ display: "flex", gap: "0.5rem" }}>
+        <Input
+          type="text"
+          onChange={onChangeHandler}
+          name="street"
+          placeholder="Street Address"
+        />
+        <Input
+          type="number"
+          onChange={onChangeHandler}
+          name="zip"
+          placeholder="Zip Address"
+        />
+      </Div>
+      <Div style={{ display: "flex", gap: "0.5rem" }}>
+        <Input
+          type="text"
+          onChange={onChangeHandler}
+          name="city"
+          placeholder="City"
+        />
+        <Input
+          type="text"
+          onChange={onChangeHandler}
+          name="state"
+          placeholder="State"
+        />
+      </Div>
+      {/* <TextField placeholder="Address" /> */}
       <Button type="submit">Next</Button>
     </Form>
   );
@@ -236,10 +301,28 @@ const PageOne = ({ setStep }) => {
 function Component({ data }) {
   const [step, setStep] = useState(0);
   const [value, setValue] = useState(0);
+  const [details, setDetails] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    street: "",
+    zip: "",
+    city: "",
+    state: "",
+  });
+  const onChangeHandler = (e) => {
+    setDetails({ ...details, [e.target.name]: e.target.value });
+    console.log(details);
+  };
   return (
     <Container>
       {step === 0 ? (
-        <PageOne setStep={setStep} />
+        <PageOne
+          details={details}
+          setStep={setStep}
+          onChangeHandler={onChangeHandler}
+        />
       ) : step === 1 ? (
         <PageTwo value={value} setValue={setValue} setStep={setStep} />
       ) : (

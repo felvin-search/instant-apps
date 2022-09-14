@@ -1,30 +1,26 @@
 [
   {
-    "id": 1,
-    "pizza": "Pepperoni",
-    "price": 10.99,
-    "desc": "Pepperoni, cheese, sauce",
-    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.webp"
-  },
-  {
-    "id": 2,
-    "pizza": "Chicken Tikka",
-    "price": 13.99,
-    "desc": "Chicken tikka, cheese, sauce",
-    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.webp"
-  },
-  {
     "id": 3,
-    "pizza": "Chicken Supreme",
+    "pizza": "VEG EXTRAVAGANZA",
     "price": 12.99,
-    "desc": "Chicken supreme, cheese, sauce",
-    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.webp"
+    "desc": "A pizza that decidedly staggers under an overload of golden corn, exotic black olives, crunchy onions, crisp capsicum, succulent mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to go all around",
+    "image": "https://www.dominos.co.in/files/items/Veg_Extravaganz.jpg",
+    "isVeg": true
   },
   {
     "id": 4,
-    "pizza": "Chicken Fajita",
+    "pizza": "NON VEG SUPREME",
     "price": 15.99,
-    "desc": "Chicken fajita, cheese, sauce",
-    "image": "https://www.dominos.co.in/theme2/front/images/menu-images/my-vegpizza.webp"
+    "desc": "Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers",
+    "image": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(13).png",
+    "isVeg": false
+  },
+  {
+    "id": 5,
+    "pizza": "CHICKEN DOMINATOR",
+    "price": 15.99,
+    "desc": "Treat your taste buds with Double Pepper Barbecue Chicken, Peri-Peri Chicken, Chicken Tikka & Grilled Chicken Rashers",
+    "image": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(11).png",
+    "isVeg": false
   }
 ]
