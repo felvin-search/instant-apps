@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { isTriggered } from "@felvin-search/core";
 import db from "./data.json";
 import axios from "axios";
-
+import { PaymentInputsWrapper, usePaymentInputs } from "react-payment-inputs";
+import images from "react-payment-inputs/images";
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
@@ -125,23 +126,51 @@ const Button = styled.button`
 
 const Div = styled.div``;
 
-const Pizza = ({ value, id, pizza, price, desc, image, setValue, isVeg }) => {
+const Pizza = ({
+  value,
+  id,
+  pizza,
+  price,
+  desc,
+  image,
+  setValue,
+  isVeg,
+  code,
+}) => {
   const [add, setAdd] = useState(false);
-  const [sizeValue, setSizeValue] = useState(0);
-  console.log(sizeValue);
-  const handleClick = () => {
-    setAdd(!add);
-  };
-  useEffect(() => {
-    if (add) {
-      setValue((pre) => pre + price);
-    } else {
-      if (value) setValue((pre) => (pre - price > 0 ? pre - price : 0));
-    }
-  }, [add]);
+  const [size, setSize] = useState("s");
+
+  // const handleClick = () => {
+  //   setAdd(!add);
+  // };
+  // useEffect(() => {
+  //   if (add) {
+  //     setValue((pre) => pre + price);
+  //   } else {
+  //     if (value) setValue((pre) => (pre - price > 0 ? pre - price : 0));
+  //   }
+  // }, [add]);
   // useEffect(()=>{
   //    setValue(pre=>eval(pre+sizeValue))
   // },[sizeValue])
+  const handleClick = async () => {
+    const storeId = localStorage.getItem("storeID");
+    console.log(size);
+    if (Boolean(storeId)) {
+      const res = await axios.post("https://dominos.fly.dev/item", {
+        pizza_code: code[size],
+      });
+      const res1 = await axios.post("https://dominos.fly.dev/order", {
+        storeID: storeId,
+      });
+      console.log(res, res1);
+      setValue({
+        price: res1.data.price,
+        time: res1.data.time,
+      });
+      setAdd(!add);
+    }
+  };
   return (
     <Cards>
       <Div
@@ -157,17 +186,14 @@ const Pizza = ({ value, id, pizza, price, desc, image, setValue, isVeg }) => {
       <Div style={{ marginLeft: "20px", width: "70%" }}>
         <Div style={{ display: "flex" }}>
           <Title>{pizza}</Title>
-          <Locations>${price.toFixed(2)}</Locations>
+          {/* <Locations>${price.toFixed(2)}</Locations> */}
         </Div>
         <ShortDesc>{desc}</ShortDesc>
         <TagContainer>
-          <Select
-            value={sizeValue}
-            onChange={(e) => setSizeValue(e.target.value)}
-          >
-            <option value={0}>Small</option>
-            <option value={5}>Medium</option>
-            <option value={10}>Large</option>
+          <Select value={size} onChange={(e) => setSize(e.target.value)}>
+            <option value="s">Small</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
           </Select>
           <Tags veg={isVeg}>{isVeg ? "🟢" : "🔴"}</Tags>
           <Add onClick={handleClick}>{!add ? "add" : "remove"}</Add>
@@ -176,7 +202,7 @@ const Pizza = ({ value, id, pizza, price, desc, image, setValue, isVeg }) => {
     </Cards>
   );
 };
-const PageThree = ({ setStep }) => {
+const PageThree = ({ setStep, value }) => {
   return (
     <Container>
       <div
@@ -188,7 +214,12 @@ const PageThree = ({ setStep }) => {
         Your Order Confirmed!!
         <br />
         <br />
-        Your Pizza will be delivered in 30 minutes
+        Your Pizza will be delivered in {value.time &&
+          `${value.time} minutes`}{" "}
+        minutes
+        <br />
+        <br />
+        {value.price && `Total Amount: $${value.price}`}
         <br />
         <Button onClick={() => setStep(0)}>Back To Home</Button>
       </div>
@@ -197,18 +228,70 @@ const PageThree = ({ setStep }) => {
 };
 
 const PageTwo = ({ setStep, setValue, value }) => {
+  const {
+    wrapperProps,
+    getCardImageProps,
+    getCardNumberProps,
+    getExpiryDateProps,
+    getCVCProps,
+    getZIPProps,
+  } = usePaymentInputs();
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
+  const [cvc, setCvc] = useState("");
+  const [zip, setZip] = useState("");
+
+  console.log(expiryDate.replace(/\s+/g, ""));
+  const handleCheckout = async () => {
+    const res = await axios.post("https://dominos.fly.dev/pay", {
+      cardNumber: cardNumber.split(" ").join("-"),
+      expiryDate: expiryDate.replace(/\s+/g, ""),
+      cardCode: cvc,
+      cardPostalCode: zip,
+    });
+    console.log(res);
+    if (res.status == 200) {
+      setStep(2);
+    } else {
+      alert("Payment Failed");
+    }
+  };
+
   return (
     <Container>
       {db.map((el, id) => (
         <Pizza value={value} setValue={setValue} key={id} {...el} />
       ))}
-      <Button onClick={() => setStep(2)}>Checkout</Button>
-      Total Cost: $ {value}
+      <PaymentInputsWrapper {...wrapperProps}>
+        <svg {...getCardImageProps({ images })} />
+        <input
+          {...getCardNumberProps({
+            onChange: (e) => setCardNumber(e.target.value),
+          })}
+          value={cardNumber}
+        />
+        <input
+          {...getExpiryDateProps({
+            onChange: (e) => setExpiryDate(e.target.value),
+          })}
+          value={expiryDate}
+        />
+        <input {...getCVCProps({ onChange: (e) => setCvc(e.target.value) })} />
+        <input
+          {...getZIPProps({ onChange: (e) => setZip(e.target.value) })}
+          value={zip}
+        />
+      </PaymentInputsWrapper>
+      <Button onClick={() => handleCheckout()}>Checkout</Button>
+      Total Cost: {value.price && `${value.price} USD`}
+      <br />
+      Estimated Time: {value.time && `${value.time} minutes`}
       <Button onClick={() => setStep(0)}>Back</Button>
     </Container>
   );
 };
-const PageOne = ({ setStep, onChangeHandler, details }) => {
+const PageOne = ({ setStep, onChangeHandler, details, setStoreID }) => {
+  const [validated, setValidated] = useState(null);
   const HandleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -220,15 +303,27 @@ const PageOne = ({ setStep, onChangeHandler, details }) => {
         address: `${details.street},${details.city},${details.state},${details.zip}`,
       })
       .then((res) => {
-        console.log(res.data);
+        // console.log(res);
+        if (res.status == 200 && res.data.storeID) {
+          setValidated(200);
+        }
+
         localStorage.setItem("storeID", res.data.storeID);
       })
       .catch((err) => {
         console.log(err);
+        setValidated(err.response.status);
+        localStorage.setItem("storeID", null);
       });
-    setStep(1);
   };
-
+  useEffect(() => {
+    console.log(validated);
+    if (validated == 200) {
+      setStep(1);
+    } else if (validated == 404) {
+      alert("No Open Stores!!");
+    }
+  }, [validated]);
   return (
     <Form onSubmit={HandleSubmit}>
       <Header src="https://1000logos.net/wp-content/uploads/2021/01/Dominos-logo.jpg" />
@@ -300,7 +395,11 @@ const PageOne = ({ setStep, onChangeHandler, details }) => {
 // `data` prop is exactly what is returned by queryToData.
 function Component({ data }) {
   const [step, setStep] = useState(0);
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState({
+    price: null,
+    time: null,
+  });
+
   const [details, setDetails] = useState({
     firstname: "",
     lastname: "",
@@ -313,7 +412,7 @@ function Component({ data }) {
   });
   const onChangeHandler = (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value });
-    console.log(details);
+    // console.log(details);
   };
   return (
     <Container>
@@ -326,7 +425,7 @@ function Component({ data }) {
       ) : step === 1 ? (
         <PageTwo value={value} setValue={setValue} setStep={setStep} />
       ) : (
-        <PageThree setStep={setStep} />
+        <PageThree setStep={setStep} value={value} />
       )}
     </Container>
   );

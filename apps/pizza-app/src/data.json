@@ -1,26 +1,29 @@
 [
   {
     "id": 3,
-    "pizza": "VEG EXTRAVAGANZA",
+    "pizza": "Pepperoni",
     "price": 12.99,
-    "desc": "A pizza that decidedly staggers under an overload of golden corn, exotic black olives, crunchy onions, crisp capsicum, succulent mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to go all around",
+    "desc": "Cheese made with 100% real mozzarella on top of our garlic-seasoned crust with a rich, buttery taste.",
     "image": "https://www.dominos.co.in/files/items/Veg_Extravaganz.jpg",
-    "isVeg": true
+    "isVeg": true,
+    "code": {
+      "s": "10SCREEN",
+      "m": "12SCREEN",
+      "l": "14SCREEN"
+    }
   },
-  {
-    "id": 4,
-    "pizza": "NON VEG SUPREME",
-    "price": 15.99,
-    "desc": "Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers",
-    "image": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(13).png",
-    "isVeg": false
-  },
+
   {
     "id": 5,
-    "pizza": "CHICKEN DOMINATOR",
+    "pizza": "Pacific Veggie",
     "price": 15.99,
-    "desc": "Treat your taste buds with Double Pepper Barbecue Chicken, Peri-Peri Chicken, Chicken Tikka & Grilled Chicken Rashers",
+    "desc": "Roasted red peppers, fresh baby spinach, fresh onions, fresh mushrooms, tomatoes, black olives, feta, provolone, cheese made with 100% real mozzarella and sprinkled with a garlic herb seasoning.",
     "image": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(11).png",
-    "isVeg": false
+    "isVeg": true,
+    "code": {
+      "s": "P10IREPV",
+      "m": "P12IREPV",
+      "l": "P14IREPV"
+    }
   }
 ]
