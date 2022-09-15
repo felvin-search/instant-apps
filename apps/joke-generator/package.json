@@ -1,6 +1,6 @@
 {
   "name": "@felvin-community/joke-generator",
-  "version": "1.93.0",
+  "version": "1.94.0",
   "license": "MIT",
   "main": "./src/index.ts",
   "publishConfig": {

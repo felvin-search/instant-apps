@@ -51,6 +51,7 @@ undecided:
   - "@felvin-community/morse-code-generator"
   - "@felvin-community/nasa-astro-pic"
   - "@felvin-community/pacman"
+  - "@felvin-community/pizza-app"
   - "@felvin-community/pokedex"
   - "@felvin-community/pomodoro"
   - "@felvin-community/qr-code-generator"
