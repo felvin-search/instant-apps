@@ -1,3 +1,4 @@
+import PizzaApp from "@felvin-community/pizza-app";
 import YcCompany from "@felvin-community/yc-company";
 import ContactMailer from "@felvin-community/contact-mailer";
 import FundRaiserApp from "@felvin-community/fund-raiser-app";
@@ -76,6 +77,7 @@ import WordCounter from "@felvin-community/word-counter";
 import WordleSolver from "@felvin-community/wordle-solver";
 
 const allApps = [
+  PizzaApp,
   YcCompany,
   ContactMailer,
   FundRaiserApp,

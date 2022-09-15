@@ -2484,6 +2484,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@felvin-community/pizza-app@^1.0.0, @felvin-community/pizza-app@workspace:apps/pizza-app":
+  version: 0.0.0-use.local
+  resolution: "@felvin-community/pizza-app@workspace:apps/pizza-app"
+  dependencies:
+    "@felvin-search/cli": ^1.0.0
+    "@felvin-search/core": ^1.0.0
+    "@types/react": ^17.0.0
+    "@types/styled-components": ^5.1.11
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-payment-inputs: ^1.1.9
+    styled-components: ^5.3.0
+  peerDependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-components: ">= 5"
+  languageName: unknown
+  linkType: soft
+
 "@felvin-community/pokedex@^1.81.0, @felvin-community/pokedex@workspace:apps/pokedex":
   version: 0.0.0-use.local
   resolution: "@felvin-community/pokedex@workspace:apps/pokedex"
@@ -3094,6 +3113,7 @@ __metadata:
     "@felvin-community/morse-code-generator": ^1.91.0
     "@felvin-community/nasa-astro-pic": ^1.8.0
     "@felvin-community/pacman": ^1.26.0
+    "@felvin-community/pizza-app": ^1.0.0
     "@felvin-community/pokedex": ^1.81.0
     "@felvin-community/pomodoro": ^1.8.0
     "@felvin-community/qr-code-generator": ^1.81.0
@@ -14167,6 +14187,16 @@ __metadata:
   peerDependencies:
     react: ^16 || ^17 || ^18
   checksum: c947127f972f42ae2e8717d84fd6bd698d4b657231b75263cbcedab7aa10d9c77ca16969383804490c771eed8313d43123f08a541e9bc567868ab189e2de6cfb
+  languageName: node
+  linkType: hard
+
+"react-payment-inputs@npm:^1.1.9":
+  version: 1.1.9
+  resolution: "react-payment-inputs@npm:1.1.9"
+  peerDependencies:
+    react: ">=16.8.0"
+    styled-components: ">=4.0.0"
+  checksum: 4b462cc35c70a564acd867c3a145af079f86f39652e305d4f74a2aa94f5d23d2df7626cc4bacfcfd0c0840f319cce2fd62e9cdfb1cd4a261dd75fe9aab8e4497
   languageName: node
   linkType: hard
 

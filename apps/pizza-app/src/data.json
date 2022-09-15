@@ -1,0 +1,29 @@
+[
+  {
+    "id": 3,
+    "pizza": "Pepperoni",
+    "price": 12.99,
+    "desc": "Cheese made with 100% real mozzarella on top of our garlic-seasoned crust with a rich, buttery taste.",
+    "image": "https://www.dominos.co.in/files/items/Veg_Extravaganz.jpg",
+    "isVeg": true,
+    "code": {
+      "s": "10SCREEN",
+      "m": "12SCREEN",
+      "l": "14SCREEN"
+    }
+  },
+
+  {
+    "id": 5,
+    "pizza": "Pacific Veggie",
+    "price": 15.99,
+    "desc": "Roasted red peppers, fresh baby spinach, fresh onions, fresh mushrooms, tomatoes, black olives, feta, provolone, cheese made with 100% real mozzarella and sprinkled with a garlic herb seasoning.",
+    "image": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(11).png",
+    "isVeg": true,
+    "code": {
+      "s": "P10IREPV",
+      "m": "P12IREPV",
+      "l": "P14IREPV"
+    }
+  }
+]
