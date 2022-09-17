@@ -1,7 +1,7 @@
 {
   "name": "private-mono-repo",
   "license": "MIT",
-  "version": "0.94.0",
+  "version": "0.95.0",
   "private": true,
   "workspaces": {
     "packages": [
