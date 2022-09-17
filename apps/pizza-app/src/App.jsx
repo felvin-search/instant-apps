@@ -8,6 +8,7 @@ import images from "react-payment-inputs/images";
 //------------Styled Components-------------
 // If you're unfamiliar with styled components
 // start here https://styled-components.com/docs/basics#getting-started
+let URL = "https://dominos.fly.dev";
 
 const Container = styled.div`
   display: flex;
@@ -140,28 +141,16 @@ const Pizza = ({
   const [add, setAdd] = useState(false);
   const [size, setSize] = useState("s");
 
-  // const handleClick = () => {
-  //   setAdd(!add);
-  // };
-  // useEffect(() => {
-  //   if (add) {
-  //     setValue((pre) => pre + price);
-  //   } else {
-  //     if (value) setValue((pre) => (pre - price > 0 ? pre - price : 0));
-  //   }
-  // }, [add]);
-  // useEffect(()=>{
-  //    setValue(pre=>eval(pre+sizeValue))
-  // },[sizeValue])
   const handleClick = async () => {
     const storeId = localStorage.getItem("storeID");
-    console.log(size);
+
     if (Boolean(storeId)) {
-      const res = await axios.post("https://dominos.fly.dev/item", {
+      const res = await axios.post(`${URL}/item`, {
         pizza_code: code[size],
       });
-      const res1 = await axios.post("https://dominos.fly.dev/order", {
+      const res1 = await axios.post(`${URL}/order`, {
         storeID: storeId,
+        address: localStorage.getItem("customer"),
       });
       console.log(res, res1);
       setValue({
@@ -240,15 +229,19 @@ const PageTwo = ({ setStep, setValue, value }) => {
   const [expiryDate, setExpiryDate] = useState("");
   const [cvc, setCvc] = useState("");
   const [zip, setZip] = useState("");
+  const cardDetails = {
+    cardNumber: cardNumber.split(" ").join(""),
+    expiryDate: expiryDate.replace("/", "").replace(/\s+/g, ""),
+    cardCode: cvc,
+    cardPostalCode: zip,
+    storeID: localStorage.getItem("storeID"),
+    address: localStorage.getItem("customer"),
+    isOrder: true,
+  };
 
-  console.log(expiryDate.replace(/\s+/g, ""));
   const handleCheckout = async () => {
-    const res = await axios.post("https://dominos.fly.dev/pay", {
-      cardNumber: cardNumber.split(" ").join("-"),
-      expiryDate: expiryDate.replace(/\s+/g, ""),
-      cardCode: cvc,
-      cardPostalCode: zip,
-    });
+    console.log(cardDetails);
+    const res = await axios.post(`${URL}/order`, cardDetails);
     console.log(res);
     if (res.status == 200) {
       setStep(2);
@@ -295,7 +288,7 @@ const PageOne = ({ setStep, onChangeHandler, details, setStoreID }) => {
   const HandleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://dominos.fly.dev/nearby", {
+      .post(`${URL}/nearby`, {
         firstname: details.firstname,
         lastname: details.lastname,
         email: details.email,
@@ -309,6 +302,7 @@ const PageOne = ({ setStep, onChangeHandler, details, setStoreID }) => {
         }
 
         localStorage.setItem("storeID", res.data.storeID);
+        localStorage.setItem("customer", JSON.stringify(res.data.customer));
       })
       .catch((err) => {
         console.log(err);
