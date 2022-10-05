@@ -151,7 +151,11 @@ function TrackingInfo(props) {
 }
 
 const triggerWords = [
-  "track",
+  "track package",
+  "track courier",
+  "courier package",
+  "courier id",
+  "package id",
   "pickrr",
   "courier",
   "tracking number",
